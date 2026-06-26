@@ -1,6 +1,6 @@
 {
   "id": "15-janus-pro-decoupled-encoders",
-  "title": "Janus Pro Decoupled Encoders",
+  "title": "Janus-Pro Decoupled Encoders",
   "motto": "Unified multimodal models have an unavoidable tension. Understanding wants semantic features — SigLIP or DINOv2 output vectors rich with concept-level information. Generation wants reconstruction-friendly codes — VQ tokens that compose back into crisp pixels. The two goals are not compatible in a single encoder. Janus (DeepSeek, October 2024) and Janus-Pro (DeepSeek, January 2025) argue the fix is to stop trying: decouple the two encoders. Share the transformer body between tasks, but route understanding through SigLIP and generation through a VQ tokenizer. At 7B, Janus-Pro beats DALL-E 3 on GenEval while matching LLaVA on MMMU. This lesson reads why two encoders work where one fails.",
   "phase": {
     "id": 12,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Janus Pro Decoupled Encoders: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Separate understanding and generation vision encoders reduce interference."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement janus_pro_decoupled_encoders",
+      "title": "Implement janus",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "janus_pro_decoupled_encoders.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(12, 15)==12015)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "janus.py",
+        "starter": "def encoder_count(decoupled):\n    return 2 if decoupled else 1\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", encoder_count(True)==2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Janus Pro Decoupled Encoders",
-        "description": "Completed interactive checkpoint for Janus Pro Decoupled Encoders."
+        "name": "Encoders",
+        "description": "Decoupled vision encoder count."
       }
     },
     {

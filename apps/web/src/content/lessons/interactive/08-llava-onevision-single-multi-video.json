@@ -1,6 +1,6 @@
 {
   "id": "08-llava-onevision-single-multi-video",
-  "title": "Llava Onevision Single Multi Video",
+  "title": "LLaVA-OneVision",
   "motto": "Before LLaVA-OneVision (Li et al., August 2024) the open-VLM world had separate lineages: LLaVA-1.5 for single images, multi-image models like Mantis and VILA, video models like Video-LLaVA and Video-LLaMA. Each won its benchmark and failed at the others. LLaVA-OneVision argued a single curriculum could train one model to dominate all three scenarios, and that the emergent task-transfer effects (single-image skills exported to video, multi-image reasoning exported to single-image) beat the sum of specialists. The recipe is deceptively simple: a visual-token budget that stays constant across scenarios, plus an explicit curriculum that moves from single-image to OneVision (multi-image) to video. This lesson reads the budget, the curriculum, and the emergent behaviors.",
   "phase": {
     "id": 12,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Llava Onevision Single Multi Video: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "One model handles single image, multi-image, and video frames in one chat template."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement llava_onevision_single_multi",
+      "title": "Implement onevision",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "llava_onevision_single_multi.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(12, 8)==12008)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "onevision.py",
+        "starter": "def frame_budget(fps, seconds):\n    return int(fps*seconds)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", frame_budget(1,10)==10)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Llava Onevision Single Multi Video",
-        "description": "Completed interactive checkpoint for Llava Onevision Single Multi Video."
+        "name": "Video frames",
+        "description": "Frames sampled from clip."
       }
     },
     {

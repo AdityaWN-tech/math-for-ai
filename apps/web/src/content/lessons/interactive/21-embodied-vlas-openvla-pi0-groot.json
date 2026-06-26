@@ -1,6 +1,6 @@
 {
   "id": "21-embodied-vlas-openvla-pi0-groot",
-  "title": "Embodied Vlas Openvla Pi0 Groot",
+  "title": "Embodied VLAs",
   "motto": "The first time a model read a recipe off a website and executed it in a kitchen robot was RT-2 (Google DeepMind, July 2023). RT-2 discretized actions as text tokens, co-fine-tuned a VLM on web data plus robot-action data, and proved that web-scale vision-language knowledge transfers to robotic control. OpenVLA (June 2024) shipped the open 7B reference. Physical Intelligence's π0 series (2024-2025) added flow-matching action experts. NVIDIA's GR00T N1 (March 2025) delivered dual-system (System 1 / System 2) control for humanoid robots at scale. The VLA primitive — vision-language-action, a single model that sees, reads, and acts — is the bridge between this phase's understanding models and the autonomous systems in Phase 15.",
   "phase": {
     "id": 12,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Embodied Vlas Openvla Pi0 Groot: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Vision-language-action models map pixels + instruction → robot actions."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement embodied_vlas_openvla_pi0_gr",
+      "title": "Implement vla",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "embodied_vlas_openvla_pi0_gr.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(12, 21)==12021)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "vla.py",
+        "starter": "def action_dim(arm_dof, gripper=1):\n    return arm_dof+gripper\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", action_dim(7)==8)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Embodied Vlas Openvla Pi0 Groot",
-        "description": "Completed interactive checkpoint for Embodied Vlas Openvla Pi0 Groot."
+        "name": "Action dim",
+        "description": "Robot action vector size."
       }
     },
     {

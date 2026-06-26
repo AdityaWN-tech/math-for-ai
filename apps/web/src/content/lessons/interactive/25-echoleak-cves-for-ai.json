@@ -1,6 +1,6 @@
 {
   "id": "25-echoleak-cves-for-ai",
-  "title": "Echoleak Cves For Ai",
+  "title": "EchoLeak & AI CVEs",
   "motto": "CVE-2025-32711 \"EchoLeak\" (CVSS 9.3) was the first publicly documented zero-click prompt injection in a production LLM system (Microsoft 365 Copilot). Discovered by Aim Labs (Aim Security), disclosed to MSRC, patched via server-side update June 2025. Attack: attacker sends a crafted email to any employee; the victim's Copilot retrieves the email as RAG context during a routine query; hidden instructions execute; Copilot exfiltrates sensitive organizational data via a CSP-approved Microsoft domain. Bypassed XPIA prompt-injection filters and Copilot's link-redaction mechanisms. Aim Labs's term: \"LLM Scope Violation\" — external untrusted input manipulates the model to access and leak confidential data. Related: CamoLeak (CVSS 9.6, GitHub Copilot Chat) exploited the Camo image proxy; fixed by disabling image rendering entirely. GitHub Copilot RCE CVE-2025-53773. NIST has called indirect prompt injection \"generative AI's greatest security flaw\"; OWASP 2025 ranks it #1 threat to LLM applications.",
   "phase": {
     "id": 18,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Echoleak Cves For Ai: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "CVE-style disclosure for prompt injection and agent vulnerabilities."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement echoleak_cves_for_ai",
+      "title": "Implement cve",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "echoleak_cves_for_ai.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(18, 25)==18025)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "cve.py",
+        "starter": "def severity_score(cvss):\n    return cvss\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", severity_score(9.8)==9.8)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Echoleak Cves For Ai",
-        "description": "Completed interactive checkpoint for Echoleak Cves For Ai."
+        "name": "CVSS score",
+        "description": "Vulnerability severity rating."
       }
     },
     {

@@ -1,6 +1,6 @@
 {
   "id": "13-transfusion-autoregressive-diffusion",
-  "title": "Transfusion Autoregressive Diffusion",
+  "title": "Transfusion",
   "motto": "Chameleon and Emu3 bet everything on discrete tokens. They work, but the quantization bottleneck is visible — the image quality plateaus below continuous-space diffusion models. Transfusion (Meta, Zhou et al., August 2024) takes the opposite bet: keep images continuous, drop the VQ-VAE entirely, and train one transformer with two losses. Text tokens get next-token-prediction. Image patches get a flow-matching / diffusion loss. Both objectives optimize the same weights. The architecture underlying Stable Diffusion 3 (MMDiT) is a close cousin. This lesson reads the Transfusion thesis, builds a toy two-loss trainer, and traces the attention mask that lets one transformer do both jobs.",
   "phase": {
     "id": 12,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Transfusion Autoregressive Diffusion: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Single transformer handles AR text and diffusion image denoising."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement transfusion_autoregressive_d",
+      "title": "Implement transfusion",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "transfusion_autoregressive_d.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(12, 13)==12013)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "transfusion.py",
+        "starter": "def denoise_step(x, noise, t):\n    return x - t*noise\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", denoise_step(1.0,0.2,0.5)==0.9)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Transfusion Autoregressive Diffusion",
-        "description": "Completed interactive checkpoint for Transfusion Autoregressive Diffusion."
+        "name": "Denoise step",
+        "description": "One diffusion denoise update."
       }
     },
     {

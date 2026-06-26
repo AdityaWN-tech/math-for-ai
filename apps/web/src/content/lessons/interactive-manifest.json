@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T07:37:56.137Z",
+  "generatedAt": "2026-06-26T08:21:11.568Z",
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -2055,7 +2055,7 @@
     },
     {
       "id": "07-open-weight-vlm-recipes",
-      "title": "Open Weight Vlm Recipes",
+      "title": "Open-Weight VLM Recipes",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 7,
@@ -2064,7 +2064,7 @@
     },
     {
       "id": "08-llava-onevision-single-multi-video",
-      "title": "Llava Onevision Single Multi Video",
+      "title": "LLaVA-OneVision",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 8,
@@ -2073,7 +2073,7 @@
     },
     {
       "id": "09-qwen-vl-family-dynamic-fps",
-      "title": "Qwen Vl Family Dynamic Fps",
+      "title": "Qwen-VL Dynamic FPS",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 9,
@@ -2082,7 +2082,7 @@
     },
     {
       "id": "10-internvl3-native-multimodal",
-      "title": "Internvl3 Native Multimodal",
+      "title": "InternVL3 Native Multimodal",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 10,
@@ -2091,7 +2091,7 @@
     },
     {
       "id": "11-chameleon-early-fusion-tokens",
-      "title": "Chameleon Early Fusion Tokens",
+      "title": "Chameleon Early Fusion",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 11,
@@ -2100,7 +2100,7 @@
     },
     {
       "id": "12-emu3-next-token-for-generation",
-      "title": "Emu3 Next Token For Generation",
+      "title": "Emu3 Next-Token Generation",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 12,
@@ -2109,7 +2109,7 @@
     },
     {
       "id": "13-transfusion-autoregressive-diffusion",
-      "title": "Transfusion Autoregressive Diffusion",
+      "title": "Transfusion",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 13,
@@ -2118,7 +2118,7 @@
     },
     {
       "id": "14-show-o-discrete-diffusion-unified",
-      "title": "Show O Discrete Diffusion Unified",
+      "title": "Show-o Unified Generation",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 14,
@@ -2127,7 +2127,7 @@
     },
     {
       "id": "15-janus-pro-decoupled-encoders",
-      "title": "Janus Pro Decoupled Encoders",
+      "title": "Janus-Pro Decoupled Encoders",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 15,
@@ -2136,7 +2136,7 @@
     },
     {
       "id": "16-mio-any-to-any-streaming",
-      "title": "Mio Any To Any Streaming",
+      "title": "Mio Any-to-Any Streaming",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 16,
@@ -2145,7 +2145,7 @@
     },
     {
       "id": "17-video-language-temporal-grounding",
-      "title": "Video Language Temporal Grounding",
+      "title": "Temporal Grounding",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 17,
@@ -2154,7 +2154,7 @@
     },
     {
       "id": "18-long-video-million-token",
-      "title": "Long Video Million Token",
+      "title": "Long Video Million Tokens",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 18,
@@ -2163,7 +2163,7 @@
     },
     {
       "id": "19-audio-language-whisper-to-af3",
-      "title": "Audio Language Whisper To Af3",
+      "title": "Audio-Language Models",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 19,
@@ -2172,7 +2172,7 @@
     },
     {
       "id": "20-omni-models-thinker-talker",
-      "title": "Omni Models Thinker Talker",
+      "title": "Omni Thinker-Talker",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 20,
@@ -2181,7 +2181,7 @@
     },
     {
       "id": "21-embodied-vlas-openvla-pi0-groot",
-      "title": "Embodied Vlas Openvla Pi0 Groot",
+      "title": "Embodied VLAs",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 21,
@@ -2190,7 +2190,7 @@
     },
     {
       "id": "22-document-diagram-understanding",
-      "title": "Document Diagram Understanding",
+      "title": "Document & Diagram Understanding",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 22,
@@ -2199,7 +2199,7 @@
     },
     {
       "id": "23-colpali-vision-native-rag",
-      "title": "Colpali Vision Native Rag",
+      "title": "ColPali Vision-Native RAG",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 23,
@@ -2208,7 +2208,7 @@
     },
     {
       "id": "24-multimodal-rag-cross-modal",
-      "title": "Multimodal Rag Cross Modal",
+      "title": "Cross-Modal RAG",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 24,
@@ -2217,7 +2217,7 @@
     },
     {
       "id": "25-multimodal-agents-computer-use",
-      "title": "Multimodal Agents Computer Use",
+      "title": "Multimodal Computer-Use Agents",
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 25,
@@ -3495,7 +3495,7 @@
     },
     {
       "id": "02-reward-hacking-goodhart",
-      "title": "Reward Hacking Goodhart",
+      "title": "Reward Hacking & Goodhart",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 2,
@@ -3504,7 +3504,7 @@
     },
     {
       "id": "03-direct-preference-optimization-family",
-      "title": "Direct Preference Optimization Family",
+      "title": "DPO Family",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 3,
@@ -3513,7 +3513,7 @@
     },
     {
       "id": "04-sycophancy-rlhf-amplification",
-      "title": "Sycophancy Rlhf Amplification",
+      "title": "Sycophancy in RLHF",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 4,
@@ -3522,7 +3522,7 @@
     },
     {
       "id": "05-constitutional-ai-rlaif",
-      "title": "Constitutional Ai Rlaif",
+      "title": "Constitutional AI & RLAIF",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 5,
@@ -3531,7 +3531,7 @@
     },
     {
       "id": "06-mesa-optimization-deceptive-alignment",
-      "title": "Mesa Optimization Deceptive Alignment",
+      "title": "Mesa-Optimization",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 6,
@@ -3540,7 +3540,7 @@
     },
     {
       "id": "07-sleeper-agents-persistent-deception",
-      "title": "Sleeper Agents Persistent Deception",
+      "title": "Sleeper Agents",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 7,
@@ -3549,7 +3549,7 @@
     },
     {
       "id": "08-in-context-scheming-frontier-models",
-      "title": "In Context Scheming Frontier Models",
+      "title": "In-Context Scheming",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 8,
@@ -3567,7 +3567,7 @@
     },
     {
       "id": "10-ai-control-subversion",
-      "title": "Ai Control Subversion",
+      "title": "AI Control & Subversion",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 10,
@@ -3576,7 +3576,7 @@
     },
     {
       "id": "11-scalable-oversight-weak-to-strong",
-      "title": "Scalable Oversight Weak To Strong",
+      "title": "Scalable Oversight",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 11,
@@ -3585,7 +3585,7 @@
     },
     {
       "id": "12-red-teaming-pair-automated-attacks",
-      "title": "Red Teaming Pair Automated Attacks",
+      "title": "Automated Red Teaming",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 12,
@@ -3594,7 +3594,7 @@
     },
     {
       "id": "13-many-shot-jailbreaking",
-      "title": "Many Shot Jailbreaking",
+      "title": "Many-Shot Jailbreaking",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 13,
@@ -3603,7 +3603,7 @@
     },
     {
       "id": "14-ascii-art-visual-jailbreaks",
-      "title": "Ascii Art Visual Jailbreaks",
+      "title": "Visual Jailbreaks",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 14,
@@ -3621,7 +3621,7 @@
     },
     {
       "id": "16-red-team-tooling-garak-llamaguard-pyrit",
-      "title": "Red Team Tooling Garak Llamaguard Pyrit",
+      "title": "Red-Team Tooling",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 16,
@@ -3630,7 +3630,7 @@
     },
     {
       "id": "17-wmdp-dual-use-evaluation",
-      "title": "Wmdp Dual Use Evaluation",
+      "title": "WMDP Dual-Use Eval",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 17,
@@ -3639,7 +3639,7 @@
     },
     {
       "id": "18-frontier-safety-frameworks-rsp-pf-fsf",
-      "title": "Frontier Safety Frameworks Rsp Pf Fsf",
+      "title": "Frontier Safety Frameworks",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 18,
@@ -3657,7 +3657,7 @@
     },
     {
       "id": "20-bias-representational-harm",
-      "title": "Bias Representational Harm",
+      "title": "Bias & Representational Harm",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 20,
@@ -3666,7 +3666,7 @@
     },
     {
       "id": "21-fairness-criteria-group-individual-counterfactual",
-      "title": "Fairness Criteria Group Individual Counterfactual",
+      "title": "Fairness Criteria",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 21,
@@ -3675,7 +3675,7 @@
     },
     {
       "id": "22-differential-privacy-for-llms",
-      "title": "Differential Privacy For Llms",
+      "title": "Differential Privacy for LLMs",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 22,
@@ -3684,7 +3684,7 @@
     },
     {
       "id": "23-watermarking-synthid-stable-signature-c2pa",
-      "title": "Watermarking Synthid Stable Signature C2pa",
+      "title": "AI Watermarking",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 23,
@@ -3693,7 +3693,7 @@
     },
     {
       "id": "24-regulatory-frameworks-eu-us-uk-korea",
-      "title": "Regulatory Frameworks Eu Us Uk Korea",
+      "title": "AI Regulation",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 24,
@@ -3702,7 +3702,7 @@
     },
     {
       "id": "25-echoleak-cves-for-ai",
-      "title": "Echoleak Cves For Ai",
+      "title": "EchoLeak & AI CVEs",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 25,
@@ -3711,7 +3711,7 @@
     },
     {
       "id": "26-model-system-dataset-cards",
-      "title": "Model System Dataset Cards",
+      "title": "Model & Dataset Cards",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 26,
@@ -3720,7 +3720,7 @@
     },
     {
       "id": "27-data-provenance-training-governance",
-      "title": "Data Provenance Training Governance",
+      "title": "Data Provenance",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 27,
@@ -3738,7 +3738,7 @@
     },
     {
       "id": "29-moderation-systems-openai-perspective-llamaguard",
-      "title": "Moderation Systems Openai Perspective Llamaguard",
+      "title": "Moderation Systems",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 29,
@@ -3747,7 +3747,7 @@
     },
     {
       "id": "30-dual-use-risk-cyber-bio-chem-nuclear",
-      "title": "Dual Use Risk Cyber Bio Chem Nuclear",
+      "title": "Dual-Use Risk Domains",
       "phaseId": 18,
       "phaseName": "AI Safety & Ethics",
       "lessonNumber": 30,

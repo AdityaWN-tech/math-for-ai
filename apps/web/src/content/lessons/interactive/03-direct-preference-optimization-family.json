@@ -1,6 +1,6 @@
 {
   "id": "03-direct-preference-optimization-family",
-  "title": "Direct Preference Optimization Family",
+  "title": "DPO Family",
   "motto": "Rafailov et al. (2023) showed RLHF's optimum has a closed form in terms of the preference data, so you can skip the explicit reward model and optimize the policy directly. That insight spawned a family — IPO, KTO, SimPO, ORPO, BPO — each fixing a failure mode of DPO. In 2026, direct alignment algorithms ship more frontier post-training runs than PPO. But the over-optimization curve from Lesson 2 still applies: DAAs do not escape Goodhart, they just move where it bites.",
   "phase": {
     "id": 18,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Direct Preference Optimization Family: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "DPO, IPO, KTO — preference optimization without explicit reward models."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement direct_preference_optimizati",
+      "title": "Implement dpofam",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "direct_preference_optimizati.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(18, 3)==18003)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "dpofam.py",
+        "starter": "def pref_loss(chosen, rejected):\n    return -(chosen-rejected)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", pref_loss(2,1)<0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Direct Preference Optimization Family",
-        "description": "Completed interactive checkpoint for Direct Preference Optimization Family."
+        "name": "Pref loss sign",
+        "description": "Preference loss favors chosen."
       }
     },
     {
