@@ -1,0 +1,71 @@
+{
+  "id": "08-t5-bart-encoder-decoder",
+  "title": "T5 & BART",
+  "motto": "Encoders understand. Decoders generate. Put them back together and you get a model built for input → output tasks: translate, summarize, rewrite, transcribe.",
+  "phase": {
+    "id": 7,
+    "name": "Transformers Deep Dive",
+    "lessonNumber": 8
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Encoders understand. Decoders generate. Put them back together and you get a model built for input → output tasks: translate, summarize, rewrite, transcribe."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Decoder-only GPT and encoder-only BERT each strip down the 2017 architecture for a different goal. But many tasks are naturally input-output:",
+        "- Translation: English → French.\n- Summarization: 5,000-token article → 200-token summary.\n- Speech recognition: audio tokens → text tokens.\n- Structured extraction: prose → JSON."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Encoder-decoder transformers excel at seq2seq: summarize, translate, QA with a text-to-text frame."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement encdec",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "encdec.py",
+        "starter": "def seq2seq_prefix(task):\n    \"\"\"Return T5-style prefix.\"\"\"\n    # TODO: 'translate: ' etc\n    return task + \": \"\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", seq2seq_prefix(\"summarize\")==\"summarize: \")\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Text-to-text prefix",
+        "description": "You can frame tasks T5-style — one model, many tasks."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "04-positional-encoding",
+  "title": "Positional Encoding",
+  "motto": "Attention is permutation-invariant. \"The cat sat on the mat\" and \"mat the on sat cat the\" produce the same output without positional signal. Three algorithms fix it — each with a different bet on what \"position\" means.",
+  "phase": {
+    "id": 7,
+    "name": "Transformers Deep Dive",
+    "lessonNumber": 4
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Attention is permutation-invariant. \"The cat sat on the mat\" and \"mat the on sat cat the\" produce the same output without positional signal. Three algorithms fix it — each with a different bet on what \"position\" means."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Scaled dot-product attention is order-blind. The attention matrix `softmax(Q K^T / √d) V` is computed from pairwise similarities. Shuffle the rows of `X`, get the rows of the output shuffled the same way. Nothing inside attention cares about position.",
+        "That is not a bug in a bag-of-words model. For language, code, audio, video — anything where order carries meaning — it is fatal."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Attention is permutation-invariant without position info. Sinusoidal or learned embeddings add order."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement posenc",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "posenc.py",
+        "starter": "import math\n\ndef sin_pos(pos, i, d_model):\n    \"\"\"sin(pos / 10000^(2i/d_model)).\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n import math\n v=sin_pos(0,0,512)\n __check(\"fin\", v==v)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Sinusoidal PE",
+        "description": "You can compute positional encoding — original transformer recipe."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

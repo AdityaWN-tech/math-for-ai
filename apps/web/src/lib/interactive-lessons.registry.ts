@@ -67,9 +67,50 @@ import lesson_63 from "@/content/lessons/interactive/12-intro-to-jax.json";
 import lesson_64 from "@/content/lessons/interactive/13-debugging-neural-networks.json";
 import lesson_65 from "@/content/lessons/interactive/01-image-fundamentals.json";
 import lesson_66 from "@/content/lessons/interactive/02-convolutions-from-scratch.json";
-import lesson_67 from "@/content/lessons/interactive/01-prompt-engineering.json";
-import lesson_68 from "@/content/lessons/interactive/02-few-shot-cot.json";
-import lesson_69 from "@/content/lessons/interactive/03-structured-outputs.json";
+import lesson_67 from "@/content/lessons/interactive/03-cnns-lenet-to-resnet.json";
+import lesson_68 from "@/content/lessons/interactive/04-image-classification.json";
+import lesson_69 from "@/content/lessons/interactive/05-transfer-learning.json";
+import lesson_70 from "@/content/lessons/interactive/06-object-detection-yolo.json";
+import lesson_71 from "@/content/lessons/interactive/07-semantic-segmentation-unet.json";
+import lesson_72 from "@/content/lessons/interactive/08-instance-segmentation-mask-rcnn.json";
+import lesson_73 from "@/content/lessons/interactive/09-image-generation-gans.json";
+import lesson_74 from "@/content/lessons/interactive/10-image-generation-diffusion.json";
+import lesson_75 from "@/content/lessons/interactive/11-stable-diffusion.json";
+import lesson_76 from "@/content/lessons/interactive/12-video-understanding.json";
+import lesson_77 from "@/content/lessons/interactive/01-text-processing.json";
+import lesson_78 from "@/content/lessons/interactive/02-bag-of-words-tfidf.json";
+import lesson_79 from "@/content/lessons/interactive/03-word-embeddings-word2vec.json";
+import lesson_80 from "@/content/lessons/interactive/04-glove-fasttext-subword.json";
+import lesson_81 from "@/content/lessons/interactive/05-sentiment-analysis.json";
+import lesson_82 from "@/content/lessons/interactive/06-named-entity-recognition.json";
+import lesson_83 from "@/content/lessons/interactive/07-pos-tagging-parsing.json";
+import lesson_84 from "@/content/lessons/interactive/08-cnns-rnns-for-text.json";
+import lesson_85 from "@/content/lessons/interactive/09-sequence-to-sequence.json";
+import lesson_86 from "@/content/lessons/interactive/10-attention-mechanism.json";
+import lesson_87 from "@/content/lessons/interactive/01-why-transformers.json";
+import lesson_88 from "@/content/lessons/interactive/02-self-attention-from-scratch.json";
+import lesson_89 from "@/content/lessons/interactive/03-multi-head-attention.json";
+import lesson_90 from "@/content/lessons/interactive/04-positional-encoding.json";
+import lesson_91 from "@/content/lessons/interactive/05-full-transformer.json";
+import lesson_92 from "@/content/lessons/interactive/06-bert-masked-language-modeling.json";
+import lesson_93 from "@/content/lessons/interactive/07-gpt-causal-language-modeling.json";
+import lesson_94 from "@/content/lessons/interactive/08-t5-bart-encoder-decoder.json";
+import lesson_95 from "@/content/lessons/interactive/09-vision-transformers.json";
+import lesson_96 from "@/content/lessons/interactive/10-audio-transformers-whisper.json";
+import lesson_97 from "@/content/lessons/interactive/01-generative-models-taxonomy-history.json";
+import lesson_98 from "@/content/lessons/interactive/02-autoencoders-vae.json";
+import lesson_99 from "@/content/lessons/interactive/03-gans-generator-discriminator.json";
+import lesson_100 from "@/content/lessons/interactive/01-prompt-engineering.json";
+import lesson_101 from "@/content/lessons/interactive/02-few-shot-cot.json";
+import lesson_102 from "@/content/lessons/interactive/03-structured-outputs.json";
+import lesson_103 from "@/content/lessons/interactive/04-embeddings.json";
+import lesson_104 from "@/content/lessons/interactive/05-context-engineering.json";
+import lesson_105 from "@/content/lessons/interactive/06-rag.json";
+import lesson_106 from "@/content/lessons/interactive/07-advanced-rag.json";
+import lesson_107 from "@/content/lessons/interactive/08-fine-tuning-lora.json";
+import lesson_108 from "@/content/lessons/interactive/09-function-calling.json";
+import lesson_109 from "@/content/lessons/interactive/10-evaluation.json";
+import lesson_110 from "@/content/lessons/interactive/02-rag-over-codebase.json";
 
 export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "01-dev-environment": lesson_0 as Lesson,
@@ -139,7 +180,48 @@ export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "13-debugging-neural-networks": lesson_64 as Lesson,
   "01-image-fundamentals": lesson_65 as Lesson,
   "02-convolutions-from-scratch": lesson_66 as Lesson,
-  "01-prompt-engineering": lesson_67 as Lesson,
-  "02-few-shot-cot": lesson_68 as Lesson,
-  "03-structured-outputs": lesson_69 as Lesson,
+  "03-cnns-lenet-to-resnet": lesson_67 as Lesson,
+  "04-image-classification": lesson_68 as Lesson,
+  "05-transfer-learning": lesson_69 as Lesson,
+  "06-object-detection-yolo": lesson_70 as Lesson,
+  "07-semantic-segmentation-unet": lesson_71 as Lesson,
+  "08-instance-segmentation-mask-rcnn": lesson_72 as Lesson,
+  "09-image-generation-gans": lesson_73 as Lesson,
+  "10-image-generation-diffusion": lesson_74 as Lesson,
+  "11-stable-diffusion": lesson_75 as Lesson,
+  "12-video-understanding": lesson_76 as Lesson,
+  "01-text-processing": lesson_77 as Lesson,
+  "02-bag-of-words-tfidf": lesson_78 as Lesson,
+  "03-word-embeddings-word2vec": lesson_79 as Lesson,
+  "04-glove-fasttext-subword": lesson_80 as Lesson,
+  "05-sentiment-analysis": lesson_81 as Lesson,
+  "06-named-entity-recognition": lesson_82 as Lesson,
+  "07-pos-tagging-parsing": lesson_83 as Lesson,
+  "08-cnns-rnns-for-text": lesson_84 as Lesson,
+  "09-sequence-to-sequence": lesson_85 as Lesson,
+  "10-attention-mechanism": lesson_86 as Lesson,
+  "01-why-transformers": lesson_87 as Lesson,
+  "02-self-attention-from-scratch": lesson_88 as Lesson,
+  "03-multi-head-attention": lesson_89 as Lesson,
+  "04-positional-encoding": lesson_90 as Lesson,
+  "05-full-transformer": lesson_91 as Lesson,
+  "06-bert-masked-language-modeling": lesson_92 as Lesson,
+  "07-gpt-causal-language-modeling": lesson_93 as Lesson,
+  "08-t5-bart-encoder-decoder": lesson_94 as Lesson,
+  "09-vision-transformers": lesson_95 as Lesson,
+  "10-audio-transformers-whisper": lesson_96 as Lesson,
+  "01-generative-models-taxonomy-history": lesson_97 as Lesson,
+  "02-autoencoders-vae": lesson_98 as Lesson,
+  "03-gans-generator-discriminator": lesson_99 as Lesson,
+  "01-prompt-engineering": lesson_100 as Lesson,
+  "02-few-shot-cot": lesson_101 as Lesson,
+  "03-structured-outputs": lesson_102 as Lesson,
+  "04-embeddings": lesson_103 as Lesson,
+  "05-context-engineering": lesson_104 as Lesson,
+  "06-rag": lesson_105 as Lesson,
+  "07-advanced-rag": lesson_106 as Lesson,
+  "08-fine-tuning-lora": lesson_107 as Lesson,
+  "09-function-calling": lesson_108 as Lesson,
+  "10-evaluation": lesson_109 as Lesson,
+  "02-rag-over-codebase": lesson_110 as Lesson,
 };

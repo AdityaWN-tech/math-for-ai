@@ -1,0 +1,71 @@
+{
+  "id": "07-advanced-rag",
+  "title": "Advanced RAG",
+  "motto": "Basic RAG retrieves the top-k most similar chunks. That works for simple questions. It falls apart for multi-hop reasoning, ambiguous queries, and large corpora. Advanced RAG is the difference between a demo that works on 10 documents and a system that works on 10 million.",
+  "phase": {
+    "id": 11,
+    "name": "LLM Engineering",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Basic RAG retrieves the top-k most similar chunks. That works for simple questions. It falls apart for multi-hop reasoning, ambiguous queries, and large corpora. Advanced RAG is the difference between a demo that works on 10 documents and a system that works on 10 million."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You built a basic RAG pipeline in Lesson 06. It works for straightforward questions on a small corpus. Now try these:",
+        "**Ambiguous query**: \"What was revenue last quarter?\" Semantic search returns chunks about revenue strategy, revenue projections, and the CFO's thoughts on revenue growth. All semantically similar to the word \"revenue.\" None containing the actual number. The correct chunk says \"$47.2M in Q3 2025\" but uses the word \"earnings\" instead of \"revenue.\" The embedding model thinks \"revenue strategy\" is closer to the query than \"Q3 earnings were $47.2M.\""
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Hybrid search (BM25 + dense), rerankers, query rewriting. Production RAG stacks multiple retrieval stages."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement hybrid",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "hybrid.py",
+        "starter": "def rrf_score(rank, k=60):\n    \"\"\"Reciprocal rank fusion: 1/(k+rank).\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", rrf_score(1) > rrf_score(10))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "RRF fusion",
+        "description": "You can fuse ranked lists — hybrid retrieval merge."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "04-embeddings",
+  "title": "Embeddings",
+  "motto": "Text is discrete. Math is continuous. Every time you ask an LLM to find \"similar\" documents, compare meanings, or search beyond keywords, you're relying on a bridge between these two worlds. That bridge is an embedding. If you don't understand embeddings, you don't understand modern AI. You just use it.",
+  "phase": {
+    "id": 11,
+    "name": "LLM Engineering",
+    "lessonNumber": 4
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Text is discrete. Math is continuous. Every time you ask an LLM to find \"similar\" documents, compare meanings, or search beyond keywords, you're relying on a bridge between these two worlds. That bridge is an embedding. If you don't understand embeddings, you don't understand modern AI. You just use it."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have 10,000 support tickets. A customer writes \"my payment didn't go through.\" You need to find similar past tickets. Keyword search finds tickets containing \"payment\" and \"didn't go through.\" It misses \"transaction failed,\" \"charge was declined,\" and \"billing error.\" These tickets describe the exact same problem with completely different words.",
+        "This is the vocabulary mismatch problem. Human language has dozens of ways to say the same thing. Keyword search treats each word as an independent symbol with no meaning. It cannot know that \"declined\" and \"didn't go through\" refer to the same concept."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Embed documents and queries into the same space. Nearest neighbors by cosine = semantic search."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement embed",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "embed.py",
+        "starter": "def dot_similarity(a,b):\n    \"\"\"Dot product of equal-length vectors.\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", dot_similarity([1,0],[0.5,0])==0.5)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Embedding similarity",
+        "description": "You can rank docs by dot product — vector search baseline."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

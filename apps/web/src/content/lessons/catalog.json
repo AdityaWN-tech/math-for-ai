@@ -23,7 +23,7 @@
     19
   ],
   "lessonCount": 502,
-  "interactiveCount": 70,
+  "interactiveCount": 111,
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -630,11 +630,11 @@
     },
     {
       "id": "03-cnns-lenet-to-resnet",
-      "title": "Cnns Lenet To Resnet",
+      "title": "CNNs: LeNet to ResNet",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-cnns-lenet-to-resnet"
     },
     {
@@ -643,7 +643,7 @@
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-image-classification"
     },
     {
@@ -652,52 +652,52 @@
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-transfer-learning"
     },
     {
       "id": "06-object-detection-yolo",
-      "title": "Object Detection Yolo",
+      "title": "Object Detection (YOLO)",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-object-detection-yolo"
     },
     {
       "id": "07-semantic-segmentation-unet",
-      "title": "Semantic Segmentation Unet",
+      "title": "Semantic Segmentation (U-Net)",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-semantic-segmentation-unet"
     },
     {
       "id": "08-instance-segmentation-mask-rcnn",
-      "title": "Instance Segmentation Mask Rcnn",
+      "title": "Instance Segmentation",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-instance-segmentation-mask-rcnn"
     },
     {
       "id": "09-image-generation-gans",
-      "title": "Image Generation Gans",
+      "title": "Image Generation (GANs)",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-image-generation-gans"
     },
     {
       "id": "10-image-generation-diffusion",
-      "title": "Image Generation Diffusion",
+      "title": "Diffusion Models",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-image-generation-diffusion"
     },
     {
@@ -706,7 +706,7 @@
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-stable-diffusion"
     },
     {
@@ -715,7 +715,7 @@
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-video-understanding"
     },
     {
@@ -868,34 +868,34 @@
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-text-processing"
     },
     {
       "id": "02-bag-of-words-tfidf",
-      "title": "Bag Of Words Tfidf",
+      "title": "Bag of Words & TF-IDF",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-bag-of-words-tfidf"
     },
     {
       "id": "03-word-embeddings-word2vec",
-      "title": "Word Embeddings Word2vec",
+      "title": "Word2Vec",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-word-embeddings-word2vec"
     },
     {
       "id": "04-glove-fasttext-subword",
-      "title": "Glove Fasttext Subword",
+      "title": "GloVe & FastText",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-glove-fasttext-subword"
     },
     {
@@ -904,7 +904,7 @@
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-sentiment-analysis"
     },
     {
@@ -913,34 +913,34 @@
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-named-entity-recognition"
     },
     {
       "id": "07-pos-tagging-parsing",
-      "title": "Pos Tagging Parsing",
+      "title": "POS Tagging & Parsing",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-pos-tagging-parsing"
     },
     {
       "id": "08-cnns-rnns-for-text",
-      "title": "Cnns Rnns For Text",
+      "title": "CNNs & RNNs for Text",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-cnns-rnns-for-text"
     },
     {
       "id": "09-sequence-to-sequence",
-      "title": "Sequence To Sequence",
+      "title": "Sequence-to-Sequence",
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-sequence-to-sequence"
     },
     {
@@ -949,7 +949,7 @@
       "phaseId": 5,
       "phaseName": "NLP Foundations to Advanced",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-attention-mechanism"
     },
     {
@@ -1282,25 +1282,25 @@
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-why-transformers"
     },
     {
       "id": "02-self-attention-from-scratch",
-      "title": "Self Attention From Scratch",
+      "title": "Self-Attention from Scratch",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-self-attention-from-scratch"
     },
     {
       "id": "03-multi-head-attention",
-      "title": "Multi Head Attention",
+      "title": "Multi-Head Attention",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-multi-head-attention"
     },
     {
@@ -1309,7 +1309,7 @@
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-positional-encoding"
     },
     {
@@ -1318,52 +1318,52 @@
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-full-transformer"
     },
     {
       "id": "06-bert-masked-language-modeling",
-      "title": "Bert Masked Language Modeling",
+      "title": "BERT & MLM",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-bert-masked-language-modeling"
     },
     {
       "id": "07-gpt-causal-language-modeling",
-      "title": "Gpt Causal Language Modeling",
+      "title": "GPT & Causal LM",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-gpt-causal-language-modeling"
     },
     {
       "id": "08-t5-bart-encoder-decoder",
-      "title": "T5 Bart Encoder Decoder",
+      "title": "T5 & BART",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-t5-bart-encoder-decoder"
     },
     {
       "id": "09-vision-transformers",
-      "title": "Vision Transformers",
+      "title": "Vision Transformers (ViT)",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-vision-transformers"
     },
     {
       "id": "10-audio-transformers-whisper",
-      "title": "Audio Transformers Whisper",
+      "title": "Audio Transformers (Whisper)",
       "phaseId": 7,
       "phaseName": "Transformers Deep Dive",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-audio-transformers-whisper"
     },
     {
@@ -1422,29 +1422,29 @@
     },
     {
       "id": "01-generative-models-taxonomy-history",
-      "title": "Generative Models Taxonomy History",
+      "title": "Generative Models Taxonomy",
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-generative-models-taxonomy-history"
     },
     {
       "id": "02-autoencoders-vae",
-      "title": "Autoencoders Vae",
+      "title": "VAEs",
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-autoencoders-vae"
     },
     {
       "id": "03-gans-generator-discriminator",
-      "title": "Gans Generator Discriminator",
+      "title": "GANs",
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-gans-generator-discriminator"
     },
     {
@@ -1903,7 +1903,7 @@
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-embeddings"
     },
     {
@@ -1912,34 +1912,34 @@
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-context-engineering"
     },
     {
       "id": "06-rag",
-      "title": "Rag",
+      "title": "RAG",
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-rag"
     },
     {
       "id": "07-advanced-rag",
-      "title": "Advanced Rag",
+      "title": "Advanced RAG",
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-advanced-rag"
     },
     {
       "id": "08-fine-tuning-lora",
-      "title": "Fine Tuning Lora",
+      "title": "Fine-Tuning & LoRA",
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-fine-tuning-lora"
     },
     {
@@ -1948,16 +1948,16 @@
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-function-calling"
     },
     {
       "id": "10-evaluation",
-      "title": "Evaluation",
+      "title": "LLM Evaluation",
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-evaluation"
     },
     {
@@ -3789,11 +3789,11 @@
     },
     {
       "id": "02-rag-over-codebase",
-      "title": "Rag Over Codebase",
+      "title": "RAG over Codebase",
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-rag-over-codebase"
     },
     {

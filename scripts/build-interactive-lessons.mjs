@@ -6,6 +6,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import BATCH2 from "./interactive-specs-batch2.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -812,7 +813,11 @@ const PHASE_NAMES = {
   2: "ML Fundamentals",
   3: "Deep Learning Core",
   4: "Computer Vision",
+  5: "NLP Foundations to Advanced",
+  7: "Transformers Deep Dive",
+  8: "Generative AI",
   11: "LLM Engineering",
+  19: "Capstone Projects",
 };
 
 const CATALOG_PATH = path.join(ROOT, "apps/web/src/content/lessons/catalog.json");
@@ -927,7 +932,7 @@ async function main() {
   await fs.mkdir(OUT, { recursive: true });
   const manifest = [];
 
-  for (const spec of SPECS) {
+  for (const spec of [...SPECS, ...BATCH2]) {
     const compiled = await loadCompiled(spec.id);
     const lesson = buildLesson(spec, compiled);
     const outPath = path.join(OUT, `${spec.id}.json`);
