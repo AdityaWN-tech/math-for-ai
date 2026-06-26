@@ -1,0 +1,32 @@
+{
+  "id": "21-tool-registry-schema-validation",
+  "title": "Tool Registry Schema Validation",
+  "motto": "A tool the agent cannot validate is a tool the agent cannot call. Build the registry and the schema checker before you build the tools.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 21
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A tool the agent cannot validate is a tool the agent cannot call. Build the registry and the schema checker before you build the tools."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/21-tool-registry-schema-validation",
+    "interactive": false
+  }
+}

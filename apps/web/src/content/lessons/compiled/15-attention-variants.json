@@ -1,0 +1,44 @@
+{
+  "id": "15-attention-variants",
+  "title": "Attention Variants",
+  "motto": "Full attention is a circle. Every token sees every token, and memory pays the price. Four variants bend the shape of the circle and recover half the cost.",
+  "phase": {
+    "id": 7,
+    "name": "Transformers Deep Dive",
+    "lessonNumber": 15
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Full attention is a circle. Every token sees every token, and memory pays the price. Four variants bend the shape of the circle and recover half the cost."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Full attention costs `O(N²)` memory and `O(N²)` compute in sequence length. For a 128K-context Llama 3 70B that is 16 billion attention entries per layer, times 80 layers. Flash Attention (Lesson 12) hides the `O(N²)` activation memory but does not change the arithmetic cost — every token still attends to every other token.",
+        "Three classes of variants change the topology of the attention matrix itself:",
+        "1. **Sliding window attention (SWA).** Each token attends to a fixed window of neighbors, not the full prefix. Memory and compute drop to `O(N · W)` where `W` is the window. Gemma 2/3, Mistral 7B's first layers, Phi-3-Long.\n2. **Sparse / block attention.** Only selected pairs `(i, j)` get scored; the rest are forced to zero weight. Longformer, BigBird, OpenAI sparse transformer.\n3. **Differential attention.** Compute two attention maps with separate Q/K projections, subtract one from the other. Kills the \"attention sink\" that bleeds weight into the first few tokens. Microsoft's DIFF Transformer (2024)."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/07-transformers-deep-dive/15-attention-variants",
+    "interactive": false
+  }
+}

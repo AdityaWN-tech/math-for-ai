@@ -1,0 +1,52 @@
+{
+  "id": "13-scaling-laws",
+  "title": "Scaling Laws",
+  "motto": "The 2020 Kaplan paper said: bigger model, lower loss. The 2022 Hoffmann paper said: you were under-training. Compute goes into two buckets — parameters and tokens — and the split is not obvious.",
+  "phase": {
+    "id": 7,
+    "name": "Transformers Deep Dive",
+    "lessonNumber": 13
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The 2020 Kaplan paper said: bigger model, lower loss. The 2022 Hoffmann paper said: you were under-training. Compute goes into two buckets — parameters and tokens — and the split is not obvious."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "When you have C FLOPs of training compute and want the best model, you face two knobs:",
+        "1. **How many parameters (N)?** Bigger model, higher capacity.\n2. **How many training tokens (D)?** More data, better use of capacity.",
+        "FLOPs scale approximately as `6 × N × D`. You can push N up and D down, or D up and N down. Which is better?"
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "![Chinchilla curves: loss vs compute at various N/D ratios](../assets/scaling-laws.svg)"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/07-transformers-deep-dive/13-scaling-laws",
+    "interactive": false
+  }
+}

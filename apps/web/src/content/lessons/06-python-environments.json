@@ -1,0 +1,67 @@
+{
+  "id": "06-python-environments",
+  "title": "Python Environments",
+  "motto": "Dependency hell is real. Virtual environments are the cure.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 6 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Dependency hell is real. Virtual environments are the cure."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "One torch version per project",
+      "cards": [
+        "Project A needs PyTorch 2.4 + CUDA 12.4. Project B pins 2.1 + CUDA 11.8. A global pip install breaks one of them every time.",
+        "Every project gets an isolated .venv with its own packages. Commit pyproject.toml + lockfile — never commit .venv/."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "uv, venv, conda",
+      "body": "uv is fastest for most work. venv ships with Python. conda when you need CUDA toolkits without system installs. Rule: don't mix pip and conda in the same env."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement parse_requirement",
+      "body": "Parse a single requirements line like 'numpy>=1.26' or 'torch' into (name, min_version). min_version is None when unpinned.",
+      "code": {
+        "language": "python",
+        "filename": "requirements.py",
+        "starter": "def parse_requirement(line):\n    \"\"\"Return (package_name, min_version_or_None).\"\"\"\n    line = line.strip()\n    # TODO: handle >= and bare names\n    return (None, None)\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    __check(\"pinned\", parse_requirement(\"numpy>=1.26\") == (\"numpy\", \"1.26\"))\n    __check(\"bare\", parse_requirement(\"torch\") == (\"torch\", None))\n    __check(\"spaces\", parse_requirement(\"  matplotlib>=3.8  \") == (\"matplotlib\", \"3.8\"))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Reproducible environments",
+        "description": "You can create per-phase venvs, parse requirements, and avoid the global-install mistakes that break CUDA builds."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "34-repo-memory-and-state",
+  "title": "Repo Memory And State",
+  "motto": "Chat history is volatile. The repo is durable. The workbench stores agent state in versioned files so the next session, the next agent, and the next reviewer all read from the same source of truth.",
+  "phase": {
+    "id": 14,
+    "name": "Agent Engineering",
+    "lessonNumber": 34
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Chat history is volatile. The repo is durable. The workbench stores agent state in versioned files so the next session, the next agent, and the next reviewer all read from the same source of truth."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "The agent finishes a session. The chat closes. The next session opens and asks where to start. The model says \"let me check the files,\" reads stale notes, and re-does work that was already complete. Or worse, it rewrites a finished file because no one told it the file was finished.",
+        "The workbench fix is repo memory: state lives in JSON files in the repo, written under a schema, persisted atomically, diff-friendly in code review. Chat is a transient feed; the repo is the system of record."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/14-agent-engineering/34-repo-memory-and-state",
+    "interactive": false
+  }
+}

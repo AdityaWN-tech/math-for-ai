@@ -1,0 +1,44 @@
+{
+  "id": "01-why-multi-agent",
+  "title": "Why Multi Agent",
+  "motto": "One agent hits a wall. The smart move is not a bigger agent - it is more agents.",
+  "phase": {
+    "id": 16,
+    "name": "Multi-Agent & Swarms",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "One agent hits a wall. The smart move is not a bigger agent - it is more agents."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You built a single agent in Phase 14. It works. It can read files, run commands, call APIs, and reason about results. Then you point it at a real codebase: 200 files, three languages, tests that depend on infrastructure, and a requirement to research external APIs before writing code.",
+        "The agent chokes. Not because the LLM is dumb, but because the task exceeds what one agent loop can handle. The context window fills up with file contents. The agent forgets what it read 40 tool calls ago. It tries to be a researcher, a coder, and a reviewer all at once, and does all three poorly.",
+        "This is the single-agent ceiling. You hit it every time a task requires:"
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/16-multi-agent-and-swarms/01-why-multi-agent",
+    "interactive": false
+  }
+}

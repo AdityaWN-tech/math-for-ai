@@ -1,0 +1,67 @@
+{
+  "id": "04-apis-and-keys",
+  "title": "APIs & Keys",
+  "motto": "Every AI API works the same way: send a request, get a response. The details change, the pattern doesn't.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 4 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every AI API works the same way: send a request, get a response. The details change, the pattern doesn't."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Keys before agents",
+      "cards": [
+        "From Phase 11 you'll call LLM APIs in loops. Agents in Phases 13–16 depend on authenticated HTTP requests with rate limits and token billing.",
+        "Never commit API keys. Use environment variables or .env files (gitignored). Understand raw HTTP before relying on SDK magic."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "Request anatomy",
+      "body": "Every call has an endpoint URL, an API key header, a JSON request body, and a JSON response. SDKs wrap this — debugging starts at the HTTP layer."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement mask_secret",
+      "body": "Log and UI must never print full API keys. mask_secret(secret, visible=4) keeps first/last N chars, masks the middle with asterisks.",
+      "code": {
+        "language": "python",
+        "filename": "secrets.py",
+        "starter": "def mask_secret(secret, visible=4):\n    \"\"\"Mask middle of secret; keep first/last `visible` chars.\"\"\"\n    if len(secret) <= visible * 2:\n        return \"*\" * len(secret)\n    # TODO: middle mask\n    return secret\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    m = mask_secret(\"sk-ant-api03-abcdefghijklmnop\", 4)\n    __check(\"starts\", m.startswith(\"sk-a\"))\n    __check(\"ends\", m.endswith(\"mnop\"))\n    __check(\"masked\", \"*\" in m[4:-4])\n    __check(\"short\", mask_secret(\"abc\", 4) == \"***\")\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "API key hygiene",
+        "description": "You can store keys in env vars, mask them in logs, and read auth errors without leaking credentials."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

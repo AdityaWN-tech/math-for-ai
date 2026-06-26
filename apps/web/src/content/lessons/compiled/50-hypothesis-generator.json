@@ -1,0 +1,32 @@
+{
+  "id": "50-hypothesis-generator",
+  "title": "Hypothesis Generator",
+  "motto": "A research agent that asks the same question twice is wasting tokens. The trick is forcing each draft to land somewhere new.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 50
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A research agent that asks the same question twice is wasting tokens. The trick is forcing each draft to land somewhere new."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/50-hypothesis-generator",
+    "interactive": false
+  }
+}

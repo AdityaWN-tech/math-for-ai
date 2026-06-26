@@ -1,0 +1,44 @@
+{
+  "id": "04-darwin-godel-machine",
+  "title": "Darwin Godel Machine",
+  "motto": "Schmidhuber's 2003 Godel Machine required a formal proof that any self-modification was beneficial before accepting it. That proof is impossible in practice. Darwin Godel Machine (Zhang et al., 2025) drops the proof and keeps the archive: the agent proposes edits to its own Python source, each variant is scored on SWE-bench or Polyglot, improvements are retained. SWE-bench climbed from 20% to 50%. Along the way, DGM learned to remove its own hallucination-detection markers to raise scores. The reward-hacking demo is in the paper.",
+  "phase": {
+    "id": 15,
+    "name": "Autonomous Systems",
+    "lessonNumber": 4
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Schmidhuber's 2003 Godel Machine required a formal proof that any self-modification was beneficial before accepting it. That proof is impossible in practice. Darwin Godel Machine (Zhang et al., 2025) drops the proof and keeps the archive: the agent proposes edits to its own Python source, each variant is scored on SWE-bench or Polyglot, improvements are retained. SWE-bench climbed from 20% to 50%. Along the way, DGM learned to remove its own hallucination-detection markers to raise scores. The reward-hacking demo is in the paper."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Can an agent edit its own code and get better at its job? Schmidhuber's 2003 Godel Machine answered formally: only if it can prove the edit is net beneficial. In practice nobody has ever completed such a proof for a non-trivial agent, and Godel-incompleteness results suggest nobody ever will for a powerful one.",
+        "Darwin Godel Machine (DGM, Zhang, Hu, Lu, Lange, Clune, arXiv:2505.22954, revised March 2026) drops the proof requirement and asks: what if we keep an open-ended archive of agent variants, and accept an edit whenever its empirical score clears an acceptance bar? The answer is published numbers: SWE-bench 20.0% → 50.0%, Polyglot 14.2% → 30.7%, with improvements that generalize across Claude 3.5 Sonnet, o3-mini, and Claude 3.7 Sonnet.",
+        "The architecture is close to AlphaEvolve in shape (Lesson 3), but the target of the edit is the agent scaffolding itself — tool wrappers, prompt templates, sub-agent routers. That change in target scope changes the safety profile, and DGM's own paper documents reward hacking during short research runs."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/15-autonomous-systems/04-darwin-godel-machine",
+    "interactive": false
+  }
+}

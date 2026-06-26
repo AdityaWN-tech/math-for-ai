@@ -1,0 +1,44 @@
+{
+  "id": "01-tokenizers",
+  "title": "Tokenizers",
+  "motto": "Your LLM does not read English. It reads integers. The tokenizer decides whether those integers carry meaning or waste it.",
+  "phase": {
+    "id": 10,
+    "name": "LLMs from Scratch",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your LLM does not read English. It reads integers. The tokenizer decides whether those integers carry meaning or waste it."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Your LLM does not read English. It does not read any language. It reads numbers.",
+        "The gap between \"Hello, world!\" and [15496, 11, 995, 0] is the tokenizer. Every word, every space, every punctuation mark must be converted into an integer before a model can process it. This conversion is not neutral. It bakes assumptions into the model that cannot be undone later.",
+        "Get this wrong and your model wastes capacity encoding common words with multiple tokens. \"unfortunately\" becomes four tokens instead of one. Your 128K context window just shrank by 75% for text heavy in multi-syllable words. Get it right and the same context window holds twice as much meaning. The difference between \"this model handles code well\" and \"this model chokes on Python\" often comes down to how the tokenizer was trained."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/10-llms-from-scratch/01-tokenizers",
+    "interactive": false
+  }
+}

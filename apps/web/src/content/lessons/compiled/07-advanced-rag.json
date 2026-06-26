@@ -1,0 +1,44 @@
+{
+  "id": "07-advanced-rag",
+  "title": "Advanced Rag",
+  "motto": "Basic RAG retrieves the top-k most similar chunks. That works for simple questions. It falls apart for multi-hop reasoning, ambiguous queries, and large corpora. Advanced RAG is the difference between a demo that works on 10 documents and a system that works on 10 million.",
+  "phase": {
+    "id": 11,
+    "name": "LLM Engineering",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Basic RAG retrieves the top-k most similar chunks. That works for simple questions. It falls apart for multi-hop reasoning, ambiguous queries, and large corpora. Advanced RAG is the difference between a demo that works on 10 documents and a system that works on 10 million."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You built a basic RAG pipeline in Lesson 06. It works for straightforward questions on a small corpus. Now try these:",
+        "**Ambiguous query**: \"What was revenue last quarter?\" Semantic search returns chunks about revenue strategy, revenue projections, and the CFO's thoughts on revenue growth. All semantically similar to the word \"revenue.\" None containing the actual number. The correct chunk says \"$47.2M in Q3 2025\" but uses the word \"earnings\" instead of \"revenue.\" The embedding model thinks \"revenue strategy\" is closer to the query than \"Q3 earnings were $47.2M.\"",
+        "**Multi-hop question**: \"Which team had the highest customer satisfaction score improvement?\" This requires finding the satisfaction scores for each team, comparing them, and identifying the maximum. No single chunk contains the answer. The information is scattered across team reports."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/11-llm-engineering/07-advanced-rag",
+    "interactive": false
+  }
+}

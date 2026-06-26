@@ -1,0 +1,32 @@
+{
+  "id": "84-refusal-evaluation",
+  "title": "Refusal Evaluation",
+  "motto": "Helpfulness on benign prompts and refusal on harmful prompts are two metrics, not one. Measure both.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 84
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Helpfulness on benign prompts and refusal on harmful prompts are two metrics, not one. Measure both."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/84-refusal-evaluation",
+    "interactive": false
+  }
+}

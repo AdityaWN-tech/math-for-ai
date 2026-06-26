@@ -1,0 +1,67 @@
+{
+  "id": "05-jupyter-notebooks",
+  "title": "Jupyter Notebooks",
+  "motto": "Notebooks are where ideas start. Scripts are where products ship.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 5 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Notebooks are where ideas start. Scripts are where products ship."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Explore vs ship",
+      "cards": [
+        "Upstream lessons use Jupyter for exploration — plot a loss curve, tweak a hyperparameter, visualize attention. The platform shell replaces tab-switching with one continuous flow.",
+        "You'll read notebook-shaped narratives here, then build in the editor pane. Knowing cell structure helps when you export to .py for production."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "Notebook structure",
+      "body": "A notebook is an ordered list of cells: markdown (narrative), code (executable), raw. The kernel runs code cells top-to-bottom; state persists until restart."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement count_code_cells",
+      "body": "Given a list of cell dicts with cell_type ('code' | 'markdown'), return how many are code cells — the same check you'd run before exporting a notebook to a script.",
+      "code": {
+        "language": "python",
+        "filename": "notebook_utils.py",
+        "starter": "def count_code_cells(cells):\n    \"\"\"cells: list of dicts with 'cell_type' key.\"\"\"\n    # TODO\n    return 0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    cells = [\n        {\"cell_type\": \"markdown\"},\n        {\"cell_type\": \"code\"},\n        {\"cell_type\": \"code\"},\n        {\"cell_type\": \"markdown\"},\n    ]\n    __check(\"count\", count_code_cells(cells) == 2)\n    __check(\"empty\", count_code_cells([]) == 0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Notebook literacy",
+        "description": "You can inspect notebook structure and know when to stay in Jupyter vs export to a deployable Python module."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "01-text-processing",
+  "title": "Text Processing",
+  "motto": "Language is continuous. Models are discrete. Preprocessing is the bridge.",
+  "phase": {
+    "id": 5,
+    "name": "NLP Foundations to Advanced",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Language is continuous. Models are discrete. Preprocessing is the bridge."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "A model cannot read \"The cats were running.\" It reads integers.",
+        "Every NLP system opens with the same three questions. Where does a word start. What is the root of the word. How do we treat \"run\", \"running\", \"ran\" as the same thing when it helps, and as different things when it doesn't.",
+        "Get tokenization wrong and the model learns from garbage. If your tokenizer treats `don't` as one token but `do n't` as two, the training distribution splits. If your stemmer collapses `organization` and `organ` to the same stem, topic modeling dies. If your lemmatizer needs part-of-speech context but you don't pass it, verbs get treated as nouns."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Three operations. Each has a job and a failure mode."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/05-nlp-foundations-to-advanced/01-text-processing",
+    "interactive": false
+  }
+}

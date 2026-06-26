@@ -1,0 +1,44 @@
+{
+  "id": "19-benchmarks-swebench-gaia",
+  "title": "Benchmarks Swebench Gaia",
+  "motto": "Three benchmarks anchor agent evaluation in 2026. SWE-bench tests code patching. GAIA tests generalist tool use. AgentBench tests multi-environment reasoning. Know their composition, their contamination story, and what they do not measure.",
+  "phase": {
+    "id": 14,
+    "name": "Agent Engineering",
+    "lessonNumber": 19
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Three benchmarks anchor agent evaluation in 2026. SWE-bench tests code patching. GAIA tests generalist tool use. AgentBench tests multi-environment reasoning. Know their composition, their contamination story, and what they do not measure."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Leaderboards tell you which model wins on one benchmark. They do not tell you:",
+        "- Whether the benchmark is contaminated (solutions in training data, test leakage).\n- Whether the benchmark measures what you care about (code vs browsing vs generalist).\n- Whether the evaluator is robust (AST matching, state checks, human review).",
+        "Know the three anchoring benchmarks and their failure modes before you quote a number."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/14-agent-engineering/19-benchmarks-swebench-gaia",
+    "interactive": false
+  }
+}

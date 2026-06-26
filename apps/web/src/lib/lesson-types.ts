@@ -61,5 +61,7 @@ export interface LessonCatalogEntry {
 export interface LessonCatalog {
   generatedAt: string;
   phases?: number[];
+  lessonCount?: number;
+  interactiveCount?: number;
   lessons: LessonCatalogEntry[];
 }

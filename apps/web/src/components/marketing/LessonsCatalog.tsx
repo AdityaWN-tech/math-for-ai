@@ -8,9 +8,11 @@ import type { LessonCatalogEntry } from "@/lib/lesson-types";
 
 interface LessonsCatalogProps {
   phases: [number, LessonCatalogEntry[]][];
+  lessonCount: number;
+  interactiveCount: number;
 }
 
-export function LessonsCatalog({ phases }: LessonsCatalogProps) {
+export function LessonsCatalog({ phases, lessonCount, interactiveCount }: LessonsCatalogProps) {
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [totalDone, setTotalDone] = useState(0);
 
@@ -27,39 +29,56 @@ export function LessonsCatalog({ phases }: LessonsCatalogProps) {
 
   return (
     <>
-      <p className="mt-2 font-mono text-sm text-[var(--ink-mute)]">
-        {totalDone} lesson{totalDone === 1 ? "" : "s"} completed locally
-      </p>
+      <div className="mt-4 flex flex-wrap gap-3 font-mono text-xs text-[var(--ink-mute)]">
+        <span className="rounded border border-[var(--rule-soft)] px-2 py-1">
+          {lessonCount} lessons · Phases 0–19
+        </span>
+        <span className="rounded border border-[var(--blueprint)] bg-[var(--blueprint-tint)] px-2 py-1 text-[var(--blueprint)]">
+          {interactiveCount} interactive
+        </span>
+        <span>
+          {totalDone} completed locally
+        </span>
+      </div>
 
-      {phases.map(([phaseId, lessons]) => (
-        <section key={phaseId} className="mt-10">
-          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-mute)]">
-            Phase {String(phaseId).padStart(2, "0")} — {lessons[0]?.phaseName}
-          </h2>
-          <ul className="mt-4 divide-y divide-[var(--rule-soft)] rounded-md border border-[var(--rule-soft)] bg-[var(--bg-surface)]">
-            {lessons.map((lesson) => (
-              <li key={lesson.id} className="flex items-center justify-between gap-4 px-4 py-3">
-                <div>
-                  <p className="font-body font-medium">
-                    {String(lesson.lessonNumber).padStart(2, "0")}. {lesson.title}
-                    {completed[lesson.id] && (
-                      <span className="ml-2 font-mono text-[10px] text-[var(--blueprint)]">✓ done</span>
-                    )}
-                  </p>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-mute)]">
-                    {lesson.interactive ? "Interactive" : "Preview"}
-                  </p>
-                </div>
-                <Link href={lesson.path}>
-                  <Button variant={lesson.interactive ? "primary" : "secondary"} size="sm">
-                    Open
-                  </Button>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
+      {phases.map(([phaseId, lessons]) => {
+        const interactiveInPhase = lessons.filter((l) => l.interactive).length;
+        return (
+          <section key={phaseId} className="mt-10">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-mute)]">
+                Phase {String(phaseId).padStart(2, "0")} — {lessons[0]?.phaseName}
+              </h2>
+              <span className="font-mono text-[10px] text-[var(--ink-mute)]">
+                {lessons.length} lessons
+                {interactiveInPhase > 0 ? ` · ${interactiveInPhase} interactive` : " · preview"}
+              </span>
+            </div>
+            <ul className="mt-4 divide-y divide-[var(--rule-soft)] rounded-md border border-[var(--rule-soft)] bg-[var(--bg-surface)]">
+              {lessons.map((lesson) => (
+                <li key={lesson.id} className="flex items-center justify-between gap-4 px-4 py-3">
+                  <div>
+                    <p className="font-body font-medium">
+                      {String(lesson.lessonNumber).padStart(2, "0")}. {lesson.title}
+                      {completed[lesson.id] && (
+                        <span className="ml-2 font-mono text-[10px] text-[var(--blueprint)]">✓ done</span>
+                      )}
+                    </p>
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-mute)]">
+                      {lesson.interactive ? "Interactive" : "Preview"}
+                    </p>
+                  </div>
+                  <Link href={lesson.path}>
+                    <Button variant={lesson.interactive ? "primary" : "secondary"} size="sm">
+                      Open
+                    </Button>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
     </>
   );
 }

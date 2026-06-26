@@ -1,0 +1,42 @@
+{
+  "id": "28-orchestration-patterns",
+  "title": "Orchestration Patterns",
+  "motto": "Four orchestration patterns recur across 2026 frameworks: supervisor-worker, swarm / peer-to-peer, hierarchical, debate. Anthropic's guidance: \"It's about building the right system for your needs.\" Start simple; add topology only when a single agent plus five workflow patterns is insufficient.",
+  "phase": {
+    "id": 14,
+    "name": "Agent Engineering",
+    "lessonNumber": 28
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Four orchestration patterns recur across 2026 frameworks: supervisor-worker, swarm / peer-to-peer, hierarchical, debate. Anthropic's guidance: \"It's about building the right system for your needs.\" Start simple; add topology only when a single agent plus five workflow patterns is insufficient."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Teams reach for \"multi-agent\" before they need it. Four patterns recur across frameworks; once you can name them, you can pick the right one — or skip topology entirely."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/14-agent-engineering/28-orchestration-patterns",
+    "interactive": false
+  }
+}

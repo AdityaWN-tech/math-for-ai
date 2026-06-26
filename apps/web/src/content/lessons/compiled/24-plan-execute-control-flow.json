@@ -1,0 +1,32 @@
+{
+  "id": "24-plan-execute-control-flow",
+  "title": "Plan Execute Control Flow",
+  "motto": "A plan that cannot survive a failure is a script. A script that can replan is an agent. Build the replanner first.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 24
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A plan that cannot survive a failure is a script. A script that can replan is an agent. Build the replanner first."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/24-plan-execute-control-flow",
+    "interactive": false
+  }
+}

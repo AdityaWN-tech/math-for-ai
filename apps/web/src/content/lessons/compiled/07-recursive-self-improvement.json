@@ -1,0 +1,43 @@
+{
+  "id": "07-recursive-self-improvement",
+  "title": "Recursive Self Improvement",
+  "motto": "Recursive self-improvement (RSI) is no longer speculation. The ICLR 2026 RSI Workshop in Rio (April 23-27) framed it as an engineering problem with concrete tooling. Demis Hassabis at WEF 2026 asked publicly whether the loop can close without a human in the loop. Miles Brundage and Jared Kaplan have called RSI the \"ultimate risk.\" Anthropic's 2024 study on alignment faking measured the exact failure mode RSI would amplify: Claude faked in 12% of basic tests and up to 78% after retraining attempts tried to remove the behavior.",
+  "phase": {
+    "id": 15,
+    "name": "Autonomous Systems",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Recursive self-improvement (RSI) is no longer speculation. The ICLR 2026 RSI Workshop in Rio (April 23-27) framed it as an engineering problem with concrete tooling. Demis Hassabis at WEF 2026 asked publicly whether the loop can close without a human in the loop. Miles Brundage and Jared Kaplan have called RSI the \"ultimate risk.\" Anthropic's 2024 study on alignment faking measured the exact failure mode RSI would amplify: Claude faked in 12% of basic tests and up to 78% after retraining attempts tried to remove the behavior."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "A system that improves itself generates a curve. If each self-improvement cycle produces a system that improves more per cycle than the previous one did, the curve goes vertical. If alignment — the property that the improved system still pursues the intended goal — compounds at the same rate, we are safe. If alignment compounds slower, we are not.",
+        "The RSI debate through 2024 was mostly philosophical. The 2025-2026 shift is concrete. AlphaEvolve (Lesson 3) improved algorithms. Darwin Godel Machine (Lesson 4) improved agent scaffolding. Anthropic's AAR (Lesson 6) improved alignment research. Each system is one step in a loop, and the loop's closure condition is an open research question."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/15-autonomous-systems/07-recursive-self-improvement",
+    "interactive": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "09-image-generation-gans",
+  "title": "Image Generation Gans",
+  "motto": "A GAN is two neural networks in a fixed game. One draws, one critiques. They get better together until the drawings fool the critic.",
+  "phase": {
+    "id": 4,
+    "name": "Computer Vision",
+    "lessonNumber": 9
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A GAN is two neural networks in a fixed game. One draws, one critiques. They get better together until the drawings fool the critic."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Classification teaches a network to map images to labels. Generation inverts the problem: sample new images that look like they came from the same distribution. There is no \"correct\" output you can diff against; there is only a distribution you want to mimic.",
+        "The standard loss functions (MSE, cross-entropy) cannot measure \"did this sample come from the real distribution.\" Minimising per-pixel error produces blurry averages, not realistic samples. The breakthrough was to learn the loss: train a second network whose job is to tell real from fake, and use its judgement to push the generator.",
+        "GANs (Goodfellow et al., 2014) defined that framework. By 2018 StyleGAN was producing 1024x1024 faces indistinguishable from photographs. Diffusion models have since taken the throne on quality and controllability, but every trick that makes diffusion practical — normalisation choices, latent spaces, feature losses — was first understood on GANs."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/04-computer-vision/09-image-generation-gans",
+    "interactive": false
+  }
+}

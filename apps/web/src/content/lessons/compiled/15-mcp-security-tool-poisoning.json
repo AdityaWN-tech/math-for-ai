@@ -1,0 +1,44 @@
+{
+  "id": "15-mcp-security-tool-poisoning",
+  "title": "Mcp Security Tool Poisoning",
+  "motto": "Tool descriptions land in the model's context verbatim. Malicious servers embed hidden instructions that users never see. Research in 2025-2026 from Invariant Labs, Unit 42, and an arXiv study published March 2026 measured attack-success rates above 70 percent on frontier models and about 85 percent against state-of-the-art defenses under adaptive attacks. This lesson names the seven concrete attack classes and builds a tool-poisoning detector you can run in CI.",
+  "phase": {
+    "id": 13,
+    "name": "Tools & Protocols",
+    "lessonNumber": 15
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Tool descriptions land in the model's context verbatim. Malicious servers embed hidden instructions that users never see. Research in 2025-2026 from Invariant Labs, Unit 42, and an arXiv study published March 2026 measured attack-success rates above 70 percent on frontier models and about 85 percent against state-of-the-art defenses under adaptive attacks. This lesson names the seven concrete attack classes and builds a tool-poisoning detector you can run in CI."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Tool descriptions are part of the prompt. Any text the server puts in a description is read by the model as if it were instructions from the user. A malicious or compromised server can write:",
+        "Research studies (arXiv 2603.22489, Invariant Labs notifications, Unit 42 attack vectors) measured:",
+        "- **Frontier models with no defense.** 70 to 90 percent compliance with hidden-instruction tool descriptions.\n- **With MELON defense (masked re-execution + tool comparison).** >99 percent indirect-injection detection.\n- **Against adaptive attackers.** ~85 percent attack success even against state-of-the-art defenses, per a March 2026 arXiv paper."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/13-tools-and-protocols/15-mcp-security-tool-poisoning",
+    "interactive": false
+  }
+}

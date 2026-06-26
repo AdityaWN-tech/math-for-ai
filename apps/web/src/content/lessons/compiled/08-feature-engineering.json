@@ -1,0 +1,44 @@
+{
+  "id": "08-feature-engineering",
+  "title": "Feature Engineering",
+  "motto": "A good feature is worth a thousand data points.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 8
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A good feature is worth a thousand data points."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You have a dataset. You pick an algorithm. You train it. The results are mediocre. You try a fancier algorithm. Still mediocre. You spend a week tuning hyperparameters. Marginal improvement.",
+        "Then someone transforms the raw data into better features and a simple logistic regression beats your tuned gradient-boosted ensemble.",
+        "This happens constantly. In classical ML, the representation of the data matters more than the choice of algorithm. A house price model with \"square footage\" and \"number of bedrooms\" will beat a model with \"address as a raw string\" no matter how sophisticated the learner is. The algorithm can only work with what you give it."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/02-ml-fundamentals/08-feature-engineering",
+    "interactive": false
+  }
+}

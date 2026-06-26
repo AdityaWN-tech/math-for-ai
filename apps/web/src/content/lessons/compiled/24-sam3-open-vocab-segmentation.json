@@ -1,0 +1,44 @@
+{
+  "id": "24-sam3-open-vocab-segmentation",
+  "title": "Sam3 Open Vocab Segmentation",
+  "motto": "Give a model a text prompt and an image and get masks for every matching object. SAM 3 made that a single forward pass.",
+  "phase": {
+    "id": 4,
+    "name": "Computer Vision",
+    "lessonNumber": 24
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Give a model a text prompt and an image and get masks for every matching object. SAM 3 made that a single forward pass."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "The 2023 SAM was a visual-prompt-only model: you click a point or draw a box and it returns a mask. For \"give me all the oranges in this photo\" you needed a detector (Grounding DINO) to produce boxes, then SAM to segment each. Grounded SAM turned this into a pipeline, but it was a cascade of two frozen models with inevitable error accumulation.",
+        "SAM 3 (Meta, Nov 2025, ICLR 2026) collapsed the cascade. It accepts a short noun phrase or an image exemplar as prompt and returns all matching masks and instance IDs in a single forward pass. That is **Promptable Concept Segmentation (PCS)**. Combined with the March 2026 Object Multiplex update (SAM 3.1), it tracks multiple instances of the same concept through video efficiently.",
+        "This lesson is about the structural shift this represents. 2D seg, detection, and text-image grounding have merged into one model. The production question is no longer \"which pipeline do I chain together\" but \"which promptable model handles my use case end-to-end.\""
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/04-computer-vision/24-sam3-open-vocab-segmentation",
+    "interactive": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "20-agent-harness-loop-contract",
+  "title": "Agent Harness Loop Contract",
+  "motto": "The harness is the agent. The model is a coprocessor. This lesson freezes the loop contract you can wire any model into.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 20
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The harness is the agent. The model is a coprocessor. This lesson freezes the loop contract you can wire any model into."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/20-agent-harness-loop-contract",
+    "interactive": false
+  }
+}

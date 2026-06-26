@@ -1,0 +1,67 @@
+{
+  "id": "03-gpu-setup-and-cloud",
+  "title": "GPU Setup & Cloud",
+  "motto": "Training on CPU is fine for learning. Training for real needs a GPU.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 3 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Training on CPU is fine for learning. Training for real needs a GPU."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "When you need a GPU",
+      "cards": [
+        "Phases 1–3 often run on CPU. CNNs, transformers, and LLM training (phase 4+) need GPU acceleration — 8 hours on CPU can become 10 minutes on GPU.",
+        "Options: local NVIDIA GPU, Google Colab (free T4), or cloud GPU (Lambda, RunPod). No GPU? Most lessons still work; heavy ones include Colab links."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "Device selection pattern",
+      "body": "Every PyTorch script starts with device = cuda if available else mps (Apple) else cpu. This one line is the bridge between your laptop and cloud GPUs."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement pick_device",
+      "body": "Mirror torch.device logic: prefer cuda, then mps (Apple Silicon), else cpu. No torch import needed.",
+      "code": {
+        "language": "python",
+        "filename": "device.py",
+        "starter": "def pick_device(has_cuda, has_mps):\n    \"\"\"Return 'cuda', 'mps', or 'cpu' in priority order.\"\"\"\n    # TODO\n    return \"cpu\"\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    __check(\"cuda\", pick_device(True, True) == \"cuda\")\n    __check(\"mps\", pick_device(False, True) == \"mps\")\n    __check(\"cpu\", pick_device(False, False) == \"cpu\")\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "GPU readiness checklist",
+        "description": "You can pick the right device, estimate VRAM needs (≈2 bytes/param fp16), and fall back to Colab when local GPU isn't available."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

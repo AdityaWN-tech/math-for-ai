@@ -1,0 +1,44 @@
+{
+  "id": "06-instruction-tuning-sft",
+  "title": "Instruction Tuning Sft",
+  "motto": "A base model predicts the next token. That's it. It doesn't follow instructions, answer questions, or refuse harmful requests. SFT is the bridge between a token predictor and a useful assistant. Every model you've ever talked to -- Claude, GPT, Llama Chat -- went through this step.",
+  "phase": {
+    "id": 10,
+    "name": "LLMs from Scratch",
+    "lessonNumber": 6
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A base model predicts the next token. That's it. It doesn't follow instructions, answer questions, or refuse harmful requests. SFT is the bridge between a token predictor and a useful assistant. Every model you've ever talked to -- Claude, GPT, Llama Chat -- went through this step."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You trained a model in Lesson 04. It can predict the next token given a sequence. Feed it \"The transformer architecture\" and it might continue with \"has revolutionized natural language processing.\" That's impressive for a next-token predictor.",
+        "Now try this: feed it \"What is the capital of France?\" A base model doesn't answer \"Paris.\" It continues the pattern. It might produce \"What is the capital of Germany? What is the capital of Spain?\" because it learned from documents that contain lists of questions. Or it might produce \"is a question that many people ask\" because that's a plausible next-token continuation. The model has no concept of *answering*. It only knows *continuing*.",
+        "This is the gap between GPT-3 (base model, released June 2020) and ChatGPT (instruction-tuned, released November 2022). Same architecture. Same pre-training. The difference is 20,000 to 100,000 carefully crafted (instruction, response) pairs that taught the model to follow the conversation pattern."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/10-llms-from-scratch/06-instruction-tuning-sft",
+    "interactive": false
+  }
+}

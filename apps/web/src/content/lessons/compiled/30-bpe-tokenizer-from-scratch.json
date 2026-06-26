@@ -1,0 +1,32 @@
+{
+  "id": "30-bpe-tokenizer-from-scratch",
+  "title": "Bpe Tokenizer From Scratch",
+  "motto": "Bytes in, ids out, ids back to the same bytes. Build the tokenizer that every modern text model still starts from.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 30
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Bytes in, ids out, ids back to the same bytes. Build the tokenizer that every modern text model still starts from."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/30-bpe-tokenizer-from-scratch",
+    "interactive": false
+  }
+}

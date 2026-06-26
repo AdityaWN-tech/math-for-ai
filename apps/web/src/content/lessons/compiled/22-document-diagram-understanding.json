@@ -1,0 +1,44 @@
+{
+  "id": "22-document-diagram-understanding",
+  "title": "Document Diagram Understanding",
+  "motto": "Documents are not photos. A PDF, scientific paper, invoice, or handwritten form has layout, tables, diagrams, footnotes, headers, and semantic structure that plain image understanding cannot capture. The pre-VLM stack was a pipeline: Tesseract OCR + LayoutLMv3 + table-extraction heuristics. The VLM wave replaced that with OCR-free models — Donut (2022), Nougat (2023), DocLLM (2023) — that emit structured markup directly. By 2026 the frontier is just \"feed the page image to Claude Opus 4.7 at 2576px native,\" and the structured-markup output comes for free. This lesson reads the three-era arc of document AI.",
+  "phase": {
+    "id": 12,
+    "name": "Multimodal AI",
+    "lessonNumber": 22
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Documents are not photos. A PDF, scientific paper, invoice, or handwritten form has layout, tables, diagrams, footnotes, headers, and semantic structure that plain image understanding cannot capture. The pre-VLM stack was a pipeline: Tesseract OCR + LayoutLMv3 + table-extraction heuristics. The VLM wave replaced that with OCR-free models — Donut (2022), Nougat (2023), DocLLM (2023) — that emit structured markup directly. By 2026 the frontier is just \"feed the page image to Claude Opus 4.7 at 2576px native,\" and the structured-markup output comes for free. This lesson reads the three-era arc of document AI."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "\"Understand this PDF\" is deceptively hard. The information sits in:",
+        "- Text content (90% of the signal).\n- Layout (headers, footnotes, sidebars, two-column format).\n- Tables (rows, columns, merged cells).\n- Figures and diagrams.\n- Handwritten annotations.\n- Fonts and typography (title vs body).",
+        "Raw OCR dumps the text and loses the rest. A system that cares about invoices needs to know \"Total: $1,245\" came from the bottom-right, not from a footnote."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/12-multimodal-ai/22-document-diagram-understanding",
+    "interactive": false
+  }
+}

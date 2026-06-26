@@ -1,0 +1,32 @@
+{
+  "id": "31-tokenized-dataset-sliding-window",
+  "title": "Tokenized Dataset Sliding Window",
+  "motto": "A pretraining run is a function from token ids to gradients. This lesson builds the conveyor that feeds the ids in.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 31
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A pretraining run is a function from token ids to gradients. This lesson builds the conveyor that feeds the ids in."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/31-tokenized-dataset-sliding-window",
+    "interactive": false
+  }
+}

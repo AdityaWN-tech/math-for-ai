@@ -1,0 +1,44 @@
+{
+  "id": "18-mcp-auth-production",
+  "title": "Mcp Auth Production",
+  "motto": "Lesson 16 stood up the OAuth 2.1 state machine in memory. By 2026, every MCP server you ship to a real org sits behind production auth: client enrollment that scales to an unbounded client population (Client ID Metadata Documents first, dynamic client registration as a backwards-compatible fallback), authorization-server metadata discovery (RFC 8414 *or* OpenID Connect Discovery), JWKS cache refresh that does not break a 3 a.m. token validation, and audience-pinned tokens that refuse cross-resource replay. This lesson models the full surface with three roles — an authorization server, a resource server (the MCP server), and a client — so you can trace every hop from discovery to a validated tool call.",
+  "phase": {
+    "id": 13,
+    "name": "Tools & Protocols",
+    "lessonNumber": 18
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Lesson 16 stood up the OAuth 2.1 state machine in memory. By 2026, every MCP server you ship to a real org sits behind production auth: client enrollment that scales to an unbounded client population (Client ID Metadata Documents first, dynamic client registration as a backwards-compatible fallback), authorization-server metadata discovery (RFC 8414 *or* OpenID Connect Discovery), JWKS cache refresh that does not break a 3 a.m. token validation, and audience-pinned tokens that refuse cross-resource replay. This lesson models the full surface with three roles — an authorization server, a resource server (the MCP server), and a client — so you can trace every hop from discovery to a validated tool call."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "The Lesson 16 simulator runs OAuth 2.1 in memory. Production has three operational gaps that a memory-only simulator does not see.",
+        "The first gap is enrollment. A real org runs hundreds of MCP servers and thousands of MCP clients. Operators do not hand-register every Cursor user as an OAuth client. The 2025-11-25 spec gives clients a priority order for solving this: use a pre-registered `client_id` if you have one, else use a **Client ID Metadata Document** (the client identifies itself with an HTTPS URL it controls and the authorization server *pulls* the metadata), else fall back to **RFC 7591 dynamic client registration** (the client *pushes* a `POST /register` and receives a `client_id` on the spot), else prompt the user. CIMD is the recommended default because it removes per-server registration entirely while keeping a DNS-rooted trust model; DCR is retained for backwards compatibility. Both discover their entry points from the authorization server's metadata: `client_id_metadata_document_supported` for CIMD, `registration_endpoint` for DCR.",
+        "The second gap is key rotation. JWT validation depends on the authorization server's signing keys, published as a JSON Web Key Set (JWKS). The authorization server rotates these on a schedule (often hourly, sometimes faster under incident response). An MCP server that fetches JWKS once at boot validates fine until the rotation window — then every request fails until restart. Production wires JWKS as a cached value with a refresh job that overwrites the cache before the previous keys expire, plus a fall-back fetch on cache miss for the case where a token signed by a key newer than the cache arrives."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/13-tools-and-protocols/18-mcp-auth-production",
+    "interactive": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "01-dev-environment",
+  "title": "Dev Environment",
+  "motto": "Your tools shape your thinking. Set them up once, set them up right.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 1 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your tools shape your thinking. Set them up once, set them up right."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why environment matters",
+      "cards": [
+        "You're about to learn AI engineering across 200+ lessons using Python, TypeScript, Rust, and Julia. If your environment is broken, every lesson becomes a fight against tooling.",
+        "Most people skip setup and spend hours on import errors and version conflicts. We install bottom-up once: system → packages → runtimes → AI libraries."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "Four layers of an AI stack",
+      "body": "System foundation (OS, git, GPU drivers) supports package managers (uv, pnpm, cargo), which manage language runtimes (Python, Node, Rust), which host AI/ML libraries (PyTorch, transformers). Install bottom-up."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement environment_layers",
+      "body": "Return the four environment layers in bottom-up order — the same stack you'll verify on your machine after this lesson.",
+      "code": {
+        "language": "python",
+        "filename": "verify_env.py",
+        "starter": "def environment_layers():\n    \"\"\"Return 4 layer names bottom-up: system → packages → runtimes → AI libs.\"\"\"\n    # TODO: fill in the four strings\n    return []\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    layers = environment_layers()\n    expected = [\n        \"System Foundation\",\n        \"Package Managers\",\n        \"Language Runtimes\",\n        \"AI/ML Libraries\",\n    ]\n    __check(\"count\", len(layers) == 4)\n    __check(\"order\", layers == expected)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Environment mental model",
+        "description": "You can now explain the four-layer stack and know what to install before PyTorch, Node, or Rust lessons."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "33-multihead-self-attention",
+  "title": "Multihead Self Attention",
+  "motto": "One linear projection, three views, H parallel heads, one mask. The attention block as the model actually uses it.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 33
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "One linear projection, three views, H parallel heads, one mask. The attention block as the model actually uses it."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/33-multihead-self-attention",
+    "interactive": false
+  }
+}

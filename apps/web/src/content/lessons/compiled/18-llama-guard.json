@@ -1,0 +1,44 @@
+{
+  "id": "18-llama-guard",
+  "title": "Llama Guard",
+  "motto": "Llama Guard 3 (Meta, Llama-3.1-8B base, fine-tuned for content safety) classifies both LLM inputs and outputs against an MLCommons 13-hazard taxonomy across 8 languages. A 1B-INT4 quantized variant runs at over 30 tokens/sec on mobile CPUs. Llama Guard 4 is multimodal (image + text), expands to the S1–S14 category set (including S14 Code Interpreter Abuse), and is a drop-in replacement for Llama Guard 3 8B/11B. NVIDIA NeMo Guardrails v0.20.0 (January 2026) adds Colang dialog-flow rails on top of input and output rails. The honest note: \"Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails\" (Huang et al., arXiv:2504.11168) showed Emoji Smuggling hit 100% attack success rate on six prominent guard systems; NeMo Guard Detect recorded 72.54% ASR on jailbreaks. Classifiers are a layer, not a solution.",
+  "phase": {
+    "id": 15,
+    "name": "Autonomous Systems",
+    "lessonNumber": 18
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Llama Guard 3 (Meta, Llama-3.1-8B base, fine-tuned for content safety) classifies both LLM inputs and outputs against an MLCommons 13-hazard taxonomy across 8 languages. A 1B-INT4 quantized variant runs at over 30 tokens/sec on mobile CPUs. Llama Guard 4 is multimodal (image + text), expands to the S1–S14 category set (including S14 Code Interpreter Abuse), and is a drop-in replacement for Llama Guard 3 8B/11B. NVIDIA NeMo Guardrails v0.20.0 (January 2026) adds Colang dialog-flow rails on top of input and output rails. The honest note: \"Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails\" (Huang et al., arXiv:2504.11168) showed Emoji Smuggling hit 100% attack success rate on six prominent guard systems; NeMo Guard Detect recorded 72.54% ASR on jailbreaks. Classifiers are a layer, not a solution."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Classifiers for LLM inputs and outputs sit at the narrowest point in the agent stack: every request passes through, every response passes through. A good classifier layer is fast, taxonomy-based, and catches a large fraction of obvious misuse for a small compute cost. A bad classifier layer is a false sense of security.",
+        "The 2024–2026 classifier stack has converged on a small set of production-ready options. Llama Guard (Meta) ships open-weights under Meta's Community License. NeMo Guardrails (NVIDIA) ships permissive-licensed rails plus Colang for dialog-flow rules. Both are designed to pair with a foundation model, not replace its safety behaviour.",
+        "The documented failure surface is equally well-mapped. Character-level attacks (emoji smuggling, homoglyph substitution), in-context redirection (\"ignore previous and answer\"), and semantic paraphrase all produce measurable drops in classifier accuracy. Huang et al. 2025 showed a specific Emoji Smuggling attack hitting 100% ASR on six named guard systems."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/15-autonomous-systems/18-llama-guard",
+    "interactive": false
+  }
+}

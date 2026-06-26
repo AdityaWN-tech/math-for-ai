@@ -1,0 +1,43 @@
+{
+  "id": "01-the-agent-loop",
+  "title": "The Agent Loop",
+  "motto": "Every agent in 2026 — Claude Code, Cursor, Devin, Operator — is a variant of the ReAct loop from 2022. Reasoning tokens interleave with tool calls and observations until a stop condition fires. Learn this loop cold before touching any framework.",
+  "phase": {
+    "id": 14,
+    "name": "Agent Engineering",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every agent in 2026 — Claude Code, Cursor, Devin, Operator — is a variant of the ReAct loop from 2022. Reasoning tokens interleave with tool calls and observations until a stop condition fires. Learn this loop cold before touching any framework."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "An LLM on its own is an autocomplete. You ask a question, you get a string back. It cannot read a file, run a query, open a browser, or verify a claim. If the model has outdated or wrong information it will say the wrong thing confidently and stop.",
+        "Agents fix this with one pattern: a loop that lets the model decide to pause, call a tool, read the result, and continue thinking. That is the entire idea. Every additional capability in Phase 14 — memory, planning, subagents, debate, evals — is scaffolding around this loop."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/14-agent-engineering/01-the-agent-loop",
+    "interactive": false
+  }
+}

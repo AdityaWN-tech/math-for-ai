@@ -1,0 +1,52 @@
+{
+  "id": "20-structured-outputs-constrained-decoding",
+  "title": "Structured Outputs Constrained Decoding",
+  "motto": "Ask an LLM for JSON. Get JSON most of the time. In production, \"most\" is the problem. Constrained decoding turns \"most\" into \"always\" by editing the logits before sampling.",
+  "phase": {
+    "id": 5,
+    "name": "NLP Foundations to Advanced",
+    "lessonNumber": 20
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Ask an LLM for JSON. Get JSON most of the time. In production, \"most\" is the problem. Constrained decoding turns \"most\" into \"always\" by editing the logits before sampling."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "A classifier prompts an LLM: \"Return one of {positive, negative, neutral}.\" The model returns \"The sentiment is positive — this review is overwhelmingly favorable because the customer explicitly states that they ...\". Your parser crashes. Your classifier's F1 is 0.0.",
+        "Free-form generation is not a contract. It is a suggestion. A production system needs a contract.",
+        "Three layers exist in 2026."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "![Constrained decoding masking invalid tokens at each step](../assets/constrained-decoding.svg)"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/05-nlp-foundations-to-advanced/20-structured-outputs-constrained-decoding",
+    "interactive": false
+  }
+}

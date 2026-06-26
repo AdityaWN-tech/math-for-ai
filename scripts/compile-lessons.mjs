@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Compile lesson manifests from ai-engineering-from-scratch (GitHub raw).
- * Usage: node scripts/compile-lessons.mjs [--phase=1]
+ * Usage: node scripts/compile-lessons.mjs [--phase=all|0|1|...]
  */
 import fs from "fs/promises";
 import path from "path";
@@ -16,22 +16,51 @@ const REPO = "rohitg00/ai-engineering-from-scratch";
 const BRANCH = "main";
 const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 
-const INTERACTIVE_IDS = new Set([
-  "01-linear-algebra-intuition",
-  "02-vectors-matrices-operations",
-  "03-matrix-transformations",
-  "07-docker-for-ai",
-]);
+/** Hand-authored interactive lessons (apps/web/src/content/lessons/*.json) */
+const INTERACTIVE_LESSONS_META = [
+  { id: "01-dev-environment", title: "Dev Environment", phaseId: 0, lessonNumber: 1 },
+  { id: "02-git-and-collaboration", title: "Git & Collaboration", phaseId: 0, lessonNumber: 2 },
+  { id: "03-gpu-setup-and-cloud", title: "GPU Setup & Cloud", phaseId: 0, lessonNumber: 3 },
+  { id: "04-apis-and-keys", title: "APIs & Keys", phaseId: 0, lessonNumber: 4 },
+  { id: "05-jupyter-notebooks", title: "Jupyter Notebooks", phaseId: 0, lessonNumber: 5 },
+  { id: "06-python-environments", title: "Python Environments", phaseId: 0, lessonNumber: 6 },
+  { id: "07-docker-for-ai", title: "Docker for AI", phaseId: 0, lessonNumber: 7 },
+  { id: "01-linear-algebra-intuition", title: "Linear Algebra Intuition", phaseId: 1, lessonNumber: 1 },
+  { id: "02-vectors-matrices-operations", title: "Vectors, Matrices & Operations", phaseId: 1, lessonNumber: 2 },
+  { id: "03-matrix-transformations", title: "Matrix Transformations", phaseId: 1, lessonNumber: 3 },
+];
+
+const INTERACTIVE_IDS = new Set(INTERACTIVE_LESSONS_META.map((l) => l.id));
+
+const PHASE_META = {
+  0: { dir: "00-setup-and-tooling", name: "Setup & Tooling" },
+  1: { dir: "01-math-foundations", name: "Math Foundations" },
+  2: { dir: "02-ml-fundamentals", name: "ML Fundamentals" },
+  3: { dir: "03-deep-learning-core", name: "Deep Learning Core" },
+  4: { dir: "04-computer-vision", name: "Computer Vision" },
+  5: { dir: "05-nlp-foundations-to-advanced", name: "NLP Foundations to Advanced" },
+  6: { dir: "06-speech-and-audio", name: "Speech & Audio" },
+  7: { dir: "07-transformers-deep-dive", name: "Transformers Deep Dive" },
+  8: { dir: "08-generative-ai", name: "Generative AI" },
+  9: { dir: "09-reinforcement-learning", name: "Reinforcement Learning" },
+  10: { dir: "10-llms-from-scratch", name: "LLMs from Scratch" },
+  11: { dir: "11-llm-engineering", name: "LLM Engineering" },
+  12: { dir: "12-multimodal-ai", name: "Multimodal AI" },
+  13: { dir: "13-tools-and-protocols", name: "Tools & Protocols" },
+  14: { dir: "14-agent-engineering", name: "Agent Engineering" },
+  15: { dir: "15-autonomous-systems", name: "Autonomous Systems" },
+  16: { dir: "16-multi-agent-and-swarms", name: "Multi-Agent & Swarms" },
+  17: { dir: "17-infrastructure-and-production", name: "Infrastructure & Production" },
+  18: { dir: "18-ethics-safety-alignment", name: "Ethics, Safety & Alignment" },
+  19: { dir: "19-capstone-projects", name: "Capstone Projects" },
+};
 
 const phaseArg = process.argv.find((a) => a.startsWith("--phase="));
-const phaseValue = phaseArg ? phaseArg.split("=")[1] : "1";
+const phaseValue = phaseArg ? phaseArg.split("=")[1] : "all";
 const PHASES_TO_COMPILE =
-  phaseValue === "all" ? [0, 1] : [Number(phaseValue)].filter((n) => !Number.isNaN(n));
-
-const PHASE_DIRS = {
-  0: "00-setup-and-tooling",
-  1: "01-math-foundations",
-};
+  phaseValue === "all"
+    ? Object.keys(PHASE_META).map(Number)
+    : [Number(phaseValue)].filter((n) => !Number.isNaN(n) && PHASE_META[n]);
 
 async function fetchText(url) {
   const res = await fetch(url);
@@ -122,12 +151,10 @@ async function listLessonDirs(phaseKey) {
 }
 
 async function compilePhase(phaseNum) {
-  const phaseKey = PHASE_DIRS[phaseNum];
-  if (!phaseKey) throw new Error(`Unknown phase ${phaseNum}`);
+  const meta = PHASE_META[phaseNum];
+  if (!meta) throw new Error(`Unknown phase ${phaseNum}`);
 
-  const phaseName =
-    phaseNum === 0 ? "Setup & Tooling" : phaseNum === 1 ? "Math Foundations" : `Phase ${phaseNum}`;
-
+  const { dir: phaseKey, name: phaseName } = meta;
   const dirs = await listLessonDirs(phaseKey);
   await fs.mkdir(OUT_DIR, { recursive: true });
 
@@ -139,15 +166,10 @@ async function compilePhase(phaseNum) {
     const title = slugToTitle(dir);
 
     if (INTERACTIVE_IDS.has(id)) {
-      const titles = {
-        "01-linear-algebra-intuition": "Linear Algebra Intuition",
-        "02-vectors-matrices-operations": "Vectors, Matrices & Operations",
-        "03-matrix-transformations": "Matrix Transformations",
-        "07-docker-for-ai": "Docker for AI",
-      };
+      const hand = INTERACTIVE_LESSONS_META.find((l) => l.id === id);
       catalogEntries.push({
         id,
-        title: titles[id] ?? slugToTitle(id),
+        title: hand?.title ?? title,
         phaseId: phaseNum,
         phaseName,
         lessonNumber,
@@ -196,63 +218,39 @@ async function main() {
   const entries = [];
 
   for (const phaseNum of PHASES_TO_COMPILE) {
+    console.log(`\n— Phase ${phaseNum}: ${PHASE_META[phaseNum].name} —`);
     entries.push(...(await compilePhase(phaseNum)));
   }
 
-  const interactive = [
-    {
-      id: "01-linear-algebra-intuition",
-      title: "Linear Algebra Intuition",
-      phaseId: 1,
-      phaseName: "Math Foundations",
-      lessonNumber: 1,
-      interactive: true,
-      path: "/demo/01-linear-algebra-intuition",
-    },
-    {
-      id: "02-vectors-matrices-operations",
-      title: "Vectors, Matrices & Operations",
-      phaseId: 1,
-      phaseName: "Math Foundations",
-      lessonNumber: 2,
-      interactive: true,
-      path: "/demo/02-vectors-matrices-operations",
-    },
-    {
-      id: "03-matrix-transformations",
-      title: "Matrix Transformations",
-      phaseId: 1,
-      phaseName: "Math Foundations",
-      lessonNumber: 3,
-      interactive: true,
-      path: "/demo/03-matrix-transformations",
-    },
-    {
-      id: "07-docker-for-ai",
-      title: "Docker for AI",
-      phaseId: 0,
-      phaseName: "Setup & Tooling",
-      lessonNumber: 7,
-      interactive: true,
-      path: "/demo/07-docker-for-ai",
-    },
-  ];
+  const interactiveCatalog = INTERACTIVE_LESSONS_META.map((l) => ({
+    id: l.id,
+    title: l.title,
+    phaseId: l.phaseId,
+    phaseName: PHASE_META[l.phaseId].name,
+    lessonNumber: l.lessonNumber,
+    interactive: true,
+    path: `/demo/${l.id}`,
+  }));
 
   const byId = new Map();
-  for (const e of [...interactive, ...entries]) {
+  for (const e of [...interactiveCatalog, ...entries]) {
     byId.set(e.id, e);
   }
 
+  const lessons = [...byId.values()].sort((a, b) =>
+    a.phaseId === b.phaseId ? a.lessonNumber - b.lessonNumber : a.phaseId - b.phaseId,
+  );
+
   const catalog = {
     generatedAt: new Date().toISOString(),
-    phases: [0, 1],
-    lessons: [...byId.values()].sort((a, b) =>
-      a.phaseId === b.phaseId ? a.lessonNumber - b.lessonNumber : a.phaseId - b.phaseId,
-    ),
+    phases: PHASES_TO_COMPILE.sort((a, b) => a - b),
+    lessonCount: lessons.length,
+    interactiveCount: lessons.filter((l) => l.interactive).length,
+    lessons,
   };
 
   await fs.writeFile(CATALOG_PATH, JSON.stringify(catalog, null, 2));
-  console.log(`\nCatalog: ${catalog.lessons.length} lessons → ${CATALOG_PATH}`);
+  console.log(`\nCatalog: ${catalog.lessonCount} lessons (${catalog.interactiveCount} interactive) → ${CATALOG_PATH}`);
 }
 
 main().catch((e) => {

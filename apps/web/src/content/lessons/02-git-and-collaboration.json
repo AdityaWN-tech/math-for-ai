@@ -1,0 +1,67 @@
+{
+  "id": "02-git-and-collaboration",
+  "title": "Git & Collaboration",
+  "motto": "Version control is not optional. Every experiment, every model, every lesson you build here gets tracked.",
+  "phase": { "id": 0, "name": "Setup & Tooling", "lessonNumber": 2 },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Version control is not optional. Every experiment, every model, every lesson you build here gets tracked."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why git first",
+      "cards": [
+        "You'll write hundreds of files across 20 phases. Without version control you lose work, can't undo mistakes, and can't collaborate.",
+        "Git is the tool. GitHub is where code lives. Save often, push to remote, branch for experiments."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The daily workflow",
+      "body": "Working directory → git add (staging) → git commit (local snapshot) → git push (remote backup). Branch with git checkout -b for experiments without breaking main."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement should_gitignore",
+      "body": "AI repos accumulate huge binaries. Write should_gitignore(path, patterns) — return True if path ends with any pattern suffix (e.g. .pt, .pth).",
+      "code": {
+        "language": "python",
+        "filename": "gitignore.py",
+        "starter": "def should_gitignore(path, patterns):\n    \"\"\"True if path ends with any pattern suffix.\"\"\"\n    # TODO\n    return False\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    pats = [\".pt\", \".pth\", \".safetensors\"]\n    __check(\"checkpoint\", should_gitignore(\"models/ckpt.pt\", pats))\n    __check(\"code_ok\", not should_gitignore(\"train.py\", pats))\n    __check(\"nested\", should_gitignore(\"runs/exp/model.safetensors\", pats))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Safe git habits",
+        "description": "You can branch for experiments, ignore model checkpoints, and push progress without polluting the repo."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

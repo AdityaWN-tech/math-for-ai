@@ -1,0 +1,44 @@
+{
+  "id": "05-tool-schema-design",
+  "title": "Tool Schema Design",
+  "motto": "A correct tool fails silently when the model cannot tell when to use it. Naming, descriptions, and parameter shapes drive 10 to 20 percentage-point swings in tool-selection accuracy on benchmarks like StableToolBench and MCPToolBench++. This lesson names the design rules that separate a tool a model picks reliably from a tool a model mis-fires.",
+  "phase": {
+    "id": 13,
+    "name": "Tools & Protocols",
+    "lessonNumber": 5
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A correct tool fails silently when the model cannot tell when to use it. Naming, descriptions, and parameter shapes drive 10 to 20 percentage-point swings in tool-selection accuracy on benchmarks like StableToolBench and MCPToolBench++. This lesson names the design rules that separate a tool a model picks reliably from a tool a model mis-fires."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Imagine an agent with 30 tools. Every user query triggers tool selection: the model reads every description and picks one. Two shapes of failure show up.",
+        "**Wrong tool picked.** The model chooses `search_contacts` when it should have chosen `get_customer_details`. Cause: both descriptions say \"look up people\". The model has no way to disambiguate.",
+        "**No tool picked when one fits.** The user asks for a stock price; the model replies with a plausible but hallucinated number. Cause: the description says \"retrieve financial data\" but the model did not map \"stock price\" to that."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/13-tools-and-protocols/05-tool-schema-design",
+    "interactive": false
+  }
+}

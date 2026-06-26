@@ -1,0 +1,32 @@
+{
+  "id": "57-end-to-end-research-demo",
+  "title": "End To End Research Demo",
+  "motto": "A demo is the place where every contract you wrote earlier has to compose. If any one of them leaks, the demo is the lesson that catches it.",
+  "phase": {
+    "id": 19,
+    "name": "Capstone Projects",
+    "lessonNumber": 57
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A demo is the place where every contract you wrote earlier has to compose. If any one of them leaks, the demo is the lesson that catches it."
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/19-capstone-projects/57-end-to-end-research-demo",
+    "interactive": false
+  }
+}

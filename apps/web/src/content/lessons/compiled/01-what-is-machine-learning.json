@@ -1,0 +1,44 @@
+{
+  "id": "01-what-is-machine-learning",
+  "title": "What Is Machine Learning",
+  "motto": "Machine learning is teaching computers to find patterns in data instead of writing rules by hand.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Machine learning is teaching computers to find patterns in data instead of writing rules by hand."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You want to build a spam filter. The traditional approach: sit down and write hundreds of rules. \"If the email contains 'FREE MONEY', mark it spam. If it has more than 3 exclamation marks, mark it spam.\" You spend weeks writing rules. Then spammers change their wording. Your rules break. You write more rules. The cycle never ends.",
+        "Machine learning flips this. Instead of writing rules, you give the computer thousands of labeled emails (\"spam\" or \"not spam\") and let it figure out the rules on its own. The computer finds patterns you never would have thought of. When spammers change tactics, you retrain on new data instead of rewriting code.",
+        "This shift from \"programming rules\" to \"learning from data\" is the core of machine learning. Every recommendation engine, voice assistant, self-driving car, and language model works this way."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/02-ml-fundamentals/01-what-is-machine-learning",
+    "interactive": false
+  }
+}

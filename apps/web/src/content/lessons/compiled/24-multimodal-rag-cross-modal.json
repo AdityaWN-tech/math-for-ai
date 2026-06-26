@@ -1,0 +1,44 @@
+{
+  "id": "24-multimodal-rag-cross-modal",
+  "title": "Multimodal Rag Cross Modal",
+  "motto": "Vision-native document RAG is one slice. Production multimodal RAG goes wider — retrieving across text, images, audio, and video for workflows like trip planning (\"find me a quiet vegan brunch with natural light\"), medical triage (\"what injury matches this photo + these notes\"), e-commerce (\"outfits similar to this selfie, in my size\"), and field service (\"diagnose this engine sound plus photo of the part\"). Three 2025 surveys — Abootorabi et al., Mei et al., Zhao et al. — codified the sub-problems: cross-modal retrieval, retrieval fusion, generation grounding, multimodal evaluation. This lesson reads the surveys and designs a production pipeline.",
+  "phase": {
+    "id": 12,
+    "name": "Multimodal AI",
+    "lessonNumber": 24
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Vision-native document RAG is one slice. Production multimodal RAG goes wider — retrieving across text, images, audio, and video for workflows like trip planning (\"find me a quiet vegan brunch with natural light\"), medical triage (\"what injury matches this photo + these notes\"), e-commerce (\"outfits similar to this selfie, in my size\"), and field service (\"diagnose this engine sound plus photo of the part\"). Three 2025 surveys — Abootorabi et al., Mei et al., Zhao et al. — codified the sub-problems: cross-modal retrieval, retrieval fusion, generation grounding, multimodal evaluation. This lesson reads the surveys and designs a production pipeline."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Single-modality RAG is a solved pattern: embed query, embed chunks, retrieve, stuff into LLM. Multimodal RAG requires:",
+        "1. Multiple retrieval heads (each modality needs embeddings in a compatible space).\n2. Fusion of retrieval results across modalities.\n3. Generation grounding that cites sources across modalities.\n4. Evaluation metrics that cover cross-modal signal.",
+        "The 2025 surveys all arrive at the same taxonomy."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/12-multimodal-ai/24-multimodal-rag-cross-modal",
+    "interactive": false
+  }
+}

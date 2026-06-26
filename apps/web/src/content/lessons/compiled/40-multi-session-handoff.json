@@ -1,0 +1,43 @@
+{
+  "id": "40-multi-session-handoff",
+  "title": "Multi Session Handoff",
+  "motto": "The session is going to end. The work is not. The handoff packet is the artifact that turns \"the agent worked for an hour\" into \"the next session is productive in the first minute.\" Build it on purpose, not as an afterthought.",
+  "phase": {
+    "id": 14,
+    "name": "Agent Engineering",
+    "lessonNumber": 40
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The session is going to end. The work is not. The handoff packet is the artifact that turns \"the agent worked for an hour\" into \"the next session is productive in the first minute.\" Build it on purpose, not as an afterthought."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "The session ends. The agent says \"great, we made progress.\" The next session opens. The next agent asks \"where did we leave off?\" The first agent's answer is gone. The next agent rediscovers, re-runs the same commands, re-asks the human the same questions, and burns thirty minutes recovering the last thirty seconds of the previous session.",
+        "The cost of a bad handoff is paid every session for the life of the task. The fix is a packet generated automatically at session end: what changed, why, what was tried, what failed, what is left, what to do first next time."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/14-agent-engineering/40-multi-session-handoff",
+    "interactive": false
+  }
+}

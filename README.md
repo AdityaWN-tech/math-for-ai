@@ -11,7 +11,7 @@ Curriculum spine: [ai-engineering-from-scratch](https://github.com/rohitg00/ai-e
 git clone git@github.com:t4tarzan/math-for-ai.git
 ```
 
-**Vertical slice v1 + v2 live** — interactive lessons, deploy panel, Phase 1 catalog.
+**Phase 0–19 roadmap live** — 502-lesson catalog, 10 interactive lessons (Phase 0 chain + math slice).
 
 ```bash
 # Terminal 1 — app
@@ -20,18 +20,17 @@ cd apps/web && npm install && npm run dev
 # Terminal 2 — Postgres (slice v2 deploy)
 cd ../.. && npm run infra:up   # requires Docker
 
-# Recompile Phase 1 from upstream curriculum
+# Recompile full curriculum from upstream (all 20 phases)
 npm run compile:lessons
 ```
 
 | URL | What |
 |-----|------|
 | http://localhost:3000 | Landing |
-| http://localhost:3000/lessons | Phase 0–1 catalog (34 lessons) |
-| http://localhost:3000/demo/01-linear-algebra-intuition | Math + Pyodide |
-| http://localhost:3000/demo/02-vectors-matrices-operations | Matrix multiply + Pyodide |
-| http://localhost:3000/demo/03-matrix-transformations | Matrix transforms + figure |
+| http://localhost:3000/lessons | Full roadmap — Phases 0–19 (502 lessons) |
+| http://localhost:3000/demo/01-dev-environment | **Start here** — Phase 0 setup |
 | http://localhost:3000/demo/07-docker-for-ai | Deploy Postgres |
+| http://localhost:3000/demo/01-linear-algebra-intuition | Phase 1 math + Pyodide |
 
 ## Docs
 
