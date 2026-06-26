@@ -11,6 +11,7 @@
     "generate:batch4": "node scripts/generate-batch4-specs.mjs",
     "generate:batch5": "node scripts/generate-batch5-enriched.mjs",
     "generate:batch6": "node scripts/generate-batch6-enriched.mjs",
+    "generate:batch7": "node scripts/generate-batch7-enriched.mjs",
     "compile:lessons": "node scripts/build-interactive-lessons.mjs && node scripts/compile-lessons.mjs --phase=all",
     "compile:lessons:phase0": "node scripts/compile-lessons.mjs --phase=0",
     "compile:lessons:phase1": "node scripts/compile-lessons.mjs --phase=1",

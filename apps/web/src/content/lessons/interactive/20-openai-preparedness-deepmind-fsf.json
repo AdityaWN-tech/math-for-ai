@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Openai Preparedness Deepmind Fsf: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Autonomous AI systems plan, research, and improve with safety bounds."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement openai_preparedness_deepmind",
+      "title": "Implement openai_preparedness_de",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "openai_preparedness_deepmind.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(15, 20)==15020)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "openai_preparedness_de.py",
+        "starter": "def openai_preparedness_de(x):\n    return x\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", openai_preparedness_de(7)==7)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -57,7 +57,7 @@
       "title": "Artifact unlocked",
       "artifact": {
         "name": "Openai Preparedness Deepmind Fsf",
-        "description": "Completed interactive checkpoint for Openai Preparedness Deepmind Fsf."
+        "description": "Checkpoint: Openai Preparedness Deepmind Fsf."
       }
     },
     {

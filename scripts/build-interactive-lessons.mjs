@@ -11,6 +11,7 @@ import BATCH3 from "./interactive-specs-batch3.mjs";
 import BATCH4 from "./interactive-specs-batch4.mjs";
 import BATCH5 from "./interactive-specs-batch5.mjs";
 import BATCH6 from "./interactive-specs-batch6.mjs";
+import BATCH7 from "./interactive-specs-batch7.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -853,6 +854,7 @@ function mergeSpecs() {
   for (const spec of SPECS) byId.set(spec.id, spec);
   for (const spec of BATCH5) byId.set(spec.id, spec);
   for (const spec of BATCH6) byId.set(spec.id, spec);
+  for (const spec of BATCH7) byId.set(spec.id, spec);
   for (const id of HAND_AUTHORED_IDS) byId.delete(id);
   return [...byId.values()];
 }

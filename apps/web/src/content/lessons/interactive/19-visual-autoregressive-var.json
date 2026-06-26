@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Visual Autoregressive Var: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Visual autoregressive models predict image tokens like GPT."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement visual_autoregressive_var",
+      "title": "Implement var",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "visual_autoregressive_var.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(8, 19)==8019)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "var.py",
+        "starter": "def image_tokens(h, w, patch):\n    return (h//patch)*(w//patch)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", image_tokens(256,256,16)==256)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Visual Autoregressive Var",
-        "description": "Completed interactive checkpoint for Visual Autoregressive Var."
+        "name": "VAR tokens",
+        "description": "Autoregressive image token count."
       }
     },
     {

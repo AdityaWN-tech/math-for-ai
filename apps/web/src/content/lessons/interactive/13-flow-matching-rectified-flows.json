@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Flow Matching Rectified Flows: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Flow matching learns straight paths from noise to data."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement flow_matching_rectified_flow",
+      "title": "Implement flow",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "flow_matching_rectified_flow.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(8, 13)==8013)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "flow.py",
+        "starter": "def flow_interpolate(x0, x1, t):\n    return x0*(1-t)+x1*t\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", flow_interpolate(0,1,0.5)==0.5)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Flow Matching Rectified Flows",
-        "description": "Completed interactive checkpoint for Flow Matching Rectified Flows."
+        "name": "Flow interp",
+        "description": "Linear flow path at t."
       }
     },
     {

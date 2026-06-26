@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Theory Of Mind Coordination: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Multi-agent coordination via protocols, memory, and orchestration."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement theory_of_mind_coordination",
+      "title": "Implement theory_of_mind_coordin",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "theory_of_mind_coordination.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(16, 18)==16018)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "theory_of_mind_coordin.py",
+        "starter": "def theory_of_mind_coordin(x):\n    return x\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", theory_of_mind_coordin(7)==7)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,7 +56,7 @@
       "title": "Artifact unlocked",
       "artifact": {
         "name": "Theory Of Mind Coordination",
-        "description": "Completed interactive checkpoint for Theory Of Mind Coordination."
+        "description": "Checkpoint: Theory Of Mind Coordination."
       }
     },
     {

@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for GPU Setup & Cloud: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "CUDA drivers and cloud GPUs (Lambda, RunPod) for training."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement gpu_setup_and_cloud",
+      "title": "Implement gpu",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "gpu_setup_and_cloud.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(0, 3)==3)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "gpu.py",
+        "starter": "def vram_gb(params_b, bytes_per=2):\n    return params_b * bytes_per\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", vram_gb(7)==14)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "GPU Setup & Cloud",
-        "description": "Completed interactive checkpoint for GPU Setup & Cloud."
+        "name": "VRAM estimate",
+        "description": "7B model fp16 memory."
       }
     },
     {

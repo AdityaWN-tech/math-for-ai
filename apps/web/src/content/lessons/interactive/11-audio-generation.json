@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Audio Generation: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Audio diffusion and transformers synthesize music and speech."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement audio_generation",
+      "title": "Implement audiogen",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "audio_generation.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(8, 11)==8011)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "audiogen.py",
+        "starter": "def seconds_of_audio(sr, samples):\n    return samples/sr\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", seconds_of_audio(16000,16000)==1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Audio Generation",
-        "description": "Completed interactive checkpoint for Audio Generation."
+        "name": "Audio duration",
+        "description": "Length from sample count."
       }
     },
     {
