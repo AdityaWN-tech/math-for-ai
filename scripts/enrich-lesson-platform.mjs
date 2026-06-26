@@ -19,6 +19,18 @@ const HAND_AUTHORED_IDS = new Set([
   "07-docker-for-ai",
 ]);
 
+const FIGURE_CONCEPTS = {
+  "01-the-agent-loop": "agent-loop",
+  "02-self-attention-from-scratch": "attention",
+  "04-calculus-for-ml": "calculus-derivative",
+};
+
+const T1_WORKSPACE_LESSONS = new Set([
+  "32-minimal-agent-workbench",
+  "41-workbench-for-real-repos",
+  "42-agent-workbench-capstone",
+]);
+
 function countChecks(tests) {
   return (tests.match(/__check\(/g) ?? []).length;
 }
@@ -84,6 +96,18 @@ function exerciseFor(lesson, buildStep) {
     };
   }
 
+  if (T1_WORKSPACE_LESSONS.has(lesson.id)) {
+    const checks = countChecks(buildStep.code?.tests ?? "");
+    const rubric = checks >= 3 ? "T2" : "T1";
+    return {
+      plugin: "monaco-ts",
+      runtimeTier: "T1",
+      rubric,
+      xpReward: 40,
+      hints: defaultHints(lesson, buildStep),
+    };
+  }
+
   const checks = countChecks(buildStep.code?.tests ?? "");
   const rubric = checks >= 3 ? "T2" : checks >= 2 ? "T1" : "T0";
   const phaseId = lesson.phase?.id ?? 0;
@@ -122,6 +146,9 @@ async function enrichFile(filePath, { skipExercise = false } = {}) {
         build.body =
           "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.";
         changed = true;
+      } else if (!skipExercise && T1_WORKSPACE_LESSONS.has(lesson.id) && build.exercise?.plugin !== "monaco-ts") {
+        build.exercise = exerciseFor(lesson, build);
+        changed = true;
       }
     }
   }
@@ -136,6 +163,16 @@ async function enrichFile(filePath, { skipExercise = false } = {}) {
       hints: exerciseFor(lesson, { code: {} }).hints,
     };
     changed = true;
+  }
+
+  const concept = lesson.steps.find((s) => s.id === "concept");
+  const figureId = FIGURE_CONCEPTS[lesson.id];
+  if (concept && figureId) {
+    if (concept.gate !== "figure" || concept.figure !== figureId) {
+      concept.gate = "figure";
+      concept.figure = figureId;
+      changed = true;
+    }
   }
 
   if (changed) {

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { notifyProgress, ProgressHUD } from "@/components/gamification/ProgressHUD";
 import { DeployPanel } from "@/components/shell/DeployPanel";
+import { LocalWorkspace } from "@/components/shell/LocalWorkspace";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
 import { getExercisePlugin } from "@/lib/exercises/registry";
@@ -21,6 +22,7 @@ import { XP_FIRST_TRY_BONUS } from "@/lib/gamification";
 import { cn } from "@/lib/cn";
 import type { Lesson, LessonStep } from "@/lib/lesson-types";
 import { nextInteractiveLessonId, phaseLessonIndex } from "@/lib/lessons";
+import { claimAllReadyQuests } from "@/lib/quests";
 import {
   getLessonCode,
   getResumeStepIndex,
@@ -30,6 +32,7 @@ import {
   recordTestPass,
   saveLessonCode,
 } from "@/lib/progress";
+import { getWorkspaceTemplate, isT1Lesson } from "@/lib/workspace-templates";
 import { runPythonWithTests, type RunResult } from "@/lib/pyodide-runner";
 
 const CodeEditor = dynamic(() => import("@/components/shell/CodeEditor"), {
@@ -62,6 +65,11 @@ export function LearningShell({ lesson }: LearningShellProps) {
   const hasBuild = Boolean(buildStep);
   const hasDeploy = lesson.steps.some((s) => s.type === "deploy");
   const phaseIndex = useMemo(() => phaseLessonIndex(), []);
+  const workspaceTemplate = useMemo(() => {
+    if (!buildStep?.code) return null;
+    return getWorkspaceTemplate(lesson.id, buildStep.code.starter, buildStep.code.filename);
+  }, [lesson.id, buildStep]);
+  const useT1Workspace = Boolean(buildStep && isT1Lesson(buildStep.exercise) && workspaceTemplate);
 
   useEffect(() => {
     setFigureReady(false);
@@ -84,6 +92,12 @@ export function LearningShell({ lesson }: LearningShellProps) {
         phaseLessonIds: phaseIndex,
       });
       track("lesson_complete", { lessonId: lesson.id });
+      const claims = claimAllReadyQuests();
+      if (claims.length > 0) {
+        const total = claims.reduce((s, c) => s + c.xp, 0);
+        setXpToast(`Quest${claims.length > 1 ? "s" : ""}: +${total} XP (${claims.map((c) => c.title).join(", ")})`);
+        setTimeout(() => setXpToast(null), 5000);
+      }
       notifyProgress();
     }
   }, [lesson.id, lesson.phase.id, step.id, stepIndex, step.type, phaseIndex]);
@@ -323,13 +337,27 @@ export function LearningShell({ lesson }: LearningShellProps) {
 
           {step.type === "build" && (
             <div className="flex min-h-[400px] flex-1 flex-col">
-              <div className="flex items-center justify-between border-b border-[var(--rule-soft)] px-3 py-2 font-mono text-xs text-[var(--ink-mute)]">
-                <span>{step.code?.filename}</span>
-                <span>{pyodideReady ? `${exercisePlugin.label} ready` : "Loading runtime…"}</span>
-              </div>
-              <div className="min-h-0 flex-1">
-                <CodeEditor value={code} onChange={handleCodeChange} filename={step.code?.filename ?? "main.py"} />
-              </div>
+              {useT1Workspace && workspaceTemplate ? (
+                <LocalWorkspace
+                  lessonId={lesson.id}
+                  template={workspaceTemplate}
+                  onPrimaryChange={handleCodeChange}
+                />
+              ) : (
+                <>
+                  <div className="flex items-center justify-between border-b border-[var(--rule-soft)] px-3 py-2 font-mono text-xs text-[var(--ink-mute)]">
+                    <span>{step.code?.filename}</span>
+                    <span>{pyodideReady ? `${exercisePlugin.label} ready` : "Loading runtime…"}</span>
+                  </div>
+                  <div className="min-h-0 flex-1">
+                    <CodeEditor
+                      value={code}
+                      onChange={handleCodeChange}
+                      filename={step.code?.filename ?? "main.py"}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           )}
 

@@ -31,9 +31,10 @@
       "id": "concept",
       "beat": "CONCEPT",
       "type": "concept",
-      "gate": "continue",
+      "gate": "figure",
       "title": "The concept",
-      "body": "Observe → think → act → observe. Repeat until done."
+      "body": "Observe → think → act → observe. Repeat until done.",
+      "figure": "agent-loop"
     },
     {
       "id": "build",

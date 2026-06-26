@@ -18,10 +18,10 @@ const deployPostgres: ExercisePluginDef = {
 
 const monacoTs: ExercisePluginDef = {
   id: "monaco-ts",
-  label: "TypeScript workspace",
+  label: "T1 · Multi-file workspace",
   runtimeTier: "T1",
   defaultRubric: "T1",
-  isComplete: () => false,
+  isComplete: (ctx) => ctx.runResult?.allPassed === true,
 };
 
 const PLUGINS: Record<ExercisePluginId, ExercisePluginDef> = {

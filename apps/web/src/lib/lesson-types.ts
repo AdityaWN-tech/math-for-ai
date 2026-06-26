@@ -30,7 +30,7 @@ export interface LessonStep {
   title: string;
   body?: string;
   cards?: string[];
-  figure?: "vector-projection" | "matrix-multiply" | "matrix-transform";
+  figure?: "vector-projection" | "matrix-multiply" | "matrix-transform" | "attention" | "agent-loop" | "calculus-derivative";
   artifact?: {
     name: string;
     description: string;

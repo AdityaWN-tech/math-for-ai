@@ -1,0 +1,48 @@
+{
+  "quests": [
+    {
+      "id": "quest-onboarding",
+      "title": "Tooling Bootcamp",
+      "description": "Complete the first three Phase 0 lessons — dev environment, git, and GPU setup.",
+      "emoji": "🛠",
+      "rewardXp": 75,
+      "lessonIds": ["01-dev-environment", "02-git-and-collaboration", "03-gpu-setup-and-cloud"]
+    },
+    {
+      "id": "quest-math-spine",
+      "title": "Math Spine",
+      "description": "Finish the core math trilogy: linear algebra, matrices, and transformations.",
+      "emoji": "📐",
+      "rewardXp": 100,
+      "lessonIds": [
+        "01-linear-algebra-intuition",
+        "02-vectors-matrices-operations",
+        "03-matrix-transformations"
+      ]
+    },
+    {
+      "id": "quest-transformer",
+      "title": "Attention Mechanic",
+      "description": "Build intuition for why transformers work — from motivation to self-attention.",
+      "emoji": "⚡",
+      "rewardXp": 100,
+      "lessonIds": ["01-why-transformers", "02-self-attention-from-scratch", "03-multi-head-attention"]
+    },
+    {
+      "id": "quest-agent-loop",
+      "title": "Agent Loop",
+      "description": "Master the observe → think → act cycle and ship a minimal workbench.",
+      "emoji": "🤖",
+      "rewardXp": 120,
+      "lessonIds": ["01-the-agent-loop", "32-minimal-agent-workbench", "42-agent-workbench-capstone"]
+    },
+    {
+      "id": "quest-ship",
+      "title": "Ship to Production",
+      "description": "Deploy Postgres and build a RAG capstone — real infra, real retrieval.",
+      "emoji": "🚀",
+      "rewardXp": 150,
+      "lessonIds": ["07-docker-for-ai", "02-rag-over-codebase", "08-production-rag-chatbot"]
+    }
+  ]
+}

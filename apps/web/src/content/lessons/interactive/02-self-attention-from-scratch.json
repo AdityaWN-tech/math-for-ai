@@ -31,9 +31,10 @@
       "id": "concept",
       "beat": "CONCEPT",
       "type": "concept",
-      "gate": "continue",
+      "gate": "figure",
       "title": "The concept",
-      "body": "Q,K,V projections; scores = QKᵀ/√d; weights = softmax(scores); output = weights @ V."
+      "body": "Q,K,V projections; scores = QKᵀ/√d; weights = softmax(scores); output = weights @ V.",
+      "figure": "attention"
     },
     {
       "id": "build",

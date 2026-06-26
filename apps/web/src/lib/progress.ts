@@ -14,6 +14,7 @@ export interface LessonProgress {
   lastStepId: string | null;
   visitedAt: number;
   code?: string;
+  workspaceFiles?: Record<string, string>;
   attempts: number;
   firstPassAt: number | null;
   xpEarned: number;
@@ -25,6 +26,7 @@ export interface ProgressState {
   streakDays: number;
   lastActiveDate: string | null;
   badges: string[];
+  questsCompleted?: string[];
   updatedAt: number;
 }
 
@@ -77,6 +79,7 @@ export function readProgress(): ProgressState {
           ...empty(),
           ...parsed,
           badges: parsed.badges ?? [],
+          questsCompleted: parsed.questsCompleted ?? [],
           streakDays: parsed.streakDays ?? 0,
         };
       }
@@ -98,6 +101,7 @@ export function writeProgress(state: ProgressState) {
   state.updatedAt = Date.now();
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    import("@/lib/progress-sync").then((m) => m.scheduleProgressSync());
   } catch {
     /* quota */
   }
@@ -128,6 +132,19 @@ export function saveLessonCode(lessonId: string, code: string) {
 
 export function getLessonCode(lessonId: string): string | undefined {
   return readProgress().lessons[lessonId]?.code;
+}
+
+export function getWorkspaceFiles(lessonId: string): Record<string, string> | undefined {
+  return readProgress().lessons[lessonId]?.workspaceFiles;
+}
+
+export function saveWorkspaceFiles(lessonId: string, files: Record<string, string>) {
+  const state = readProgress();
+  const lesson = touchLesson(state, lessonId);
+  lesson.workspaceFiles = files;
+  const primary = Object.keys(files).find((k) => k.endsWith(".py")) ?? Object.keys(files)[0];
+  if (primary) lesson.code = files[primary];
+  writeProgress(state);
 }
 
 export function recordTestAttempt(lessonId: string): number {

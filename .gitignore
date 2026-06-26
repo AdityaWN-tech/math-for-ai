@@ -10,5 +10,6 @@ build/
 .vercel
 .turbo
 data/
+.data/
 .idea/
 .vscode/

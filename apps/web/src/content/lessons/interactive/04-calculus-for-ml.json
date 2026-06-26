@@ -31,9 +31,10 @@
       "id": "concept",
       "beat": "CONCEPT",
       "type": "concept",
-      "gate": "continue",
+      "gate": "figure",
       "title": "The concept",
-      "body": "The derivative of loss w.r.t. each weight tells you which way to nudge it. Neural nets are gradient-following machines."
+      "body": "The derivative of loss w.r.t. each weight tells you which way to nudge it. Neural nets are gradient-following machines.",
+      "figure": "calculus-derivative"
     },
     {
       "id": "build",

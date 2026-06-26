@@ -49,8 +49,8 @@
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", capstone_done(True,True))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       },
       "exercise": {
-        "plugin": "pyodide-tests",
-        "runtimeTier": "T0",
+        "plugin": "monaco-ts",
+        "runtimeTier": "T1",
         "rubric": "T2",
         "xpReward": 35,
         "hints": [

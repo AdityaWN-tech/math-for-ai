@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { QuestPanel } from "@/components/gamification/QuestPanel";
 import { Button } from "@/components/ui/button";
 import { badgeById, levelFromXp } from "@/lib/gamification";
 import { getCompletedCount, getProgressSummary, isLessonComplete } from "@/lib/progress";
@@ -61,6 +62,8 @@ export function LessonsCatalog({ phases, lessonCount, interactiveCount }: Lesson
           </span>
         )}
       </div>
+
+      <QuestPanel />
 
       {phases.map(([phaseId, lessons]) => {
         const interactiveInPhase = lessons.filter((l) => l.interactive).length;
