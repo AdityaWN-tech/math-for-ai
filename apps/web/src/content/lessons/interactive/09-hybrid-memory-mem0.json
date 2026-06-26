@@ -1,6 +1,6 @@
 {
   "id": "09-hybrid-memory-mem0",
-  "title": "Hybrid Memory Mem0",
+  "title": "Mem0 Hybrid Memory",
   "motto": "Mem0 (Chhikara et al., 2025) treats memory as three stores in parallel — vector for semantic similarity, KV for fast fact lookup, graph for entity-relationship reasoning. A scoring layer fuses the three on retrieval. This is the 2026 production standard for external memory.",
   "phase": {
     "id": 14,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Hybrid Memory Mem0: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Vector + graph memory for persistent agent recall."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement hybrid_memory_mem0",
+      "title": "Implement mem0",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "hybrid_memory_mem0.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 9)==14009)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "mem0.py",
+        "starter": "def memory_hit(score, thresh):\n    return score>=thresh\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", memory_hit(0.85,0.8))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Hybrid Memory Mem0",
-        "description": "Completed interactive checkpoint for Hybrid Memory Mem0."
+        "name": "Memory hit",
+        "description": "Retrieval threshold for recall."
       }
     },
     {

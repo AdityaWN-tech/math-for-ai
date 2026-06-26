@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Transformer Block: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Attention + FFN + residual + layer norm in one block."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement transformer_block",
+      "title": "Implement cap34",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "transformer_block.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(19, 34)==19034)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "cap34.py",
+        "starter": "def block_submodules():\n    return [\"attn\",\"ffn\",\"norm\"]\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", len(block_submodules())==3)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Transformer Block",
-        "description": "Completed interactive checkpoint for Transformer Block."
+        "name": "Block parts",
+        "description": "Transformer block components."
       }
     },
     {

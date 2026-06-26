@@ -15,6 +15,13 @@ const CATALOG = path.join(ROOT, "apps/web/src/content/lessons/catalog.json");
 const OUT = path.join(__dirname, "interactive-specs-batch4.mjs");
 const BUILD = path.join(__dirname, "build-interactive-lessons.mjs");
 
+const HAND_AUTHORED_IDS = [
+  "01-linear-algebra-intuition",
+  "02-vectors-matrices-operations",
+  "03-matrix-transformations",
+  "07-docker-for-ai",
+];
+
 function escapeJs(s) {
   return s.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
 }
@@ -38,10 +45,11 @@ function makeSpec(lesson) {
 
 async function loadBatch1Ids() {
   const src = await fs.readFile(BUILD, "utf8");
+  const start = src.indexOf("const SPECS = [");
+  const end = src.indexOf("\n];", start);
+  const block = start >= 0 && end > start ? src.slice(start, end) : src;
   const ids = new Set();
-  for (const m of src.matchAll(/id:\s*"([^"]+)"/g)) {
-    if (m[1].includes("-")) ids.add(m[1]);
-  }
+  for (const m of block.matchAll(/id:\s*"([^"]+)"/g)) ids.add(m[1]);
   return ids;
 }
 
@@ -51,6 +59,7 @@ async function main() {
     ...(await loadBatch1Ids()),
     ...BATCH2.map((s) => s.id),
     ...BATCH3.map((s) => s.id),
+    ...HAND_AUTHORED_IDS,
   ]);
 
   const missing = catalog.lessons.filter((l) => !known.has(l.id));

@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Inference Optimization: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Batching, KV cache, and kernels maximize tokens/sec per dollar."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement inference_optimization",
+      "title": "Implement infer",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "inference_optimization.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(10, 12)==10012)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "infer.py",
+        "starter": "def tokens_per_sec(tokens, seconds):\n    return tokens/max(seconds,1e-9)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", tokens_per_sec(1000,2)==500)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Inference Optimization",
-        "description": "Completed interactive checkpoint for Inference Optimization."
+        "name": "Throughput",
+        "description": "Serving throughput metric."
       }
     },
     {

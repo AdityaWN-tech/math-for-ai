@@ -11,7 +11,7 @@ Curriculum spine: [ai-engineering-from-scratch](https://github.com/rohitg00/ai-e
 git clone git@github.com:t4tarzan/math-for-ai.git
 ```
 
-**Phase 0–19 roadmap** — **502/502 interactive** lessons (full catalog from [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)).
+**Phase 0–19 roadmap** — **502/502 interactive** lessons; batches 1–5 with enriched exercises for LLMs-from-scratch, agents, and capstones (batch 4 stubs remain for phases 6–18 remainder).
 
 ```bash
 # Terminal 1 — app (http://localhost:7777)

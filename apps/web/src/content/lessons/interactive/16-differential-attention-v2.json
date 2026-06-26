@@ -1,6 +1,6 @@
 {
   "id": "16-differential-attention-v2",
-  "title": "Differential Attention V2",
+  "title": "Differential Attention",
   "motto": "Softmax attention spreads a small amount of probability over every non-matching token. Over 100k tokens that noise adds up and drowns the signal. Differential Transformer (Ye et al., ICLR 2025) fixes it by computing attention as the difference of two softmaxes, subtracting the shared noise floor. DIFF V2 (Microsoft, January 2026) is the production-stack rewrite: matching decode latency to baseline Transformer, no custom kernels, FlashAttention-compatible. This lesson is V1 to V2 end-to-end, with a working toy implementation of the difference operation you can run in stdlib Python.",
   "phase": {
     "id": 10,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Differential Attention V2: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Subtract attention maps to reduce noise and improve long-context focus."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement differential_attention_v2",
+      "title": "Implement diffattn",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "differential_attention_v2.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(10, 16)==10016)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "diffattn.py",
+        "starter": "def diff_attn(a1, a2):\n    return [x-y for x,y in zip(a1,a2)]\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", diff_attn([1,0.5],[0.5,0.5])[0]==0.5)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Differential Attention V2",
-        "description": "Completed interactive checkpoint for Differential Attention V2."
+        "name": "Diff attn",
+        "description": "Attention map subtraction."
       }
     },
     {

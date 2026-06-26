@@ -1,6 +1,6 @@
 {
   "id": "23-otel-genai-conventions",
-  "title": "Otel Genai Conventions",
+  "title": "OpenTelemetry GenAI",
   "motto": "OpenTelemetry's GenAI SIG (launched April 2024) defines the standard schema for agent telemetry. Span names, attributes, and content-capture rules converge across vendors so agent traces mean the same thing in Datadog, Grafana, Jaeger, and Honeycomb.",
   "phase": {
     "id": 14,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Otel Genai Conventions: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Standard spans for LLM calls, tool use, and agent steps."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement otel_genai_conventions",
+      "title": "Implement otel",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "otel_genai_conventions.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 23)==14023)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "otel.py",
+        "starter": "def span_attrs(model, tokens):\n    return {\"model\":model,\"tokens\":tokens}\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", span_attrs(\"gpt\",100)[\"tokens\"]==100)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Otel Genai Conventions",
-        "description": "Completed interactive checkpoint for Otel Genai Conventions."
+        "name": "OTel span",
+        "description": "GenAI span attributes."
       }
     },
     {

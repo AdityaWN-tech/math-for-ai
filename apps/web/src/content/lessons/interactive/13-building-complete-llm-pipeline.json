@@ -1,6 +1,6 @@
 {
   "id": "13-building-complete-llm-pipeline",
-  "title": "Building Complete Llm Pipeline",
+  "title": "Complete LLM Pipeline",
   "motto": "Everything from Lessons 01 to 12 is one stage of one pipeline. This lesson is the scaffold that turns those stages into a single end-to-end run: tokenize, pre-train, scale, SFT, align, evaluate, quantize, serve. You will not train a 70B model on a laptop. You will produce the orchestration layer, the manifest, the eval gate, and the rollback plan that a 2026 frontier team uses to decide what gets shipped. This is the capstone.",
   "phase": {
     "id": 10,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Building Complete Llm Pipeline: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Data → train → eval → quantize → serve — production LLM lifecycle."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement building_complete_llm_pipeli",
+      "title": "Implement pipe10",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "building_complete_llm_pipeli.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(10, 13)==10013)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "pipe10.py",
+        "starter": "def pipeline_stages(stages):\n    return len(stages)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", pipeline_stages([\"a\",\"b\",\"c\"])==3)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Building Complete Llm Pipeline",
-        "description": "Completed interactive checkpoint for Building Complete Llm Pipeline."
+        "name": "Pipeline",
+        "description": "End-to-end LLM stages."
       }
     },
     {

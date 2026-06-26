@@ -1,6 +1,6 @@
 {
   "id": "11-llm-observability-dashboard",
-  "title": "Llm Observability Dashboard",
+  "title": "LLM Observability Dashboard",
   "motto": "Langfuse went open-core. Arize Phoenix published the 2026 GenAI semconv mappings. Helicone and Braintrust both doubled down on per-user cost attribution. Traceloop's OpenLLMetry became the de-facto SDK instrumentation. The production shape is ClickHouse for traces, Postgres for metadata, Next.js for UI, and a small army of eval jobs (DeepEval, RAGAS, LLM-judge) running over sampled traces. Build one self-hosted, ingest from at least four SDK families, and demonstrate catching an injected regression in under five minutes.",
   "phase": {
     "id": 19,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Llm Observability Dashboard: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Traces, costs, latency — production LLM monitoring UI."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement llm_observability_dashboard",
+      "title": "Implement cap11",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "llm_observability_dashboard.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(19, 11)==19011)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "cap11.py",
+        "starter": "def p99_latency(samples):\n    s=sorted(samples); return s[int(0.99*len(s))-1]\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", p99_latency([1,2,100])==100)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Llm Observability Dashboard",
-        "description": "Completed interactive checkpoint for Llm Observability Dashboard."
+        "name": "P99 latency",
+        "description": "Tail latency metric."
       }
     },
     {

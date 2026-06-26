@@ -1,6 +1,6 @@
 {
   "id": "06-tool-use-and-function-calling",
-  "title": "Tool Use And Function Calling",
+  "title": "Tool Use",
   "motto": "Toolformer (Schick et al., 2023) started self-supervised tool annotation. Berkeley Function Calling Leaderboard V4 (Patil et al., 2025) sets the 2026 bar: 40% agentic, 30% multi-turn, 10% live, 10% non-live, 10% hallucination. Single-turn is solved. Memory, dynamic decision-making, and long-horizon tool chains are not.",
   "phase": {
     "id": 14,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Tool Use And Function Calling: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Agents invoke tools via JSON schemas — validate args before execution."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement tool_use_and_function_callin",
+      "title": "Implement tool14",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "tool_use_and_function_callin.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 6)==14006)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "tool14.py",
+        "starter": "def parse_tool_name(call):\n    return call.get(\"name\",\"\")\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", parse_tool_name({\"name\":\"search\"})==\"search\")\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Tool Use And Function Calling",
-        "description": "Completed interactive checkpoint for Tool Use And Function Calling."
+        "name": "Tool name",
+        "description": "Extract tool from call payload."
       }
     },
     {

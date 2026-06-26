@@ -1,6 +1,6 @@
 {
   "id": "20-benchmarks-webarena-osworld",
-  "title": "Benchmarks Webarena Osworld",
+  "title": "WebArena & OSWorld",
   "motto": "WebArena tests web-agent capability across four self-hosted apps. OSWorld tests desktop-agent capability across Ubuntu, Windows, macOS. At release (2023–2024) both showed a big gap between best-in-class agents and humans. The gap is narrowing; the failure modes haven't changed.",
   "phase": {
     "id": 14,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Benchmarks Webarena Osworld: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Browser and desktop environment benchmarks for computer-use agents."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement benchmarks_webarena_osworld",
+      "title": "Implement webarena",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "benchmarks_webarena_osworld.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 20)==14020)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "webarena.py",
+        "starter": "def task_success(done, total):\n    return done==total\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", task_success(5,5))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Benchmarks Webarena Osworld",
-        "description": "Completed interactive checkpoint for Benchmarks Webarena Osworld."
+        "name": "Task success",
+        "description": "All subtasks completed."
       }
     },
     {

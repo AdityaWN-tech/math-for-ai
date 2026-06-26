@@ -1,6 +1,6 @@
 {
   "id": "13-mcp-server-with-registry",
-  "title": "Mcp Server With Registry",
+  "title": "MCP Server Registry",
   "motto": "The Model Context Protocol stopped being the future and became the default tool-use spec in 2026. Anthropic, OpenAI, Google, and every major IDE ship MCP clients. Pinterest published its internal ecosystem of MCP servers. The AAIF Registry formalized capability metadata at `.well-known`. AWS ECS published the reference stateless deployment. Block's goose-agent put the same protocol inside a hosted assistant. The 2026 production shape is: StreamableHTTP transport, OAuth 2.1 scopes, OPA policy gating, and a registry that lets platform teams discover, validate, and enable servers. Build that end to end.",
   "phase": {
     "id": 19,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Mcp Server With Registry: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Discover and route tool calls across MCP servers."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement mcp_server_with_registry",
+      "title": "Implement cap13",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "mcp_server_with_registry.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(19, 13)==19013)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "cap13.py",
+        "starter": "def registry_lookup(reg, name):\n    return reg.get(name)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", registry_lookup({\"calc\":1},\"calc\")==1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Mcp Server With Registry",
-        "description": "Completed interactive checkpoint for Mcp Server With Registry."
+        "name": "Registry",
+        "description": "Tool server lookup."
       }
     },
     {

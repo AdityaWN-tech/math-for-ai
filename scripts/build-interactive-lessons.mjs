@@ -9,6 +9,7 @@ import { fileURLToPath } from "url";
 import BATCH2 from "./interactive-specs-batch2.mjs";
 import BATCH3 from "./interactive-specs-batch3.mjs";
 import BATCH4 from "./interactive-specs-batch4.mjs";
+import BATCH5 from "./interactive-specs-batch5.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -832,7 +833,55 @@ const PHASE_NAMES = {
   19: "Capstone Projects",
 };
 
+const HAND_AUTHORED_DIR = path.join(
+  ROOT,
+  "apps/web/src/content/lessons/interactive-hand-authored",
+);
+const HAND_AUTHORED_IDS = new Set([
+  "01-linear-algebra-intuition",
+  "02-vectors-matrices-operations",
+  "03-matrix-transformations",
+  "07-docker-for-ai",
+]);
+
+function mergeSpecs() {
+  const byId = new Map();
+  for (const spec of BATCH4) byId.set(spec.id, spec);
+  for (const spec of BATCH2) byId.set(spec.id, spec);
+  for (const spec of BATCH3) byId.set(spec.id, spec);
+  for (const spec of SPECS) byId.set(spec.id, spec);
+  for (const spec of BATCH5) byId.set(spec.id, spec);
+  for (const id of HAND_AUTHORED_IDS) byId.delete(id);
+  return [...byId.values()];
+}
+
 const CATALOG_PATH = path.join(ROOT, "apps/web/src/content/lessons/catalog.json");
+
+async function preserveHandAuthored(manifest) {
+  for (const id of HAND_AUTHORED_IDS) {
+    const src = path.join(HAND_AUTHORED_DIR, `${id}.json`);
+    try {
+      const raw = await fs.readFile(src, "utf8");
+      await fs.writeFile(path.join(OUT, `${id}.json`), raw);
+      const lesson = JSON.parse(raw);
+      const entry = {
+        id: lesson.id,
+        title: lesson.title,
+        phaseId: lesson.phase.id,
+        phaseName: lesson.phase.name,
+        lessonNumber: lesson.phase.lessonNumber,
+        interactive: true,
+        path: `/demo/${lesson.id}`,
+      };
+      const idx = manifest.findIndex((m) => m.id === id);
+      if (idx >= 0) manifest[idx] = entry;
+      else manifest.push(entry);
+      console.log(`preserved hand-authored ${id}`);
+    } catch (e) {
+      console.warn(`Could not preserve ${id}:`, e.message);
+    }
+  }
+}
 
 async function patchCatalogInteractive(manifest) {
   try {
@@ -944,7 +993,9 @@ async function main() {
   await fs.mkdir(OUT, { recursive: true });
   const manifest = [];
 
-  for (const spec of [...SPECS, ...BATCH2, ...BATCH3, ...BATCH4]) {
+  const allSpecs = mergeSpecs();
+
+  for (const spec of allSpecs) {
     const compiled = await loadCompiled(spec.id);
     const lesson = buildLesson(spec, compiled);
     const outPath = path.join(OUT, `${spec.id}.json`);
@@ -960,6 +1011,8 @@ async function main() {
     });
     console.log(`wrote ${spec.id}`);
   }
+
+  await preserveHandAuthored(manifest);
 
   // Merge with existing interactive lessons not in SPECS (hand-authored)
   const existing = await fs.readdir(OUT);

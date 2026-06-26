@@ -1,6 +1,6 @@
 {
   "id": "26-failure-modes-agentic",
-  "title": "Failure Modes Agentic",
+  "title": "Agent Failure Modes",
   "motto": "MASFT (Berkeley, 2025) catalogs 14 multi-agent failure modes in 3 categories. Microsoft's Taxonomy documents how existing AI failures amplify in agentic settings. Industry field data converges on five recurring modes: hallucinated actions, scope creep, cascading errors, context loss, tool misuse.",
   "phase": {
     "id": 14,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Failure Modes Agentic: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Loops, tool hallucination, context drift — design guardrails."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement failure_modes_agentic",
+      "title": "Implement fail",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "failure_modes_agentic.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 26)==14026)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "fail.py",
+        "starter": "def loop_detect(history, max_rep):\n    return history.count(history[-1])>max_rep if history else False\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", loop_detect([\"a\",\"a\",\"a\"],2))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Failure Modes Agentic",
-        "description": "Completed interactive checkpoint for Failure Modes Agentic."
+        "name": "Loop detect",
+        "description": "Detect repeated agent actions."
       }
     },
     {

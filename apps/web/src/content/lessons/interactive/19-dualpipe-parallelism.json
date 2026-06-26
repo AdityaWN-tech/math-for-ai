@@ -1,6 +1,6 @@
 {
   "id": "19-dualpipe-parallelism",
-  "title": "Dualpipe Parallelism",
+  "title": "DualPipe Parallelism",
   "motto": "DeepSeek-V3 was trained on 2,048 H800 GPUs with MoE experts scattered across nodes. Cross-node expert all-to-all communication cost 1 GPU-hour of comm for every 1 GPU-hour of compute. GPUs were idle half the time. DualPipe (DeepSeek, Dec 2024) is a bidirectional pipeline that overlaps forward and backward computation with the all-to-all comms they trigger. Bubbles drop, throughput climbs, and the keeping of two model-parameter copies (the \"dual\" that gives the name) is cheap once Expert Parallelism is already spreading experts across ranks anyway. This lesson is a Learn-type walkthrough of what DualPipe actually does and why Sea AI Lab's DualPipeV refinement drops the 2x parameter cost at the expense of a marginally tighter bubble.",
   "phase": {
     "id": 10,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Dualpipe Parallelism: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Pipeline parallel schedules overlap forward/backward across GPUs."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement dualpipe_parallelism",
+      "title": "Implement dualpipe",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "dualpipe_parallelism.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(10, 19)==10019)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "dualpipe.py",
+        "starter": "def bubble_fraction(stages, microbatches):\n    return (stages-1)/max(microbatches,1)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", bubble_fraction(4,8)<1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Dualpipe Parallelism",
-        "description": "Completed interactive checkpoint for Dualpipe Parallelism."
+        "name": "PP bubble",
+        "description": "Pipeline bubble estimate."
       }
     },
     {

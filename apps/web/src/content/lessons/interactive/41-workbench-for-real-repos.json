@@ -1,6 +1,6 @@
 {
   "id": "41-workbench-for-real-repos",
-  "title": "Workbench For Real Repos",
+  "title": "Real Repo Workbench",
   "motto": "Eleven lessons of surfaces are worth nothing if they do not survive contact with a real codebase. This lesson runs the same task twice on a small sample app: prompt-only versus workbench-guided. The numbers do the arguing.",
   "phase": {
     "id": 14,
@@ -33,20 +33,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Workbench For Real Repos: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Run agents on real codebases with git, CI, and monorepos."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement workbench_for_real_repos",
+      "title": "Implement wb41",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "workbench_for_real_repos.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 41)==14041)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "wb41.py",
+        "starter": "def repo_size(files):\n    return len(files)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", repo_size([\"a\",\"b\"])==2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -56,8 +56,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Workbench For Real Repos",
-        "description": "Completed interactive checkpoint for Workbench For Real Repos."
+        "name": "Repo size",
+        "description": "Tracked file count."
       }
     },
     {

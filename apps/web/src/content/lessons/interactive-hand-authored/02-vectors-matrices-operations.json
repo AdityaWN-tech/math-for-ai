@@ -1,0 +1,72 @@
+{
+  "id": "02-vectors-matrices-operations",
+  "title": "Vectors, Matrices & Operations",
+  "motto": "Every neural network is just matrix multiplication with extra steps.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 2
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every neural network is just matrix multiplication with extra steps."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why shapes matter",
+      "cards": [
+        "In PyTorch you see output = weights @ input + bias. That @ is matrix multiplication — the entire forward pass of a layer in three operations.",
+        "If inner dimensions do not match, you get a shape error. (128×784) @ (784×1) = (128×1) is valid because 784 = 784."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "figure",
+      "title": "Matrix multiply transforms space",
+      "body": "Matrix multiplication combines rows of A with columns of B via dot products. Element-wise multiply is different — same shape, multiply matching positions. Neural networks use @, not *.",
+      "figure": "matrix-multiply"
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement matrix_multiply",
+      "body": "Write matrix_multiply(A, B) for matrices represented as lists of lists. No numpy. Inner dimensions must match or raise ValueError.",
+      "code": {
+        "language": "python",
+        "filename": "matrices.py",
+        "starter": "def matrix_multiply(A, B):\n    \"\"\"Return A @ B for matrices as list-of-lists.\"\"\"\n    rows_a = len(A)\n    cols_a = len(A[0]) if rows_a else 0\n    rows_b = len(B)\n    cols_b = len(B[0]) if rows_b else 0\n    if cols_a != rows_b:\n        raise ValueError(\"inner dimensions must match\")\n    # TODO: compute each output[i][j] as dot(row i of A, col j of B)\n    return [[0 for _ in range(cols_b)] for _ in range(rows_a)]\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ndef _eq(M, E):\n    return all(M[i][j] == E[i][j] for i in range(len(M)) for j in range(len(M[0])))\n\ntry:\n    r = matrix_multiply([[1, 2], [3, 4]], [[5, 6], [7, 8]])\n    __check(\"2x2\", _eq(r, [[19, 22], [43, 50]]))\n    r2 = matrix_multiply([[1, 2, 3]], [[1], [2], [3]])\n    __check(\"row_vec\", _eq(r2, [[14]]))\n    bad = False\n    try:\n        matrix_multiply([[1, 2]], [[1]])\n        bad = True\n    except ValueError:\n        pass\n    __check(\"shape_error\", not bad)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Layer forward pass intuition",
+        "description": "You can now implement relu(W @ x + b) by hand and explain why weight matrices have shape (out_features, in_features)."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

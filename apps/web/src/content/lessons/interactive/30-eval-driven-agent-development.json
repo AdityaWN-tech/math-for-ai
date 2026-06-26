@@ -1,6 +1,6 @@
 {
   "id": "30-eval-driven-agent-development",
-  "title": "Eval Driven Agent Development",
+  "title": "Eval-Driven Agents",
   "motto": "Anthropic's guidance: \"start with simple prompts, optimize them with comprehensive evaluation, and add multi-step agentic systems only when needed.\" Evaluation is not the last step. It's the outer loop that drives every other choice in Phase 14.",
   "phase": {
     "id": 14,
@@ -32,20 +32,20 @@
       "type": "concept",
       "gate": "continue",
       "title": "The concept",
-      "body": "Core ideas for Eval Driven Agent Development: read the narrative, then implement the checkpoint function to lock in the concept."
+      "body": "Write evals first; iterate agent until benchmark improves."
     },
     {
       "id": "build",
       "beat": "BUILD IT",
       "type": "build",
       "gate": "tests",
-      "title": "Implement eval_driven_agent_developmen",
+      "title": "Implement evdag",
       "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
       "code": {
         "language": "python",
-        "filename": "eval_driven_agent_developmen.py",
-        "starter": "def lesson_checkpoint(phase_id, lesson_no):\n    \"\"\"Return a deterministic fingerprint for this lesson (phase * 1000 + lesson).\"\"\"\n  # TODO: replace with lesson-specific logic\n    return phase_id * 1000 + lesson_no\n",
-        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"checkpoint\", lesson_checkpoint(14, 30)==14030)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+        "filename": "evdag.py",
+        "starter": "def eval_delta(before, after):\n    return after-before\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", eval_delta(0.5,0.7)>0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
       }
     },
     {
@@ -55,8 +55,8 @@
       "gate": "continue",
       "title": "Artifact unlocked",
       "artifact": {
-        "name": "Eval Driven Agent Development",
-        "description": "Completed interactive checkpoint for Eval Driven Agent Development."
+        "name": "Eval delta",
+        "description": "Improvement from iteration."
       }
     },
     {
