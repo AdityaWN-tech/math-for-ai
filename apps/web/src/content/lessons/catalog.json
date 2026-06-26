@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T06:38:28.809Z",
+  "generatedAt": "2026-06-26T06:45:09.190Z",
   "phases": [
     0,
     1
@@ -124,11 +124,11 @@
     },
     {
       "id": "02-vectors-matrices-operations",
-      "title": "Vectors Matrices Operations",
+      "title": "Vectors, Matrices & Operations",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-vectors-matrices-operations"
     },
     {

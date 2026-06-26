@@ -33,7 +33,8 @@
       "type": "concept",
       "gate": "figure",
       "title": "The dot product measures similarity",
-      "body": "The dot product tells you how aligned two vectors are: positive means similar direction, zero means perpendicular, negative means opposite. This is the basis of embedding similarity search in AI."
+      "body": "The dot product tells you how aligned two vectors are: positive means similar direction, zero means perpendicular, negative means opposite. This is the basis of embedding similarity search in AI.",
+      "figure": "vector-projection"
     },
     {
       "id": "build",

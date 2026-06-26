@@ -29,6 +29,7 @@ npm run compile:lessons
 | http://localhost:3000 | Landing |
 | http://localhost:3000/lessons | Phase 0–1 catalog (34 lessons) |
 | http://localhost:3000/demo/01-linear-algebra-intuition | Math + Pyodide |
+| http://localhost:3000/demo/02-vectors-matrices-operations | Matrix multiply + Pyodide |
 | http://localhost:3000/demo/07-docker-for-ai | Deploy Postgres |
 
 ## Docs
@@ -41,6 +42,7 @@ npm run compile:lessons
 | [docs/LAUNCH.md](docs/LAUNCH.md) | 90-day SaaS launch plan |
 | [docs/WIREFRAME-MAP.md](docs/WIREFRAME-MAP.md) | Which template frames → which product screens |
 | [docs/VERTICAL-SLICE.md](docs/VERTICAL-SLICE.md) | First build: one math lesson end-to-end |
+| [docs/DEPLOY.md](docs/DEPLOY.md) | Vercel + Postgres production setup |
 
 ## Quick start (design)
 

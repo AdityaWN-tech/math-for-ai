@@ -18,6 +18,7 @@ export interface LessonStep {
   title: string;
   body?: string;
   cards?: string[];
+  figure?: "vector-projection" | "matrix-multiply";
   artifact?: {
     name: string;
     description: string;
@@ -59,6 +60,6 @@ export interface LessonCatalogEntry {
 
 export interface LessonCatalog {
   generatedAt: string;
-  phase: number;
+  phases?: number[];
   lessons: LessonCatalogEntry[];
 }

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import catalog from "@/content/lessons/catalog.json";
+import { LessonsCatalog } from "@/components/marketing/LessonsCatalog";
 import { Button } from "@/components/ui/button";
+import type { LessonCatalogEntry } from "@/lib/lesson-types";
 
 export const metadata = {
   title: "Lessons — Math for AI",
@@ -8,14 +10,14 @@ export const metadata = {
 };
 
 export default function LessonsPage() {
-  const byPhase = new Map<number, typeof catalog.lessons>();
+  const byPhase = new Map<number, LessonCatalogEntry[]>();
   for (const lesson of catalog.lessons) {
     const list = byPhase.get(lesson.phaseId) ?? [];
     list.push(lesson);
     byPhase.set(lesson.phaseId, list);
   }
 
-  const phases = [...byPhase.entries()].sort(([a], [b]) => a - b);
+  const phases = [...byPhase.entries()].sort(([a], [b]) => a - b) as [number, LessonCatalogEntry[]][];
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)]">
@@ -43,32 +45,7 @@ export default function LessonsPage() {
           . Interactive lessons include code + deploy gates.
         </p>
 
-        {phases.map(([phaseId, lessons]) => (
-          <section key={phaseId} className="mt-10">
-            <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-mute)]">
-              Phase {String(phaseId).padStart(2, "0")} — {lessons[0]?.phaseName}
-            </h2>
-            <ul className="mt-4 divide-y divide-[var(--rule-soft)] rounded-md border border-[var(--rule-soft)] bg-[var(--bg-surface)]">
-              {lessons.map((lesson) => (
-                <li key={lesson.id} className="flex items-center justify-between gap-4 px-4 py-3">
-                  <div>
-                    <p className="font-body font-medium">
-                      {String(lesson.lessonNumber).padStart(2, "0")}. {lesson.title}
-                    </p>
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-mute)]">
-                      {lesson.interactive ? "Interactive" : "Preview"}
-                    </p>
-                  </div>
-                  <Link href={lesson.path}>
-                    <Button variant={lesson.interactive ? "primary" : "secondary"} size="sm">
-                      Open
-                    </Button>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+        <LessonsCatalog phases={phases} />
       </main>
     </div>
   );

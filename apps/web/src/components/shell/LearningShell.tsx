@@ -5,11 +5,14 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, Loader2, Play, Rocket, Sparkles } from "lucide-react";
 import { VectorProjectionFigure } from "@/components/figure/VectorProjectionFigure";
+import { MatrixMultiplyFigure } from "@/components/figure/MatrixMultiplyFigure";
 import { DeployPanel } from "@/components/shell/DeployPanel";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 import type { Lesson, LessonStep } from "@/lib/lesson-types";
+import { nextInteractiveLessonId } from "@/lib/lessons";
+import { markLessonComplete, markStep } from "@/lib/progress";
 import { runPythonWithTests, type RunResult } from "@/lib/pyodide-runner";
 
 const CodeEditor = dynamic(() => import("@/components/shell/CodeEditor"), {
@@ -49,7 +52,12 @@ export function LearningShell({ lesson }: LearningShellProps) {
 
   useEffect(() => {
     track("step_view", { lessonId: lesson.id, stepId: step.id, stepIndex });
-  }, [lesson.id, step.id, stepIndex]);
+    markStep(lesson.id, step.id);
+    if (step.type === "complete") {
+      markLessonComplete(lesson.id);
+      track("lesson_complete", { lessonId: lesson.id });
+    }
+  }, [lesson.id, step.id, stepIndex, step.type]);
 
   useEffect(() => {
     if (!hasBuild) return;
@@ -102,8 +110,8 @@ export function LearningShell({ lesson }: LearningShellProps) {
     if (stepIndex > 0) setStepIndex((i) => i - 1);
   };
 
-  const showFigure =
-    step.type === "concept" && lesson.id === "01-linear-algebra-intuition";
+  const figureId = step.type === "concept" ? step.figure : undefined;
+  const nextLessonId = nextInteractiveLessonId(lesson.id);
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg)] text-[var(--ink)]">
@@ -193,9 +201,9 @@ export function LearningShell({ lesson }: LearningShellProps) {
                     Lesson catalog
                   </Button>
                 </Link>
-                {lesson.id === "01-linear-algebra-intuition" && (
-                  <Link href="/demo/07-docker-for-ai">
-                    <Button size="sm">Next: Deploy lesson →</Button>
+                {nextLessonId && (
+                  <Link href={`/demo/${nextLessonId}`}>
+                    <Button size="sm">Next lesson →</Button>
                   </Link>
                 )}
               </div>
@@ -204,9 +212,15 @@ export function LearningShell({ lesson }: LearningShellProps) {
         </section>
 
         <section className="flex min-h-[320px] flex-col border-b border-[var(--rule-soft)] lg:border-b-0 lg:border-r">
-          {showFigure && (
+          {figureId === "vector-projection" && (
             <div className="flex-1 p-4">
               <VectorProjectionFigure onInteract={() => setFigureReady(true)} />
+            </div>
+          )}
+
+          {figureId === "matrix-multiply" && (
+            <div className="flex-1 p-4">
+              <MatrixMultiplyFigure onInteract={() => setFigureReady(true)} />
             </div>
           )}
 
@@ -228,7 +242,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
             </div>
           )}
 
-          {!showFigure && step.type !== "build" && step.type !== "deploy" && (
+          {!figureId && step.type !== "build" && step.type !== "deploy" && (
             <div className="flex flex-1 flex-col items-center justify-center p-8 text-center">
               <p className="font-display text-4xl text-[var(--blueprint)] opacity-30">◇</p>
               <p className="mt-3 max-w-xs font-body text-sm text-[var(--ink-mute)]">
@@ -285,7 +299,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
             </div>
           ) : (
             <div className="rounded-md border border-dashed border-[var(--rule-soft)] p-4 font-mono text-xs text-[var(--ink-mute)]">
-              {step.type === "concept" && showFigure
+              {step.type === "concept" && figureId
                 ? "Interact with the figure or tap Got it."
                 : "Tests and deploy output appear here during build/deploy steps."}
             </div>

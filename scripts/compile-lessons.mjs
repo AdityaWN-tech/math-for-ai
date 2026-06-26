@@ -16,7 +16,11 @@ const REPO = "rohitg00/ai-engineering-from-scratch";
 const BRANCH = "main";
 const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 
-const INTERACTIVE_IDS = new Set(["01-linear-algebra-intuition", "07-docker-for-ai"]);
+const INTERACTIVE_IDS = new Set([
+  "01-linear-algebra-intuition",
+  "02-vectors-matrices-operations",
+  "07-docker-for-ai",
+]);
 
 const phaseArg = process.argv.find((a) => a.startsWith("--phase="));
 const phaseValue = phaseArg ? phaseArg.split("=")[1] : "1";
@@ -134,9 +138,14 @@ async function compilePhase(phaseNum) {
     const title = slugToTitle(dir);
 
     if (INTERACTIVE_IDS.has(id)) {
+      const titles = {
+        "01-linear-algebra-intuition": "Linear Algebra Intuition",
+        "02-vectors-matrices-operations": "Vectors, Matrices & Operations",
+        "07-docker-for-ai": "Docker for AI",
+      };
       catalogEntries.push({
         id,
-        title: id === "01-linear-algebra-intuition" ? "Linear Algebra Intuition" : "Docker for AI",
+        title: titles[id] ?? slugToTitle(id),
         phaseId: phaseNum,
         phaseName,
         lessonNumber,
@@ -197,6 +206,15 @@ async function main() {
       lessonNumber: 1,
       interactive: true,
       path: "/demo/01-linear-algebra-intuition",
+    },
+    {
+      id: "02-vectors-matrices-operations",
+      title: "Vectors, Matrices & Operations",
+      phaseId: 1,
+      phaseName: "Math Foundations",
+      lessonNumber: 2,
+      interactive: true,
+      path: "/demo/02-vectors-matrices-operations",
     },
     {
       id: "07-docker-for-ai",
