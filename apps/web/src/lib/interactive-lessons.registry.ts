@@ -77,40 +77,431 @@ import lesson_73 from "@/content/lessons/interactive/09-image-generation-gans.js
 import lesson_74 from "@/content/lessons/interactive/10-image-generation-diffusion.json";
 import lesson_75 from "@/content/lessons/interactive/11-stable-diffusion.json";
 import lesson_76 from "@/content/lessons/interactive/12-video-understanding.json";
-import lesson_77 from "@/content/lessons/interactive/01-text-processing.json";
-import lesson_78 from "@/content/lessons/interactive/02-bag-of-words-tfidf.json";
-import lesson_79 from "@/content/lessons/interactive/03-word-embeddings-word2vec.json";
-import lesson_80 from "@/content/lessons/interactive/04-glove-fasttext-subword.json";
-import lesson_81 from "@/content/lessons/interactive/05-sentiment-analysis.json";
-import lesson_82 from "@/content/lessons/interactive/06-named-entity-recognition.json";
-import lesson_83 from "@/content/lessons/interactive/07-pos-tagging-parsing.json";
-import lesson_84 from "@/content/lessons/interactive/08-cnns-rnns-for-text.json";
-import lesson_85 from "@/content/lessons/interactive/09-sequence-to-sequence.json";
-import lesson_86 from "@/content/lessons/interactive/10-attention-mechanism.json";
-import lesson_87 from "@/content/lessons/interactive/01-why-transformers.json";
-import lesson_88 from "@/content/lessons/interactive/02-self-attention-from-scratch.json";
-import lesson_89 from "@/content/lessons/interactive/03-multi-head-attention.json";
-import lesson_90 from "@/content/lessons/interactive/04-positional-encoding.json";
-import lesson_91 from "@/content/lessons/interactive/05-full-transformer.json";
-import lesson_92 from "@/content/lessons/interactive/06-bert-masked-language-modeling.json";
-import lesson_93 from "@/content/lessons/interactive/07-gpt-causal-language-modeling.json";
-import lesson_94 from "@/content/lessons/interactive/08-t5-bart-encoder-decoder.json";
-import lesson_95 from "@/content/lessons/interactive/09-vision-transformers.json";
-import lesson_96 from "@/content/lessons/interactive/10-audio-transformers-whisper.json";
-import lesson_97 from "@/content/lessons/interactive/01-generative-models-taxonomy-history.json";
-import lesson_98 from "@/content/lessons/interactive/02-autoencoders-vae.json";
-import lesson_99 from "@/content/lessons/interactive/03-gans-generator-discriminator.json";
-import lesson_100 from "@/content/lessons/interactive/01-prompt-engineering.json";
-import lesson_101 from "@/content/lessons/interactive/02-few-shot-cot.json";
-import lesson_102 from "@/content/lessons/interactive/03-structured-outputs.json";
-import lesson_103 from "@/content/lessons/interactive/04-embeddings.json";
-import lesson_104 from "@/content/lessons/interactive/05-context-engineering.json";
-import lesson_105 from "@/content/lessons/interactive/06-rag.json";
-import lesson_106 from "@/content/lessons/interactive/07-advanced-rag.json";
-import lesson_107 from "@/content/lessons/interactive/08-fine-tuning-lora.json";
-import lesson_108 from "@/content/lessons/interactive/09-function-calling.json";
-import lesson_109 from "@/content/lessons/interactive/10-evaluation.json";
-import lesson_110 from "@/content/lessons/interactive/02-rag-over-codebase.json";
+import lesson_77 from "@/content/lessons/interactive/13-3d-vision-nerf.json";
+import lesson_78 from "@/content/lessons/interactive/14-vision-transformers.json";
+import lesson_79 from "@/content/lessons/interactive/15-real-time-edge.json";
+import lesson_80 from "@/content/lessons/interactive/16-vision-pipeline-capstone.json";
+import lesson_81 from "@/content/lessons/interactive/17-self-supervised-vision.json";
+import lesson_82 from "@/content/lessons/interactive/18-open-vocab-clip.json";
+import lesson_83 from "@/content/lessons/interactive/19-ocr-document-understanding.json";
+import lesson_84 from "@/content/lessons/interactive/20-image-retrieval-metric.json";
+import lesson_85 from "@/content/lessons/interactive/21-keypoint-pose.json";
+import lesson_86 from "@/content/lessons/interactive/22-3d-gaussian-splatting.json";
+import lesson_87 from "@/content/lessons/interactive/23-diffusion-transformers-rectified-flow.json";
+import lesson_88 from "@/content/lessons/interactive/24-sam3-open-vocab-segmentation.json";
+import lesson_89 from "@/content/lessons/interactive/25-vision-language-models.json";
+import lesson_90 from "@/content/lessons/interactive/26-monocular-depth.json";
+import lesson_91 from "@/content/lessons/interactive/27-multi-object-tracking.json";
+import lesson_92 from "@/content/lessons/interactive/28-world-models-video-diffusion.json";
+import lesson_93 from "@/content/lessons/interactive/01-text-processing.json";
+import lesson_94 from "@/content/lessons/interactive/02-bag-of-words-tfidf.json";
+import lesson_95 from "@/content/lessons/interactive/03-word-embeddings-word2vec.json";
+import lesson_96 from "@/content/lessons/interactive/04-glove-fasttext-subword.json";
+import lesson_97 from "@/content/lessons/interactive/05-sentiment-analysis.json";
+import lesson_98 from "@/content/lessons/interactive/06-named-entity-recognition.json";
+import lesson_99 from "@/content/lessons/interactive/07-pos-tagging-parsing.json";
+import lesson_100 from "@/content/lessons/interactive/08-cnns-rnns-for-text.json";
+import lesson_101 from "@/content/lessons/interactive/09-sequence-to-sequence.json";
+import lesson_102 from "@/content/lessons/interactive/10-attention-mechanism.json";
+import lesson_103 from "@/content/lessons/interactive/11-machine-translation.json";
+import lesson_104 from "@/content/lessons/interactive/12-text-summarization.json";
+import lesson_105 from "@/content/lessons/interactive/13-question-answering.json";
+import lesson_106 from "@/content/lessons/interactive/14-information-retrieval-search.json";
+import lesson_107 from "@/content/lessons/interactive/15-topic-modeling.json";
+import lesson_108 from "@/content/lessons/interactive/16-text-generation-pre-transformer.json";
+import lesson_109 from "@/content/lessons/interactive/17-chatbots-rule-to-neural.json";
+import lesson_110 from "@/content/lessons/interactive/18-multilingual-nlp.json";
+import lesson_111 from "@/content/lessons/interactive/19-subword-tokenization.json";
+import lesson_112 from "@/content/lessons/interactive/20-structured-outputs-constrained-decoding.json";
+import lesson_113 from "@/content/lessons/interactive/21-nli-textual-entailment.json";
+import lesson_114 from "@/content/lessons/interactive/22-embedding-models-deep-dive.json";
+import lesson_115 from "@/content/lessons/interactive/23-chunking-strategies-rag.json";
+import lesson_116 from "@/content/lessons/interactive/24-coreference-resolution.json";
+import lesson_117 from "@/content/lessons/interactive/25-entity-linking.json";
+import lesson_118 from "@/content/lessons/interactive/26-relation-extraction-kg.json";
+import lesson_119 from "@/content/lessons/interactive/27-llm-evaluation-frameworks.json";
+import lesson_120 from "@/content/lessons/interactive/28-long-context-evaluation.json";
+import lesson_121 from "@/content/lessons/interactive/29-dialogue-state-tracking.json";
+import lesson_122 from "@/content/lessons/interactive/01-audio-fundamentals.json";
+import lesson_123 from "@/content/lessons/interactive/02-spectrograms-mel-features.json";
+import lesson_124 from "@/content/lessons/interactive/03-audio-classification.json";
+import lesson_125 from "@/content/lessons/interactive/04-speech-recognition-asr.json";
+import lesson_126 from "@/content/lessons/interactive/05-whisper-architecture-finetuning.json";
+import lesson_127 from "@/content/lessons/interactive/06-speaker-recognition-verification.json";
+import lesson_128 from "@/content/lessons/interactive/07-text-to-speech.json";
+import lesson_129 from "@/content/lessons/interactive/08-voice-cloning-conversion.json";
+import lesson_130 from "@/content/lessons/interactive/09-music-generation.json";
+import lesson_131 from "@/content/lessons/interactive/10-audio-language-models.json";
+import lesson_132 from "@/content/lessons/interactive/11-real-time-audio-processing.json";
+import lesson_133 from "@/content/lessons/interactive/12-voice-assistant-pipeline.json";
+import lesson_134 from "@/content/lessons/interactive/13-neural-audio-codecs.json";
+import lesson_135 from "@/content/lessons/interactive/14-voice-activity-detection-turn-taking.json";
+import lesson_136 from "@/content/lessons/interactive/15-streaming-speech-to-speech-moshi-hibiki.json";
+import lesson_137 from "@/content/lessons/interactive/16-anti-spoofing-audio-watermarking.json";
+import lesson_138 from "@/content/lessons/interactive/17-audio-evaluation-metrics.json";
+import lesson_139 from "@/content/lessons/interactive/01-why-transformers.json";
+import lesson_140 from "@/content/lessons/interactive/02-self-attention-from-scratch.json";
+import lesson_141 from "@/content/lessons/interactive/03-multi-head-attention.json";
+import lesson_142 from "@/content/lessons/interactive/04-positional-encoding.json";
+import lesson_143 from "@/content/lessons/interactive/05-full-transformer.json";
+import lesson_144 from "@/content/lessons/interactive/06-bert-masked-language-modeling.json";
+import lesson_145 from "@/content/lessons/interactive/07-gpt-causal-language-modeling.json";
+import lesson_146 from "@/content/lessons/interactive/08-t5-bart-encoder-decoder.json";
+import lesson_147 from "@/content/lessons/interactive/09-vision-transformers.json";
+import lesson_148 from "@/content/lessons/interactive/10-audio-transformers-whisper.json";
+import lesson_149 from "@/content/lessons/interactive/11-mixture-of-experts.json";
+import lesson_150 from "@/content/lessons/interactive/12-kv-cache-flash-attention.json";
+import lesson_151 from "@/content/lessons/interactive/13-scaling-laws.json";
+import lesson_152 from "@/content/lessons/interactive/14-build-a-transformer-capstone.json";
+import lesson_153 from "@/content/lessons/interactive/15-attention-variants.json";
+import lesson_154 from "@/content/lessons/interactive/16-speculative-decoding.json";
+import lesson_155 from "@/content/lessons/interactive/01-generative-models-taxonomy-history.json";
+import lesson_156 from "@/content/lessons/interactive/02-autoencoders-vae.json";
+import lesson_157 from "@/content/lessons/interactive/03-gans-generator-discriminator.json";
+import lesson_158 from "@/content/lessons/interactive/04-conditional-gans-pix2pix.json";
+import lesson_159 from "@/content/lessons/interactive/05-stylegan.json";
+import lesson_160 from "@/content/lessons/interactive/06-diffusion-ddpm-from-scratch.json";
+import lesson_161 from "@/content/lessons/interactive/07-latent-diffusion-stable-diffusion.json";
+import lesson_162 from "@/content/lessons/interactive/08-controlnet-lora-conditioning.json";
+import lesson_163 from "@/content/lessons/interactive/09-inpainting-outpainting-editing.json";
+import lesson_164 from "@/content/lessons/interactive/10-video-generation.json";
+import lesson_165 from "@/content/lessons/interactive/11-audio-generation.json";
+import lesson_166 from "@/content/lessons/interactive/12-3d-generation.json";
+import lesson_167 from "@/content/lessons/interactive/13-flow-matching-rectified-flows.json";
+import lesson_168 from "@/content/lessons/interactive/14-evaluation-fid-clip-score.json";
+import lesson_169 from "@/content/lessons/interactive/19-visual-autoregressive-var.json";
+import lesson_170 from "@/content/lessons/interactive/01-mdps-states-actions-rewards.json";
+import lesson_171 from "@/content/lessons/interactive/02-dynamic-programming.json";
+import lesson_172 from "@/content/lessons/interactive/03-monte-carlo-methods.json";
+import lesson_173 from "@/content/lessons/interactive/04-q-learning-sarsa.json";
+import lesson_174 from "@/content/lessons/interactive/05-dqn.json";
+import lesson_175 from "@/content/lessons/interactive/06-policy-gradients-reinforce.json";
+import lesson_176 from "@/content/lessons/interactive/07-actor-critic-a2c-a3c.json";
+import lesson_177 from "@/content/lessons/interactive/08-ppo.json";
+import lesson_178 from "@/content/lessons/interactive/09-reward-modeling-rlhf.json";
+import lesson_179 from "@/content/lessons/interactive/10-multi-agent-rl.json";
+import lesson_180 from "@/content/lessons/interactive/11-sim-to-real-transfer.json";
+import lesson_181 from "@/content/lessons/interactive/12-rl-for-games.json";
+import lesson_182 from "@/content/lessons/interactive/01-tokenizers.json";
+import lesson_183 from "@/content/lessons/interactive/02-building-a-tokenizer.json";
+import lesson_184 from "@/content/lessons/interactive/03-data-pipelines.json";
+import lesson_185 from "@/content/lessons/interactive/04-pre-training-mini-gpt.json";
+import lesson_186 from "@/content/lessons/interactive/05-scaling-distributed.json";
+import lesson_187 from "@/content/lessons/interactive/06-instruction-tuning-sft.json";
+import lesson_188 from "@/content/lessons/interactive/07-rlhf.json";
+import lesson_189 from "@/content/lessons/interactive/08-dpo.json";
+import lesson_190 from "@/content/lessons/interactive/09-constitutional-ai-self-improvement.json";
+import lesson_191 from "@/content/lessons/interactive/11-quantization.json";
+import lesson_192 from "@/content/lessons/interactive/12-inference-optimization.json";
+import lesson_193 from "@/content/lessons/interactive/13-building-complete-llm-pipeline.json";
+import lesson_194 from "@/content/lessons/interactive/14-open-models-architecture-walkthroughs.json";
+import lesson_195 from "@/content/lessons/interactive/15-speculative-decoding-eagle3.json";
+import lesson_196 from "@/content/lessons/interactive/16-differential-attention-v2.json";
+import lesson_197 from "@/content/lessons/interactive/17-native-sparse-attention.json";
+import lesson_198 from "@/content/lessons/interactive/18-multi-token-prediction.json";
+import lesson_199 from "@/content/lessons/interactive/19-dualpipe-parallelism.json";
+import lesson_200 from "@/content/lessons/interactive/20-deepseek-v3-walkthrough.json";
+import lesson_201 from "@/content/lessons/interactive/21-jamba-hybrid-ssm-transformer.json";
+import lesson_202 from "@/content/lessons/interactive/22-async-hogwild-inference.json";
+import lesson_203 from "@/content/lessons/interactive/25-speculative-decoding.json";
+import lesson_204 from "@/content/lessons/interactive/34-gradient-checkpointing.json";
+import lesson_205 from "@/content/lessons/interactive/01-prompt-engineering.json";
+import lesson_206 from "@/content/lessons/interactive/02-few-shot-cot.json";
+import lesson_207 from "@/content/lessons/interactive/03-structured-outputs.json";
+import lesson_208 from "@/content/lessons/interactive/04-embeddings.json";
+import lesson_209 from "@/content/lessons/interactive/05-context-engineering.json";
+import lesson_210 from "@/content/lessons/interactive/06-rag.json";
+import lesson_211 from "@/content/lessons/interactive/07-advanced-rag.json";
+import lesson_212 from "@/content/lessons/interactive/08-fine-tuning-lora.json";
+import lesson_213 from "@/content/lessons/interactive/09-function-calling.json";
+import lesson_214 from "@/content/lessons/interactive/10-evaluation.json";
+import lesson_215 from "@/content/lessons/interactive/11-caching-cost.json";
+import lesson_216 from "@/content/lessons/interactive/12-guardrails.json";
+import lesson_217 from "@/content/lessons/interactive/13-production-app.json";
+import lesson_218 from "@/content/lessons/interactive/14-model-context-protocol.json";
+import lesson_219 from "@/content/lessons/interactive/15-prompt-caching.json";
+import lesson_220 from "@/content/lessons/interactive/16-langgraph-state-machines.json";
+import lesson_221 from "@/content/lessons/interactive/17-agent-framework-tradeoffs.json";
+import lesson_222 from "@/content/lessons/interactive/01-vision-transformer-patch-tokens.json";
+import lesson_223 from "@/content/lessons/interactive/02-clip-contrastive-pretraining.json";
+import lesson_224 from "@/content/lessons/interactive/03-blip2-qformer-bridge.json";
+import lesson_225 from "@/content/lessons/interactive/04-flamingo-gated-cross-attention.json";
+import lesson_226 from "@/content/lessons/interactive/05-llava-visual-instruction-tuning.json";
+import lesson_227 from "@/content/lessons/interactive/06-any-resolution-patch-n-pack.json";
+import lesson_228 from "@/content/lessons/interactive/07-open-weight-vlm-recipes.json";
+import lesson_229 from "@/content/lessons/interactive/08-llava-onevision-single-multi-video.json";
+import lesson_230 from "@/content/lessons/interactive/09-qwen-vl-family-dynamic-fps.json";
+import lesson_231 from "@/content/lessons/interactive/10-internvl3-native-multimodal.json";
+import lesson_232 from "@/content/lessons/interactive/11-chameleon-early-fusion-tokens.json";
+import lesson_233 from "@/content/lessons/interactive/12-emu3-next-token-for-generation.json";
+import lesson_234 from "@/content/lessons/interactive/13-transfusion-autoregressive-diffusion.json";
+import lesson_235 from "@/content/lessons/interactive/14-show-o-discrete-diffusion-unified.json";
+import lesson_236 from "@/content/lessons/interactive/15-janus-pro-decoupled-encoders.json";
+import lesson_237 from "@/content/lessons/interactive/16-mio-any-to-any-streaming.json";
+import lesson_238 from "@/content/lessons/interactive/17-video-language-temporal-grounding.json";
+import lesson_239 from "@/content/lessons/interactive/18-long-video-million-token.json";
+import lesson_240 from "@/content/lessons/interactive/19-audio-language-whisper-to-af3.json";
+import lesson_241 from "@/content/lessons/interactive/20-omni-models-thinker-talker.json";
+import lesson_242 from "@/content/lessons/interactive/21-embodied-vlas-openvla-pi0-groot.json";
+import lesson_243 from "@/content/lessons/interactive/22-document-diagram-understanding.json";
+import lesson_244 from "@/content/lessons/interactive/23-colpali-vision-native-rag.json";
+import lesson_245 from "@/content/lessons/interactive/24-multimodal-rag-cross-modal.json";
+import lesson_246 from "@/content/lessons/interactive/25-multimodal-agents-computer-use.json";
+import lesson_247 from "@/content/lessons/interactive/01-the-tool-interface.json";
+import lesson_248 from "@/content/lessons/interactive/02-function-calling-deep-dive.json";
+import lesson_249 from "@/content/lessons/interactive/03-parallel-and-streaming-tool-calls.json";
+import lesson_250 from "@/content/lessons/interactive/04-structured-output.json";
+import lesson_251 from "@/content/lessons/interactive/05-tool-schema-design.json";
+import lesson_252 from "@/content/lessons/interactive/06-mcp-fundamentals.json";
+import lesson_253 from "@/content/lessons/interactive/07-building-an-mcp-server.json";
+import lesson_254 from "@/content/lessons/interactive/08-building-an-mcp-client.json";
+import lesson_255 from "@/content/lessons/interactive/09-mcp-transports.json";
+import lesson_256 from "@/content/lessons/interactive/10-mcp-resources-and-prompts.json";
+import lesson_257 from "@/content/lessons/interactive/11-mcp-sampling.json";
+import lesson_258 from "@/content/lessons/interactive/12-mcp-roots-and-elicitation.json";
+import lesson_259 from "@/content/lessons/interactive/13-mcp-async-tasks.json";
+import lesson_260 from "@/content/lessons/interactive/14-mcp-apps.json";
+import lesson_261 from "@/content/lessons/interactive/15-mcp-security-tool-poisoning.json";
+import lesson_262 from "@/content/lessons/interactive/16-mcp-security-oauth-2-1.json";
+import lesson_263 from "@/content/lessons/interactive/17-mcp-gateways-and-registries.json";
+import lesson_264 from "@/content/lessons/interactive/18-mcp-auth-production.json";
+import lesson_265 from "@/content/lessons/interactive/19-a2a-protocol.json";
+import lesson_266 from "@/content/lessons/interactive/20-opentelemetry-genai.json";
+import lesson_267 from "@/content/lessons/interactive/21-llm-routing-layer.json";
+import lesson_268 from "@/content/lessons/interactive/22-skills-and-agent-sdks.json";
+import lesson_269 from "@/content/lessons/interactive/23-capstone-tool-ecosystem.json";
+import lesson_270 from "@/content/lessons/interactive/01-the-agent-loop.json";
+import lesson_271 from "@/content/lessons/interactive/02-rewoo-plan-and-execute.json";
+import lesson_272 from "@/content/lessons/interactive/03-reflexion-verbal-rl.json";
+import lesson_273 from "@/content/lessons/interactive/04-tree-of-thoughts-lats.json";
+import lesson_274 from "@/content/lessons/interactive/05-self-refine-and-critic.json";
+import lesson_275 from "@/content/lessons/interactive/06-tool-use-and-function-calling.json";
+import lesson_276 from "@/content/lessons/interactive/07-memory-virtual-context-memgpt.json";
+import lesson_277 from "@/content/lessons/interactive/08-memory-blocks-sleep-time-compute.json";
+import lesson_278 from "@/content/lessons/interactive/09-hybrid-memory-mem0.json";
+import lesson_279 from "@/content/lessons/interactive/10-skill-libraries-voyager.json";
+import lesson_280 from "@/content/lessons/interactive/11-planning-htn-and-evolutionary.json";
+import lesson_281 from "@/content/lessons/interactive/12-anthropic-workflow-patterns.json";
+import lesson_282 from "@/content/lessons/interactive/13-langgraph-stateful-graphs.json";
+import lesson_283 from "@/content/lessons/interactive/14-autogen-actor-model.json";
+import lesson_284 from "@/content/lessons/interactive/15-crewai-role-based-crews.json";
+import lesson_285 from "@/content/lessons/interactive/16-openai-agents-sdk.json";
+import lesson_286 from "@/content/lessons/interactive/17-claude-agent-sdk.json";
+import lesson_287 from "@/content/lessons/interactive/18-agno-and-mastra-runtimes.json";
+import lesson_288 from "@/content/lessons/interactive/19-benchmarks-swebench-gaia.json";
+import lesson_289 from "@/content/lessons/interactive/20-benchmarks-webarena-osworld.json";
+import lesson_290 from "@/content/lessons/interactive/21-computer-use-agents.json";
+import lesson_291 from "@/content/lessons/interactive/22-voice-agents-pipecat-livekit.json";
+import lesson_292 from "@/content/lessons/interactive/23-otel-genai-conventions.json";
+import lesson_293 from "@/content/lessons/interactive/24-agent-observability-platforms.json";
+import lesson_294 from "@/content/lessons/interactive/25-multi-agent-debate.json";
+import lesson_295 from "@/content/lessons/interactive/26-failure-modes-agentic.json";
+import lesson_296 from "@/content/lessons/interactive/27-prompt-injection-defense.json";
+import lesson_297 from "@/content/lessons/interactive/28-orchestration-patterns.json";
+import lesson_298 from "@/content/lessons/interactive/29-production-runtimes.json";
+import lesson_299 from "@/content/lessons/interactive/30-eval-driven-agent-development.json";
+import lesson_300 from "@/content/lessons/interactive/31-agent-workbench-why-models-fail.json";
+import lesson_301 from "@/content/lessons/interactive/32-minimal-agent-workbench.json";
+import lesson_302 from "@/content/lessons/interactive/33-instructions-as-executable-constraints.json";
+import lesson_303 from "@/content/lessons/interactive/34-repo-memory-and-state.json";
+import lesson_304 from "@/content/lessons/interactive/35-initialization-scripts.json";
+import lesson_305 from "@/content/lessons/interactive/36-scope-contracts.json";
+import lesson_306 from "@/content/lessons/interactive/37-runtime-feedback-loops.json";
+import lesson_307 from "@/content/lessons/interactive/38-verification-gates.json";
+import lesson_308 from "@/content/lessons/interactive/39-reviewer-agent.json";
+import lesson_309 from "@/content/lessons/interactive/40-multi-session-handoff.json";
+import lesson_310 from "@/content/lessons/interactive/41-workbench-for-real-repos.json";
+import lesson_311 from "@/content/lessons/interactive/42-agent-workbench-capstone.json";
+import lesson_312 from "@/content/lessons/interactive/01-long-horizon-agents.json";
+import lesson_313 from "@/content/lessons/interactive/02-star-family-reasoning.json";
+import lesson_314 from "@/content/lessons/interactive/03-alphaevolve-evolutionary-coding.json";
+import lesson_315 from "@/content/lessons/interactive/04-darwin-godel-machine.json";
+import lesson_316 from "@/content/lessons/interactive/05-ai-scientist-v2.json";
+import lesson_317 from "@/content/lessons/interactive/06-automated-alignment-research.json";
+import lesson_318 from "@/content/lessons/interactive/07-recursive-self-improvement.json";
+import lesson_319 from "@/content/lessons/interactive/08-bounded-self-improvement.json";
+import lesson_320 from "@/content/lessons/interactive/09-coding-agent-landscape.json";
+import lesson_321 from "@/content/lessons/interactive/10-claude-code-permission-modes.json";
+import lesson_322 from "@/content/lessons/interactive/11-browser-agents.json";
+import lesson_323 from "@/content/lessons/interactive/12-durable-execution.json";
+import lesson_324 from "@/content/lessons/interactive/13-cost-governors.json";
+import lesson_325 from "@/content/lessons/interactive/14-kill-switches-canaries.json";
+import lesson_326 from "@/content/lessons/interactive/15-propose-then-commit.json";
+import lesson_327 from "@/content/lessons/interactive/16-checkpoints-rollback.json";
+import lesson_328 from "@/content/lessons/interactive/17-constitutional-ai.json";
+import lesson_329 from "@/content/lessons/interactive/18-llama-guard.json";
+import lesson_330 from "@/content/lessons/interactive/19-anthropic-rsp.json";
+import lesson_331 from "@/content/lessons/interactive/20-openai-preparedness-deepmind-fsf.json";
+import lesson_332 from "@/content/lessons/interactive/21-metr-external-evaluation.json";
+import lesson_333 from "@/content/lessons/interactive/22-cais-caisi-societal-risk.json";
+import lesson_334 from "@/content/lessons/interactive/01-why-multi-agent.json";
+import lesson_335 from "@/content/lessons/interactive/02-fipa-acl-heritage.json";
+import lesson_336 from "@/content/lessons/interactive/03-communication-protocols.json";
+import lesson_337 from "@/content/lessons/interactive/04-primitive-model.json";
+import lesson_338 from "@/content/lessons/interactive/05-supervisor-orchestrator-pattern.json";
+import lesson_339 from "@/content/lessons/interactive/06-hierarchical-architecture.json";
+import lesson_340 from "@/content/lessons/interactive/07-society-of-mind-debate.json";
+import lesson_341 from "@/content/lessons/interactive/08-role-specialization.json";
+import lesson_342 from "@/content/lessons/interactive/09-parallel-swarm-networks.json";
+import lesson_343 from "@/content/lessons/interactive/10-group-chat-speaker-selection.json";
+import lesson_344 from "@/content/lessons/interactive/11-handoffs-and-routines.json";
+import lesson_345 from "@/content/lessons/interactive/12-a2a-protocol.json";
+import lesson_346 from "@/content/lessons/interactive/13-shared-memory-blackboard.json";
+import lesson_347 from "@/content/lessons/interactive/14-consensus-and-bft.json";
+import lesson_348 from "@/content/lessons/interactive/15-voting-debate-topology.json";
+import lesson_349 from "@/content/lessons/interactive/16-negotiation-bargaining.json";
+import lesson_350 from "@/content/lessons/interactive/17-generative-agents-simulation.json";
+import lesson_351 from "@/content/lessons/interactive/18-theory-of-mind-coordination.json";
+import lesson_352 from "@/content/lessons/interactive/19-swarm-optimization-pso-aco.json";
+import lesson_353 from "@/content/lessons/interactive/20-marl-maddpg-qmix-mappo.json";
+import lesson_354 from "@/content/lessons/interactive/21-agent-economies.json";
+import lesson_355 from "@/content/lessons/interactive/22-production-scaling-queues-checkpoints.json";
+import lesson_356 from "@/content/lessons/interactive/23-failure-modes-mast-groupthink.json";
+import lesson_357 from "@/content/lessons/interactive/24-evaluation-coordination-benchmarks.json";
+import lesson_358 from "@/content/lessons/interactive/25-case-studies-2026-sota.json";
+import lesson_359 from "@/content/lessons/interactive/01-managed-llm-platforms.json";
+import lesson_360 from "@/content/lessons/interactive/02-inference-platform-economics.json";
+import lesson_361 from "@/content/lessons/interactive/03-gpu-autoscaling-kubernetes.json";
+import lesson_362 from "@/content/lessons/interactive/04-vllm-serving-internals.json";
+import lesson_363 from "@/content/lessons/interactive/05-eagle3-speculative-decoding.json";
+import lesson_364 from "@/content/lessons/interactive/06-sglang-radixattention.json";
+import lesson_365 from "@/content/lessons/interactive/07-tensorrt-llm-blackwell.json";
+import lesson_366 from "@/content/lessons/interactive/08-inference-metrics-goodput.json";
+import lesson_367 from "@/content/lessons/interactive/09-production-quantization.json";
+import lesson_368 from "@/content/lessons/interactive/10-cold-start-mitigation.json";
+import lesson_369 from "@/content/lessons/interactive/11-multi-region-kv-locality.json";
+import lesson_370 from "@/content/lessons/interactive/12-edge-inference.json";
+import lesson_371 from "@/content/lessons/interactive/13-llm-observability.json";
+import lesson_372 from "@/content/lessons/interactive/14-prompt-semantic-caching.json";
+import lesson_373 from "@/content/lessons/interactive/15-batch-apis.json";
+import lesson_374 from "@/content/lessons/interactive/16-model-routing.json";
+import lesson_375 from "@/content/lessons/interactive/17-disaggregated-prefill-decode.json";
+import lesson_376 from "@/content/lessons/interactive/18-vllm-production-stack-lmcache.json";
+import lesson_377 from "@/content/lessons/interactive/19-ai-gateways.json";
+import lesson_378 from "@/content/lessons/interactive/20-shadow-canary-progressive.json";
+import lesson_379 from "@/content/lessons/interactive/21-ab-testing-llm-features.json";
+import lesson_380 from "@/content/lessons/interactive/22-load-testing-llm-apis.json";
+import lesson_381 from "@/content/lessons/interactive/23-sre-for-ai.json";
+import lesson_382 from "@/content/lessons/interactive/24-chaos-engineering-llm.json";
+import lesson_383 from "@/content/lessons/interactive/25-security-secrets-audit.json";
+import lesson_384 from "@/content/lessons/interactive/26-compliance-frameworks.json";
+import lesson_385 from "@/content/lessons/interactive/27-finops-llms.json";
+import lesson_386 from "@/content/lessons/interactive/28-self-hosted-serving-selection.json";
+import lesson_387 from "@/content/lessons/interactive/01-instruction-following-alignment-signal.json";
+import lesson_388 from "@/content/lessons/interactive/02-reward-hacking-goodhart.json";
+import lesson_389 from "@/content/lessons/interactive/03-direct-preference-optimization-family.json";
+import lesson_390 from "@/content/lessons/interactive/04-sycophancy-rlhf-amplification.json";
+import lesson_391 from "@/content/lessons/interactive/05-constitutional-ai-rlaif.json";
+import lesson_392 from "@/content/lessons/interactive/06-mesa-optimization-deceptive-alignment.json";
+import lesson_393 from "@/content/lessons/interactive/07-sleeper-agents-persistent-deception.json";
+import lesson_394 from "@/content/lessons/interactive/08-in-context-scheming-frontier-models.json";
+import lesson_395 from "@/content/lessons/interactive/09-alignment-faking.json";
+import lesson_396 from "@/content/lessons/interactive/10-ai-control-subversion.json";
+import lesson_397 from "@/content/lessons/interactive/11-scalable-oversight-weak-to-strong.json";
+import lesson_398 from "@/content/lessons/interactive/12-red-teaming-pair-automated-attacks.json";
+import lesson_399 from "@/content/lessons/interactive/13-many-shot-jailbreaking.json";
+import lesson_400 from "@/content/lessons/interactive/14-ascii-art-visual-jailbreaks.json";
+import lesson_401 from "@/content/lessons/interactive/15-indirect-prompt-injection.json";
+import lesson_402 from "@/content/lessons/interactive/16-red-team-tooling-garak-llamaguard-pyrit.json";
+import lesson_403 from "@/content/lessons/interactive/17-wmdp-dual-use-evaluation.json";
+import lesson_404 from "@/content/lessons/interactive/18-frontier-safety-frameworks-rsp-pf-fsf.json";
+import lesson_405 from "@/content/lessons/interactive/19-model-welfare-research.json";
+import lesson_406 from "@/content/lessons/interactive/20-bias-representational-harm.json";
+import lesson_407 from "@/content/lessons/interactive/21-fairness-criteria-group-individual-counterfactual.json";
+import lesson_408 from "@/content/lessons/interactive/22-differential-privacy-for-llms.json";
+import lesson_409 from "@/content/lessons/interactive/23-watermarking-synthid-stable-signature-c2pa.json";
+import lesson_410 from "@/content/lessons/interactive/24-regulatory-frameworks-eu-us-uk-korea.json";
+import lesson_411 from "@/content/lessons/interactive/25-echoleak-cves-for-ai.json";
+import lesson_412 from "@/content/lessons/interactive/26-model-system-dataset-cards.json";
+import lesson_413 from "@/content/lessons/interactive/27-data-provenance-training-governance.json";
+import lesson_414 from "@/content/lessons/interactive/28-alignment-research-ecosystem.json";
+import lesson_415 from "@/content/lessons/interactive/29-moderation-systems-openai-perspective-llamaguard.json";
+import lesson_416 from "@/content/lessons/interactive/30-dual-use-risk-cyber-bio-chem-nuclear.json";
+import lesson_417 from "@/content/lessons/interactive/01-terminal-native-coding-agent.json";
+import lesson_418 from "@/content/lessons/interactive/02-rag-over-codebase.json";
+import lesson_419 from "@/content/lessons/interactive/03-realtime-voice-assistant.json";
+import lesson_420 from "@/content/lessons/interactive/04-multimodal-document-qa.json";
+import lesson_421 from "@/content/lessons/interactive/05-autonomous-research-agent.json";
+import lesson_422 from "@/content/lessons/interactive/06-devops-troubleshooting-agent.json";
+import lesson_423 from "@/content/lessons/interactive/07-end-to-end-fine-tuning-pipeline.json";
+import lesson_424 from "@/content/lessons/interactive/08-production-rag-chatbot.json";
+import lesson_425 from "@/content/lessons/interactive/09-code-migration-agent.json";
+import lesson_426 from "@/content/lessons/interactive/10-multi-agent-software-team.json";
+import lesson_427 from "@/content/lessons/interactive/11-llm-observability-dashboard.json";
+import lesson_428 from "@/content/lessons/interactive/12-video-understanding-pipeline.json";
+import lesson_429 from "@/content/lessons/interactive/13-mcp-server-with-registry.json";
+import lesson_430 from "@/content/lessons/interactive/14-speculative-decoding-server.json";
+import lesson_431 from "@/content/lessons/interactive/15-constitutional-safety-harness.json";
+import lesson_432 from "@/content/lessons/interactive/16-github-issue-to-pr-agent.json";
+import lesson_433 from "@/content/lessons/interactive/17-personal-ai-tutor.json";
+import lesson_434 from "@/content/lessons/interactive/20-agent-harness-loop-contract.json";
+import lesson_435 from "@/content/lessons/interactive/21-tool-registry-schema-validation.json";
+import lesson_436 from "@/content/lessons/interactive/22-jsonrpc-stdio-transport.json";
+import lesson_437 from "@/content/lessons/interactive/23-function-call-dispatcher.json";
+import lesson_438 from "@/content/lessons/interactive/24-plan-execute-control-flow.json";
+import lesson_439 from "@/content/lessons/interactive/25-verification-gates-observation-budget.json";
+import lesson_440 from "@/content/lessons/interactive/26-sandbox-runner-denylist.json";
+import lesson_441 from "@/content/lessons/interactive/27-eval-harness-fixture-tasks.json";
+import lesson_442 from "@/content/lessons/interactive/28-observability-otel-traces.json";
+import lesson_443 from "@/content/lessons/interactive/29-end-to-end-coding-task-demo.json";
+import lesson_444 from "@/content/lessons/interactive/30-bpe-tokenizer-from-scratch.json";
+import lesson_445 from "@/content/lessons/interactive/31-tokenized-dataset-sliding-window.json";
+import lesson_446 from "@/content/lessons/interactive/32-token-positional-embeddings.json";
+import lesson_447 from "@/content/lessons/interactive/33-multihead-self-attention.json";
+import lesson_448 from "@/content/lessons/interactive/34-transformer-block.json";
+import lesson_449 from "@/content/lessons/interactive/35-gpt-model-assembly.json";
+import lesson_450 from "@/content/lessons/interactive/36-training-loop-eval.json";
+import lesson_451 from "@/content/lessons/interactive/37-loading-pretrained-weights.json";
+import lesson_452 from "@/content/lessons/interactive/38-classifier-finetuning.json";
+import lesson_453 from "@/content/lessons/interactive/39-instruction-tuning-sft.json";
+import lesson_454 from "@/content/lessons/interactive/40-dpo-from-scratch.json";
+import lesson_455 from "@/content/lessons/interactive/41-eval-pipeline.json";
+import lesson_456 from "@/content/lessons/interactive/42-large-corpus-downloader.json";
+import lesson_457 from "@/content/lessons/interactive/43-hdf5-tokenized-corpus.json";
+import lesson_458 from "@/content/lessons/interactive/44-cosine-lr-warmup.json";
+import lesson_459 from "@/content/lessons/interactive/45-gradient-clipping-amp.json";
+import lesson_460 from "@/content/lessons/interactive/46-gradient-accumulation.json";
+import lesson_461 from "@/content/lessons/interactive/47-checkpoint-save-resume.json";
+import lesson_462 from "@/content/lessons/interactive/48-distributed-fsdp-ddp.json";
+import lesson_463 from "@/content/lessons/interactive/49-lm-eval-harness.json";
+import lesson_464 from "@/content/lessons/interactive/50-hypothesis-generator.json";
+import lesson_465 from "@/content/lessons/interactive/51-literature-retrieval.json";
+import lesson_466 from "@/content/lessons/interactive/52-experiment-runner.json";
+import lesson_467 from "@/content/lessons/interactive/53-result-evaluator.json";
+import lesson_468 from "@/content/lessons/interactive/54-paper-writer.json";
+import lesson_469 from "@/content/lessons/interactive/55-critic-loop.json";
+import lesson_470 from "@/content/lessons/interactive/56-iteration-scheduler.json";
+import lesson_471 from "@/content/lessons/interactive/57-end-to-end-research-demo.json";
+import lesson_472 from "@/content/lessons/interactive/58-vision-encoder-patches.json";
+import lesson_473 from "@/content/lessons/interactive/59-vit-transformer.json";
+import lesson_474 from "@/content/lessons/interactive/60-projection-layer-modality-align.json";
+import lesson_475 from "@/content/lessons/interactive/61-cross-attention-fusion.json";
+import lesson_476 from "@/content/lessons/interactive/62-vision-language-pretraining.json";
+import lesson_477 from "@/content/lessons/interactive/63-multimodal-eval.json";
+import lesson_478 from "@/content/lessons/interactive/64-chunking-strategies-advanced.json";
+import lesson_479 from "@/content/lessons/interactive/65-hybrid-retrieval-bm25-dense.json";
+import lesson_480 from "@/content/lessons/interactive/66-reranker-cross-encoder.json";
+import lesson_481 from "@/content/lessons/interactive/67-query-rewriting-hyde.json";
+import lesson_482 from "@/content/lessons/interactive/68-rag-eval-precision-recall.json";
+import lesson_483 from "@/content/lessons/interactive/69-end-to-end-rag-system.json";
+import lesson_484 from "@/content/lessons/interactive/70-task-spec-format.json";
+import lesson_485 from "@/content/lessons/interactive/71-classical-metrics.json";
+import lesson_486 from "@/content/lessons/interactive/72-code-exec-metric.json";
+import lesson_487 from "@/content/lessons/interactive/73-perplexity-calibration.json";
+import lesson_488 from "@/content/lessons/interactive/74-leaderboard-aggregation.json";
+import lesson_489 from "@/content/lessons/interactive/75-end-to-end-eval-runner.json";
+import lesson_490 from "@/content/lessons/interactive/76-collective-ops-from-scratch.json";
+import lesson_491 from "@/content/lessons/interactive/77-data-parallel-ddp.json";
+import lesson_492 from "@/content/lessons/interactive/78-zero-parameter-sharding.json";
+import lesson_493 from "@/content/lessons/interactive/79-pipeline-parallel.json";
+import lesson_494 from "@/content/lessons/interactive/80-checkpoint-sharded-resume.json";
+import lesson_495 from "@/content/lessons/interactive/81-end-to-end-distributed-train.json";
+import lesson_496 from "@/content/lessons/interactive/82-jailbreak-taxonomy.json";
+import lesson_497 from "@/content/lessons/interactive/83-prompt-injection-detector.json";
+import lesson_498 from "@/content/lessons/interactive/84-refusal-evaluation.json";
+import lesson_499 from "@/content/lessons/interactive/85-content-classifier-integration.json";
+import lesson_500 from "@/content/lessons/interactive/86-constitutional-rules-engine.json";
+import lesson_501 from "@/content/lessons/interactive/87-end-to-end-safety-gate.json";
 
 export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "01-dev-environment": lesson_0 as Lesson,
@@ -190,38 +581,429 @@ export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "10-image-generation-diffusion": lesson_74 as Lesson,
   "11-stable-diffusion": lesson_75 as Lesson,
   "12-video-understanding": lesson_76 as Lesson,
-  "01-text-processing": lesson_77 as Lesson,
-  "02-bag-of-words-tfidf": lesson_78 as Lesson,
-  "03-word-embeddings-word2vec": lesson_79 as Lesson,
-  "04-glove-fasttext-subword": lesson_80 as Lesson,
-  "05-sentiment-analysis": lesson_81 as Lesson,
-  "06-named-entity-recognition": lesson_82 as Lesson,
-  "07-pos-tagging-parsing": lesson_83 as Lesson,
-  "08-cnns-rnns-for-text": lesson_84 as Lesson,
-  "09-sequence-to-sequence": lesson_85 as Lesson,
-  "10-attention-mechanism": lesson_86 as Lesson,
-  "01-why-transformers": lesson_87 as Lesson,
-  "02-self-attention-from-scratch": lesson_88 as Lesson,
-  "03-multi-head-attention": lesson_89 as Lesson,
-  "04-positional-encoding": lesson_90 as Lesson,
-  "05-full-transformer": lesson_91 as Lesson,
-  "06-bert-masked-language-modeling": lesson_92 as Lesson,
-  "07-gpt-causal-language-modeling": lesson_93 as Lesson,
-  "08-t5-bart-encoder-decoder": lesson_94 as Lesson,
-  "09-vision-transformers": lesson_95 as Lesson,
-  "10-audio-transformers-whisper": lesson_96 as Lesson,
-  "01-generative-models-taxonomy-history": lesson_97 as Lesson,
-  "02-autoencoders-vae": lesson_98 as Lesson,
-  "03-gans-generator-discriminator": lesson_99 as Lesson,
-  "01-prompt-engineering": lesson_100 as Lesson,
-  "02-few-shot-cot": lesson_101 as Lesson,
-  "03-structured-outputs": lesson_102 as Lesson,
-  "04-embeddings": lesson_103 as Lesson,
-  "05-context-engineering": lesson_104 as Lesson,
-  "06-rag": lesson_105 as Lesson,
-  "07-advanced-rag": lesson_106 as Lesson,
-  "08-fine-tuning-lora": lesson_107 as Lesson,
-  "09-function-calling": lesson_108 as Lesson,
-  "10-evaluation": lesson_109 as Lesson,
-  "02-rag-over-codebase": lesson_110 as Lesson,
+  "13-3d-vision-nerf": lesson_77 as Lesson,
+  "14-vision-transformers": lesson_78 as Lesson,
+  "15-real-time-edge": lesson_79 as Lesson,
+  "16-vision-pipeline-capstone": lesson_80 as Lesson,
+  "17-self-supervised-vision": lesson_81 as Lesson,
+  "18-open-vocab-clip": lesson_82 as Lesson,
+  "19-ocr-document-understanding": lesson_83 as Lesson,
+  "20-image-retrieval-metric": lesson_84 as Lesson,
+  "21-keypoint-pose": lesson_85 as Lesson,
+  "22-3d-gaussian-splatting": lesson_86 as Lesson,
+  "23-diffusion-transformers-rectified-flow": lesson_87 as Lesson,
+  "24-sam3-open-vocab-segmentation": lesson_88 as Lesson,
+  "25-vision-language-models": lesson_89 as Lesson,
+  "26-monocular-depth": lesson_90 as Lesson,
+  "27-multi-object-tracking": lesson_91 as Lesson,
+  "28-world-models-video-diffusion": lesson_92 as Lesson,
+  "01-text-processing": lesson_93 as Lesson,
+  "02-bag-of-words-tfidf": lesson_94 as Lesson,
+  "03-word-embeddings-word2vec": lesson_95 as Lesson,
+  "04-glove-fasttext-subword": lesson_96 as Lesson,
+  "05-sentiment-analysis": lesson_97 as Lesson,
+  "06-named-entity-recognition": lesson_98 as Lesson,
+  "07-pos-tagging-parsing": lesson_99 as Lesson,
+  "08-cnns-rnns-for-text": lesson_100 as Lesson,
+  "09-sequence-to-sequence": lesson_101 as Lesson,
+  "10-attention-mechanism": lesson_102 as Lesson,
+  "11-machine-translation": lesson_103 as Lesson,
+  "12-text-summarization": lesson_104 as Lesson,
+  "13-question-answering": lesson_105 as Lesson,
+  "14-information-retrieval-search": lesson_106 as Lesson,
+  "15-topic-modeling": lesson_107 as Lesson,
+  "16-text-generation-pre-transformer": lesson_108 as Lesson,
+  "17-chatbots-rule-to-neural": lesson_109 as Lesson,
+  "18-multilingual-nlp": lesson_110 as Lesson,
+  "19-subword-tokenization": lesson_111 as Lesson,
+  "20-structured-outputs-constrained-decoding": lesson_112 as Lesson,
+  "21-nli-textual-entailment": lesson_113 as Lesson,
+  "22-embedding-models-deep-dive": lesson_114 as Lesson,
+  "23-chunking-strategies-rag": lesson_115 as Lesson,
+  "24-coreference-resolution": lesson_116 as Lesson,
+  "25-entity-linking": lesson_117 as Lesson,
+  "26-relation-extraction-kg": lesson_118 as Lesson,
+  "27-llm-evaluation-frameworks": lesson_119 as Lesson,
+  "28-long-context-evaluation": lesson_120 as Lesson,
+  "29-dialogue-state-tracking": lesson_121 as Lesson,
+  "01-audio-fundamentals": lesson_122 as Lesson,
+  "02-spectrograms-mel-features": lesson_123 as Lesson,
+  "03-audio-classification": lesson_124 as Lesson,
+  "04-speech-recognition-asr": lesson_125 as Lesson,
+  "05-whisper-architecture-finetuning": lesson_126 as Lesson,
+  "06-speaker-recognition-verification": lesson_127 as Lesson,
+  "07-text-to-speech": lesson_128 as Lesson,
+  "08-voice-cloning-conversion": lesson_129 as Lesson,
+  "09-music-generation": lesson_130 as Lesson,
+  "10-audio-language-models": lesson_131 as Lesson,
+  "11-real-time-audio-processing": lesson_132 as Lesson,
+  "12-voice-assistant-pipeline": lesson_133 as Lesson,
+  "13-neural-audio-codecs": lesson_134 as Lesson,
+  "14-voice-activity-detection-turn-taking": lesson_135 as Lesson,
+  "15-streaming-speech-to-speech-moshi-hibiki": lesson_136 as Lesson,
+  "16-anti-spoofing-audio-watermarking": lesson_137 as Lesson,
+  "17-audio-evaluation-metrics": lesson_138 as Lesson,
+  "01-why-transformers": lesson_139 as Lesson,
+  "02-self-attention-from-scratch": lesson_140 as Lesson,
+  "03-multi-head-attention": lesson_141 as Lesson,
+  "04-positional-encoding": lesson_142 as Lesson,
+  "05-full-transformer": lesson_143 as Lesson,
+  "06-bert-masked-language-modeling": lesson_144 as Lesson,
+  "07-gpt-causal-language-modeling": lesson_145 as Lesson,
+  "08-t5-bart-encoder-decoder": lesson_146 as Lesson,
+  "09-vision-transformers": lesson_147 as Lesson,
+  "10-audio-transformers-whisper": lesson_148 as Lesson,
+  "11-mixture-of-experts": lesson_149 as Lesson,
+  "12-kv-cache-flash-attention": lesson_150 as Lesson,
+  "13-scaling-laws": lesson_151 as Lesson,
+  "14-build-a-transformer-capstone": lesson_152 as Lesson,
+  "15-attention-variants": lesson_153 as Lesson,
+  "16-speculative-decoding": lesson_154 as Lesson,
+  "01-generative-models-taxonomy-history": lesson_155 as Lesson,
+  "02-autoencoders-vae": lesson_156 as Lesson,
+  "03-gans-generator-discriminator": lesson_157 as Lesson,
+  "04-conditional-gans-pix2pix": lesson_158 as Lesson,
+  "05-stylegan": lesson_159 as Lesson,
+  "06-diffusion-ddpm-from-scratch": lesson_160 as Lesson,
+  "07-latent-diffusion-stable-diffusion": lesson_161 as Lesson,
+  "08-controlnet-lora-conditioning": lesson_162 as Lesson,
+  "09-inpainting-outpainting-editing": lesson_163 as Lesson,
+  "10-video-generation": lesson_164 as Lesson,
+  "11-audio-generation": lesson_165 as Lesson,
+  "12-3d-generation": lesson_166 as Lesson,
+  "13-flow-matching-rectified-flows": lesson_167 as Lesson,
+  "14-evaluation-fid-clip-score": lesson_168 as Lesson,
+  "19-visual-autoregressive-var": lesson_169 as Lesson,
+  "01-mdps-states-actions-rewards": lesson_170 as Lesson,
+  "02-dynamic-programming": lesson_171 as Lesson,
+  "03-monte-carlo-methods": lesson_172 as Lesson,
+  "04-q-learning-sarsa": lesson_173 as Lesson,
+  "05-dqn": lesson_174 as Lesson,
+  "06-policy-gradients-reinforce": lesson_175 as Lesson,
+  "07-actor-critic-a2c-a3c": lesson_176 as Lesson,
+  "08-ppo": lesson_177 as Lesson,
+  "09-reward-modeling-rlhf": lesson_178 as Lesson,
+  "10-multi-agent-rl": lesson_179 as Lesson,
+  "11-sim-to-real-transfer": lesson_180 as Lesson,
+  "12-rl-for-games": lesson_181 as Lesson,
+  "01-tokenizers": lesson_182 as Lesson,
+  "02-building-a-tokenizer": lesson_183 as Lesson,
+  "03-data-pipelines": lesson_184 as Lesson,
+  "04-pre-training-mini-gpt": lesson_185 as Lesson,
+  "05-scaling-distributed": lesson_186 as Lesson,
+  "06-instruction-tuning-sft": lesson_187 as Lesson,
+  "07-rlhf": lesson_188 as Lesson,
+  "08-dpo": lesson_189 as Lesson,
+  "09-constitutional-ai-self-improvement": lesson_190 as Lesson,
+  "11-quantization": lesson_191 as Lesson,
+  "12-inference-optimization": lesson_192 as Lesson,
+  "13-building-complete-llm-pipeline": lesson_193 as Lesson,
+  "14-open-models-architecture-walkthroughs": lesson_194 as Lesson,
+  "15-speculative-decoding-eagle3": lesson_195 as Lesson,
+  "16-differential-attention-v2": lesson_196 as Lesson,
+  "17-native-sparse-attention": lesson_197 as Lesson,
+  "18-multi-token-prediction": lesson_198 as Lesson,
+  "19-dualpipe-parallelism": lesson_199 as Lesson,
+  "20-deepseek-v3-walkthrough": lesson_200 as Lesson,
+  "21-jamba-hybrid-ssm-transformer": lesson_201 as Lesson,
+  "22-async-hogwild-inference": lesson_202 as Lesson,
+  "25-speculative-decoding": lesson_203 as Lesson,
+  "34-gradient-checkpointing": lesson_204 as Lesson,
+  "01-prompt-engineering": lesson_205 as Lesson,
+  "02-few-shot-cot": lesson_206 as Lesson,
+  "03-structured-outputs": lesson_207 as Lesson,
+  "04-embeddings": lesson_208 as Lesson,
+  "05-context-engineering": lesson_209 as Lesson,
+  "06-rag": lesson_210 as Lesson,
+  "07-advanced-rag": lesson_211 as Lesson,
+  "08-fine-tuning-lora": lesson_212 as Lesson,
+  "09-function-calling": lesson_213 as Lesson,
+  "10-evaluation": lesson_214 as Lesson,
+  "11-caching-cost": lesson_215 as Lesson,
+  "12-guardrails": lesson_216 as Lesson,
+  "13-production-app": lesson_217 as Lesson,
+  "14-model-context-protocol": lesson_218 as Lesson,
+  "15-prompt-caching": lesson_219 as Lesson,
+  "16-langgraph-state-machines": lesson_220 as Lesson,
+  "17-agent-framework-tradeoffs": lesson_221 as Lesson,
+  "01-vision-transformer-patch-tokens": lesson_222 as Lesson,
+  "02-clip-contrastive-pretraining": lesson_223 as Lesson,
+  "03-blip2-qformer-bridge": lesson_224 as Lesson,
+  "04-flamingo-gated-cross-attention": lesson_225 as Lesson,
+  "05-llava-visual-instruction-tuning": lesson_226 as Lesson,
+  "06-any-resolution-patch-n-pack": lesson_227 as Lesson,
+  "07-open-weight-vlm-recipes": lesson_228 as Lesson,
+  "08-llava-onevision-single-multi-video": lesson_229 as Lesson,
+  "09-qwen-vl-family-dynamic-fps": lesson_230 as Lesson,
+  "10-internvl3-native-multimodal": lesson_231 as Lesson,
+  "11-chameleon-early-fusion-tokens": lesson_232 as Lesson,
+  "12-emu3-next-token-for-generation": lesson_233 as Lesson,
+  "13-transfusion-autoregressive-diffusion": lesson_234 as Lesson,
+  "14-show-o-discrete-diffusion-unified": lesson_235 as Lesson,
+  "15-janus-pro-decoupled-encoders": lesson_236 as Lesson,
+  "16-mio-any-to-any-streaming": lesson_237 as Lesson,
+  "17-video-language-temporal-grounding": lesson_238 as Lesson,
+  "18-long-video-million-token": lesson_239 as Lesson,
+  "19-audio-language-whisper-to-af3": lesson_240 as Lesson,
+  "20-omni-models-thinker-talker": lesson_241 as Lesson,
+  "21-embodied-vlas-openvla-pi0-groot": lesson_242 as Lesson,
+  "22-document-diagram-understanding": lesson_243 as Lesson,
+  "23-colpali-vision-native-rag": lesson_244 as Lesson,
+  "24-multimodal-rag-cross-modal": lesson_245 as Lesson,
+  "25-multimodal-agents-computer-use": lesson_246 as Lesson,
+  "01-the-tool-interface": lesson_247 as Lesson,
+  "02-function-calling-deep-dive": lesson_248 as Lesson,
+  "03-parallel-and-streaming-tool-calls": lesson_249 as Lesson,
+  "04-structured-output": lesson_250 as Lesson,
+  "05-tool-schema-design": lesson_251 as Lesson,
+  "06-mcp-fundamentals": lesson_252 as Lesson,
+  "07-building-an-mcp-server": lesson_253 as Lesson,
+  "08-building-an-mcp-client": lesson_254 as Lesson,
+  "09-mcp-transports": lesson_255 as Lesson,
+  "10-mcp-resources-and-prompts": lesson_256 as Lesson,
+  "11-mcp-sampling": lesson_257 as Lesson,
+  "12-mcp-roots-and-elicitation": lesson_258 as Lesson,
+  "13-mcp-async-tasks": lesson_259 as Lesson,
+  "14-mcp-apps": lesson_260 as Lesson,
+  "15-mcp-security-tool-poisoning": lesson_261 as Lesson,
+  "16-mcp-security-oauth-2-1": lesson_262 as Lesson,
+  "17-mcp-gateways-and-registries": lesson_263 as Lesson,
+  "18-mcp-auth-production": lesson_264 as Lesson,
+  "19-a2a-protocol": lesson_265 as Lesson,
+  "20-opentelemetry-genai": lesson_266 as Lesson,
+  "21-llm-routing-layer": lesson_267 as Lesson,
+  "22-skills-and-agent-sdks": lesson_268 as Lesson,
+  "23-capstone-tool-ecosystem": lesson_269 as Lesson,
+  "01-the-agent-loop": lesson_270 as Lesson,
+  "02-rewoo-plan-and-execute": lesson_271 as Lesson,
+  "03-reflexion-verbal-rl": lesson_272 as Lesson,
+  "04-tree-of-thoughts-lats": lesson_273 as Lesson,
+  "05-self-refine-and-critic": lesson_274 as Lesson,
+  "06-tool-use-and-function-calling": lesson_275 as Lesson,
+  "07-memory-virtual-context-memgpt": lesson_276 as Lesson,
+  "08-memory-blocks-sleep-time-compute": lesson_277 as Lesson,
+  "09-hybrid-memory-mem0": lesson_278 as Lesson,
+  "10-skill-libraries-voyager": lesson_279 as Lesson,
+  "11-planning-htn-and-evolutionary": lesson_280 as Lesson,
+  "12-anthropic-workflow-patterns": lesson_281 as Lesson,
+  "13-langgraph-stateful-graphs": lesson_282 as Lesson,
+  "14-autogen-actor-model": lesson_283 as Lesson,
+  "15-crewai-role-based-crews": lesson_284 as Lesson,
+  "16-openai-agents-sdk": lesson_285 as Lesson,
+  "17-claude-agent-sdk": lesson_286 as Lesson,
+  "18-agno-and-mastra-runtimes": lesson_287 as Lesson,
+  "19-benchmarks-swebench-gaia": lesson_288 as Lesson,
+  "20-benchmarks-webarena-osworld": lesson_289 as Lesson,
+  "21-computer-use-agents": lesson_290 as Lesson,
+  "22-voice-agents-pipecat-livekit": lesson_291 as Lesson,
+  "23-otel-genai-conventions": lesson_292 as Lesson,
+  "24-agent-observability-platforms": lesson_293 as Lesson,
+  "25-multi-agent-debate": lesson_294 as Lesson,
+  "26-failure-modes-agentic": lesson_295 as Lesson,
+  "27-prompt-injection-defense": lesson_296 as Lesson,
+  "28-orchestration-patterns": lesson_297 as Lesson,
+  "29-production-runtimes": lesson_298 as Lesson,
+  "30-eval-driven-agent-development": lesson_299 as Lesson,
+  "31-agent-workbench-why-models-fail": lesson_300 as Lesson,
+  "32-minimal-agent-workbench": lesson_301 as Lesson,
+  "33-instructions-as-executable-constraints": lesson_302 as Lesson,
+  "34-repo-memory-and-state": lesson_303 as Lesson,
+  "35-initialization-scripts": lesson_304 as Lesson,
+  "36-scope-contracts": lesson_305 as Lesson,
+  "37-runtime-feedback-loops": lesson_306 as Lesson,
+  "38-verification-gates": lesson_307 as Lesson,
+  "39-reviewer-agent": lesson_308 as Lesson,
+  "40-multi-session-handoff": lesson_309 as Lesson,
+  "41-workbench-for-real-repos": lesson_310 as Lesson,
+  "42-agent-workbench-capstone": lesson_311 as Lesson,
+  "01-long-horizon-agents": lesson_312 as Lesson,
+  "02-star-family-reasoning": lesson_313 as Lesson,
+  "03-alphaevolve-evolutionary-coding": lesson_314 as Lesson,
+  "04-darwin-godel-machine": lesson_315 as Lesson,
+  "05-ai-scientist-v2": lesson_316 as Lesson,
+  "06-automated-alignment-research": lesson_317 as Lesson,
+  "07-recursive-self-improvement": lesson_318 as Lesson,
+  "08-bounded-self-improvement": lesson_319 as Lesson,
+  "09-coding-agent-landscape": lesson_320 as Lesson,
+  "10-claude-code-permission-modes": lesson_321 as Lesson,
+  "11-browser-agents": lesson_322 as Lesson,
+  "12-durable-execution": lesson_323 as Lesson,
+  "13-cost-governors": lesson_324 as Lesson,
+  "14-kill-switches-canaries": lesson_325 as Lesson,
+  "15-propose-then-commit": lesson_326 as Lesson,
+  "16-checkpoints-rollback": lesson_327 as Lesson,
+  "17-constitutional-ai": lesson_328 as Lesson,
+  "18-llama-guard": lesson_329 as Lesson,
+  "19-anthropic-rsp": lesson_330 as Lesson,
+  "20-openai-preparedness-deepmind-fsf": lesson_331 as Lesson,
+  "21-metr-external-evaluation": lesson_332 as Lesson,
+  "22-cais-caisi-societal-risk": lesson_333 as Lesson,
+  "01-why-multi-agent": lesson_334 as Lesson,
+  "02-fipa-acl-heritage": lesson_335 as Lesson,
+  "03-communication-protocols": lesson_336 as Lesson,
+  "04-primitive-model": lesson_337 as Lesson,
+  "05-supervisor-orchestrator-pattern": lesson_338 as Lesson,
+  "06-hierarchical-architecture": lesson_339 as Lesson,
+  "07-society-of-mind-debate": lesson_340 as Lesson,
+  "08-role-specialization": lesson_341 as Lesson,
+  "09-parallel-swarm-networks": lesson_342 as Lesson,
+  "10-group-chat-speaker-selection": lesson_343 as Lesson,
+  "11-handoffs-and-routines": lesson_344 as Lesson,
+  "12-a2a-protocol": lesson_345 as Lesson,
+  "13-shared-memory-blackboard": lesson_346 as Lesson,
+  "14-consensus-and-bft": lesson_347 as Lesson,
+  "15-voting-debate-topology": lesson_348 as Lesson,
+  "16-negotiation-bargaining": lesson_349 as Lesson,
+  "17-generative-agents-simulation": lesson_350 as Lesson,
+  "18-theory-of-mind-coordination": lesson_351 as Lesson,
+  "19-swarm-optimization-pso-aco": lesson_352 as Lesson,
+  "20-marl-maddpg-qmix-mappo": lesson_353 as Lesson,
+  "21-agent-economies": lesson_354 as Lesson,
+  "22-production-scaling-queues-checkpoints": lesson_355 as Lesson,
+  "23-failure-modes-mast-groupthink": lesson_356 as Lesson,
+  "24-evaluation-coordination-benchmarks": lesson_357 as Lesson,
+  "25-case-studies-2026-sota": lesson_358 as Lesson,
+  "01-managed-llm-platforms": lesson_359 as Lesson,
+  "02-inference-platform-economics": lesson_360 as Lesson,
+  "03-gpu-autoscaling-kubernetes": lesson_361 as Lesson,
+  "04-vllm-serving-internals": lesson_362 as Lesson,
+  "05-eagle3-speculative-decoding": lesson_363 as Lesson,
+  "06-sglang-radixattention": lesson_364 as Lesson,
+  "07-tensorrt-llm-blackwell": lesson_365 as Lesson,
+  "08-inference-metrics-goodput": lesson_366 as Lesson,
+  "09-production-quantization": lesson_367 as Lesson,
+  "10-cold-start-mitigation": lesson_368 as Lesson,
+  "11-multi-region-kv-locality": lesson_369 as Lesson,
+  "12-edge-inference": lesson_370 as Lesson,
+  "13-llm-observability": lesson_371 as Lesson,
+  "14-prompt-semantic-caching": lesson_372 as Lesson,
+  "15-batch-apis": lesson_373 as Lesson,
+  "16-model-routing": lesson_374 as Lesson,
+  "17-disaggregated-prefill-decode": lesson_375 as Lesson,
+  "18-vllm-production-stack-lmcache": lesson_376 as Lesson,
+  "19-ai-gateways": lesson_377 as Lesson,
+  "20-shadow-canary-progressive": lesson_378 as Lesson,
+  "21-ab-testing-llm-features": lesson_379 as Lesson,
+  "22-load-testing-llm-apis": lesson_380 as Lesson,
+  "23-sre-for-ai": lesson_381 as Lesson,
+  "24-chaos-engineering-llm": lesson_382 as Lesson,
+  "25-security-secrets-audit": lesson_383 as Lesson,
+  "26-compliance-frameworks": lesson_384 as Lesson,
+  "27-finops-llms": lesson_385 as Lesson,
+  "28-self-hosted-serving-selection": lesson_386 as Lesson,
+  "01-instruction-following-alignment-signal": lesson_387 as Lesson,
+  "02-reward-hacking-goodhart": lesson_388 as Lesson,
+  "03-direct-preference-optimization-family": lesson_389 as Lesson,
+  "04-sycophancy-rlhf-amplification": lesson_390 as Lesson,
+  "05-constitutional-ai-rlaif": lesson_391 as Lesson,
+  "06-mesa-optimization-deceptive-alignment": lesson_392 as Lesson,
+  "07-sleeper-agents-persistent-deception": lesson_393 as Lesson,
+  "08-in-context-scheming-frontier-models": lesson_394 as Lesson,
+  "09-alignment-faking": lesson_395 as Lesson,
+  "10-ai-control-subversion": lesson_396 as Lesson,
+  "11-scalable-oversight-weak-to-strong": lesson_397 as Lesson,
+  "12-red-teaming-pair-automated-attacks": lesson_398 as Lesson,
+  "13-many-shot-jailbreaking": lesson_399 as Lesson,
+  "14-ascii-art-visual-jailbreaks": lesson_400 as Lesson,
+  "15-indirect-prompt-injection": lesson_401 as Lesson,
+  "16-red-team-tooling-garak-llamaguard-pyrit": lesson_402 as Lesson,
+  "17-wmdp-dual-use-evaluation": lesson_403 as Lesson,
+  "18-frontier-safety-frameworks-rsp-pf-fsf": lesson_404 as Lesson,
+  "19-model-welfare-research": lesson_405 as Lesson,
+  "20-bias-representational-harm": lesson_406 as Lesson,
+  "21-fairness-criteria-group-individual-counterfactual": lesson_407 as Lesson,
+  "22-differential-privacy-for-llms": lesson_408 as Lesson,
+  "23-watermarking-synthid-stable-signature-c2pa": lesson_409 as Lesson,
+  "24-regulatory-frameworks-eu-us-uk-korea": lesson_410 as Lesson,
+  "25-echoleak-cves-for-ai": lesson_411 as Lesson,
+  "26-model-system-dataset-cards": lesson_412 as Lesson,
+  "27-data-provenance-training-governance": lesson_413 as Lesson,
+  "28-alignment-research-ecosystem": lesson_414 as Lesson,
+  "29-moderation-systems-openai-perspective-llamaguard": lesson_415 as Lesson,
+  "30-dual-use-risk-cyber-bio-chem-nuclear": lesson_416 as Lesson,
+  "01-terminal-native-coding-agent": lesson_417 as Lesson,
+  "02-rag-over-codebase": lesson_418 as Lesson,
+  "03-realtime-voice-assistant": lesson_419 as Lesson,
+  "04-multimodal-document-qa": lesson_420 as Lesson,
+  "05-autonomous-research-agent": lesson_421 as Lesson,
+  "06-devops-troubleshooting-agent": lesson_422 as Lesson,
+  "07-end-to-end-fine-tuning-pipeline": lesson_423 as Lesson,
+  "08-production-rag-chatbot": lesson_424 as Lesson,
+  "09-code-migration-agent": lesson_425 as Lesson,
+  "10-multi-agent-software-team": lesson_426 as Lesson,
+  "11-llm-observability-dashboard": lesson_427 as Lesson,
+  "12-video-understanding-pipeline": lesson_428 as Lesson,
+  "13-mcp-server-with-registry": lesson_429 as Lesson,
+  "14-speculative-decoding-server": lesson_430 as Lesson,
+  "15-constitutional-safety-harness": lesson_431 as Lesson,
+  "16-github-issue-to-pr-agent": lesson_432 as Lesson,
+  "17-personal-ai-tutor": lesson_433 as Lesson,
+  "20-agent-harness-loop-contract": lesson_434 as Lesson,
+  "21-tool-registry-schema-validation": lesson_435 as Lesson,
+  "22-jsonrpc-stdio-transport": lesson_436 as Lesson,
+  "23-function-call-dispatcher": lesson_437 as Lesson,
+  "24-plan-execute-control-flow": lesson_438 as Lesson,
+  "25-verification-gates-observation-budget": lesson_439 as Lesson,
+  "26-sandbox-runner-denylist": lesson_440 as Lesson,
+  "27-eval-harness-fixture-tasks": lesson_441 as Lesson,
+  "28-observability-otel-traces": lesson_442 as Lesson,
+  "29-end-to-end-coding-task-demo": lesson_443 as Lesson,
+  "30-bpe-tokenizer-from-scratch": lesson_444 as Lesson,
+  "31-tokenized-dataset-sliding-window": lesson_445 as Lesson,
+  "32-token-positional-embeddings": lesson_446 as Lesson,
+  "33-multihead-self-attention": lesson_447 as Lesson,
+  "34-transformer-block": lesson_448 as Lesson,
+  "35-gpt-model-assembly": lesson_449 as Lesson,
+  "36-training-loop-eval": lesson_450 as Lesson,
+  "37-loading-pretrained-weights": lesson_451 as Lesson,
+  "38-classifier-finetuning": lesson_452 as Lesson,
+  "39-instruction-tuning-sft": lesson_453 as Lesson,
+  "40-dpo-from-scratch": lesson_454 as Lesson,
+  "41-eval-pipeline": lesson_455 as Lesson,
+  "42-large-corpus-downloader": lesson_456 as Lesson,
+  "43-hdf5-tokenized-corpus": lesson_457 as Lesson,
+  "44-cosine-lr-warmup": lesson_458 as Lesson,
+  "45-gradient-clipping-amp": lesson_459 as Lesson,
+  "46-gradient-accumulation": lesson_460 as Lesson,
+  "47-checkpoint-save-resume": lesson_461 as Lesson,
+  "48-distributed-fsdp-ddp": lesson_462 as Lesson,
+  "49-lm-eval-harness": lesson_463 as Lesson,
+  "50-hypothesis-generator": lesson_464 as Lesson,
+  "51-literature-retrieval": lesson_465 as Lesson,
+  "52-experiment-runner": lesson_466 as Lesson,
+  "53-result-evaluator": lesson_467 as Lesson,
+  "54-paper-writer": lesson_468 as Lesson,
+  "55-critic-loop": lesson_469 as Lesson,
+  "56-iteration-scheduler": lesson_470 as Lesson,
+  "57-end-to-end-research-demo": lesson_471 as Lesson,
+  "58-vision-encoder-patches": lesson_472 as Lesson,
+  "59-vit-transformer": lesson_473 as Lesson,
+  "60-projection-layer-modality-align": lesson_474 as Lesson,
+  "61-cross-attention-fusion": lesson_475 as Lesson,
+  "62-vision-language-pretraining": lesson_476 as Lesson,
+  "63-multimodal-eval": lesson_477 as Lesson,
+  "64-chunking-strategies-advanced": lesson_478 as Lesson,
+  "65-hybrid-retrieval-bm25-dense": lesson_479 as Lesson,
+  "66-reranker-cross-encoder": lesson_480 as Lesson,
+  "67-query-rewriting-hyde": lesson_481 as Lesson,
+  "68-rag-eval-precision-recall": lesson_482 as Lesson,
+  "69-end-to-end-rag-system": lesson_483 as Lesson,
+  "70-task-spec-format": lesson_484 as Lesson,
+  "71-classical-metrics": lesson_485 as Lesson,
+  "72-code-exec-metric": lesson_486 as Lesson,
+  "73-perplexity-calibration": lesson_487 as Lesson,
+  "74-leaderboard-aggregation": lesson_488 as Lesson,
+  "75-end-to-end-eval-runner": lesson_489 as Lesson,
+  "76-collective-ops-from-scratch": lesson_490 as Lesson,
+  "77-data-parallel-ddp": lesson_491 as Lesson,
+  "78-zero-parameter-sharding": lesson_492 as Lesson,
+  "79-pipeline-parallel": lesson_493 as Lesson,
+  "80-checkpoint-sharded-resume": lesson_494 as Lesson,
+  "81-end-to-end-distributed-train": lesson_495 as Lesson,
+  "82-jailbreak-taxonomy": lesson_496 as Lesson,
+  "83-prompt-injection-detector": lesson_497 as Lesson,
+  "84-refusal-evaluation": lesson_498 as Lesson,
+  "85-content-classifier-integration": lesson_499 as Lesson,
+  "86-constitutional-rules-engine": lesson_500 as Lesson,
+  "87-end-to-end-safety-gate": lesson_501 as Lesson,
 };

@@ -8,6 +8,7 @@
     "start": "npm run start --prefix apps/web",
     "lint": "npm run lint --prefix apps/web",
     "compile:interactive": "node scripts/build-interactive-lessons.mjs",
+    "generate:batch4": "node scripts/generate-batch4-specs.mjs",
     "compile:lessons": "node scripts/build-interactive-lessons.mjs && node scripts/compile-lessons.mjs --phase=all",
     "compile:lessons:phase0": "node scripts/compile-lessons.mjs --phase=0",
     "compile:lessons:phase1": "node scripts/compile-lessons.mjs --phase=1",

@@ -8,6 +8,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import BATCH2 from "./interactive-specs-batch2.mjs";
 import BATCH3 from "./interactive-specs-batch3.mjs";
+import BATCH4 from "./interactive-specs-batch4.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -943,7 +944,7 @@ async function main() {
   await fs.mkdir(OUT, { recursive: true });
   const manifest = [];
 
-  for (const spec of [...SPECS, ...BATCH2, ...BATCH3]) {
+  for (const spec of [...SPECS, ...BATCH2, ...BATCH3, ...BATCH4]) {
     const compiled = await loadCompiled(spec.id);
     const lesson = buildLesson(spec, compiled);
     const outPath = path.join(OUT, `${spec.id}.json`);

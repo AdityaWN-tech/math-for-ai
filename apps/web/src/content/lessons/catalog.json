@@ -23,7 +23,7 @@
     19
   ],
   "lessonCount": 502,
-  "interactiveCount": 219,
+  "interactiveCount": 502,
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -1237,7 +1237,7 @@
       "phaseId": 6,
       "phaseName": "Speech & Audio",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-neural-audio-codecs"
     },
     {
@@ -1246,7 +1246,7 @@
       "phaseId": 6,
       "phaseName": "Speech & Audio",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-voice-activity-detection-turn-taking"
     },
     {
@@ -1255,7 +1255,7 @@
       "phaseId": 6,
       "phaseName": "Speech & Audio",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-streaming-speech-to-speech-moshi-hibiki"
     },
     {
@@ -1264,7 +1264,7 @@
       "phaseId": 6,
       "phaseName": "Speech & Audio",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-anti-spoofing-audio-watermarking"
     },
     {
@@ -1273,7 +1273,7 @@
       "phaseId": 6,
       "phaseName": "Speech & Audio",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-audio-evaluation-metrics"
     },
     {
@@ -1516,7 +1516,7 @@
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-audio-generation"
     },
     {
@@ -1525,7 +1525,7 @@
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-3d-generation"
     },
     {
@@ -1534,7 +1534,7 @@
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-flow-matching-rectified-flows"
     },
     {
@@ -1543,7 +1543,7 @@
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-evaluation-fid-clip-score"
     },
     {
@@ -1552,7 +1552,7 @@
       "phaseId": 8,
       "phaseName": "Generative AI",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-visual-autoregressive-var"
     },
     {
@@ -1633,7 +1633,7 @@
       "phaseId": 9,
       "phaseName": "Reinforcement Learning",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-reward-modeling-rlhf"
     },
     {
@@ -1642,7 +1642,7 @@
       "phaseId": 9,
       "phaseName": "Reinforcement Learning",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-multi-agent-rl"
     },
     {
@@ -1651,7 +1651,7 @@
       "phaseId": 9,
       "phaseName": "Reinforcement Learning",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-sim-to-real-transfer"
     },
     {
@@ -1660,7 +1660,7 @@
       "phaseId": 9,
       "phaseName": "Reinforcement Learning",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-rl-for-games"
     },
     {
@@ -1723,7 +1723,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-rlhf"
     },
     {
@@ -1732,7 +1732,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-dpo"
     },
     {
@@ -1741,7 +1741,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-constitutional-ai-self-improvement"
     },
     {
@@ -1750,7 +1750,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-quantization"
     },
     {
@@ -1759,7 +1759,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-inference-optimization"
     },
     {
@@ -1768,7 +1768,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-building-complete-llm-pipeline"
     },
     {
@@ -1777,7 +1777,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-open-models-architecture-walkthroughs"
     },
     {
@@ -1786,7 +1786,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-speculative-decoding-eagle3"
     },
     {
@@ -1795,7 +1795,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-differential-attention-v2"
     },
     {
@@ -1804,7 +1804,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-native-sparse-attention"
     },
     {
@@ -1813,7 +1813,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-multi-token-prediction"
     },
     {
@@ -1822,7 +1822,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-dualpipe-parallelism"
     },
     {
@@ -1831,7 +1831,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-deepseek-v3-walkthrough"
     },
     {
@@ -1840,7 +1840,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-jamba-hybrid-ssm-transformer"
     },
     {
@@ -1849,7 +1849,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-async-hogwild-inference"
     },
     {
@@ -1858,7 +1858,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-speculative-decoding"
     },
     {
@@ -1867,7 +1867,7 @@
       "phaseId": 10,
       "phaseName": "LLMs from Scratch",
       "lessonNumber": 34,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/34-gradient-checkpointing"
     },
     {
@@ -2083,7 +2083,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-open-weight-vlm-recipes"
     },
     {
@@ -2092,7 +2092,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-llava-onevision-single-multi-video"
     },
     {
@@ -2101,7 +2101,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-qwen-vl-family-dynamic-fps"
     },
     {
@@ -2110,7 +2110,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-internvl3-native-multimodal"
     },
     {
@@ -2119,7 +2119,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-chameleon-early-fusion-tokens"
     },
     {
@@ -2128,7 +2128,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-emu3-next-token-for-generation"
     },
     {
@@ -2137,7 +2137,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-transfusion-autoregressive-diffusion"
     },
     {
@@ -2146,7 +2146,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-show-o-discrete-diffusion-unified"
     },
     {
@@ -2155,7 +2155,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-janus-pro-decoupled-encoders"
     },
     {
@@ -2164,7 +2164,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-mio-any-to-any-streaming"
     },
     {
@@ -2173,7 +2173,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-video-language-temporal-grounding"
     },
     {
@@ -2182,7 +2182,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-long-video-million-token"
     },
     {
@@ -2191,7 +2191,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-audio-language-whisper-to-af3"
     },
     {
@@ -2200,7 +2200,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-omni-models-thinker-talker"
     },
     {
@@ -2209,7 +2209,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-embodied-vlas-openvla-pi0-groot"
     },
     {
@@ -2218,7 +2218,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-document-diagram-understanding"
     },
     {
@@ -2227,7 +2227,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-colpali-vision-native-rag"
     },
     {
@@ -2236,7 +2236,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-multimodal-rag-cross-modal"
     },
     {
@@ -2245,7 +2245,7 @@
       "phaseId": 12,
       "phaseName": "Multimodal AI",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-multimodal-agents-computer-use"
     },
     {
@@ -2308,7 +2308,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-building-an-mcp-server"
     },
     {
@@ -2317,7 +2317,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-building-an-mcp-client"
     },
     {
@@ -2326,7 +2326,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-mcp-transports"
     },
     {
@@ -2335,7 +2335,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-mcp-resources-and-prompts"
     },
     {
@@ -2344,7 +2344,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-mcp-sampling"
     },
     {
@@ -2353,7 +2353,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-mcp-roots-and-elicitation"
     },
     {
@@ -2362,7 +2362,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-mcp-async-tasks"
     },
     {
@@ -2371,7 +2371,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-mcp-apps"
     },
     {
@@ -2380,7 +2380,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-mcp-security-tool-poisoning"
     },
     {
@@ -2389,7 +2389,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-mcp-security-oauth-2-1"
     },
     {
@@ -2398,7 +2398,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-mcp-gateways-and-registries"
     },
     {
@@ -2407,7 +2407,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-mcp-auth-production"
     },
     {
@@ -2416,7 +2416,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-a2a-protocol"
     },
     {
@@ -2425,7 +2425,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-opentelemetry-genai"
     },
     {
@@ -2434,7 +2434,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-llm-routing-layer"
     },
     {
@@ -2443,7 +2443,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-skills-and-agent-sdks"
     },
     {
@@ -2452,7 +2452,7 @@
       "phaseId": 13,
       "phaseName": "Tools & Protocols",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-capstone-tool-ecosystem"
     },
     {
@@ -2506,7 +2506,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-tool-use-and-function-calling"
     },
     {
@@ -2515,7 +2515,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-memory-virtual-context-memgpt"
     },
     {
@@ -2524,7 +2524,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-memory-blocks-sleep-time-compute"
     },
     {
@@ -2533,7 +2533,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-hybrid-memory-mem0"
     },
     {
@@ -2542,7 +2542,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-skill-libraries-voyager"
     },
     {
@@ -2551,7 +2551,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-planning-htn-and-evolutionary"
     },
     {
@@ -2560,7 +2560,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-anthropic-workflow-patterns"
     },
     {
@@ -2569,7 +2569,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-langgraph-stateful-graphs"
     },
     {
@@ -2578,7 +2578,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-autogen-actor-model"
     },
     {
@@ -2587,7 +2587,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-crewai-role-based-crews"
     },
     {
@@ -2596,7 +2596,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-openai-agents-sdk"
     },
     {
@@ -2605,7 +2605,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-claude-agent-sdk"
     },
     {
@@ -2614,7 +2614,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-agno-and-mastra-runtimes"
     },
     {
@@ -2623,7 +2623,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-benchmarks-swebench-gaia"
     },
     {
@@ -2632,7 +2632,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-benchmarks-webarena-osworld"
     },
     {
@@ -2641,7 +2641,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-computer-use-agents"
     },
     {
@@ -2650,7 +2650,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-voice-agents-pipecat-livekit"
     },
     {
@@ -2659,7 +2659,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-otel-genai-conventions"
     },
     {
@@ -2668,7 +2668,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-agent-observability-platforms"
     },
     {
@@ -2677,7 +2677,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-multi-agent-debate"
     },
     {
@@ -2686,7 +2686,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 26,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/26-failure-modes-agentic"
     },
     {
@@ -2695,7 +2695,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 27,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/27-prompt-injection-defense"
     },
     {
@@ -2704,7 +2704,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 28,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/28-orchestration-patterns"
     },
     {
@@ -2713,7 +2713,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 29,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/29-production-runtimes"
     },
     {
@@ -2722,7 +2722,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 30,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/30-eval-driven-agent-development"
     },
     {
@@ -2731,7 +2731,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 31,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/31-agent-workbench-why-models-fail"
     },
     {
@@ -2740,7 +2740,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 32,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/32-minimal-agent-workbench"
     },
     {
@@ -2749,7 +2749,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 33,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/33-instructions-as-executable-constraints"
     },
     {
@@ -2758,7 +2758,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 34,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/34-repo-memory-and-state"
     },
     {
@@ -2767,7 +2767,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 35,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/35-initialization-scripts"
     },
     {
@@ -2776,7 +2776,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 36,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/36-scope-contracts"
     },
     {
@@ -2785,7 +2785,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 37,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/37-runtime-feedback-loops"
     },
     {
@@ -2794,7 +2794,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 38,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/38-verification-gates"
     },
     {
@@ -2803,7 +2803,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 39,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/39-reviewer-agent"
     },
     {
@@ -2812,7 +2812,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 40,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/40-multi-session-handoff"
     },
     {
@@ -2821,7 +2821,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 41,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/41-workbench-for-real-repos"
     },
     {
@@ -2830,7 +2830,7 @@
       "phaseId": 14,
       "phaseName": "Agent Engineering",
       "lessonNumber": 42,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/42-agent-workbench-capstone"
     },
     {
@@ -2848,7 +2848,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-star-family-reasoning"
     },
     {
@@ -2857,7 +2857,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-alphaevolve-evolutionary-coding"
     },
     {
@@ -2866,7 +2866,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-darwin-godel-machine"
     },
     {
@@ -2875,7 +2875,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-ai-scientist-v2"
     },
     {
@@ -2884,7 +2884,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-automated-alignment-research"
     },
     {
@@ -2893,7 +2893,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-recursive-self-improvement"
     },
     {
@@ -2902,7 +2902,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-bounded-self-improvement"
     },
     {
@@ -2911,7 +2911,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-coding-agent-landscape"
     },
     {
@@ -2920,7 +2920,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-claude-code-permission-modes"
     },
     {
@@ -2929,7 +2929,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-browser-agents"
     },
     {
@@ -2938,7 +2938,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-durable-execution"
     },
     {
@@ -2947,7 +2947,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-cost-governors"
     },
     {
@@ -2956,7 +2956,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-kill-switches-canaries"
     },
     {
@@ -2965,7 +2965,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-propose-then-commit"
     },
     {
@@ -2974,7 +2974,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-checkpoints-rollback"
     },
     {
@@ -2983,7 +2983,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-constitutional-ai"
     },
     {
@@ -2992,7 +2992,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-llama-guard"
     },
     {
@@ -3001,7 +3001,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-anthropic-rsp"
     },
     {
@@ -3010,7 +3010,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-openai-preparedness-deepmind-fsf"
     },
     {
@@ -3019,7 +3019,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-metr-external-evaluation"
     },
     {
@@ -3028,7 +3028,7 @@
       "phaseId": 15,
       "phaseName": "Autonomous Systems",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-cais-caisi-societal-risk"
     },
     {
@@ -3046,7 +3046,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-fipa-acl-heritage"
     },
     {
@@ -3055,7 +3055,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-communication-protocols"
     },
     {
@@ -3064,7 +3064,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-primitive-model"
     },
     {
@@ -3073,7 +3073,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-supervisor-orchestrator-pattern"
     },
     {
@@ -3082,7 +3082,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-hierarchical-architecture"
     },
     {
@@ -3091,7 +3091,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-society-of-mind-debate"
     },
     {
@@ -3100,7 +3100,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-role-specialization"
     },
     {
@@ -3109,7 +3109,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-parallel-swarm-networks"
     },
     {
@@ -3118,7 +3118,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-group-chat-speaker-selection"
     },
     {
@@ -3127,7 +3127,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-handoffs-and-routines"
     },
     {
@@ -3136,7 +3136,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-a2a-protocol"
     },
     {
@@ -3145,7 +3145,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-shared-memory-blackboard"
     },
     {
@@ -3154,7 +3154,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-consensus-and-bft"
     },
     {
@@ -3163,7 +3163,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-voting-debate-topology"
     },
     {
@@ -3172,7 +3172,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-negotiation-bargaining"
     },
     {
@@ -3181,7 +3181,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-generative-agents-simulation"
     },
     {
@@ -3190,7 +3190,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-theory-of-mind-coordination"
     },
     {
@@ -3199,7 +3199,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-swarm-optimization-pso-aco"
     },
     {
@@ -3208,7 +3208,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-marl-maddpg-qmix-mappo"
     },
     {
@@ -3217,7 +3217,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-agent-economies"
     },
     {
@@ -3226,7 +3226,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-production-scaling-queues-checkpoints"
     },
     {
@@ -3235,7 +3235,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-failure-modes-mast-groupthink"
     },
     {
@@ -3244,7 +3244,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-evaluation-coordination-benchmarks"
     },
     {
@@ -3253,7 +3253,7 @@
       "phaseId": 16,
       "phaseName": "Multi-Agent & Swarms",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-case-studies-2026-sota"
     },
     {
@@ -3271,7 +3271,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-inference-platform-economics"
     },
     {
@@ -3280,7 +3280,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-gpu-autoscaling-kubernetes"
     },
     {
@@ -3289,7 +3289,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-vllm-serving-internals"
     },
     {
@@ -3298,7 +3298,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-eagle3-speculative-decoding"
     },
     {
@@ -3307,7 +3307,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-sglang-radixattention"
     },
     {
@@ -3316,7 +3316,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-tensorrt-llm-blackwell"
     },
     {
@@ -3325,7 +3325,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-inference-metrics-goodput"
     },
     {
@@ -3334,7 +3334,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-production-quantization"
     },
     {
@@ -3343,7 +3343,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-cold-start-mitigation"
     },
     {
@@ -3352,7 +3352,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-multi-region-kv-locality"
     },
     {
@@ -3361,7 +3361,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-edge-inference"
     },
     {
@@ -3370,7 +3370,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-llm-observability"
     },
     {
@@ -3379,7 +3379,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-prompt-semantic-caching"
     },
     {
@@ -3388,7 +3388,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-batch-apis"
     },
     {
@@ -3397,7 +3397,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-model-routing"
     },
     {
@@ -3406,7 +3406,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-disaggregated-prefill-decode"
     },
     {
@@ -3415,7 +3415,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-vllm-production-stack-lmcache"
     },
     {
@@ -3424,7 +3424,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-ai-gateways"
     },
     {
@@ -3433,7 +3433,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-shadow-canary-progressive"
     },
     {
@@ -3442,7 +3442,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-ab-testing-llm-features"
     },
     {
@@ -3451,7 +3451,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-load-testing-llm-apis"
     },
     {
@@ -3460,7 +3460,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-sre-for-ai"
     },
     {
@@ -3469,7 +3469,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-chaos-engineering-llm"
     },
     {
@@ -3478,7 +3478,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-security-secrets-audit"
     },
     {
@@ -3487,7 +3487,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 26,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/26-compliance-frameworks"
     },
     {
@@ -3496,7 +3496,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 27,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/27-finops-llms"
     },
     {
@@ -3505,7 +3505,7 @@
       "phaseId": 17,
       "phaseName": "Infrastructure & Production",
       "lessonNumber": 28,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/28-self-hosted-serving-selection"
     },
     {
@@ -3523,7 +3523,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-reward-hacking-goodhart"
     },
     {
@@ -3532,7 +3532,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-direct-preference-optimization-family"
     },
     {
@@ -3541,7 +3541,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-sycophancy-rlhf-amplification"
     },
     {
@@ -3550,7 +3550,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-constitutional-ai-rlaif"
     },
     {
@@ -3559,7 +3559,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-mesa-optimization-deceptive-alignment"
     },
     {
@@ -3568,7 +3568,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-sleeper-agents-persistent-deception"
     },
     {
@@ -3577,7 +3577,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-in-context-scheming-frontier-models"
     },
     {
@@ -3586,7 +3586,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-alignment-faking"
     },
     {
@@ -3595,7 +3595,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-ai-control-subversion"
     },
     {
@@ -3604,7 +3604,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-scalable-oversight-weak-to-strong"
     },
     {
@@ -3613,7 +3613,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-red-teaming-pair-automated-attacks"
     },
     {
@@ -3622,7 +3622,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-many-shot-jailbreaking"
     },
     {
@@ -3631,7 +3631,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-ascii-art-visual-jailbreaks"
     },
     {
@@ -3640,7 +3640,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-indirect-prompt-injection"
     },
     {
@@ -3649,7 +3649,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-red-team-tooling-garak-llamaguard-pyrit"
     },
     {
@@ -3658,7 +3658,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-wmdp-dual-use-evaluation"
     },
     {
@@ -3667,7 +3667,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-frontier-safety-frameworks-rsp-pf-fsf"
     },
     {
@@ -3676,7 +3676,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-model-welfare-research"
     },
     {
@@ -3685,7 +3685,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-bias-representational-harm"
     },
     {
@@ -3694,7 +3694,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-fairness-criteria-group-individual-counterfactual"
     },
     {
@@ -3703,7 +3703,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-differential-privacy-for-llms"
     },
     {
@@ -3712,7 +3712,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-watermarking-synthid-stable-signature-c2pa"
     },
     {
@@ -3721,7 +3721,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-regulatory-frameworks-eu-us-uk-korea"
     },
     {
@@ -3730,7 +3730,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-echoleak-cves-for-ai"
     },
     {
@@ -3739,7 +3739,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 26,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/26-model-system-dataset-cards"
     },
     {
@@ -3748,7 +3748,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 27,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/27-data-provenance-training-governance"
     },
     {
@@ -3757,7 +3757,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 28,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/28-alignment-research-ecosystem"
     },
     {
@@ -3766,7 +3766,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 29,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/29-moderation-systems-openai-perspective-llamaguard"
     },
     {
@@ -3775,7 +3775,7 @@
       "phaseId": 18,
       "phaseName": "Ethics, Safety & Alignment",
       "lessonNumber": 30,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/30-dual-use-risk-cyber-bio-chem-nuclear"
     },
     {
@@ -3838,7 +3838,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-end-to-end-fine-tuning-pipeline"
     },
     {
@@ -3856,7 +3856,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-code-migration-agent"
     },
     {
@@ -3865,7 +3865,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-multi-agent-software-team"
     },
     {
@@ -3874,7 +3874,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-llm-observability-dashboard"
     },
     {
@@ -3883,7 +3883,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-video-understanding-pipeline"
     },
     {
@@ -3892,7 +3892,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-mcp-server-with-registry"
     },
     {
@@ -3901,7 +3901,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-speculative-decoding-server"
     },
     {
@@ -3910,7 +3910,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-constitutional-safety-harness"
     },
     {
@@ -3919,7 +3919,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-github-issue-to-pr-agent"
     },
     {
@@ -3928,7 +3928,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-personal-ai-tutor"
     },
     {
@@ -3937,7 +3937,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-agent-harness-loop-contract"
     },
     {
@@ -3946,7 +3946,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-tool-registry-schema-validation"
     },
     {
@@ -3955,7 +3955,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-jsonrpc-stdio-transport"
     },
     {
@@ -3964,7 +3964,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 23,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/23-function-call-dispatcher"
     },
     {
@@ -3973,7 +3973,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 24,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/24-plan-execute-control-flow"
     },
     {
@@ -3982,7 +3982,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 25,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/25-verification-gates-observation-budget"
     },
     {
@@ -3991,7 +3991,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 26,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/26-sandbox-runner-denylist"
     },
     {
@@ -4000,7 +4000,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 27,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/27-eval-harness-fixture-tasks"
     },
     {
@@ -4009,7 +4009,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 28,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/28-observability-otel-traces"
     },
     {
@@ -4018,7 +4018,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 29,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/29-end-to-end-coding-task-demo"
     },
     {
@@ -4027,7 +4027,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 30,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/30-bpe-tokenizer-from-scratch"
     },
     {
@@ -4036,7 +4036,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 31,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/31-tokenized-dataset-sliding-window"
     },
     {
@@ -4045,7 +4045,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 32,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/32-token-positional-embeddings"
     },
     {
@@ -4054,7 +4054,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 33,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/33-multihead-self-attention"
     },
     {
@@ -4063,7 +4063,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 34,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/34-transformer-block"
     },
     {
@@ -4072,7 +4072,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 35,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/35-gpt-model-assembly"
     },
     {
@@ -4081,7 +4081,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 36,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/36-training-loop-eval"
     },
     {
@@ -4090,7 +4090,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 37,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/37-loading-pretrained-weights"
     },
     {
@@ -4099,7 +4099,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 38,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/38-classifier-finetuning"
     },
     {
@@ -4108,7 +4108,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 39,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/39-instruction-tuning-sft"
     },
     {
@@ -4117,7 +4117,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 40,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/40-dpo-from-scratch"
     },
     {
@@ -4126,7 +4126,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 41,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/41-eval-pipeline"
     },
     {
@@ -4135,7 +4135,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 42,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/42-large-corpus-downloader"
     },
     {
@@ -4144,7 +4144,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 43,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/43-hdf5-tokenized-corpus"
     },
     {
@@ -4153,7 +4153,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 44,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/44-cosine-lr-warmup"
     },
     {
@@ -4162,7 +4162,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 45,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/45-gradient-clipping-amp"
     },
     {
@@ -4171,7 +4171,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 46,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/46-gradient-accumulation"
     },
     {
@@ -4180,7 +4180,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 47,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/47-checkpoint-save-resume"
     },
     {
@@ -4189,7 +4189,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 48,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/48-distributed-fsdp-ddp"
     },
     {
@@ -4198,7 +4198,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 49,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/49-lm-eval-harness"
     },
     {
@@ -4207,7 +4207,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 50,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/50-hypothesis-generator"
     },
     {
@@ -4216,7 +4216,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 51,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/51-literature-retrieval"
     },
     {
@@ -4225,7 +4225,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 52,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/52-experiment-runner"
     },
     {
@@ -4234,7 +4234,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 53,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/53-result-evaluator"
     },
     {
@@ -4243,7 +4243,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 54,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/54-paper-writer"
     },
     {
@@ -4252,7 +4252,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 55,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/55-critic-loop"
     },
     {
@@ -4261,7 +4261,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 56,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/56-iteration-scheduler"
     },
     {
@@ -4270,7 +4270,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 57,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/57-end-to-end-research-demo"
     },
     {
@@ -4279,7 +4279,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 58,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/58-vision-encoder-patches"
     },
     {
@@ -4288,7 +4288,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 59,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/59-vit-transformer"
     },
     {
@@ -4297,7 +4297,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 60,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/60-projection-layer-modality-align"
     },
     {
@@ -4306,7 +4306,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 61,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/61-cross-attention-fusion"
     },
     {
@@ -4315,7 +4315,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 62,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/62-vision-language-pretraining"
     },
     {
@@ -4324,7 +4324,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 63,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/63-multimodal-eval"
     },
     {
@@ -4333,7 +4333,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 64,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/64-chunking-strategies-advanced"
     },
     {
@@ -4342,7 +4342,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 65,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/65-hybrid-retrieval-bm25-dense"
     },
     {
@@ -4351,7 +4351,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 66,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/66-reranker-cross-encoder"
     },
     {
@@ -4360,7 +4360,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 67,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/67-query-rewriting-hyde"
     },
     {
@@ -4369,7 +4369,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 68,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/68-rag-eval-precision-recall"
     },
     {
@@ -4378,7 +4378,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 69,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/69-end-to-end-rag-system"
     },
     {
@@ -4387,7 +4387,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 70,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/70-task-spec-format"
     },
     {
@@ -4396,7 +4396,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 71,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/71-classical-metrics"
     },
     {
@@ -4405,7 +4405,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 72,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/72-code-exec-metric"
     },
     {
@@ -4414,7 +4414,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 73,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/73-perplexity-calibration"
     },
     {
@@ -4423,7 +4423,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 74,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/74-leaderboard-aggregation"
     },
     {
@@ -4432,7 +4432,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 75,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/75-end-to-end-eval-runner"
     },
     {
@@ -4441,7 +4441,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 76,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/76-collective-ops-from-scratch"
     },
     {
@@ -4450,7 +4450,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 77,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/77-data-parallel-ddp"
     },
     {
@@ -4459,7 +4459,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 78,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/78-zero-parameter-sharding"
     },
     {
@@ -4468,7 +4468,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 79,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/79-pipeline-parallel"
     },
     {
@@ -4477,7 +4477,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 80,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/80-checkpoint-sharded-resume"
     },
     {
@@ -4486,7 +4486,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 81,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/81-end-to-end-distributed-train"
     },
     {
@@ -4495,7 +4495,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 82,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/82-jailbreak-taxonomy"
     },
     {
@@ -4504,7 +4504,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 83,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/83-prompt-injection-detector"
     },
     {
@@ -4513,7 +4513,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 84,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/84-refusal-evaluation"
     },
     {
@@ -4522,7 +4522,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 85,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/85-content-classifier-integration"
     },
     {
@@ -4531,7 +4531,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 86,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/86-constitutional-rules-engine"
     },
     {
@@ -4540,7 +4540,7 @@
       "phaseId": 19,
       "phaseName": "Capstone Projects",
       "lessonNumber": 87,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/87-end-to-end-safety-gate"
     }
   ]
