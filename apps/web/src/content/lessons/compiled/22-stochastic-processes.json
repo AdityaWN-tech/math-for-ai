@@ -1,0 +1,44 @@
+{
+  "id": "22-stochastic-processes",
+  "title": "Stochastic Processes",
+  "motto": "Randomness with structure. The math behind random walks, Markov chains, and diffusion models.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 22
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Randomness with structure. The math behind random walks, Markov chains, and diffusion models."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Many AI systems involve randomness that evolves over time. Not static randomness -- structured, sequential randomness where each step depends on what came before.",
+        "Language models generate tokens one at a time. Each token depends on the previous context. The model outputs a probability distribution, samples from it, and moves on. That is a stochastic process.",
+        "Diffusion models add noise to an image step by step until it becomes pure static. Then they reverse the process, denoising step by step until a new image emerges. The forward process is a Markov chain. The reverse process is a learned Markov chain running backward."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/22-stochastic-processes",
+    "interactive": false
+  }
+}

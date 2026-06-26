@@ -1,0 +1,22 @@
+# Math for AI — local deploy stack (slice v2)
+# Run: npm run infra:up
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: m4ai-postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: m4ai
+      POSTGRES_PASSWORD: m4ai
+      POSTGRES_DB: m4ai
+    volumes:
+      - m4ai_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U m4ai -d m4ai"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  m4ai_pg_data:

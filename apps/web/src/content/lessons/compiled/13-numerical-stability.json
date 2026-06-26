@@ -1,0 +1,44 @@
+{
+  "id": "13-numerical-stability",
+  "title": "Numerical Stability",
+  "motto": "Floating point is a leaky abstraction. It will bite you during training, and you will not see it coming.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 13
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Floating point is a leaky abstraction. It will bite you during training, and you will not see it coming."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Your model trains for three hours, then the loss becomes NaN. You add a print statement. The logits are fine at step 9,000. At step 9,001 they are `inf`. By step 9,002 every gradient is `nan` and training is dead.",
+        "Or: your model trains to completion but accuracy is 2% worse than the paper claims. You check everything. Architecture matches. Hyperparameters match. Data matches. The problem is that the paper used float32 and you used float16 without the right scaling. Thirty-two bits of accumulated rounding error quietly ate your accuracy.",
+        "Or: you implement cross-entropy loss from scratch. It works on small logits. When logits exceed 100, it returns `inf`. The softmax overflowed because `exp(100)` is larger than float32 can represent. Every ML framework handles this with a two-line trick. You did not know the trick existed."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/13-numerical-stability",
+    "interactive": false
+  }
+}

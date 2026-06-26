@@ -1,0 +1,43 @@
+{
+  "id": "06-probability-and-distributions",
+  "title": "Probability And Distributions",
+  "motto": "Probability is the language AI uses to express uncertainty.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 6
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Probability is the language AI uses to express uncertainty."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "A classifier outputs `[0.03, 0.91, 0.06]`. A language model picks the next word from 50,000 candidates. A diffusion model generates images by sampling from learned distributions. All of these are probability in action.",
+        "Every prediction a model makes is a probability distribution. Every loss function measures how far the predicted distribution is from the true one. Every training step adjusts parameters to make one distribution look more like another. Without probability, you cannot read a single ML paper, debug a single model, or understand why your training loss is NaN."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/06-probability-and-distributions",
+    "interactive": false
+  }
+}

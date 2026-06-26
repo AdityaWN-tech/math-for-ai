@@ -1,0 +1,44 @@
+{
+  "id": "16-sampling-methods",
+  "title": "Sampling Methods",
+  "motto": "Sampling is how AI explores the space of possibilities.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 16
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Sampling is how AI explores the space of possibilities."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "A language model finishes processing your prompt and produces a vector of 50,000 logits. One for every token in its vocabulary. Now it has to pick one. How?",
+        "If it always picks the highest-probability token, every response is identical. Deterministic. Boring. If it picks uniformly at random, the output is gibberish. The answer lives somewhere between these extremes, and that somewhere is controlled by sampling.",
+        "Sampling is not limited to text generation. Reinforcement learning estimates policy gradients by sampling trajectories. VAEs learn latent representations by sampling from learned distributions and backpropagating through the randomness. Diffusion models generate images by sampling noise and iteratively denoising. Monte Carlo methods estimate integrals that have no closed-form solution. MCMC algorithms explore high-dimensional posterior distributions that are impossible to enumerate."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/16-sampling-methods",
+    "interactive": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "05-chain-rule-and-autodiff",
+  "title": "Chain Rule And Autodiff",
+  "motto": "The chain rule is the engine behind every neural network that learns.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 5
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The chain rule is the engine behind every neural network that learns."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You can compute derivatives of simple functions. But a neural network is not a simple function. It is hundreds of functions composed together: matrix multiply, add bias, apply activation, matrix multiply again, softmax, cross-entropy loss. The output is a function of a function of a function.",
+        "To train the network, you need the gradient of the loss with respect to every single weight. Doing this by hand is impossible for millions of parameters. Doing it numerically (finite differences) is too slow.",
+        "The chain rule gives you the math. Automatic differentiation gives you the algorithm. Together they let you compute exact gradients through arbitrary compositions of functions in time proportional to a single forward pass."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/05-chain-rule-and-autodiff",
+    "interactive": false
+  }
+}

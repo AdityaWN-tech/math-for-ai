@@ -1,0 +1,71 @@
+{
+  "id": "01-linear-algebra-intuition",
+  "title": "Linear Algebra Intuition",
+  "motto": "Every AI model is just matrix math wearing a fancy hat.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every AI model is just matrix math wearing a fancy hat."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Open any ML paper and you'll see vectors, matrices, and dot products within the first page. Without linear algebra intuition, those are just symbols.",
+        "You don't need to be a mathematician. You need to see what operations mean geometrically — then code them yourself."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "figure",
+      "title": "The dot product measures similarity",
+      "body": "The dot product tells you how aligned two vectors are: positive means similar direction, zero means perpendicular, negative means opposite. This is the basis of embedding similarity search in AI."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement dot_product",
+      "body": "Write dot_product from scratch — no numpy.dot. Run your code when ready; all tests must pass to continue.",
+      "code": {
+        "language": "python",
+        "filename": "vectors.py",
+        "starter": "def dot_product(a, b):\n    \"\"\"Return the dot product of two equal-length vectors.\"\"\"\n    # TODO: implement without numpy\n    return 0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    __check(\"basic\", dot_product([1, 2], [3, 4]) == 11)\n    __check(\"perpendicular\", dot_product([1, 0], [0, 1]) == 0)\n    __check(\"negative\", dot_product([-1, 2], [2, -1]) == -4)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Embedding similarity intuition",
+        "description": "You can now explain why dot products power word embeddings, attention scores, and nearest-neighbor search."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

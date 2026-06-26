@@ -1,0 +1,65 @@
+{
+  "id": "07-docker-for-ai",
+  "title": "Docker for AI",
+  "motto": "Containers make \"works on my machine\" a thing of the past.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Containers make \"works on my machine\" a thing of the past."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why Docker for AI",
+      "cards": [
+        "You trained a model with PyTorch 2.3 and CUDA 12.4. Your colleague has PyTorch 2.1 and CUDA 11.8. Your model crashes on their machine. Your Dockerfile works on both.",
+        "A real AI app is not one script — it's an inference server, a vector database, maybe a web frontend. Docker Compose orchestrates all of these with one command."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "Multi-service AI stack",
+      "body": "For this lesson you deploy Postgres with pgvector — the same database shape used in production RAG capstones. Your learner workspace gets a real table, a real connection string, and a health URL."
+    },
+    {
+      "id": "deploy",
+      "beat": "DEPLOY",
+      "type": "deploy",
+      "gate": "deploy",
+      "title": "Deploy your workspace database",
+      "body": "Click Deploy to provision Postgres, run migrations, and get a live health endpoint. This is the same thread as Phase 19 capstones — read, build, deploy."
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Learner workspace database",
+        "description": "Postgres + pgvector provisioned. Your capstone RAG chatbot will use this same stack — hybrid search, migrations, and a live URL."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

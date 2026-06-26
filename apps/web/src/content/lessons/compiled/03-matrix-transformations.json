@@ -1,0 +1,43 @@
+{
+  "id": "03-matrix-transformations",
+  "title": "Matrix Transformations",
+  "motto": "A matrix is a machine that reshapes space. Learn what it does to every point, and you understand the whole transformation.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 3
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A matrix is a machine that reshapes space. Learn what it does to every point, and you understand the whole transformation."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You read about PCA and see \"find the eigenvectors of the covariance matrix.\" You read about model stability and see \"check if all eigenvalues have magnitude less than 1.\" You read about data augmentation and see \"apply a random rotation.\" None of this makes sense until you understand what matrices do to space geometrically.",
+        "Matrices are not just grids of numbers. They are spatial machines. A rotation matrix spins points. A scaling matrix stretches them. A shearing matrix tilts them. Every transformation a neural network applies to data is one of these operations or a composition of them. This lesson makes those operations concrete."
+      ]
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/01-math-foundations/03-matrix-transformations",
+    "interactive": false
+  }
+}

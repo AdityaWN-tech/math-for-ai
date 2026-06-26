@@ -1,0 +1,216 @@
+{
+  "generatedAt": "2026-06-26T06:32:17.734Z",
+  "phases": [
+    0,
+    1
+  ],
+  "lessons": [
+    {
+      "id": "07-docker-for-ai",
+      "title": "Docker for AI",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-docker-for-ai"
+    },
+    {
+      "id": "01-linear-algebra-intuition",
+      "title": "Linear Algebra Intuition",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-linear-algebra-intuition"
+    },
+    {
+      "id": "02-vectors-matrices-operations",
+      "title": "Vectors Matrices Operations",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 2,
+      "interactive": false,
+      "path": "/demo/02-vectors-matrices-operations"
+    },
+    {
+      "id": "03-matrix-transformations",
+      "title": "Matrix Transformations",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 3,
+      "interactive": false,
+      "path": "/demo/03-matrix-transformations"
+    },
+    {
+      "id": "04-calculus-for-ml",
+      "title": "Calculus For Ml",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 4,
+      "interactive": false,
+      "path": "/demo/04-calculus-for-ml"
+    },
+    {
+      "id": "05-chain-rule-and-autodiff",
+      "title": "Chain Rule And Autodiff",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 5,
+      "interactive": false,
+      "path": "/demo/05-chain-rule-and-autodiff"
+    },
+    {
+      "id": "06-probability-and-distributions",
+      "title": "Probability And Distributions",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 6,
+      "interactive": false,
+      "path": "/demo/06-probability-and-distributions"
+    },
+    {
+      "id": "07-bayes-theorem",
+      "title": "Bayes Theorem",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 7,
+      "interactive": false,
+      "path": "/demo/07-bayes-theorem"
+    },
+    {
+      "id": "08-optimization",
+      "title": "Optimization",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 8,
+      "interactive": false,
+      "path": "/demo/08-optimization"
+    },
+    {
+      "id": "09-information-theory",
+      "title": "Information Theory",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 9,
+      "interactive": false,
+      "path": "/demo/09-information-theory"
+    },
+    {
+      "id": "10-dimensionality-reduction",
+      "title": "Dimensionality Reduction",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 10,
+      "interactive": false,
+      "path": "/demo/10-dimensionality-reduction"
+    },
+    {
+      "id": "11-singular-value-decomposition",
+      "title": "Singular Value Decomposition",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 11,
+      "interactive": false,
+      "path": "/demo/11-singular-value-decomposition"
+    },
+    {
+      "id": "12-tensor-operations",
+      "title": "Tensor Operations",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 12,
+      "interactive": false,
+      "path": "/demo/12-tensor-operations"
+    },
+    {
+      "id": "13-numerical-stability",
+      "title": "Numerical Stability",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 13,
+      "interactive": false,
+      "path": "/demo/13-numerical-stability"
+    },
+    {
+      "id": "14-norms-and-distances",
+      "title": "Norms And Distances",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 14,
+      "interactive": false,
+      "path": "/demo/14-norms-and-distances"
+    },
+    {
+      "id": "15-statistics-for-ml",
+      "title": "Statistics For Ml",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 15,
+      "interactive": false,
+      "path": "/demo/15-statistics-for-ml"
+    },
+    {
+      "id": "16-sampling-methods",
+      "title": "Sampling Methods",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 16,
+      "interactive": false,
+      "path": "/demo/16-sampling-methods"
+    },
+    {
+      "id": "17-linear-systems",
+      "title": "Linear Systems",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 17,
+      "interactive": false,
+      "path": "/demo/17-linear-systems"
+    },
+    {
+      "id": "18-convex-optimization",
+      "title": "Convex Optimization",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 18,
+      "interactive": false,
+      "path": "/demo/18-convex-optimization"
+    },
+    {
+      "id": "19-complex-numbers",
+      "title": "Complex Numbers",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 19,
+      "interactive": false,
+      "path": "/demo/19-complex-numbers"
+    },
+    {
+      "id": "20-fourier-transform",
+      "title": "Fourier Transform",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 20,
+      "interactive": false,
+      "path": "/demo/20-fourier-transform"
+    },
+    {
+      "id": "21-graph-theory",
+      "title": "Graph Theory",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 21,
+      "interactive": false,
+      "path": "/demo/21-graph-theory"
+    },
+    {
+      "id": "22-stochastic-processes",
+      "title": "Stochastic Processes",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 22,
+      "interactive": false,
+      "path": "/demo/22-stochastic-processes"
+    }
+  ]
+}

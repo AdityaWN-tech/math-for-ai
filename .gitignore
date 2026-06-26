@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.*
+!.env.example
+*.log
+.vercel
+.turbo
+# Submodule lives at content/curriculum — do not ignore
+content/*
+!content/curriculum/
+.idea/
+.vscode/
