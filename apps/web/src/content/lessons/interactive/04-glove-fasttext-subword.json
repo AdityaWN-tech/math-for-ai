@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement subword",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "subword.py",
         "starter": "def char_ngrams(word, n=3):\n    \"\"\"Return list of character n-grams.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"ng\", len(char_ngrams(\"cat\",2))==2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: GloVe uses global co-occurrence stats. FastText sums subword vectors for OOV words.…",
+          "Implement `subword` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

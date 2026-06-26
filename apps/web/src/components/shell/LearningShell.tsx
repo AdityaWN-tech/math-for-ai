@@ -3,17 +3,33 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Loader2, Play, Rocket, Sparkles } from "lucide-react";
-import { VectorProjectionFigure } from "@/components/figure/VectorProjectionFigure";
-import { MatrixMultiplyFigure } from "@/components/figure/MatrixMultiplyFigure";
-import { MatrixTransformFigure } from "@/components/figure/MatrixTransformFigure";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Lightbulb,
+  Loader2,
+  Play,
+  Sparkles,
+} from "lucide-react";
+import { notifyProgress, ProgressHUD } from "@/components/gamification/ProgressHUD";
 import { DeployPanel } from "@/components/shell/DeployPanel";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
+import { getExercisePlugin } from "@/lib/exercises/registry";
+import { getFigureComponent } from "@/lib/figures/registry";
+import { XP_FIRST_TRY_BONUS } from "@/lib/gamification";
 import { cn } from "@/lib/cn";
 import type { Lesson, LessonStep } from "@/lib/lesson-types";
-import { nextInteractiveLessonId } from "@/lib/lessons";
-import { getResumeStepIndex, markLessonComplete, markStep } from "@/lib/progress";
+import { nextInteractiveLessonId, phaseLessonIndex } from "@/lib/lessons";
+import {
+  getLessonCode,
+  getResumeStepIndex,
+  markLessonComplete,
+  markStep,
+  recordTestAttempt,
+  recordTestPass,
+  saveLessonCode,
+} from "@/lib/progress";
 import { runPythonWithTests, type RunResult } from "@/lib/pyodide-runner";
 
 const CodeEditor = dynamic(() => import("@/components/shell/CodeEditor"), {
@@ -37,28 +53,40 @@ export function LearningShell({ lesson }: LearningShellProps) {
   const [runResult, setRunResult] = useState<RunResult | null>(null);
   const [running, setRunning] = useState(false);
   const [pyodideReady, setPyodideReady] = useState(false);
+  const [hintIndex, setHintIndex] = useState(0);
+  const [xpToast, setXpToast] = useState<string | null>(null);
 
   const step = lesson.steps[stepIndex] as LessonStep;
   const total = lesson.steps.length;
-  const hasBuild = lesson.steps.some((s) => s.type === "build");
+  const buildStep = lesson.steps.find((s) => s.type === "build");
+  const hasBuild = Boolean(buildStep);
+  const hasDeploy = lesson.steps.some((s) => s.type === "deploy");
+  const phaseIndex = useMemo(() => phaseLessonIndex(), []);
 
   useEffect(() => {
     setFigureReady(false);
     setDeployReady(false);
     setRunResult(null);
-    const buildStep = lesson.steps.find((s) => s.type === "build");
-    setCode(buildStep?.code?.starter ?? "");
+    setHintIndex(0);
+    const saved = getLessonCode(lesson.id);
+    setCode(saved ?? buildStep?.code?.starter ?? "");
     setStepIndex(getResumeStepIndex(lesson.id, lesson.steps));
-  }, [lesson.id, lesson.steps]);
+  }, [lesson.id, lesson.steps, buildStep?.code?.starter]);
 
   useEffect(() => {
     track("step_view", { lessonId: lesson.id, stepId: step.id, stepIndex });
     markStep(lesson.id, step.id);
+    notifyProgress();
+
     if (step.type === "complete") {
-      markLessonComplete(lesson.id);
+      markLessonComplete(lesson.id, {
+        phaseId: lesson.phase.id,
+        phaseLessonIds: phaseIndex,
+      });
       track("lesson_complete", { lessonId: lesson.id });
+      notifyProgress();
     }
-  }, [lesson.id, step.id, stepIndex, step.type]);
+  }, [lesson.id, lesson.phase.id, step.id, stepIndex, step.type, phaseIndex]);
 
   useEffect(() => {
     if (!hasBuild) return;
@@ -67,6 +95,10 @@ export function LearningShell({ lesson }: LearningShellProps) {
       .then(() => setPyodideReady(true))
       .catch(() => setPyodideReady(false));
   }, [hasBuild]);
+
+  const exercisePlugin = getExercisePlugin(
+    step.exercise?.plugin ?? (step.type === "deploy" ? "deploy-postgres" : "pyodide-tests"),
+  );
 
   const canContinue = useMemo(() => {
     switch (step.gate) {
@@ -83,20 +115,39 @@ export function LearningShell({ lesson }: LearningShellProps) {
     }
   }, [step.gate, figureReady, runResult?.allPassed, deployReady]);
 
+  const handleCodeChange = useCallback(
+    (value: string) => {
+      setCode(value);
+      saveLessonCode(lesson.id, value);
+    },
+    [lesson.id],
+  );
+
   const handleRun = useCallback(async () => {
-    const buildStep = lesson.steps.find((s) => s.type === "build");
     if (!buildStep?.code) return;
 
     setRunning(true);
     setRunResult(null);
+    recordTestAttempt(lesson.id);
     const result = await runPythonWithTests(code, buildStep.code.tests);
     setRunResult(result);
     setRunning(false);
 
     if (result.allPassed) {
       track("test_pass", { lessonId: lesson.id, stepId: step.id });
+      const { xp, firstTry } = recordTestPass(lesson.id, {
+        xpReward: buildStep.exercise?.xpReward,
+        rubric: buildStep.exercise?.rubric,
+        hasDeploy,
+      });
+      notifyProgress();
+      if (xp > 0) {
+        const msg = firstTry ? `+${xp} XP (includes +${XP_FIRST_TRY_BONUS} first-try!)` : `+${xp} XP`;
+        setXpToast(msg);
+        setTimeout(() => setXpToast(null), 4000);
+      }
     }
-  }, [code, lesson.id, lesson.steps, step.id]);
+  }, [buildStep, code, hasDeploy, lesson.id, step.id]);
 
   const goNext = () => {
     if (!canContinue || stepIndex >= total - 1) return;
@@ -105,6 +156,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
     setStepIndex((i) => i + 1);
     if (next?.gate === "figure") setFigureReady(false);
     if (next?.gate === "deploy") setDeployReady(false);
+    setHintIndex(0);
   };
 
   const goBack = () => {
@@ -112,6 +164,8 @@ export function LearningShell({ lesson }: LearningShellProps) {
   };
 
   const figureId = step.type === "concept" ? step.figure : undefined;
+  const FigureComponent = figureId ? getFigureComponent(figureId) : null;
+  const hints = buildStep?.exercise?.hints ?? [];
   const nextLessonId = nextInteractiveLessonId(lesson.id);
 
   return (
@@ -140,10 +194,18 @@ export function LearningShell({ lesson }: LearningShellProps) {
               />
             ))}
           </div>
-          <div className="hidden font-mono text-xs text-[var(--ink-mute)] sm:block">
-            Step {stepIndex + 1}/{total}
+          <div className="flex items-center gap-3">
+            <ProgressHUD />
+            <span className="hidden font-mono text-xs text-[var(--ink-mute)] sm:block">
+              {stepIndex + 1}/{total}
+            </span>
           </div>
         </div>
+        {xpToast && (
+          <div className="border-t border-[var(--blueprint)] bg-[var(--blueprint-tint)] px-4 py-1 text-center font-mono text-xs text-[var(--blueprint)]">
+            {xpToast}
+          </div>
+        )}
       </header>
 
       <main className="mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-1 lg:grid-cols-[minmax(220px,1fr)_minmax(0,2fr)_minmax(260px,1fr)]">
@@ -176,6 +238,46 @@ export function LearningShell({ lesson }: LearningShellProps) {
             step.body && (
               <p className="mt-4 font-body text-sm leading-relaxed text-[var(--ink-soft)]">{step.body}</p>
             )}
+
+          {step.type === "build" && step.exercise && (
+            <div className="mt-4 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-widest">
+              <span className="rounded border border-[var(--rule-soft)] px-2 py-0.5">
+                {exercisePlugin.label}
+              </span>
+              <span className="rounded border border-[var(--rule-soft)] px-2 py-0.5">
+                Rubric {step.exercise.rubric}
+              </span>
+              {step.exercise.xpReward && (
+                <span className="rounded border border-[var(--blueprint)] bg-[var(--blueprint-tint)] px-2 py-0.5 text-[var(--blueprint)]">
+                  +{step.exercise.xpReward} XP
+                </span>
+              )}
+            </div>
+          )}
+
+          {step.type === "build" && hints.length > 0 && (
+            <div className="mt-4 rounded-md border border-[var(--rule-soft)] bg-[var(--bg-surface)] p-3">
+              <div className="mb-2 flex items-center justify-between">
+                <span className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-mute)]">
+                  <Lightbulb className="h-3.5 w-3.5" />
+                  Hints ({hintIndex}/{hints.length})
+                </span>
+                {hintIndex < hints.length && (
+                  <Button variant="ghost" size="sm" onClick={() => setHintIndex((i) => i + 1)}>
+                    Reveal hint
+                  </Button>
+                )}
+              </div>
+              {hintIndex > 0 && (
+                <p className="font-body text-sm text-[var(--ink-soft)]">{hints[hintIndex - 1]}</p>
+              )}
+              {hintIndex === 0 && (
+                <p className="font-body text-xs text-[var(--ink-mute)]">
+                  Stuck? Reveal hints one at a time — first-try XP bonus still counts.
+                </p>
+              )}
+            </div>
+          )}
 
           {step.type === "ship" && step.artifact && (
             <div className="mt-4 rounded-md border border-[var(--blueprint)] bg-[var(--blueprint-tint)] p-4">
@@ -213,21 +315,9 @@ export function LearningShell({ lesson }: LearningShellProps) {
         </section>
 
         <section className="flex min-h-[320px] flex-col border-b border-[var(--rule-soft)] lg:border-b-0 lg:border-r">
-          {figureId === "vector-projection" && (
+          {FigureComponent && (
             <div className="flex-1 p-4">
-              <VectorProjectionFigure onInteract={() => setFigureReady(true)} />
-            </div>
-          )}
-
-          {figureId === "matrix-multiply" && (
-            <div className="flex-1 p-4">
-              <MatrixMultiplyFigure onInteract={() => setFigureReady(true)} />
-            </div>
-          )}
-
-          {figureId === "matrix-transform" && (
-            <div className="flex-1 p-4">
-              <MatrixTransformFigure onInteract={() => setFigureReady(true)} />
+              <FigureComponent onInteract={() => setFigureReady(true)} />
             </div>
           )}
 
@@ -235,10 +325,10 @@ export function LearningShell({ lesson }: LearningShellProps) {
             <div className="flex min-h-[400px] flex-1 flex-col">
               <div className="flex items-center justify-between border-b border-[var(--rule-soft)] px-3 py-2 font-mono text-xs text-[var(--ink-mute)]">
                 <span>{step.code?.filename}</span>
-                <span>{pyodideReady ? "Python · Pyodide ready" : "Loading runtime…"}</span>
+                <span>{pyodideReady ? `${exercisePlugin.label} ready` : "Loading runtime…"}</span>
               </div>
               <div className="min-h-0 flex-1">
-                <CodeEditor value={code} onChange={setCode} filename={step.code?.filename ?? "main.py"} />
+                <CodeEditor value={code} onChange={handleCodeChange} filename={step.code?.filename ?? "main.py"} />
               </div>
             </div>
           )}
@@ -249,7 +339,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
             </div>
           )}
 
-          {!figureId && step.type !== "build" && step.type !== "deploy" && (
+          {!FigureComponent && step.type !== "build" && step.type !== "deploy" && (
             <div className="flex flex-1 flex-col items-center justify-center p-8 text-center">
               <p className="font-display text-4xl text-[var(--blueprint)] opacity-30">◇</p>
               <p className="mt-3 max-w-xs font-body text-sm text-[var(--ink-mute)]">
@@ -295,7 +385,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
             </div>
           ) : step.type === "deploy" ? (
             <div className="flex flex-1 flex-col rounded-md border border-[var(--rule-soft)] bg-[var(--code-bg)] p-3 font-mono text-xs text-[var(--ink-soft)]">
-              <p># Deploy output</p>
+              <p># Deploy output · Tier T2</p>
               <p className="mt-2 text-[var(--ink-mute)]">
                 Health check: <span className="text-[var(--blueprint)]">GET /api/health/db</span>
               </p>
@@ -307,7 +397,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
           ) : (
             <div className="rounded-md border border-dashed border-[var(--rule-soft)] p-4 font-mono text-xs text-[var(--ink-mute)]">
               {step.type === "concept" && figureId
-                ? "Interact with the figure or tap Got it."
+                ? "Interact with the figure, then continue."
                 : "Tests and deploy output appear here during build/deploy steps."}
             </div>
           )}

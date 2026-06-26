@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement transfer",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "transfer.py",
         "starter": "def trainable_params(total, frozen):\n    \"\"\"Return count still trainable.\"\"\"\n    # TODO\n    return 0\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trainable_params(100,80)==20)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Freeze backbone, train only the head. Fewer params = faster training on small datasets.…",
+          "Implement `transfer` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

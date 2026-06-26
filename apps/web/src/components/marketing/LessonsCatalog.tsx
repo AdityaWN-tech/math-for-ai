@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { getCompletedCount, isLessonComplete } from "@/lib/progress";
+import { badgeById, levelFromXp } from "@/lib/gamification";
+import { getCompletedCount, getProgressSummary, isLessonComplete } from "@/lib/progress";
 import type { LessonCatalogEntry } from "@/lib/lesson-types";
 
 interface LessonsCatalogProps {
@@ -15,6 +16,7 @@ interface LessonsCatalogProps {
 export function LessonsCatalog({ phases, lessonCount, interactiveCount }: LessonsCatalogProps) {
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [totalDone, setTotalDone] = useState(0);
+  const [summary, setSummary] = useState({ xp: 0, streakDays: 0, badges: [] as string[], completed: 0 });
 
   useEffect(() => {
     const map: Record<string, boolean> = {};
@@ -25,6 +27,14 @@ export function LessonsCatalog({ phases, lessonCount, interactiveCount }: Lesson
     }
     setCompleted(map);
     setTotalDone(getCompletedCount());
+    setSummary(getProgressSummary());
+
+    const refresh = () => {
+      setTotalDone(getCompletedCount());
+      setSummary(getProgressSummary());
+    };
+    window.addEventListener("m4ai:progress", refresh);
+    return () => window.removeEventListener("m4ai:progress", refresh);
   }, [phases]);
 
   return (
@@ -36,9 +46,20 @@ export function LessonsCatalog({ phases, lessonCount, interactiveCount }: Lesson
         <span className="rounded border border-[var(--blueprint)] bg-[var(--blueprint-tint)] px-2 py-1 text-[var(--blueprint)]">
           {interactiveCount} interactive
         </span>
-        <span>
-          {totalDone} completed locally
+        <span className="rounded border border-[var(--rule-soft)] px-2 py-1">
+          Lv{levelFromXp(summary.xp).level} · {summary.xp} XP
         </span>
+        {summary.streakDays > 0 && (
+          <span className="rounded border border-orange-200 bg-orange-50 px-2 py-1 text-orange-700">
+            🔥 {summary.streakDays}d streak
+          </span>
+        )}
+        <span>{totalDone} completed locally</span>
+        {summary.badges.length > 0 && (
+          <span title={summary.badges.map((b) => badgeById(b)?.name).join(", ")}>
+            {summary.badges.length} badge{summary.badges.length === 1 ? "" : "s"}
+          </span>
+        )}
       </div>
 
       {phases.map(([phaseId, lessons]) => {

@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement pipeline",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "pipeline.py",
         "starter": "def run_pipeline(steps, data):\n    \"\"\"Apply list of callables in order: data = fn(data).\"\"\"\n    # TODO\n    return data\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    r = run_pipeline([lambda x: x+1, lambda x: x*2], 3)\n    __check(\"p\", r == 8)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Pipelines chain preprocess → train → evaluate. sklearn.Pipeline prevents train/test leakage.…",
+          "Implement `pipeline` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

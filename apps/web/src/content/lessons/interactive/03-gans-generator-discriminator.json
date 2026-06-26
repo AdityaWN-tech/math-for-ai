@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement gan_loss",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "gan_loss.py",
         "starter": "import math\n\ndef d_loss_real(real_score):\n    \"\"\"Discriminator loss on real sample (higher score is better).\"\"\"\n    # TODO: return -math.log(max(real_score, 1e-12))\n    return 0.0\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", d_loss_real(0.9) < d_loss_real(0.1))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Discriminator loss pushes real→1, fake→0. Generator tries to fool D.…",
+          "Implement `gan_loss` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

@@ -40,12 +40,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement visualjb",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "visualjb.py",
         "starter": "def non_ascii_ratio(text):\n    return sum(ord(c)>127 for c in text)/max(len(text),1)\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", non_ascii_ratio(\"café\")>0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: ASCII art and adversarial images smuggle instructions past filters.…",
+          "Implement `visualjb` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement shell",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "shell.py",
         "starter": "def parse_export(line):\n    \"\"\"Parse 'export KEY=value' -> (key, value) or None.\"\"\"\n    # TODO\n    return None\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"ok\", parse_export(\"export CUDA_VISIBLE_DEVICES=0\") == (\"CUDA_VISIBLE_DEVICES\", \"0\"))\n    __check(\"bad\", parse_export(\"echo hi\") is None)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: The shell is how you orchestrate training jobs, tail logs, and SSH into GPUs. Pipes chain commands; env vars configure r…",
+          "Implement `shell` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

@@ -10,6 +10,18 @@ export type StepType =
   | "complete"
   | "content";
 
+export type RuntimeTier = "T0" | "T1" | "T2";
+export type RubricTier = "T0" | "T1" | "T2";
+export type ExercisePluginId = "pyodide-tests" | "deploy-postgres" | "monaco-ts";
+
+export interface ExerciseMeta {
+  plugin: ExercisePluginId;
+  runtimeTier: RuntimeTier;
+  rubric: RubricTier;
+  xpReward?: number;
+  hints?: string[];
+}
+
 export interface LessonStep {
   id: string;
   beat: string;
@@ -23,6 +35,7 @@ export interface LessonStep {
     name: string;
     description: string;
   };
+  exercise?: ExerciseMeta;
   code?: {
     language: string;
     filename: string;

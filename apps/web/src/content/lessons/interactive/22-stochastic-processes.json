@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement markov",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "markov.py",
         "starter": "def markov_step(dist, P):\n    \"\"\"dist: state probs, P[i][j]=P(j|i). Return next distribution.\"\"\"\n    # TODO: new[j] = sum_i dist[i]*P[i][j]\n    return []\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    P = [[0.9,0.1],[0.5,0.5]]\n    n = markov_step([1.0,0.0], P)\n    __check(\"sum\", abs(sum(n)-1) < 1e-9)\n    __check(\"s0\", abs(n[0]-0.9) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Markov chains: next state depends only on current. PageRank and RL policies are Markov processes.…",
+          "Implement `markov` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

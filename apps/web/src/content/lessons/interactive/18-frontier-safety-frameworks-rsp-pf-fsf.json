@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement fsf",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "fsf.py",
         "starter": "def capability_tier(score, tiers):\n    for i,t in enumerate(tiers):\n        if score<t: return i\n    return len(tiers)\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", capability_tier(0.5,[0.3,0.7])==1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: RSP, Preparedness Framework, FSF — tiered capability thresholds.…",
+          "Implement `fsf` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

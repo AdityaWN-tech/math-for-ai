@@ -42,12 +42,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement matrix_multiply",
-      "body": "Write matrix_multiply(A, B) for matrices represented as lists of lists. No numpy. Inner dimensions must match or raise ValueError.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "matrices.py",
         "starter": "def matrix_multiply(A, B):\n    \"\"\"Return A @ B for matrices as list-of-lists.\"\"\"\n    rows_a = len(A)\n    cols_a = len(A[0]) if rows_a else 0\n    rows_b = len(B)\n    cols_b = len(B[0]) if rows_b else 0\n    if cols_a != rows_b:\n        raise ValueError(\"inner dimensions must match\")\n    # TODO: compute each output[i][j] as dot(row i of A, col j of B)\n    return [[0 for _ in range(cols_b)] for _ in range(rows_a)]\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ndef _eq(M, E):\n    return all(M[i][j] == E[i][j] for i in range(len(M)) for j in range(len(M[0])))\n\ntry:\n    r = matrix_multiply([[1, 2], [3, 4]], [[5, 6], [7, 8]])\n    __check(\"2x2\", _eq(r, [[19, 22], [43, 50]]))\n    r2 = matrix_multiply([[1, 2, 3]], [[1], [2], [3]])\n    __check(\"row_vec\", _eq(r2, [[14]]))\n    bad = False\n    try:\n        matrix_multiply([[1, 2]], [[1]])\n        bad = True\n    except ValueError:\n        pass\n    __check(\"shape_error\", not bad)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Matrix multiplication combines rows of A with columns of B via dot products. Element-wise multiply is different — same s…",
+          "Implement `matrices` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

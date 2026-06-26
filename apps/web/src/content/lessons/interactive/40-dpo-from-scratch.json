@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement ft",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "ft.py",
         "starter": "def trainable_tokens(total, masked):\n    return total-masked\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trainable_tokens(100,30)==70)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 50,
+        "hints": [
+          "Re-read the concept: Fine-tuning adapts base models via SFT, DPO, or LoRA.…",
+          "Implement `ft` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

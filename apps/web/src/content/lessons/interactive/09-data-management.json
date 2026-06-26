@@ -40,12 +40,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement data_splits",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "data_splits.py",
         "starter": "def split_counts(n, train=0.8, val=0.1):\n    \"\"\"Return (train_n, val_n, test_n) ints summing to n.\"\"\"\n    # TODO\n    return (0, 0, 0)\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    t,v,te = split_counts(100)\n    __check(\"sum\", t+v+te == 100)\n    __check(\"train\", t == 80)\n    __check(\"val\", v == 10)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: AI projects drown in datasets, checkpoints, and logs. Version data like code: splits, hashes, and clear train/val/test b…",
+          "Implement `data_splits` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

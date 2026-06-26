@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement gpt",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "gpt.py",
         "starter": "def causal_mask_allowed(i, j):\n    \"\"\"True if position j visible from i in causal attention.\"\"\"\n    # TODO\n    return False\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"y\", causal_mask_allowed(3,2))\n __check(\"n\", not causal_mask_allowed(2,3))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Causal mask: token i only sees j≤i. Autoregressive next-token prediction trains LLMs.…",
+          "Implement `gpt` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

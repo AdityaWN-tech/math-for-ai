@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement timeseries",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "timeseries.py",
         "starter": "def sliding_windows(series, window):\n    \"\"\"Return list of consecutive slices of length window.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    w = sliding_windows([1,2,3,4], 2)\n    __check(\"n\", len(w) == 3)\n    __check(\"first\", w[0] == [1,2])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Sliding windows turn sequences into supervised samples. Forecast next step from past W values.…",
+          "Implement `timeseries` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

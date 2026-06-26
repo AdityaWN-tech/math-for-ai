@@ -42,12 +42,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement rotation_2d and apply_transform",
-      "body": "Build a 2D rotation matrix from an angle in radians, then apply any 2×2 matrix to a point. No numpy.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "transforms.py",
         "starter": "import math\n\ndef rotation_2d(theta):\n    \"\"\"Return 2x2 rotation matrix as list-of-lists.\"\"\"\n    # TODO: [[cos, -sin], [sin, cos]]\n    return [[1, 0], [0, 1]]\n\ndef apply_transform(matrix, point):\n    \"\"\"Apply 2x2 matrix to [x, y].\"\"\"\n    # TODO: matrix @ point\n    return [0, 0]\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ndef _approx(a, b, eps=1e-4):\n    return abs(a - b) < eps\n\ntry:\n    import math\n    R0 = rotation_2d(0)\n    __check(\"identity\", _approx(R0[0][0], 1) and _approx(R0[1][1], 1) and _approx(R0[0][1], 0))\n    R90 = rotation_2d(math.pi / 2)\n    p = apply_transform(R90, [1, 0])\n    __check(\"rotate90\", _approx(p[0], 0) and _approx(p[1], 1))\n    p45 = apply_transform(rotation_2d(math.pi / 4), [1, 0])\n    s = math.sqrt(2) / 2\n    __check(\"rotate45\", _approx(p45[0], s) and _approx(p45[1], s))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Every linear map is determined by where it sends the basis vectors. Drag rotation, scale, and shear — the orange square …",
+          "Implement `transforms` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

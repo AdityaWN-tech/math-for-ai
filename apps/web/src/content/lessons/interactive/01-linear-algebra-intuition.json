@@ -42,12 +42,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement dot_product",
-      "body": "Write dot_product from scratch — no numpy.dot. Run your code when ready; all tests must pass to continue.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "vectors.py",
         "starter": "def dot_product(a, b):\n    \"\"\"Return the dot product of two equal-length vectors.\"\"\"\n    # TODO: implement without numpy\n    return 0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    __check(\"basic\", dot_product([1, 2], [3, 4]) == 11)\n    __check(\"perpendicular\", dot_product([1, 0], [0, 1]) == 0)\n    __check(\"negative\", dot_product([-1, 2], [2, -1]) == -4)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: The dot product tells you how aligned two vectors are: positive means similar direction, zero means perpendicular, negat…",
+          "Implement `vectors` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

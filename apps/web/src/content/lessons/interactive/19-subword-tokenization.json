@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement bpe",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "bpe.py",
         "starter": "def merge_pair(tokens,a,b):\n    out=[]; i=0\n    while i<len(tokens):\n        if i<len(tokens)-1 and tokens[i]==a and tokens[i+1]==b:\n            out.append(a+b); i+=2\n        else:\n            out.append(tokens[i]); i+=1\n    return out\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", merge_pair([\"a\",\"a\",\"b\"],\"a\",\"a\")==[\"aa\",\"b\"])\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: BPE merges frequent pairs. Handles OOV via subwords.…",
+          "Implement `bpe` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

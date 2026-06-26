@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement structured",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "structured.py",
         "starter": "def extract_json_keys(obj):\n    \"\"\"Return sorted keys of dict.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"k\", extract_json_keys({\"a\":1,\"b\":2}) == [\"a\",\"b\"])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: JSON mode and tool schemas force parseable outputs. Agents need structured data, not prose.…",
+          "Implement `structured` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

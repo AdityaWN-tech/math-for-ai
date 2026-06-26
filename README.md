@@ -11,7 +11,7 @@ Curriculum spine: [ai-engineering-from-scratch](https://github.com/rohitg00/ai-e
 git clone git@github.com:t4tarzan/math-for-ai.git
 ```
 
-**Phase 0–19 roadmap** — **502/502 interactive** lessons with topic-specific Pyodide exercises (no generic stubs remaining).
+**Phase 0–19 roadmap** — **502/502 interactive** lessons with topic-specific exercises, hints, XP/streaks/badges, and plugin-ready T0/T1/T2 tiers (see `docs/EXTENSIBILITY.md`).
 
 ```bash
 # Terminal 1 — app (http://localhost:7777)

@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement rag",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "rag.py",
         "starter": "def chunk_text(text, size, overlap=0):\n    \"\"\"Split text into chunks of `size` chars with overlap.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n c=chunk_text(\"abcdefgh\",4,2)\n __check(\"c\", len(c)>=2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Retrieve relevant chunks, inject into prompt, generate grounded answer. Reduces hallucination.…",
+          "Implement `rag` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

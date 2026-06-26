@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement route",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "route.py",
         "starter": "def pick_model(scores, min_q):\n    ok=[m for m,s in scores.items() if s>=min_q]\n    return ok[0] if ok else None\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", pick_model({\"small\":0.7,\"big\":0.9},0.8)==\"big\")\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: Route prompts to the cheapest model that meets quality SLAs.…",
+          "Implement `route` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

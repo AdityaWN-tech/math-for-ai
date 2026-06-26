@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement stats",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "stats.py",
         "starter": "def mean(xs):\n    \"\"\"Arithmetic mean of non-empty list.\"\"\"\n    # TODO\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", mean([2,4,6]) == 4.0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Normalize features with mean and variance. Batch norm uses running statistics; z-scores stabilize training.…",
+          "Implement `stats` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

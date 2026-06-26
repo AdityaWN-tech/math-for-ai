@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement entropy",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "entropy.py",
         "starter": "import math\n\ndef cross_entropy(p, q):\n    \"\"\"Cross-entropy for discrete distributions p (true), q (pred).\"\"\"\n    # TODO: assume same length, sum -p_i log q_i\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    ce = cross_entropy([1.0, 0.0], [0.9, 0.1])\n    __check(\"pos\", ce > 0)\n    __check(\"match\", abs(cross_entropy([0.5,0.5],[0.5,0.5]) - math.log(2)) < 1e-5)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Cross-entropy H(p,q) = -Σ p log q. Language models minimize cross-entropy between predicted and true token distributions…",
+          "Implement `entropy` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

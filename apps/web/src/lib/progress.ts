@@ -1,27 +1,93 @@
-const STORAGE_KEY = "m4ai:progress:v1";
+import {
+  computeLessonXp,
+  evaluateBadges,
+  todayKey,
+  updateStreak,
+  XP_PHASE_BONUS,
+} from "@/lib/gamification";
+
+const STORAGE_KEY = "m4ai:progress:v2";
+const LEGACY_KEY = "m4ai:progress:v1";
 
 export interface LessonProgress {
   completedAt: number | null;
   lastStepId: string | null;
   visitedAt: number;
+  code?: string;
+  attempts: number;
+  firstPassAt: number | null;
+  xpEarned: number;
 }
 
 export interface ProgressState {
   lessons: Record<string, LessonProgress>;
+  xp: number;
+  streakDays: number;
+  lastActiveDate: string | null;
+  badges: string[];
   updatedAt: number;
 }
 
+function emptyLesson(): LessonProgress {
+  return {
+    completedAt: null,
+    lastStepId: null,
+    visitedAt: Date.now(),
+    attempts: 0,
+    firstPassAt: null,
+    xpEarned: 0,
+  };
+}
+
 function empty(): ProgressState {
-  return { lessons: {}, updatedAt: 0 };
+  return {
+    lessons: {},
+    xp: 0,
+    streakDays: 0,
+    lastActiveDate: null,
+    badges: [],
+    updatedAt: 0,
+  };
+}
+
+function migrateLegacy(raw: unknown): ProgressState {
+  const state = empty();
+  if (!raw || typeof raw !== "object") return state;
+  const legacy = raw as { lessons?: Record<string, { completedAt?: number | null; lastStepId?: string | null; visitedAt?: number }> };
+  for (const [id, lp] of Object.entries(legacy.lessons ?? {})) {
+    state.lessons[id] = {
+      ...emptyLesson(),
+      completedAt: lp.completedAt ?? null,
+      lastStepId: lp.lastStepId ?? null,
+      visitedAt: lp.visitedAt ?? Date.now(),
+    };
+    if (lp.completedAt) state.xp += 25;
+  }
+  return state;
 }
 
 export function readProgress(): ProgressState {
   if (typeof window === "undefined") return empty();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return empty();
-    const parsed = JSON.parse(raw) as ProgressState;
-    return parsed?.lessons ? parsed : empty();
+    if (raw) {
+      const parsed = JSON.parse(raw) as ProgressState;
+      if (parsed?.lessons) {
+        return {
+          ...empty(),
+          ...parsed,
+          badges: parsed.badges ?? [],
+          streakDays: parsed.streakDays ?? 0,
+        };
+      }
+    }
+    const legacyRaw = localStorage.getItem(LEGACY_KEY);
+    if (legacyRaw) {
+      const migrated = migrateLegacy(JSON.parse(legacyRaw));
+      writeProgress(migrated);
+      return migrated;
+    }
+    return empty();
   } catch {
     return empty();
   }
@@ -37,25 +103,90 @@ export function writeProgress(state: ProgressState) {
   }
 }
 
+function touchLesson(state: ProgressState, lessonId: string): LessonProgress {
+  if (!state.lessons[lessonId]) {
+    state.lessons[lessonId] = emptyLesson();
+  }
+  return state.lessons[lessonId];
+}
+
 export function markStep(lessonId: string, stepId: string) {
   const state = readProgress();
-  if (!state.lessons[lessonId]) {
-    state.lessons[lessonId] = { completedAt: null, lastStepId: stepId, visitedAt: Date.now() };
-  } else {
-    state.lessons[lessonId].lastStepId = stepId;
-    state.lessons[lessonId].visitedAt = Date.now();
-  }
+  const lesson = touchLesson(state, lessonId);
+  lesson.lastStepId = stepId;
+  lesson.visitedAt = Date.now();
+  const withStreak = updateStreak(state);
+  writeProgress(withStreak);
+}
+
+export function saveLessonCode(lessonId: string, code: string) {
+  const state = readProgress();
+  const lesson = touchLesson(state, lessonId);
+  lesson.code = code;
   writeProgress(state);
 }
 
-export function markLessonComplete(lessonId: string) {
+export function getLessonCode(lessonId: string): string | undefined {
+  return readProgress().lessons[lessonId]?.code;
+}
+
+export function recordTestAttempt(lessonId: string): number {
   const state = readProgress();
-  if (!state.lessons[lessonId]) {
-    state.lessons[lessonId] = { completedAt: Date.now(), lastStepId: null, visitedAt: Date.now() };
-  } else {
-    state.lessons[lessonId].completedAt = Date.now();
-  }
+  const lesson = touchLesson(state, lessonId);
+  lesson.attempts += 1;
   writeProgress(state);
+  return lesson.attempts;
+}
+
+export function recordTestPass(
+  lessonId: string,
+  opts: { xpReward?: number; rubric?: string; hasDeploy?: boolean },
+): { xp: number; firstTry: boolean; totalXp: number } {
+  const state = readProgress();
+  const lesson = touchLesson(state, lessonId);
+  const firstTry = lesson.attempts === 1 && !lesson.firstPassAt;
+  if (!lesson.firstPassAt) lesson.firstPassAt = Date.now();
+
+  const xp =
+    lesson.xpEarned > 0
+      ? 0
+      : computeLessonXp({
+          base: opts.xpReward,
+          firstTry,
+          hasDeploy: opts.hasDeploy ?? false,
+          rubric: opts.rubric,
+        });
+
+  if (xp > 0) {
+    lesson.xpEarned = xp;
+    state.xp += xp;
+  }
+
+  writeProgress(state);
+  return { xp, firstTry, totalXp: state.xp };
+}
+
+export function markLessonComplete(
+  lessonId: string,
+  opts?: { phaseId?: number; phaseLessonIds?: Record<number, string[]> },
+) {
+  const state = readProgress();
+  const lesson = touchLesson(state, lessonId);
+  if (!lesson.completedAt) lesson.completedAt = Date.now();
+
+  if (opts?.phaseLessonIds && opts.phaseId !== undefined) {
+    const ids = opts.phaseLessonIds[opts.phaseId] ?? [];
+    const allDone = ids.every(
+      (id) => id === lessonId || Boolean(state.lessons[id]?.completedAt),
+    );
+    if (allDone && ids.length > 0) {
+      state.xp += XP_PHASE_BONUS;
+    }
+    state.badges = evaluateBadges(state, opts.phaseLessonIds);
+  }
+
+  const withStreak = updateStreak(state);
+  writeProgress(withStreak);
 }
 
 export function isLessonComplete(lessonId: string): boolean {
@@ -72,4 +203,14 @@ export function getResumeStepIndex(lessonId: string, steps: { id: string }[]): n
 
 export function getCompletedCount(): number {
   return Object.values(readProgress().lessons).filter((l) => l.completedAt).length;
+}
+
+export function getProgressSummary() {
+  const state = readProgress();
+  return {
+    xp: state.xp,
+    streakDays: state.streakDays,
+    badges: state.badges,
+    completed: getCompletedCount(),
+  };
 }

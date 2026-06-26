@@ -40,12 +40,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement cap17",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "cap17.py",
         "starter": "def mastery_level(correct, total):\n    return correct/total\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", mastery_level(8,10)==0.8)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 50,
+        "hints": [
+          "Re-read the concept: Adaptive tutoring with mastery tracking and Socratic hints.…",
+          "Implement `cap17` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

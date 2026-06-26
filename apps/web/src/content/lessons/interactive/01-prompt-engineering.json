@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement prompts",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "prompts.py",
         "starter": "def estimate_tokens(text):\n    \"\"\"Rough estimate: 1 token ≈ 4 chars (heuristic).\"\"\"\n    # TODO\n    return 0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"t\", estimate_tokens(\"abcd\") == 1)\n    __check(\"8\", estimate_tokens(\"a\"*32) == 8)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Structure prompts: role, task, constraints, output format. Token budget forces concise context engineering.…",
+          "Implement `prompts` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

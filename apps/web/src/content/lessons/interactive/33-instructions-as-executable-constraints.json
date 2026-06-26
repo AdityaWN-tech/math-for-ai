@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement wb33",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "wb33.py",
         "starter": "def constraint_ok(output, forbidden):\n    return not any(f in output for f in forbidden)\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", constraint_ok(\"ok\",[\"secret\"]))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: Treat instructions as verifiable contracts on agent behavior.…",
+          "Implement `wb33` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

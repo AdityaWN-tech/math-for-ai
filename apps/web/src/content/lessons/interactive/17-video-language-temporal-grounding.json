@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement tground",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "tground.py",
         "starter": "def iou_temporal(a,b):\n    s1,e1=a; s2,e2=b\n    inter=max(0,min(e1,e2)-max(s1,s2))\n    union=max(e1,e2)-min(s1,s2)\n    return inter/max(union,1e-9)\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", iou_temporal((0,5),(2,7))>0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Locate when an event happens: start/end seconds in a video.…",
+          "Implement `tground` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

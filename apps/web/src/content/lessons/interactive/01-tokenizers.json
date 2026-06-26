@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement tok",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "tok.py",
         "starter": "def char_to_ids(text,vocab):\n    return [vocab.index(c) for c in text if c in vocab]\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", char_to_ids(\"ab\",list(\"abc\"))==[0,1])\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: BPE/WordPiece split text into subword IDs for the model.…",
+          "Implement `tok` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

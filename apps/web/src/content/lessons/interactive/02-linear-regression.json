@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement regression",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "regression.py",
         "starter": "def mse_loss(y_true, y_pred):\n    \"\"\"Mean squared error for equal-length lists.\"\"\"\n    # TODO\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"zero\", mse_loss([1,2],[1,2]) == 0)\n    __check(\"one\", mse_loss([0],[1]) == 1.0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Fit ŷ = wx + b by minimizing mean squared error. The simplest model — and the foundation of neural nets.…",
+          "Implement `regression` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

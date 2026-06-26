@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement ocr",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "ocr.py",
         "starter": "def reading_order(boxes):\n    \"\"\"Sort boxes by top y then x. boxes: [(x,y),...].\"\"\"\n    # TODO\n    return boxes\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"o\", reading_order([(10,5),(2,5)])[0][0]==2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Detect text regions, recognize characters, structure into reading order.…",
+          "Implement `ocr` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

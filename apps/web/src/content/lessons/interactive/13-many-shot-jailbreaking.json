@@ -40,12 +40,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement manyshot",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "manyshot.py",
         "starter": "def context_fill_ratio(shots, window):\n    return shots/window\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", context_fill_ratio(50,100)==0.5)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: Long faux dialogues of harmful Q&A bypass safety in context.…",
+          "Implement `manyshot` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

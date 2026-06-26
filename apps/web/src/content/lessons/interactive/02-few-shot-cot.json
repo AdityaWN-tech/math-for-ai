@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement cot",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "cot.py",
         "starter": "def format_cot_prompt(question):\n    \"\"\"Append 'Let's think step by step.' to question.\"\"\"\n    # TODO\n    return question\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = format_cot_prompt(\"2+2?\")\n    __check(\"cot\", \"step by step\" in p.lower())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Show examples in the prompt (few-shot). Ask the model to think step-by-step (CoT) before the final answer.…",
+          "Implement `cot` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

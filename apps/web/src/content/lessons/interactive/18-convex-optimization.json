@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement convex",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "convex.py",
         "starter": "def quadratic(x, a, b, c):\n    \"\"\"Evaluate ax^2 + bx + c.\"\"\"\n    return a*x*x + b*x + c\n\ndef is_convex_coeff(a):\n    \"\"\"True if a>0 (convex quadratic).\"\"\"\n    # TODO\n    return False\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"yes\", is_convex_coeff(1.0))\n    __check(\"no\", not is_convex_coeff(-1.0))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Convex functions have one global minimum. MSE is convex; neural nets are not — but convex subproblems appear everywhere.…",
+          "Implement `convex` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

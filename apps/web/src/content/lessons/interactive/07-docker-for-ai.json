@@ -41,7 +41,18 @@
       "type": "deploy",
       "gate": "deploy",
       "title": "Deploy your workspace database",
-      "body": "Click Deploy to provision Postgres, run migrations, and get a live health endpoint. This is the same thread as Phase 19 capstones — read, build, deploy."
+      "body": "Click Deploy to provision Postgres, run migrations, and get a live health endpoint. This is the same thread as Phase 19 capstones — read, build, deploy.",
+      "exercise": {
+        "plugin": "deploy-postgres",
+        "runtimeTier": "T2",
+        "rubric": "T2",
+        "xpReward": 50,
+        "hints": [
+          "Click Provision in the workspace — this creates a real Postgres row.",
+          "Wait for the health check to return ok before continuing.",
+          "Your connection string is stored locally for later capstones."
+        ]
+      }
     },
     {
       "id": "ship",

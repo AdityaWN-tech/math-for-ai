@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement fourier",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "fourier.py",
         "starter": "import math\n\ndef dft_real(signal, k):\n    \"\"\"Real part of k-th DFT coefficient for real signal.\"\"\"\n    # TODO: sum_n signal[n]*cos(2*pi*k*n/N)\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    s = [1.0, 0.0, -1.0, 0.0]\n    __check(\"finite\", abs(dft_real(s, 1)) < 1e6)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Signals decompose into frequencies. DFT finds how much of each frequency is present — used in audio and position encodin…",
+          "Implement `fourier` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

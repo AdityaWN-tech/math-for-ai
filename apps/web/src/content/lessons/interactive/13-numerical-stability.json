@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement stable",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "stable.py",
         "starter": "import math\n\ndef stable_softmax(logits):\n    \"\"\"Softmax with max-subtraction trick.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = stable_softmax([1000.0, 1001.0, 1002.0])\n    __check(\"sum\", abs(sum(p)-1) < 1e-6)\n    __check(\"max\", p[2] > p[1] > p[0])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Subtract max before exp in softmax to avoid overflow. Stable numerics prevent NaNs in training.…",
+          "Implement `stable` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

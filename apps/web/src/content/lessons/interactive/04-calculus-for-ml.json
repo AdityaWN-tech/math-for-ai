@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement calculus",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "calculus.py",
         "starter": "def numerical_derivative(f, x, h=1e-5):\n    \"\"\"Central difference approximation of f'(x).\"\"\"\n    # TODO\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    d = numerical_derivative(lambda x: x*x, 3.0)\n    __check(\"quad\", abs(d - 6.0) < 1e-3)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: The derivative of loss w.r.t. each weight tells you which way to nudge it. Neural nets are gradient-following machines.…",
+          "Implement `calculus` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

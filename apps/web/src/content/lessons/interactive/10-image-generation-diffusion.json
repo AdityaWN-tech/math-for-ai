@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement diffusion",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "diffusion.py",
         "starter": "def add_noise(x, t, T):\n    \"\"\"Linear mix: x*(1-t/T) + noise*(t/T) with noise=1 for demo.\"\"\"\n    # TODO\n    return x\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", abs(add_noise(1.0,50,100)-0.5)<1e-9)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Forward process adds noise over T steps; reverse learns to denoise. DDPM starts the generative AI revolution.…",
+          "Implement `diffusion` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

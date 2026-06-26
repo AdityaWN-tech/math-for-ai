@@ -40,12 +40,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement indirect",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "indirect.py",
         "starter": "def untrusted_source(url, trusted):\n    return url not in trusted\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", untrusted_source(\"evil.com\",[\"good.com\"]))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 35,
+        "hints": [
+          "Re-read the concept: Untrusted web pages or emails poison agent context via hidden instructions.…",
+          "Implement `indirect` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

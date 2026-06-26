@@ -1,5 +1,6 @@
 import type { Lesson } from "@/lib/lesson-types";
 import manifest from "@/content/lessons/interactive-manifest.json";
+import catalog from "@/content/lessons/catalog.json";
 import { INTERACTIVE_LESSONS_REGISTRY } from "@/lib/interactive-lessons.registry";
 
 export const INTERACTIVE_LESSONS: Record<string, Lesson> = INTERACTIVE_LESSONS_REGISTRY;
@@ -21,4 +22,14 @@ export function isInteractiveLesson(id: string) {
 export function firstLessonIdForPhase(phaseId: number): string | null {
   const entry = manifest.lessons.find((l) => l.phaseId === phaseId);
   return entry?.id ?? null;
+}
+
+/** Phase id → lesson ids (for badge evaluation). */
+export function phaseLessonIndex(): Record<number, string[]> {
+  const map: Record<number, string[]> = {};
+  for (const l of catalog.lessons) {
+    if (!map[l.phaseId]) map[l.phaseId] = [];
+    map[l.phaseId].push(l.id);
+  }
+  return map;
 }

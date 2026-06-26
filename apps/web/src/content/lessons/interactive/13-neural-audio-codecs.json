@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement codec",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "codec.py",
         "starter": "def compression_ratio(raw_kb, coded_kb):\n    return raw_kb/max(coded_kb,1e-9)\n",
         "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", compression_ratio(100,10)==10)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Neural codecs (EnCodec, DAC) compress audio at low bitrate.…",
+          "Implement `codec` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

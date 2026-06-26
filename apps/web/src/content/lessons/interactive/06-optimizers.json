@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement optim",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "optim.py",
         "starter": "def sgd_momentum(v, grad, lr, beta=0.9):\n    \"\"\"Return updated velocity and param delta.\"\"\"\n    # TODO: v = beta*v + grad; return v, -lr*v\n    return v, 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    v, d = sgd_momentum(0.0, 1.0, 0.1, 0.0)\n    __check(\"d\", abs(d - (-0.1)) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: SGD + momentum accumulates velocity. Adam adapts per-parameter learning rates — default for transformers.…",
+          "Implement `optim` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

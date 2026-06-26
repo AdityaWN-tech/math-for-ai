@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement bayes",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "bayes.py",
         "starter": "def bayes_posterior(prior, likelihood, evidence):\n    \"\"\"P(H|D) = P(D|H)*P(H)/P(D). All scalars in [0,1].\"\"\"\n    # TODO\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = bayes_posterior(0.01, 0.9, 0.1)\n    __check(\"range\", 0 <= p <= 1)\n    __check(\"calc\", abs(p - 0.09) < 1e-6)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Posterior ∝ likelihood × prior. Bayesian updating is how spam filters and medical tests reason under uncertainty.…",
+          "Implement `bayes` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

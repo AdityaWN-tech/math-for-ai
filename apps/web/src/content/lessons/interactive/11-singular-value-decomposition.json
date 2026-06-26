@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement svd",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "svd.py",
         "starter": "def frobenius_norm(A):\n    \"\"\"Frobenius norm for matrix as list-of-lists.\"\"\"\n    # TODO: sqrt(sum of squares of all elements)\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"f\", abs(frobenius_norm([[3,0],[0,4]]) - 5.0) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: SVD factors any matrix into U Σ Vᵀ. Singular values rank components for PCA, compression, and recommender systems.…",
+          "Implement `svd` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

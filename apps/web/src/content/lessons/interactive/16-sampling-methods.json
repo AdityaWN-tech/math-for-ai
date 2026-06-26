@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement sample",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "sample.py",
         "starter": "def batch_indices(n, batch_size, start=0):\n    \"\"\"Return index list [start, ..., start+batch_size-1] capped at n-1.\"\"\"\n    # TODO\n    return []\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    b = batch_indices(10, 3, 0)\n    __check(\"len\", len(b) == 3)\n    __check(\"idx\", b == [0,1,2])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: Mini-batches are random samples from the dataset. Shuffling each epoch prevents order bias.…",
+          "Implement `sample` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

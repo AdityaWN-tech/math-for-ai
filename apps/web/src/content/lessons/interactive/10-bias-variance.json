@@ -41,12 +41,23 @@
       "type": "build",
       "gate": "tests",
       "title": "Implement biasvar",
-      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "body": "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
       "code": {
         "language": "python",
         "filename": "biasvar.py",
         "starter": "def mse(y_true, y_pred):\n    \"\"\"Mean squared error.\"\"\"\n    # TODO\n    return 0.0\n",
         "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", mse([1,2],[1,2]) == 0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      },
+      "exercise": {
+        "plugin": "pyodide-tests",
+        "runtimeTier": "T0",
+        "rubric": "T2",
+        "xpReward": 25,
+        "hints": [
+          "Re-read the concept: High bias = underfitting. High variance = overfitting. MSE decomposes into bias² + variance + noise.…",
+          "Implement `biasvar` incrementally — Run after each small change.",
+          "All test names in the output pane must show ✓ before Continue unlocks."
+        ]
       }
     },
     {

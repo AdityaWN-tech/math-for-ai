@@ -917,6 +917,36 @@ async function loadCompiled(id) {
   }
 }
 
+function countChecks(tests) {
+  return (tests.match(/__check\(/g) ?? []).length;
+}
+
+function defaultHints(spec) {
+  const fn = spec.build.filename.replace(".py", "");
+  return [
+    `Re-read the concept above — your \`${fn}\` function should match that behavior.`,
+    "Run tests after each edit; fix one failing check at a time.",
+    "First-try pass earns bonus XP — hints are fine to use.",
+  ];
+}
+
+function exerciseMetaFor(spec) {
+  const checks = countChecks(spec.build.tests);
+  const rubric = spec.rubric ?? (checks >= 3 ? "T2" : checks >= 2 ? "T1" : "T0");
+  let xpReward = spec.xpReward ?? 25;
+  if (spec.phaseId === 19) xpReward = 50;
+  else if (spec.phaseId >= 14) xpReward = 35;
+  else if (rubric === "T1") xpReward = 30;
+
+  return {
+    plugin: "pyodide-tests",
+    runtimeTier: spec.runtimeTier ?? "T0",
+    rubric,
+    xpReward,
+    hints: spec.hints ?? defaultHints(spec),
+  };
+}
+
 function buildLesson(spec, compiled) {
   const motto = compiled?.motto ?? spec.title;
   const problemCards =
@@ -955,7 +985,8 @@ function buildLesson(spec, compiled) {
       type: "build",
       gate: "tests",
       title: `Implement ${spec.build.filename.replace(".py", "")}`,
-      body: "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      body: "Implement the function in the workspace. Use hints if stuck — first-try passes earn bonus XP.",
+      exercise: exerciseMetaFor(spec),
       code: {
         language: "python",
         filename: spec.build.filename,
