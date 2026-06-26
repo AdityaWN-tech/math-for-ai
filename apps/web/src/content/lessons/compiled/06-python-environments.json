@@ -1,0 +1,52 @@
+{
+  "id": "06-python-environments",
+  "title": "Python Environments",
+  "motto": "Dependency hell is real. Virtual environments are the cure.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 6
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Dependency hell is real. Virtual environments are the cure."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You install PyTorch 2.4 for a fine-tuning project. Next week, a different project needs PyTorch 2.1 because its CUDA build is pinned. You upgrade globally, and the first project breaks. You downgrade, and the second one breaks.",
+        "This is dependency hell. It happens constantly in AI/ML work because:",
+        "- PyTorch, JAX, and TensorFlow each ship their own CUDA bindings\n- Model libraries pin specific framework versions\n- A global `pip install` overwrites whatever was there before\n- CUDA 11.8 builds don't work with CUDA 12.x drivers (and vice versa)"
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "subgraph with[\"With virtual environments\"]\n        PA[\"Project A (.venv/)\"] --> PA1[\"torch 2.4.0 (CUDA 12.4)\"]\n        PA --> PA2[\"transformers 4.44\"]\n        PB[\"Project B (.venv/)\"] --> PB1[\"torch 2.1.0 (CUDA 11.8)\"]\n        PB --> PB2[\"diffusers 0.28\"]\n    end\n```"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/00-setup-and-tooling/06-python-environments",
+    "interactive": false
+  }
+}

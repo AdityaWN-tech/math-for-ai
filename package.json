@@ -7,8 +7,9 @@
     "build": "npm run compile:lessons && npm run build --prefix apps/web",
     "start": "npm run start --prefix apps/web",
     "lint": "npm run lint --prefix apps/web",
-    "compile:lessons": "node scripts/compile-lessons.mjs --phase=1",
-    "compile:lessons:all": "node scripts/compile-lessons.mjs --phase=0 && node scripts/compile-lessons.mjs --phase=1",
+    "compile:lessons": "node scripts/compile-lessons.mjs --phase=all",
+    "compile:lessons:phase0": "node scripts/compile-lessons.mjs --phase=0",
+    "compile:lessons:phase1": "node scripts/compile-lessons.mjs --phase=1",
     "infra:up": "docker compose up -d",
     "infra:down": "docker compose down",
     "infra:logs": "docker compose logs -f postgres"

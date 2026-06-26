@@ -3,7 +3,13 @@
 Unified learning platform: read → build → deploy → ship SaaS.  
 Curriculum spine: [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch).
 
-## Status
+## Repository
+
+**Private GitHub:** https://github.com/t4tarzan/math-for-ai
+
+```bash
+git clone git@github.com:t4tarzan/math-for-ai.git
+```
 
 **Vertical slice v1 + v2 live** — interactive lessons, deploy panel, Phase 1 catalog.
 
@@ -21,7 +27,7 @@ npm run compile:lessons
 | URL | What |
 |-----|------|
 | http://localhost:3000 | Landing |
-| http://localhost:3000/lessons | Phase 0–1 catalog (23 lessons) |
+| http://localhost:3000/lessons | Phase 0–1 catalog (34 lessons) |
 | http://localhost:3000/demo/01-linear-algebra-intuition | Math + Pyodide |
 | http://localhost:3000/demo/07-docker-for-ai | Deploy Postgres |
 

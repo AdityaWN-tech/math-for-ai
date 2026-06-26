@@ -1,10 +1,64 @@
 {
-  "generatedAt": "2026-06-26T06:32:17.734Z",
+  "generatedAt": "2026-06-26T06:38:28.809Z",
   "phases": [
     0,
     1
   ],
   "lessons": [
+    {
+      "id": "01-dev-environment",
+      "title": "Dev Environment",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 1,
+      "interactive": false,
+      "path": "/demo/01-dev-environment"
+    },
+    {
+      "id": "02-git-and-collaboration",
+      "title": "Git And Collaboration",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 2,
+      "interactive": false,
+      "path": "/demo/02-git-and-collaboration"
+    },
+    {
+      "id": "03-gpu-setup-and-cloud",
+      "title": "Gpu Setup And Cloud",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 3,
+      "interactive": false,
+      "path": "/demo/03-gpu-setup-and-cloud"
+    },
+    {
+      "id": "04-apis-and-keys",
+      "title": "Apis And Keys",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 4,
+      "interactive": false,
+      "path": "/demo/04-apis-and-keys"
+    },
+    {
+      "id": "05-jupyter-notebooks",
+      "title": "Jupyter Notebooks",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 5,
+      "interactive": false,
+      "path": "/demo/05-jupyter-notebooks"
+    },
+    {
+      "id": "06-python-environments",
+      "title": "Python Environments",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 6,
+      "interactive": false,
+      "path": "/demo/06-python-environments"
+    },
     {
       "id": "07-docker-for-ai",
       "title": "Docker for AI",
@@ -13,6 +67,51 @@
       "lessonNumber": 7,
       "interactive": true,
       "path": "/demo/07-docker-for-ai"
+    },
+    {
+      "id": "08-editor-setup",
+      "title": "Editor Setup",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 8,
+      "interactive": false,
+      "path": "/demo/08-editor-setup"
+    },
+    {
+      "id": "09-data-management",
+      "title": "Data Management",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 9,
+      "interactive": false,
+      "path": "/demo/09-data-management"
+    },
+    {
+      "id": "10-terminal-and-shell",
+      "title": "Terminal And Shell",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 10,
+      "interactive": false,
+      "path": "/demo/10-terminal-and-shell"
+    },
+    {
+      "id": "11-linux-for-ai",
+      "title": "Linux For Ai",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 11,
+      "interactive": false,
+      "path": "/demo/11-linux-for-ai"
+    },
+    {
+      "id": "12-debugging-and-profiling",
+      "title": "Debugging And Profiling",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 12,
+      "interactive": false,
+      "path": "/demo/12-debugging-and-profiling"
     },
     {
       "id": "01-linear-algebra-intuition",

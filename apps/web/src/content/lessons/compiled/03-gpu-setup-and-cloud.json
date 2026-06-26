@@ -1,0 +1,51 @@
+{
+  "id": "03-gpu-setup-and-cloud",
+  "title": "Gpu Setup And Cloud",
+  "motto": "Training on CPU is fine for learning. Training for real needs a GPU.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 3
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Training on CPU is fine for learning. Training for real needs a GPU."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Most lessons in phases 1-3 run fine on CPU. But once you start training CNNs, transformers, or LLMs (phases 4+), you need GPU acceleration. A training run that takes 8 hours on CPU takes 10 minutes on GPU.",
+        "You have three options: local GPU, cloud GPU, or Google Colab (free)."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "1. Local NVIDIA GPU\n   Cost: $0 (you already have it)\n   Setup: Install CUDA + cuDNN\n   Best for: Regular use, large datasets"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/00-setup-and-tooling/03-gpu-setup-and-cloud",
+    "interactive": false
+  }
+}

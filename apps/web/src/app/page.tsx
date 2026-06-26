@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Code2, Database, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WaitlistForm } from "@/components/marketing/WaitlistForm";
 
 export default function HomePage() {
   return (
@@ -55,7 +56,16 @@ export default function HomePage() {
           ))}
         </section>
 
-        <section className="mt-16 rounded-md border border-[var(--rule-soft)] bg-[var(--blueprint-tint)] p-8">
+        <section className="mt-16 rounded-md border border-[var(--rule-soft)] bg-[var(--bg-surface)] p-8 shadow-[var(--shadow-hard)]">
+          <h2 className="font-body text-2xl font-semibold">Join the waitlist</h2>
+          <p className="mt-2 max-w-xl font-body text-[var(--ink-soft)]">
+            Pro tier (full 503-lesson path) and Deploy tier (cloud workspaces + capstone rubrics) open
+            soon.
+          </p>
+          <WaitlistForm className="mt-6 max-w-md" />
+        </section>
+
+        <section className="mt-10 rounded-md border border-[var(--blueprint)] bg-[var(--blueprint-tint)] p-8">
           <h2 className="font-body text-2xl font-semibold">Vertical slice live</h2>
           <p className="mt-2 max-w-xl font-body text-[var(--ink-soft)]">
             Lesson 01 — Linear Algebra Intuition: motto → problem → interactive figure → implement{" "}

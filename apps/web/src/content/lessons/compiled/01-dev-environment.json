@@ -1,0 +1,51 @@
+{
+  "id": "01-dev-environment",
+  "title": "Dev Environment",
+  "motto": "Your tools shape your thinking. Set them up once, set them up right.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your tools shape your thinking. Set them up once, set them up right."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "You're about to learn AI engineering across 200+ lessons using Python, TypeScript, Rust, and Julia. If your environment is broken, every single lesson becomes a fight against tooling instead of learning.",
+        "Most people skip environment setup. Then they spend hours debugging import errors, version conflicts, and missing CUDA drivers. We're going to do this once, properly."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "An AI engineering environment has four layers:"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/00-setup-and-tooling/01-dev-environment",
+    "interactive": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "04-apis-and-keys",
+  "title": "Apis And Keys",
+  "motto": "Every AI API works the same way: send a request, get a response. The details change, the pattern doesn't.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 4
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every AI API works the same way: send a request, get a response. The details change, the pattern doesn't."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "The problem",
+      "cards": [
+        "Starting from Phase 11, you'll call LLM APIs (Anthropic, OpenAI, Google). In Phase 13-16 you'll build agents that use these APIs in loops. You need to know how API keys work, how to store them safely, and how to make your first API call."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "content",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Every API call has:\n1. An endpoint (URL)\n2. An API key (authentication)\n3. A request body (what you want)\n4. A response body (what you get back)"
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson overview complete",
+      "body": "Full interactive build + deploy steps ship in the platform soon. Continue the path from the catalog."
+    }
+  ],
+  "compileMeta": {
+    "sourcePath": "phases/00-setup-and-tooling/04-apis-and-keys",
+    "interactive": false
+  }
+}

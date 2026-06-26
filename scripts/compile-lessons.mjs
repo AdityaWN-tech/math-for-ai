@@ -19,7 +19,9 @@ const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 const INTERACTIVE_IDS = new Set(["01-linear-algebra-intuition", "07-docker-for-ai"]);
 
 const phaseArg = process.argv.find((a) => a.startsWith("--phase="));
-const PHASE_FILTER = phaseArg ? Number(phaseArg.split("=")[1]) : 1;
+const phaseValue = phaseArg ? phaseArg.split("=")[1] : "1";
+const PHASES_TO_COMPILE =
+  phaseValue === "all" ? [0, 1] : [Number(phaseValue)].filter((n) => !Number.isNaN(n));
 
 const PHASE_DIRS = {
   0: "00-setup-and-tooling",
@@ -182,15 +184,10 @@ async function compilePhase(phaseNum) {
 async function main() {
   const entries = [];
 
-  if (PHASE_FILTER === 1 || PHASE_FILTER === 0) {
-    if (PHASE_FILTER === 0) {
-      entries.push(...(await compilePhase(0)));
-    } else {
-      entries.push(...(await compilePhase(1)));
-    }
+  for (const phaseNum of PHASES_TO_COMPILE) {
+    entries.push(...(await compilePhase(phaseNum)));
   }
 
-  // Merge with interactive entries from other phases if compiling phase 1
   const interactive = [
     {
       id: "01-linear-algebra-intuition",

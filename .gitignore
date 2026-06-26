@@ -9,8 +9,6 @@ build/
 *.log
 .vercel
 .turbo
-# Submodule lives at content/curriculum — do not ignore
-content/*
-!content/curriculum/
+data/
 .idea/
 .vscode/
