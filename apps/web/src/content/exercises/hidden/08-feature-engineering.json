@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-feature-engineering",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    z = standardize([1,2,3])\n    __check(\"mean\", abs(sum(z)/3) < 1e-9) __check(\"hidden_no_none\", all(x is not None for x in standardize()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "70-task-spec-format",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", task_spec_format(7)==7) __check(\"hidden_callable\", callable(task_spec_format)) __check(\"hidden_idempotent\", task_spec_format() == task_spec_format())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

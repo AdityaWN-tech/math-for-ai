@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-apis-and-keys",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"k\", key_from_env(\"OPENAI_API_KEY\", {\"OPENAI_API_KEY\": \"sk-x\"})==\"sk-x\") __check(\"hidden_callable\", callable(key_from_env)) __check(\"hidden_idempotent\", key_from_env() == key_from_env())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

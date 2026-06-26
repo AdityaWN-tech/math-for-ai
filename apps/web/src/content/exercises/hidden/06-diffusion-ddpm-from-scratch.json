@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-diffusion-ddpm-from-scratch",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", beta_schedule_step(50,100)>0) __check(\"hidden_callable\", callable(beta_schedule_step)) __check(\"hidden_idempotent\", beta_schedule_step() == beta_schedule_step())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

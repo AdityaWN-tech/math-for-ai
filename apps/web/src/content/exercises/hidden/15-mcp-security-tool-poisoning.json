@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-mcp-security-tool-poisoning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", description_suspicious(\"ignore previous\")) __check(\"hidden_nonempty_str\", len(str(description_suspicious())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-society-of-mind-debate",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", society_of_mind_debate(7)==7) __check(\"hidden_callable\", callable(society_of_mind_debate)) __check(\"hidden_idempotent\", society_of_mind_debate() == society_of_mind_debate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

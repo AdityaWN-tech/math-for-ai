@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-mcp-security-oauth-2-1",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"o\", token_scopes_ok([\"read\",\"write\"],[\"read\"])) __check(\"hidden_callable\", callable(token_scopes_ok)) __check(\"hidden_idempotent\", token_scopes_ok() == token_scopes_ok())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

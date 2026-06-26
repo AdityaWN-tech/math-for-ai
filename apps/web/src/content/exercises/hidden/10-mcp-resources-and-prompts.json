@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-mcp-resources-and-prompts",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", resource_uri(\"file\",\"data\")==\"file://data\") __check(\"hidden_callable\", callable(resource_uri)) __check(\"hidden_idempotent\", resource_uri() == resource_uri())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

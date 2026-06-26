@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-skills-and-agent-sdks",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", len(skill_manifest(\"dev\",[\"run\"])[\"tools\"])==1) __check(\"hidden_len_pos\", len(skill_manifest()) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-function-calling",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", parse_tool_name({\"name\":\"search\"})==\"search\") __check(\"hidden_nonempty_str\", len(str(parse_tool_name())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

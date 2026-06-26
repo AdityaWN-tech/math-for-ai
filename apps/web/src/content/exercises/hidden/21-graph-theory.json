@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-graph-theory",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    adj = {0:[1,2], 1:[0], 2:[]}\n    __check(\"y\", has_edge(adj,0,1))\n    __check(\"n\", not has_edge(adj,2,0)) __check(\"hidden_bool\", isinstance(has_edge(), bool))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

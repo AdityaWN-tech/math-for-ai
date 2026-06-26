@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Source_Serif_4, VT323 } from "next/font/google";
 import { AnalyticsProvider } from "@/components/providers/AnalyticsProvider";
+import { ProgressBootstrap } from "@/components/gamification/ProgressBootstrap";
 import "./globals.css";
 
 const display = VT323({
@@ -33,7 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} h-full`}>
       <body className="min-h-full font-body antialiased">
-        <AnalyticsProvider>{children}</AnalyticsProvider>
+        <AnalyticsProvider>
+          <ProgressBootstrap />
+          {children}
+        </AnalyticsProvider>
       </body>
     </html>
   );

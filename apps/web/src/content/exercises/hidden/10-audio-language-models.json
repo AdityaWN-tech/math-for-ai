@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-audio-language-models",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", modal_tokens(100,50)==150) __check(\"hidden_callable\", callable(modal_tokens)) __check(\"hidden_idempotent\", modal_tokens() == modal_tokens())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

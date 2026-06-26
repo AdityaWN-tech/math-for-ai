@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-debugging-neural-networks",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"n\", has_nan([1.0, float('nan')]))\n    __check(\"ok\", not has_nan([1.0,2.0])) __check(\"hidden_bool\", isinstance(has_nan(), bool))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

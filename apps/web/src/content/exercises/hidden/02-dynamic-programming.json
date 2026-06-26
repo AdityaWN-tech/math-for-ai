@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-dynamic-programming",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", bellman_backup(0,1,0.9,1)==0.9) __check(\"hidden_callable\", callable(bellman_backup)) __check(\"hidden_idempotent\", bellman_backup() == bellman_backup())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

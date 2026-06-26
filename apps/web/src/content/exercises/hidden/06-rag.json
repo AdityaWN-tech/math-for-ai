@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-rag",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n c=chunk_text(\"abcdefgh\",4,2)\n __check(\"c\", len(c)>=2) __check(\"hidden_len_pos\", len(chunk_text()) > 0) __check(\"hidden_no_none\", all(x is not None for x in chunk_text()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

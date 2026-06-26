@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-tool-use-and-function-calling",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", parse_tool_name({\"name\":\"search\"})==\"search\") __check(\"hidden_callable\", callable(parse_tool_name)) __check(\"hidden_idempotent\", parse_tool_name() == parse_tool_name())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

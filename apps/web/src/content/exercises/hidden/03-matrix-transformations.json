@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-matrix-transformations",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ndef _approx(a, b, eps=1e-4):\n    return abs(a - b) < eps\n\ntry:\n    import math\n    R0 = rotation_2d(0)\n    __check(\"identity\", _approx(R0[0][0], 1) and _approx(R0[1][1], 1) and _approx(R0[0][1], 0))\n    R90 = rotation_2d(math.pi / 2)\n    p = apply_transform(R90, [1, 0])\n    __check(\"rotate90\", _approx(p[0], 0) and _approx(p[1], 1))\n    p45 = apply_transform(rotation_2d(math.pi / 4), [1, 0])\n    s = math.sqrt(2) / 2\n    __check(\"rotate45\", _approx(p45[0], s) and _approx(p45[1], s)) __check(\"hidden_no_none\", all(x is not None for x in rotation_2d()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

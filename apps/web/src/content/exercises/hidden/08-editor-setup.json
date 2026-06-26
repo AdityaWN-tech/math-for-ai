@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-editor-setup",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"run\", shortcut_action(\"cmd+enter\") == \"run\")\n    __check(\"open\", shortcut_action(\"cmd+p\") == \"quick_open\")\n    __check(\"unk\", shortcut_action(\"cmd+z\") == \"unknown\") __check(\"hidden_nonempty_str\", len(str(shortcut_action())) > 0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

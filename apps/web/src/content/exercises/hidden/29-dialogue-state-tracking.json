@@ -1,0 +1,4 @@
+{
+  "lessonId": "29-dialogue-state-tracking",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", update_slot({},\"city\",\"Paris\")[\"city\"]==\"Paris\") __check(\"hidden_callable\", callable(update_slot)) __check(\"hidden_idempotent\", update_slot() == update_slot())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

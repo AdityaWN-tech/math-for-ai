@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-speaker-recognition-verification",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", verify(0.9,0.8)) __check(\"hidden_callable\", callable(verify)) __check(\"hidden_idempotent\", verify() == verify())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

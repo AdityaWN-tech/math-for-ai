@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-production-scaling-queues-checkpoints",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", production_scaling_que(7)==7) __check(\"hidden_callable\", callable(production_scaling_que)) __check(\"hidden_idempotent\", production_scaling_que() == production_scaling_que())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

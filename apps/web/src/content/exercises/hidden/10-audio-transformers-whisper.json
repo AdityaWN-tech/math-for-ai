@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-audio-transformers-whisper",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", mel_frames(16000,160)==100) __check(\"hidden_callable\", callable(mel_frames)) __check(\"hidden_idempotent\", mel_frames() == mel_frames())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

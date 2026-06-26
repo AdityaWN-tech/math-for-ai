@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-differential-privacy-for-llms",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", dp_noise_scale(1.0)==1.0) __check(\"hidden_callable\", callable(dp_noise_scale)) __check(\"hidden_idempotent\", dp_noise_scale() == dp_noise_scale())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

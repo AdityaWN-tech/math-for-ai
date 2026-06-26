@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-t5-bart-encoder-decoder",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", seq2seq_prefix(\"summarize\")==\"summarize: \") __check(\"hidden_callable\", callable(seq2seq_prefix)) __check(\"hidden_idempotent\", seq2seq_prefix() == seq2seq_prefix())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-mcp-gateways-and-registries",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", route_server({\"calc\":1},\"calc\")==1) __check(\"hidden_callable\", callable(route_server)) __check(\"hidden_idempotent\", route_server() == route_server())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

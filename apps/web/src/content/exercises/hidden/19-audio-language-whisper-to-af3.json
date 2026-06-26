@@ -1,0 +1,4 @@
+{
+  "lessonId": "19-audio-language-whisper-to-af3",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", mel_bins(400)==201) __check(\"hidden_callable\", callable(mel_bins)) __check(\"hidden_idempotent\", mel_bins() == mel_bins())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

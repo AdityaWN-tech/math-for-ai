@@ -1,0 +1,4 @@
+{
+  "lessonId": "46-gradient-accumulation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", effective_batch(4,8)==32) __check(\"hidden_callable\", callable(effective_batch)) __check(\"hidden_idempotent\", effective_batch() == effective_batch())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

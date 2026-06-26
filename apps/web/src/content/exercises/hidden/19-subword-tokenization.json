@@ -1,0 +1,4 @@
+{
+  "lessonId": "19-subword-tokenization",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", merge_pair([\"a\",\"a\",\"b\"],\"a\",\"a\")==[\"aa\",\"b\"]) __check(\"hidden_callable\", callable(merge_pair)) __check(\"hidden_idempotent\", merge_pair() == merge_pair())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-loss-functions",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"p\", bce(1, 0.9) < bce(1, 0.1)) __check(\"hidden_callable\", callable(bce)) __check(\"hidden_idempotent\", bce() == bce())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-transfer-learning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trainable_params(100,80)==20) __check(\"hidden_callable\", callable(trainable_params)) __check(\"hidden_idempotent\", trainable_params() == trainable_params())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-open-vocab-clip",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", clip_logits([1,0],[1,0])==1.0) __check(\"hidden_callable\", callable(clip_logits)) __check(\"hidden_idempotent\", clip_logits() == clip_logits())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

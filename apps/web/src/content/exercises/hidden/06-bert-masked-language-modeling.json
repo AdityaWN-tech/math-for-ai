@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-bert-masked-language-modeling",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", mask_tokens([1]*100,0)==15) __check(\"hidden_callable\", callable(mask_tokens)) __check(\"hidden_idempotent\", mask_tokens() == mask_tokens())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

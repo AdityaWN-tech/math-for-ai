@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-constitutional-safety-harness",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", policy_violation(\"hack\",[\"hack\"])) __check(\"hidden_callable\", callable(policy_violation)) __check(\"hidden_idempotent\", policy_violation() == policy_violation())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

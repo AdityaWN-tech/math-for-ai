@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-positional-encoding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n import math\n v=sin_pos(0,0,512)\n __check(\"fin\", v==v) __check(\"hidden_callable\", callable(sin_pos)) __check(\"hidden_idempotent\", sin_pos() == sin_pos())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

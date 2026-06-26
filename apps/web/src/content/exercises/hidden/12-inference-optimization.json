@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-inference-optimization",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", tokens_per_sec(1000,2)==500) __check(\"hidden_callable\", callable(tokens_per_sec)) __check(\"hidden_idempotent\", tokens_per_sec() == tokens_per_sec())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

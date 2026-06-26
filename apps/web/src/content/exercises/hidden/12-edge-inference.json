@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-edge-inference",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", edge_inference(7)==7) __check(\"hidden_callable\", callable(edge_inference)) __check(\"hidden_idempotent\", edge_inference() == edge_inference())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

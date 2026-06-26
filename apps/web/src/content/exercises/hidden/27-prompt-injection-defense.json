@@ -1,0 +1,4 @@
+{
+  "lessonId": "27-prompt-injection-defense",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", untrusted_boundary(\"<untrusted>x\")) __check(\"hidden_nonempty_str\", len(str(untrusted_boundary())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

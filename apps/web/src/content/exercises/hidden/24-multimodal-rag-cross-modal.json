@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-multimodal-rag-cross-modal",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", cross_modal_score([1,0],[1,0])==1) __check(\"hidden_callable\", callable(cross_modal_score)) __check(\"hidden_idempotent\", cross_modal_score() == cross_modal_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

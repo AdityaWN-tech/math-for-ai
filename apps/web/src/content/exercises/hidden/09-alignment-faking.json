@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-alignment-faking",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", eval_deploy_gap(True,False)) __check(\"hidden_callable\", callable(eval_deploy_gap)) __check(\"hidden_idempotent\", eval_deploy_gap() == eval_deploy_gap())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

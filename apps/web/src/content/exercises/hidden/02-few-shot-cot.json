@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-few-shot-cot",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = format_cot_prompt(\"2+2?\")\n    __check(\"cot\", \"step by step\" in p.lower()) __check(\"hidden_callable\", callable(format_cot_prompt)) __check(\"hidden_idempotent\", format_cot_prompt() == format_cot_prompt())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

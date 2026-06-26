@@ -1,0 +1,4 @@
+{
+  "lessonId": "36-scope-contracts",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", in_scope(\"src/x\",[\"src/\"])) __check(\"hidden_callable\", callable(in_scope)) __check(\"hidden_idempotent\", in_scope() == in_scope())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

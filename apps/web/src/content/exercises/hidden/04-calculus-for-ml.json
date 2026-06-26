@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-calculus-for-ml",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    d = numerical_derivative(lambda x: x*x, 3.0)\n    __check(\"quad\", abs(d - 6.0) < 1e-3) __check(\"hidden_callable\", callable(numerical_derivative)) __check(\"hidden_idempotent\", numerical_derivative() == numerical_derivative())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

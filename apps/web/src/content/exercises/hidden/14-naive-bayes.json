@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-naive-bayes",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"c\", naive_score([-1,-2], [[0,0],[-5,-5]]) == 0) __check(\"hidden_callable\", callable(naive_score)) __check(\"hidden_idempotent\", naive_score() == naive_score())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

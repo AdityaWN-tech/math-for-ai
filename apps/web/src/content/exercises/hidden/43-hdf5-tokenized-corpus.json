@@ -1,0 +1,4 @@
+{
+  "lessonId": "43-hdf5-tokenized-corpus",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", shard_count(1000,300)==4) __check(\"hidden_no_none\", all(x is not None for x in shard_count()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

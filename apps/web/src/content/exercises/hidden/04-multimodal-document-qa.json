@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-multimodal-document-qa",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", page_cite(3)==\"p.3\") __check(\"hidden_callable\", callable(page_cite)) __check(\"hidden_idempotent\", page_cite() == page_cite())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

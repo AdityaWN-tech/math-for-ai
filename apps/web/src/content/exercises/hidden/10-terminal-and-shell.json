@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-terminal-and-shell",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"ok\", parse_export(\"export CUDA_VISIBLE_DEVICES=0\") == (\"CUDA_VISIBLE_DEVICES\", \"0\"))\n    __check(\"bad\", parse_export(\"echo hi\") is None) __check(\"hidden_callable\", callable(parse_export)) __check(\"hidden_idempotent\", parse_export() == parse_export())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

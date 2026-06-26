@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-deepseek-v3-walkthrough",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", moe_active_experts(2,8)==2) __check(\"hidden_callable\", callable(moe_active_experts)) __check(\"hidden_idempotent\", moe_active_experts() == moe_active_experts())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

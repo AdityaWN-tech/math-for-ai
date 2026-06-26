@@ -1,0 +1,4 @@
+{
+  "lessonId": "40-multi-session-handoff",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", handoff_payload({})[\"v\"]==1) __check(\"hidden_callable\", callable(handoff_payload)) __check(\"hidden_idempotent\", handoff_payload() == handoff_payload())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

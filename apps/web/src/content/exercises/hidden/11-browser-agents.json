@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-browser-agents",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", click_action(10,20)[\"type\"]==\"click\") __check(\"hidden_callable\", callable(click_action)) __check(\"hidden_idempotent\", click_action() == click_action())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

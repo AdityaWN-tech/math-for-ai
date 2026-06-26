@@ -96,12 +96,15 @@ export function readProgress(): ProgressState {
   }
 }
 
-export function writeProgress(state: ProgressState) {
+export function writeProgress(state: ProgressState, opts?: { skipSync?: boolean }) {
   if (typeof window === "undefined") return;
   state.updatedAt = Date.now();
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    import("@/lib/progress-sync").then((m) => m.scheduleProgressSync());
+    if (!opts?.skipSync) {
+      import("@/lib/progress-sync").then((m) => m.scheduleProgressSync());
+    }
+    window.dispatchEvent(new Event("m4ai:progress"));
   } catch {
     /* quota */
   }
@@ -230,4 +233,45 @@ export function getProgressSummary() {
     badges: state.badges,
     completed: getCompletedCount(),
   };
+}
+
+/** Merge remote server state into local — keeps best progress from either side. */
+export function mergeRemoteProgress(remote: ProgressState) {
+  if (typeof window === "undefined") return;
+  const local = readProgress();
+  const merged: ProgressState = {
+    ...local,
+    xp: Math.max(local.xp, remote.xp ?? 0),
+    streakDays: Math.max(local.streakDays, remote.streakDays ?? 0),
+    badges: [...new Set([...(local.badges ?? []), ...(remote.badges ?? [])])],
+    questsCompleted: [...new Set([...(local.questsCompleted ?? []), ...(remote.questsCompleted ?? [])])],
+    lessons: { ...local.lessons },
+    updatedAt: Math.max(local.updatedAt, remote.updatedAt ?? 0),
+  };
+
+  for (const [id, remoteLesson] of Object.entries(remote.lessons ?? {})) {
+    const localLesson = local.lessons[id] ?? emptyLesson();
+    const pickLocal = localLesson.visitedAt >= (remoteLesson.visitedAt ?? 0);
+    merged.lessons[id] = {
+      ...localLesson,
+      completedAt:
+        localLesson.completedAt && remoteLesson.completedAt
+          ? Math.min(localLesson.completedAt, remoteLesson.completedAt)
+          : localLesson.completedAt ?? remoteLesson.completedAt ?? null,
+      lastStepId: pickLocal ? localLesson.lastStepId : remoteLesson.lastStepId ?? localLesson.lastStepId,
+      visitedAt: Math.max(localLesson.visitedAt, remoteLesson.visitedAt ?? 0),
+      attempts: Math.max(localLesson.attempts, remoteLesson.attempts ?? 0),
+      firstPassAt:
+        localLesson.firstPassAt && remoteLesson.firstPassAt
+          ? Math.min(localLesson.firstPassAt, remoteLesson.firstPassAt)
+          : localLesson.firstPassAt ?? remoteLesson.firstPassAt ?? null,
+      xpEarned: Math.max(localLesson.xpEarned, remoteLesson.xpEarned ?? 0),
+      code: pickLocal ? localLesson.code : remoteLesson.code ?? localLesson.code,
+      workspaceFiles: pickLocal
+        ? localLesson.workspaceFiles
+        : remoteLesson.workspaceFiles ?? localLesson.workspaceFiles,
+    };
+  }
+
+  writeProgress(merged, { skipSync: true });
 }

@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-monte-carlo-methods",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", episode_return([1,2,3])==6) __check(\"hidden_callable\", callable(episode_return)) __check(\"hidden_idempotent\", episode_return() == episode_return())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

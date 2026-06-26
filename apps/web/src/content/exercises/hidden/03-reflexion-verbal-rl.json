@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-reflexion-verbal-rl",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", retry_allowed(1,3)) __check(\"hidden_callable\", callable(retry_allowed)) __check(\"hidden_idempotent\", retry_allowed() == retry_allowed())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

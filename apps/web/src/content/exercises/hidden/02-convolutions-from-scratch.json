@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-convolutions-from-scratch",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"c\", conv1d_valid([1,2,3,4],[1,0]) == [1,2,3]) __check(\"hidden_no_none\", all(x is not None for x in conv1d_valid()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

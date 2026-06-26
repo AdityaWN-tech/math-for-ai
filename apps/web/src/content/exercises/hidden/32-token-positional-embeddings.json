@@ -1,0 +1,4 @@
+{
+  "lessonId": "32-token-positional-embeddings",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", rope_dim(64)==64) __check(\"hidden_callable\", callable(rope_dim)) __check(\"hidden_idempotent\", rope_dim() == rope_dim())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

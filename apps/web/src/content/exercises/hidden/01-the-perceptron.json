@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-the-perceptron",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"pos\", perceptron_output([1,1],[1,1], -0.5) == 1)\n    __check(\"neg\", perceptron_output([1,1],[-1,-1], 0) == 0) __check(\"hidden_callable\", callable(perceptron_output)) __check(\"hidden_idempotent\", perceptron_output() == perceptron_output())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

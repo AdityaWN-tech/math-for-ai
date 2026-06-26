@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-inference-metrics-goodput",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", goodput(500,1)==500) __check(\"hidden_callable\", callable(goodput)) __check(\"hidden_idempotent\", goodput() == goodput())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

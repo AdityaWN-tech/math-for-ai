@@ -1,0 +1,4 @@
+{
+  "lessonId": "35-initialization-scripts",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", init_commands([\"pip\",\"test\"])==2) __check(\"hidden_callable\", callable(init_commands)) __check(\"hidden_idempotent\", init_commands() == init_commands())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

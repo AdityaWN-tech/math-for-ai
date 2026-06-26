@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-shared-memory-blackboard",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", shared_memory_blackboa(7)==7) __check(\"hidden_callable\", callable(shared_memory_blackboa)) __check(\"hidden_idempotent\", shared_memory_blackboa() == shared_memory_blackboa())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

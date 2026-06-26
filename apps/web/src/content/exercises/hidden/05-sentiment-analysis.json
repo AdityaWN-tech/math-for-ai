@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-sentiment-analysis",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", label_from_score(0.8)==1)\n __check(\"n\", label_from_score(0.2)==0) __check(\"hidden_callable\", callable(label_from_score)) __check(\"hidden_idempotent\", label_from_score() == label_from_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

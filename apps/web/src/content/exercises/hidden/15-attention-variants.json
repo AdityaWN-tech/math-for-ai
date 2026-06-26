@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-attention-variants",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", linear_attn_cost(1000,64)==64000) __check(\"hidden_callable\", callable(linear_attn_cost)) __check(\"hidden_idempotent\", linear_attn_cost() == linear_attn_cost())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

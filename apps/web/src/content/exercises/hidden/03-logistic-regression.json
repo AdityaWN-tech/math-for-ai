@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-logistic-regression",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"zero\", abs(sigmoid(0) - 0.5) < 1e-9)\n    __check(\"pos\", sigmoid(10) > 0.99) __check(\"hidden_callable\", callable(sigmoid)) __check(\"hidden_idempotent\", sigmoid() == sigmoid())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

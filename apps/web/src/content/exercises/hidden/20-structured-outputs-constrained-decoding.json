@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-structured-outputs-constrained-decoding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"j\", is_json_start(\"{\")) __check(\"hidden_callable\", callable(is_json_start)) __check(\"hidden_idempotent\", is_json_start() == is_json_start())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

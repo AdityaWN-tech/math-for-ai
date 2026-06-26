@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-colpali-vision-native-rag",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", page_embedding_dim(1000,128)>0) __check(\"hidden_callable\", callable(page_embedding_dim)) __check(\"hidden_idempotent\", page_embedding_dim() == page_embedding_dim())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

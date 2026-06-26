@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-world-models-video-diffusion",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", future_frames(10,4)==4) __check(\"hidden_callable\", callable(future_frames)) __check(\"hidden_idempotent\", future_frames() == future_frames())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

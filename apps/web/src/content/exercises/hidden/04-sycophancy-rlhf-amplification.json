@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-sycophancy-rlhf-amplification",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", sycophancy_score(True,False)) __check(\"hidden_callable\", callable(sycophancy_score)) __check(\"hidden_idempotent\", sycophancy_score() == sycophancy_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

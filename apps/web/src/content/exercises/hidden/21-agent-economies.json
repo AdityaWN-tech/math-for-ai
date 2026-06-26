@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-agent-economies",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", agent_economies(7)==7) __check(\"hidden_callable\", callable(agent_economies)) __check(\"hidden_idempotent\", agent_economies() == agent_economies())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

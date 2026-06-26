@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-multi-agent-rl",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"j\", joint_reward([1,2,3])==6) __check(\"hidden_callable\", callable(joint_reward)) __check(\"hidden_idempotent\", joint_reward() == joint_reward())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

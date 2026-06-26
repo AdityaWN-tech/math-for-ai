@@ -1,0 +1,4 @@
+{
+  "lessonId": "27-multi-object-tracking",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", iou_match_threshold()==0.5) __check(\"hidden_callable\", callable(iou_match_threshold)) __check(\"hidden_idempotent\", iou_match_threshold() == iou_match_threshold())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

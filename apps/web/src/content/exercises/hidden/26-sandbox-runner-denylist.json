@@ -1,0 +1,4 @@
+{
+  "lessonId": "26-sandbox-runner-denylist",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", is_denied(\"rm -rf\",[\"rm\"])) __check(\"hidden_callable\", callable(is_denied)) __check(\"hidden_idempotent\", is_denied() == is_denied())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

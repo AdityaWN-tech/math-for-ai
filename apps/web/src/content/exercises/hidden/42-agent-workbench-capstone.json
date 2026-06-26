@@ -1,0 +1,4 @@
+{
+  "lessonId": "42-agent-workbench-capstone",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", capstone_done(True,True)) __check(\"hidden_callable\", callable(capstone_done)) __check(\"hidden_idempotent\", capstone_done() == capstone_done())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

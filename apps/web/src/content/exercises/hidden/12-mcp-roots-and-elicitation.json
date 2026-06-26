@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-mcp-roots-and-elicitation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", path_allowed(\"/data/x\", [\"/data\"])) __check(\"hidden_callable\", callable(path_allowed)) __check(\"hidden_idempotent\", path_allowed() == path_allowed())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

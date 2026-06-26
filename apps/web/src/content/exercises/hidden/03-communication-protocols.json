@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-communication-protocols",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", communication_protocol(7)==7) __check(\"hidden_callable\", callable(communication_protocol)) __check(\"hidden_idempotent\", communication_protocol() == communication_protocol())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

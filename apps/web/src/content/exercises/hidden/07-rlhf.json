@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-rlhf",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"kl\", kl_penalty([0.6,0.4],[0.5,0.5],0.1)>0) __check(\"hidden_callable\", callable(kl_penalty)) __check(\"hidden_idempotent\", kl_penalty() == kl_penalty())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

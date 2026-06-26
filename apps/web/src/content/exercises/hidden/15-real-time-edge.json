@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-real-time-edge",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"q\", quant_size_mb(1_000_000)==1.0) __check(\"hidden_callable\", callable(quant_size_mb)) __check(\"hidden_idempotent\", quant_size_mb() == quant_size_mb())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

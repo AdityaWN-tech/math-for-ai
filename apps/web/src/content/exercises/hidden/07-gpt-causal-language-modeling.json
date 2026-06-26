@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-gpt-causal-language-modeling",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"y\", causal_mask_allowed(3,2))\n __check(\"n\", not causal_mask_allowed(2,3)) __check(\"hidden_bool\", isinstance(causal_mask_allowed(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

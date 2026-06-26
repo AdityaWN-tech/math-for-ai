@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-statistics-for-ml",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", mean([2,4,6]) == 4.0) __check(\"hidden_callable\", callable(mean)) __check(\"hidden_idempotent\", mean() == mean())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

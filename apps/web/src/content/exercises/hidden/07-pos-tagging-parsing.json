@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-pos-tagging-parsing",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"y\", is_noun_tag(\"NNS\"))\n __check(\"n\", not is_noun_tag(\"VB\")) __check(\"hidden_bool\", isinstance(is_noun_tag(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

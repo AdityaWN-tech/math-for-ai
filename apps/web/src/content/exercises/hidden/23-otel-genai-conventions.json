@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-otel-genai-conventions",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", span_attrs(\"gpt\",100)[\"tokens\"]==100) __check(\"hidden_callable\", callable(span_attrs)) __check(\"hidden_idempotent\", span_attrs() == span_attrs())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

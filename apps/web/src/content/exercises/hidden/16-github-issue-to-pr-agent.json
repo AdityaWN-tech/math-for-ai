@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-github-issue-to-pr-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", pr_ready(True,10)) __check(\"hidden_callable\", callable(pr_ready)) __check(\"hidden_idempotent\", pr_ready() == pr_ready())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

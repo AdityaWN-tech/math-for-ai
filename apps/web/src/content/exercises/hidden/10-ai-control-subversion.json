@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-ai-control-subversion",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", autonomy_level(3)==3) __check(\"hidden_callable\", callable(autonomy_level)) __check(\"hidden_idempotent\", autonomy_level() == autonomy_level())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

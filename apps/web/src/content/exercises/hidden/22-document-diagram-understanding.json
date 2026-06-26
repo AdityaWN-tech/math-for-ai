@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-document-diagram-understanding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", region_count([\"title\",\"chart\"])==2) __check(\"hidden_callable\", callable(region_count)) __check(\"hidden_idempotent\", region_count() == region_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

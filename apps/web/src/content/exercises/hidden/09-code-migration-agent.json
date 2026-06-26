@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-code-migration-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", files_migrated(3)) __check(\"hidden_callable\", callable(files_migrated)) __check(\"hidden_idempotent\", files_migrated() == files_migrated())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

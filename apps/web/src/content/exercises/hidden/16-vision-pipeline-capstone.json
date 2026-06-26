@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-vision-pipeline-capstone",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", pipeline_step_count([\"a\",\"b\"])==2) __check(\"hidden_callable\", callable(pipeline_step_count)) __check(\"hidden_idempotent\", pipeline_step_count() == pipeline_step_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

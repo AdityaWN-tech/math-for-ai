@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-fairness-criteria-group-individual-counterfactual",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", demographic_parity(0.5,0.52,0.05)) __check(\"hidden_callable\", callable(demographic_parity)) __check(\"hidden_idempotent\", demographic_parity() == demographic_parity())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-tokenizers",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", char_to_ids(\"ab\",list(\"abc\"))==[0,1]) __check(\"hidden_no_none\", all(x is not None for x in char_to_ids()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

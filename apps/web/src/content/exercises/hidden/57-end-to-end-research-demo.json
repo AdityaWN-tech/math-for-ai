@@ -1,0 +1,4 @@
+{
+  "lessonId": "57-end-to-end-research-demo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", end_to_end_research_de(7)==7) __check(\"hidden_callable\", callable(end_to_end_research_de)) __check(\"hidden_idempotent\", end_to_end_research_de() == end_to_end_research_de())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

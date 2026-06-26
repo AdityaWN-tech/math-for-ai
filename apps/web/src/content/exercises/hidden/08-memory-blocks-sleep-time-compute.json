@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-memory-blocks-sleep-time-compute",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", idle_minutes(5)==5) __check(\"hidden_callable\", callable(idle_minutes)) __check(\"hidden_idempotent\", idle_minutes() == idle_minutes())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

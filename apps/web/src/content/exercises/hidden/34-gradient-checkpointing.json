@@ -1,0 +1,4 @@
+{
+  "lessonId": "34-gradient-checkpointing",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", mem_savings_ratio(4,16)>0) __check(\"hidden_callable\", callable(mem_savings_ratio)) __check(\"hidden_idempotent\", mem_savings_ratio() == mem_savings_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

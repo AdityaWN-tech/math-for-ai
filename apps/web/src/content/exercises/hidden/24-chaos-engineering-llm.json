@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-chaos-engineering-llm",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", chaos_engineering_llm(7)==7) __check(\"hidden_callable\", callable(chaos_engineering_llm)) __check(\"hidden_idempotent\", chaos_engineering_llm() == chaos_engineering_llm())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

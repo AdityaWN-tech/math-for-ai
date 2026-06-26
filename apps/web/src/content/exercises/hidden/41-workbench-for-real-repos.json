@@ -1,0 +1,4 @@
+{
+  "lessonId": "41-workbench-for-real-repos",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", repo_size([\"a\",\"b\"])==2) __check(\"hidden_callable\", callable(repo_size)) __check(\"hidden_idempotent\", repo_size() == repo_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

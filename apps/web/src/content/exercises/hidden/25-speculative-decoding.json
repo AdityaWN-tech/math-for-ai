@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-speculative-decoding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", speedup(100,50)==2.0) __check(\"hidden_callable\", callable(speedup)) __check(\"hidden_idempotent\", speedup() == speedup())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "27-data-provenance-training-governance",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", provenance_complete([\"license\",\"source\"],[\"license\",\"source\"])) __check(\"hidden_callable\", callable(provenance_complete)) __check(\"hidden_idempotent\", provenance_complete() == provenance_complete())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

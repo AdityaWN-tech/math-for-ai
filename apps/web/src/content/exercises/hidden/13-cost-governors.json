@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-cost-governors",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"o\", over_budget(11,10)) __check(\"hidden_callable\", callable(over_budget)) __check(\"hidden_idempotent\", over_budget() == over_budget())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

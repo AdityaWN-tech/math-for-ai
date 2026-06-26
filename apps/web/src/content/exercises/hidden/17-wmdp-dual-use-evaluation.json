@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-wmdp-dual-use-evaluation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", dual_use_block(0.9,0.8)) __check(\"hidden_callable\", callable(dual_use_block)) __check(\"hidden_idempotent\", dual_use_block() == dual_use_block())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

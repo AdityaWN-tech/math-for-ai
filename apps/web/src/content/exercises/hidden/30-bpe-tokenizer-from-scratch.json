@@ -1,0 +1,4 @@
+{
+  "lessonId": "30-bpe-tokenizer-from-scratch",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", merge_count(256,1000)==1256) __check(\"hidden_callable\", callable(merge_count)) __check(\"hidden_idempotent\", merge_count() == merge_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

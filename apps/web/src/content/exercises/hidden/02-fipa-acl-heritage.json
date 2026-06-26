@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-fipa-acl-heritage",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", acl_performative({\"performative\":\"inform\"})==\"inform\") __check(\"hidden_callable\", callable(acl_performative)) __check(\"hidden_idempotent\", acl_performative() == acl_performative())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

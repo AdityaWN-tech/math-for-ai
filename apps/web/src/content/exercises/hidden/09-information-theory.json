@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-information-theory",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    ce = cross_entropy([1.0, 0.0], [0.9, 0.1])\n    __check(\"pos\", ce > 0)\n    __check(\"match\", abs(cross_entropy([0.5,0.5],[0.5,0.5]) - math.log(2)) < 1e-5) __check(\"hidden_callable\", callable(cross_entropy)) __check(\"hidden_idempotent\", cross_entropy() == cross_entropy())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

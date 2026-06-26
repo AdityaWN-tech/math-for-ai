@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-image-generation-diffusion",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", abs(add_noise(1.0,50,100)-0.5)<1e-9) __check(\"hidden_callable\", callable(add_noise)) __check(\"hidden_idempotent\", add_noise() == add_noise())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

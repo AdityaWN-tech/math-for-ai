@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-speculative-decoding-eagle3",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", accept_rate(4,5)==0.8) __check(\"hidden_callable\", callable(accept_rate)) __check(\"hidden_idempotent\", accept_rate() == accept_rate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

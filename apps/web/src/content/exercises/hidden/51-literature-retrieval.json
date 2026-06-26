@@ -1,0 +1,4 @@
+{
+  "lessonId": "51-literature-retrieval",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", retrieval_precision([1,1],2)==1.0) __check(\"hidden_callable\", callable(retrieval_precision)) __check(\"hidden_idempotent\", retrieval_precision() == retrieval_precision())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

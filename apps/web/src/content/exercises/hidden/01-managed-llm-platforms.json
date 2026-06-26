@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-managed-llm-platforms",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", \"us\" in region_endpoint(\"us-east\")) __check(\"hidden_callable\", callable(region_endpoint)) __check(\"hidden_idempotent\", region_endpoint() == region_endpoint())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

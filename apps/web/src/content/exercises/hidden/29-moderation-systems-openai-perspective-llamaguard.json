@@ -1,0 +1,4 @@
+{
+  "lessonId": "29-moderation-systems-openai-perspective-llamaguard",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", moderation_block({\"hate\":True})) __check(\"hidden_callable\", callable(moderation_block)) __check(\"hidden_idempotent\", moderation_block() == moderation_block())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "27-finops-llms",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", cost_per_million(1e6,3)==3) __check(\"hidden_callable\", callable(cost_per_million)) __check(\"hidden_idempotent\", cost_per_million() == cost_per_million())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

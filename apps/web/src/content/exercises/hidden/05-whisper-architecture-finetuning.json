@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-whisper-architecture-finetuning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", token_len(\"hello\")>=1) __check(\"hidden_len_pos\", len(token_len()) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

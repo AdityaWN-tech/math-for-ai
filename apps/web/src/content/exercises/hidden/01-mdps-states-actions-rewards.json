@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-mdps-states-actions-rewards",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", return_discount([1,1],0.9)>1.8) __check(\"hidden_callable\", callable(return_discount)) __check(\"hidden_idempotent\", return_discount() == return_discount())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-star-family-reasoning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"q\", trace_quality(8,10)==0.8) __check(\"hidden_callable\", callable(trace_quality)) __check(\"hidden_idempotent\", trace_quality() == trace_quality())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

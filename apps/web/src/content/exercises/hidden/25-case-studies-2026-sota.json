@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-case-studies-2026-sota",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", case_studies_2026_sota(7)==7) __check(\"hidden_callable\", callable(case_studies_2026_sota)) __check(\"hidden_idempotent\", case_studies_2026_sota() == case_studies_2026_sota())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

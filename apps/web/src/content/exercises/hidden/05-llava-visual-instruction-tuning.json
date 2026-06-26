@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-llava-visual-instruction-tuning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", \"USER\" in instruction_template(\"hi\")) __check(\"hidden_callable\", callable(instruction_template)) __check(\"hidden_idempotent\", instruction_template() == instruction_template())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

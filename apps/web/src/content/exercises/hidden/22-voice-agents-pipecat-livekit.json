@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-voice-agents-pipecat-livekit",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", pipeline_latency_ms([50,200,100])==350) __check(\"hidden_callable\", callable(pipeline_latency_ms)) __check(\"hidden_idempotent\", pipeline_latency_ms() == pipeline_latency_ms())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-text-to-speech",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", chars_to_phonemes_estimate(5)==10) __check(\"hidden_callable\", callable(chars_to_phonemes_estimate)) __check(\"hidden_idempotent\", chars_to_phonemes_estimate() == chars_to_phonemes_estimate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

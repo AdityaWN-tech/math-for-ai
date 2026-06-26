@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-a2a-protocol",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", agent_card_skills([\"search\",\"code\"])==2) __check(\"hidden_callable\", callable(agent_card_skills)) __check(\"hidden_idempotent\", agent_card_skills() == agent_card_skills())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-linear-regression",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"zero\", mse_loss([1,2],[1,2]) == 0)\n    __check(\"one\", mse_loss([0],[1]) == 1.0) __check(\"hidden_callable\", callable(mse_loss)) __check(\"hidden_idempotent\", mse_loss() == mse_loss())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

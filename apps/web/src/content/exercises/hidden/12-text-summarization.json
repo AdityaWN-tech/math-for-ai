@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-text-summarization",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", compression_ratio(100,25)==0.25) __check(\"hidden_callable\", callable(compression_ratio)) __check(\"hidden_idempotent\", compression_ratio() == compression_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

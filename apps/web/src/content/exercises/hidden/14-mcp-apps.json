@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-mcp-apps",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", has_ui_block({\"ui\":1})) __check(\"hidden_nonempty_str\", len(str(has_ui_block())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

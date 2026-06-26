@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-autogen-actor-model",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", message_round([\"a\",\"b\"])==2) __check(\"hidden_callable\", callable(message_round)) __check(\"hidden_idempotent\", message_round() == message_round())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

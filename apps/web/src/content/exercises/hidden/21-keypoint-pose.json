@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-keypoint-pose",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"k\", num_keypoints([1,None,2])==2) __check(\"hidden_callable\", callable(num_keypoints)) __check(\"hidden_idempotent\", num_keypoints() == num_keypoints())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

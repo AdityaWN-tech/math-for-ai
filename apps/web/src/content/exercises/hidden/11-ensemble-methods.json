@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-ensemble-methods",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"avg\", average_predictions([1.0,3.0,5.0]) == 3.0) __check(\"hidden_callable\", callable(average_predictions)) __check(\"hidden_idempotent\", average_predictions() == average_predictions())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

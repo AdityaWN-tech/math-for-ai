@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-ab-testing-llm-features",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", ab_testing_llm_feature(7)==7) __check(\"hidden_callable\", callable(ab_testing_llm_feature)) __check(\"hidden_idempotent\", ab_testing_llm_feature() == ab_testing_llm_feature())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

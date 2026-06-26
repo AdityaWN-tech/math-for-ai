@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-video-generation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", clip_frames(24,2)==48) __check(\"hidden_callable\", callable(clip_frames)) __check(\"hidden_idempotent\", clip_frames() == clip_frames())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

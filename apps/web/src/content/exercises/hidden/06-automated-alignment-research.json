@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-automated-alignment-research",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", automated_alignment_re(7)==7) __check(\"hidden_callable\", callable(automated_alignment_re)) __check(\"hidden_idempotent\", automated_alignment_re() == automated_alignment_re())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-alignment-research-ecosystem",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", eval_independence(True)) __check(\"hidden_callable\", callable(eval_independence)) __check(\"hidden_idempotent\", eval_independence() == eval_independence())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

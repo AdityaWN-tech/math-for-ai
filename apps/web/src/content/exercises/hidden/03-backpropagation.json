@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-backpropagation",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"p\", relu_derivative(1.0) == 1)\n    __check(\"n\", relu_derivative(-1.0) == 0) __check(\"hidden_callable\", callable(relu_derivative)) __check(\"hidden_idempotent\", relu_derivative() == relu_derivative())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

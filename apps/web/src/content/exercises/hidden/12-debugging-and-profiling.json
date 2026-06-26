@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-debugging-and-profiling",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"7b\", abs(memory_gb(7_000_000_000) - 14.0) < 0.1)\n    __check(\"fp32\", abs(memory_gb(1_000_000_000, 4) - 4.0) < 0.1) __check(\"hidden_callable\", callable(memory_gb)) __check(\"hidden_idempotent\", memory_gb() == memory_gb())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

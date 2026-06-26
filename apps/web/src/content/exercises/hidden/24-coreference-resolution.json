@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-coreference-resolution",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", same_entity(\"Alice\",\"Alice\")) __check(\"hidden_callable\", callable(same_entity)) __check(\"hidden_idempotent\", same_entity() == same_entity())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-nli-textual-entailment",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", label_entailment(\"x\",\"x\")==\"entailment\") __check(\"hidden_nonempty_str\", len(str(label_entailment())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

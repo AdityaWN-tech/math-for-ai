@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-memory-virtual-context-memgpt",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", page_out(12000,8000)==4000) __check(\"hidden_callable\", callable(page_out)) __check(\"hidden_idempotent\", page_out() == page_out())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

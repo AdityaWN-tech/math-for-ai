@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-cnns-rnns-for-text",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", sequence_lengths([[1,2],[3]])==[2,1]) __check(\"hidden_no_none\", all(x is not None for x in sequence_lengths()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

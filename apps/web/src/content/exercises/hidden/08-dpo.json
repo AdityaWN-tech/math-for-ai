@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-dpo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", preference_margin(2.0,1.0)==1.0) __check(\"hidden_callable\", callable(preference_margin)) __check(\"hidden_idempotent\", preference_margin() == preference_margin())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

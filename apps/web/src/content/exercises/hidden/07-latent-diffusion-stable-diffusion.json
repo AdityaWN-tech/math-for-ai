@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-latent-diffusion-stable-diffusion",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", compression_factor()==8) __check(\"hidden_callable\", callable(compression_factor)) __check(\"hidden_idempotent\", compression_factor() == compression_factor())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

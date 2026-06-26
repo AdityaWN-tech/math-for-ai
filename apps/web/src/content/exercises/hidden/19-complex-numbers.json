@@ -1,0 +1,4 @@
+{
+  "lessonId": "19-complex-numbers",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    r,i = complex_mul(1,1,1,-1)\n    __check(\"r\", r == 2)\n    __check(\"i\", i == 0) __check(\"hidden_no_none\", all(x is not None for x in complex_mul()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

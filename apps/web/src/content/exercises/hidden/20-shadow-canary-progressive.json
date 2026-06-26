@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-shadow-canary-progressive",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"k\", kill_triggered(\"STOP\")) __check(\"hidden_callable\", callable(kill_triggered)) __check(\"hidden_idempotent\", kill_triggered() == kill_triggered())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "37-runtime-feedback-loops",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", tests_passed([True,True])) __check(\"hidden_callable\", callable(tests_passed)) __check(\"hidden_idempotent\", tests_passed() == tests_passed())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

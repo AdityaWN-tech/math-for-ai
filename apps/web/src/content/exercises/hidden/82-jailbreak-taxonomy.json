@@ -1,0 +1,4 @@
+{
+  "lessonId": "82-jailbreak-taxonomy",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", safety_block({\"inj\":True})) __check(\"hidden_callable\", callable(safety_block)) __check(\"hidden_idempotent\", safety_block() == safety_block())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

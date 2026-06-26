@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-model-evaluation",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"a\", accuracy([1,0,1],[1,1,1]) == 2/3) __check(\"hidden_callable\", callable(accuracy)) __check(\"hidden_idempotent\", accuracy() == accuracy())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

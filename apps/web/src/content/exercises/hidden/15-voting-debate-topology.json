@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-voting-debate-topology",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", voting_debate_topology(7)==7) __check(\"hidden_callable\", callable(voting_debate_topology)) __check(\"hidden_idempotent\", voting_debate_topology() == voting_debate_topology())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

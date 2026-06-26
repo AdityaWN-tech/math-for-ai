@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-mesa-optimization-deceptive-alignment",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", inner_outer_gap(\"hack\",\"help\")) __check(\"hidden_callable\", callable(inner_outer_gap)) __check(\"hidden_idempotent\", inner_outer_gap() == inner_outer_gap())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

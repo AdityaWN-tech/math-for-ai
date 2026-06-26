@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-weight-initialization",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    import math\n    __check(\"x\", abs(xavier_std(512,512) - math.sqrt(2/1024)) < 1e-9) __check(\"hidden_callable\", callable(xavier_std)) __check(\"hidden_idempotent\", xavier_std() == xavier_std())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-gans-generator-discriminator",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", d_loss_real(0.9) < d_loss_real(0.1)) __check(\"hidden_callable\", callable(d_loss_real)) __check(\"hidden_idempotent\", d_loss_real() == d_loss_real())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

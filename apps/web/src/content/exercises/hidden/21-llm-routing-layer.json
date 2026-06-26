@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-llm-routing-layer",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", pick_model({\"small\":0.7,\"big\":0.9},0.8)==\"big\") __check(\"hidden_callable\", callable(pick_model)) __check(\"hidden_idempotent\", pick_model() == pick_model())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

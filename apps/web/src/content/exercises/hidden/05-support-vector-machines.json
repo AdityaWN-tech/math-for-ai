@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-support-vector-machines",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", abs(margin_width(2.0) - 1.0) < 1e-9) __check(\"hidden_callable\", callable(margin_width)) __check(\"hidden_idempotent\", margin_width() == margin_width())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-sre-for-ai",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", sre_for_ai(7)==7) __check(\"hidden_callable\", callable(sre_for_ai)) __check(\"hidden_idempotent\", sre_for_ai() == sre_for_ai())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

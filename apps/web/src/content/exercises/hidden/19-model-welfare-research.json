@@ -1,0 +1,4 @@
+{
+  "lessonId": "19-model-welfare-research",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", welfare_flag(True)) __check(\"hidden_callable\", callable(welfare_flag)) __check(\"hidden_idempotent\", welfare_flag() == welfare_flag())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

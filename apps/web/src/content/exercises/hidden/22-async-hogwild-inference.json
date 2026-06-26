@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-async-hogwild-inference",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", worker_count(4,2)==8) __check(\"hidden_callable\", callable(worker_count)) __check(\"hidden_idempotent\", worker_count() == worker_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

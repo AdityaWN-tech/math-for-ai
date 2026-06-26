@@ -1,0 +1,4 @@
+{
+  "lessonId": "19-ocr-document-understanding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"o\", reading_order([(10,5),(2,5)])[0][0]==2) __check(\"hidden_callable\", callable(reading_order)) __check(\"hidden_idempotent\", reading_order() == reading_order())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

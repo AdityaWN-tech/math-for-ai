@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-bounded-self-improvement",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", bounded_self_improveme(7)==7) __check(\"hidden_callable\", callable(bounded_self_improveme)) __check(\"hidden_idempotent\", bounded_self_improveme() == bounded_self_improveme())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

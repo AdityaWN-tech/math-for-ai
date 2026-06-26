@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-agent-observability-platforms",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trace_steps([1,2])==2) __check(\"hidden_callable\", callable(trace_steps)) __check(\"hidden_idempotent\", trace_steps() == trace_steps())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

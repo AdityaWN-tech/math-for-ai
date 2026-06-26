@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-attention-mechanism",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n import math\n __check(\"s\", abs(scaled_dot([1,0],[1,0])-1.0)<1e-9) __check(\"hidden_callable\", callable(scaled_dot)) __check(\"hidden_idempotent\", scaled_dot() == scaled_dot())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

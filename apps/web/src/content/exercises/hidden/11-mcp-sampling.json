@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-mcp-sampling",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", sampling_request(\"hi\",100)[\"maxTokens\"]==100) __check(\"hidden_callable\", callable(sampling_request)) __check(\"hidden_idempotent\", sampling_request() == sampling_request())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-image-fundamentals",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"w\", abs(rgb_to_gray(1,1,1)-1) < 1e-6) __check(\"hidden_callable\", callable(rgb_to_gray)) __check(\"hidden_idempotent\", rgb_to_gray() == rgb_to_gray())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

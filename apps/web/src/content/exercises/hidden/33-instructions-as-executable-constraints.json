@@ -1,0 +1,4 @@
+{
+  "lessonId": "33-instructions-as-executable-constraints",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", constraint_ok(\"ok\",[\"secret\"])) __check(\"hidden_callable\", callable(constraint_ok)) __check(\"hidden_idempotent\", constraint_ok() == constraint_ok())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

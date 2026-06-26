@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-machine-translation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", bleu_ngram_match(\"abc\",\"abc\")==1) __check(\"hidden_callable\", callable(bleu_ngram_match)) __check(\"hidden_idempotent\", bleu_ngram_match() == bleu_ngram_match())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

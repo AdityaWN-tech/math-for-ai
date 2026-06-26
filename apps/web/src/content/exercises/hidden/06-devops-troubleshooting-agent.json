@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-devops-troubleshooting-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", incident_severity([\"low\",\"high\"],1)==\"high\") __check(\"hidden_callable\", callable(incident_severity)) __check(\"hidden_idempotent\", incident_severity() == incident_severity())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

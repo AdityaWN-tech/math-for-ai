@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-chain-rule-and-autodiff",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"basic\", chain_rule(3.0, 2.0) == 6.0) __check(\"hidden_callable\", callable(chain_rule)) __check(\"hidden_idempotent\", chain_rule() == chain_rule())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

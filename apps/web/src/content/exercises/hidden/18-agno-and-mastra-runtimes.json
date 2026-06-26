@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-agno-and-mastra-runtimes",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", workflow_nodes(5)==5) __check(\"hidden_callable\", callable(workflow_nodes)) __check(\"hidden_idempotent\", workflow_nodes() == workflow_nodes())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

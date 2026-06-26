@@ -1,0 +1,4 @@
+{
+  "lessonId": "39-reviewer-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", review_approved([])) __check(\"hidden_callable\", callable(review_approved)) __check(\"hidden_idempotent\", review_approved() == review_approved())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

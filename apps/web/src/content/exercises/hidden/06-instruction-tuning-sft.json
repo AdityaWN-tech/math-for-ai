@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-instruction-tuning-sft",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", len(mask_loss_positions(5,10))==5) __check(\"hidden_len_pos\", len(mask_loss_positions()) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

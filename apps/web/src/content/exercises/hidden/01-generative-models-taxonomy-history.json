@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-generative-models-taxonomy-history",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", model_family_autoregressive(\"gpt\")) __check(\"hidden_bool\", isinstance(model_family_autoregressive(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

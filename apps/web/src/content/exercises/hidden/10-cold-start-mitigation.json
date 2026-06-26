@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-cold-start-mitigation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", cold_start_mitigation(7)==7) __check(\"hidden_callable\", callable(cold_start_mitigation)) __check(\"hidden_idempotent\", cold_start_mitigation() == cold_start_mitigation())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

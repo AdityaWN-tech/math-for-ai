@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-feature-selection",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"v\", variance([1,2,3]) == 2/3) __check(\"hidden_callable\", callable(variance)) __check(\"hidden_idempotent\", variance() == variance())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

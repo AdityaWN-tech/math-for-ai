@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-linux-for-ai",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"file\", basename(\"/data/models/ckpt.pt\") == \"ckpt.pt\")\n    __check(\"root\", basename(\"/\") == \"\") __check(\"hidden_nonempty_str\", len(str(basename())) > 0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

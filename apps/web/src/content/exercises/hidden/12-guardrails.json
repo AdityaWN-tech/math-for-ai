@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-guardrails",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", block_pii(\"a@b.com\")) __check(\"hidden_nonempty_str\", len(str(block_pii())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

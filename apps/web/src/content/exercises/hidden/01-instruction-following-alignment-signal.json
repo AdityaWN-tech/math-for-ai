@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-instruction-following-alignment-signal",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", follow_rate(8,10)==0.8) __check(\"hidden_callable\", callable(follow_rate)) __check(\"hidden_idempotent\", follow_rate() == follow_rate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

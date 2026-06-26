@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-fourier-transform",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    s = [1.0, 0.0, -1.0, 0.0]\n    __check(\"finite\", abs(dft_real(s, 1)) < 1e6) __check(\"hidden_callable\", callable(dft_real)) __check(\"hidden_idempotent\", dft_real() == dft_real())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-many-shot-jailbreaking",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", context_fill_ratio(50,100)==0.5) __check(\"hidden_callable\", callable(context_fill_ratio)) __check(\"hidden_idempotent\", context_fill_ratio() == context_fill_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

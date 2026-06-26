@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-transfusion-autoregressive-diffusion",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", denoise_step(1.0,0.2,0.5)==0.9) __check(\"hidden_callable\", callable(denoise_step)) __check(\"hidden_idempotent\", denoise_step() == denoise_step())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

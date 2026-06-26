@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-supervisor-orchestrator-pattern",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", supervisor_orchestrato(7)==7) __check(\"hidden_callable\", callable(supervisor_orchestrato)) __check(\"hidden_idempotent\", supervisor_orchestrato() == supervisor_orchestrato())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

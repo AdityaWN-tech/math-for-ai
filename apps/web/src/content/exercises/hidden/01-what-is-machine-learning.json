@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-what-is-machine-learning",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    tr, te = train_test_split(100)\n    __check(\"sum\", tr+te == 100)\n    __check(\"ratio\", tr == 80) __check(\"hidden_no_none\", all(x is not None for x in train_test_split()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

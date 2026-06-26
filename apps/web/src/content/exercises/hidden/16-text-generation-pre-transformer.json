@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-text-generation-pre-transformer",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", next_token_vocab_size([\"a\",\"b\"])==2) __check(\"hidden_callable\", callable(next_token_vocab_size)) __check(\"hidden_idempotent\", next_token_vocab_size() == next_token_vocab_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

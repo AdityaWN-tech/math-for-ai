@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-bag-of-words-tfidf",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"tf\", term_frequency([\"a\",\"b\",\"a\"],\"a\")==2) __check(\"hidden_callable\", callable(term_frequency)) __check(\"hidden_idempotent\", term_frequency() == term_frequency())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

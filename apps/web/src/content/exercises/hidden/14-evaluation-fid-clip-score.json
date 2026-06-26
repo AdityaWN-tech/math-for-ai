@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-evaluation-fid-clip-score",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", clip_score(0.8)==0.8) __check(\"hidden_callable\", callable(clip_score)) __check(\"hidden_idempotent\", clip_score() == clip_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

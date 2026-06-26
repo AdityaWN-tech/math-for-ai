@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-structured-outputs",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"k\", extract_json_keys({\"a\":1,\"b\":2}) == [\"a\",\"b\"]) __check(\"hidden_no_none\", all(x is not None for x in extract_json_keys()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

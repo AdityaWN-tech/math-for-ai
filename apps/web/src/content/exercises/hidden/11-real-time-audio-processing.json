@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-real-time-audio-processing",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", buffer_latency_ms(1600,16000)==100) __check(\"hidden_callable\", callable(buffer_latency_ms)) __check(\"hidden_idempotent\", buffer_latency_ms() == buffer_latency_ms())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

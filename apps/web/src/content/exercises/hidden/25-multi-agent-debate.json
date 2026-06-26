@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-multi-agent-debate",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", majority_vote([\"a\",\"a\",\"b\"])==\"a\") __check(\"hidden_callable\", callable(majority_vote)) __check(\"hidden_idempotent\", majority_vote() == majority_vote())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

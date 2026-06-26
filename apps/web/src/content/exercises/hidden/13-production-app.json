@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-production-app",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", rate_limit_ok(5,10)) __check(\"hidden_callable\", callable(rate_limit_ok)) __check(\"hidden_idempotent\", rate_limit_ok() == rate_limit_ok())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

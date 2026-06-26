@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-optimizers",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    v, d = sgd_momentum(0.0, 1.0, 0.1, 0.0)\n    __check(\"d\", abs(d - (-0.1)) < 1e-9) __check(\"hidden_callable\", callable(sgd_momentum)) __check(\"hidden_idempotent\", sgd_momentum() == sgd_momentum())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

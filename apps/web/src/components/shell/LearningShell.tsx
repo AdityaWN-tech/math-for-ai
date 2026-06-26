@@ -143,7 +143,35 @@ export function LearningShell({ lesson }: LearningShellProps) {
     setRunning(true);
     setRunResult(null);
     recordTestAttempt(lesson.id);
-    const result = await runPythonWithTests(code, buildStep.code.tests);
+    let result = await runPythonWithTests(code, buildStep.code.tests);
+
+    if (result.allPassed && buildStep.exercise?.rubric === "T2") {
+      try {
+        const hres = await fetch("/api/exercises/hidden-tests", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ lessonId: lesson.id, visiblePassed: true }),
+        });
+        const hdata = await hres.json();
+        if (hdata.ok && hdata.tests) {
+          const hiddenResult = await runPythonWithTests(code, hdata.tests as string);
+          const masked = hiddenResult.tests.map((t, i) => ({
+            ...t,
+            name: `hidden check ${i + 1}`,
+            msg: t.pass ? "" : "edge case failed",
+          }));
+          result = {
+            stdout: [result.stdout, hiddenResult.stdout].filter(Boolean).join("\n"),
+            tests: [...result.tests, ...masked],
+            allPassed: result.allPassed && hiddenResult.allPassed,
+            error: hiddenResult.error ?? result.error,
+          };
+        }
+      } catch {
+        /* no hidden harness */
+      }
+    }
+
     setRunResult(result);
     setRunning(false);
 
@@ -264,6 +292,11 @@ export function LearningShell({ lesson }: LearningShellProps) {
               {step.exercise.xpReward && (
                 <span className="rounded border border-[var(--blueprint)] bg-[var(--blueprint-tint)] px-2 py-0.5 text-[var(--blueprint)]">
                   +{step.exercise.xpReward} XP
+                </span>
+              )}
+              {step.exercise.rubric === "T2" && (
+                <span className="rounded border border-orange-200 bg-orange-50 px-2 py-0.5 text-orange-700">
+                  + hidden checks
                 </span>
               )}
             </div>

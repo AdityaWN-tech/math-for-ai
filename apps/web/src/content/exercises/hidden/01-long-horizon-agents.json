@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-long-horizon-agents",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", horizon_hours(4)==4) __check(\"hidden_callable\", callable(horizon_hours)) __check(\"hidden_idempotent\", horizon_hours() == horizon_hours())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

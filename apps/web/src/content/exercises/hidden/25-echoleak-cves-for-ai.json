@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-echoleak-cves-for-ai",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", severity_score(9.8)==9.8) __check(\"hidden_callable\", callable(severity_score)) __check(\"hidden_idempotent\", severity_score() == severity_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

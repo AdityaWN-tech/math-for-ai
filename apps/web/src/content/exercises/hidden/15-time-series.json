@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-time-series",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    w = sliding_windows([1,2,3,4], 2)\n    __check(\"n\", len(w) == 3)\n    __check(\"first\", w[0] == [1,2]) __check(\"hidden_len_pos\", len(sliding_windows()) > 0) __check(\"hidden_no_none\", all(x is not None for x in sliding_windows()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

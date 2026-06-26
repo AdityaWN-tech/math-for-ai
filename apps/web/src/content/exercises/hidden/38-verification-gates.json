@@ -1,0 +1,4 @@
+{
+  "lessonId": "38-verification-gates",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", gate_open({\"t\":True,\"l\":True})) __check(\"hidden_callable\", callable(gate_open)) __check(\"hidden_idempotent\", gate_open() == gate_open())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

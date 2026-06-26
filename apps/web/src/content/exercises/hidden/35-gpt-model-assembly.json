@@ -1,0 +1,4 @@
+{
+  "lessonId": "35-gpt-model-assembly",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", gpt_model_assembly(7)==7) __check(\"hidden_callable\", callable(gpt_model_assembly)) __check(\"hidden_idempotent\", gpt_model_assembly() == gpt_model_assembly())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

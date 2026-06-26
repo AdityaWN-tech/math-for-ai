@@ -1,0 +1,4 @@
+{
+  "lessonId": "56-iteration-scheduler",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", iteration_scheduler(7)==7) __check(\"hidden_callable\", callable(iteration_scheduler)) __check(\"hidden_idempotent\", iteration_scheduler() == iteration_scheduler())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

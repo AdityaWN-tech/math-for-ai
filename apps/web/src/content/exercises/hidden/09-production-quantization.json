@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-production-quantization",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"q\", quant_bits(1000)==500) __check(\"hidden_callable\", callable(quant_bits)) __check(\"hidden_idempotent\", quant_bits() == quant_bits())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

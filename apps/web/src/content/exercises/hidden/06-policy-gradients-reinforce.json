@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-policy-gradients-reinforce",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", log_policy_grad(-1,2)==-2) __check(\"hidden_callable\", callable(log_policy_grad)) __check(\"hidden_idempotent\", log_policy_grad() == log_policy_grad())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

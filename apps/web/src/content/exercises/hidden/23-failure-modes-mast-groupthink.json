@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-failure-modes-mast-groupthink",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", failure_modes_mast_gro(7)==7) __check(\"hidden_callable\", callable(failure_modes_mast_gro)) __check(\"hidden_idempotent\", failure_modes_mast_gro() == failure_modes_mast_gro())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-video-language-temporal-grounding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", iou_temporal((0,5),(2,7))>0) __check(\"hidden_callable\", callable(iou_temporal)) __check(\"hidden_idempotent\", iou_temporal() == iou_temporal())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

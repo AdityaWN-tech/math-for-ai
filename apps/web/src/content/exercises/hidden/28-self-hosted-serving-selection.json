@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-self-hosted-serving-selection",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", self_hosted_serving_se(7)==7) __check(\"hidden_callable\", callable(self_hosted_serving_se)) __check(\"hidden_idempotent\", self_hosted_serving_se() == self_hosted_serving_se())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

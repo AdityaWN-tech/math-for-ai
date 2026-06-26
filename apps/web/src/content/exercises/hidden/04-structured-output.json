@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-structured-output",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"j\", json_valid_braces(\"{}\")) __check(\"hidden_callable\", callable(json_valid_braces)) __check(\"hidden_idempotent\", json_valid_braces() == json_valid_braces())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

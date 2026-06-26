@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-multi-token-prediction",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", mtp_heads(4)==4) __check(\"hidden_callable\", callable(mtp_heads)) __check(\"hidden_idempotent\", mtp_heads() == mtp_heads())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-bayes-theorem",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = bayes_posterior(0.01, 0.9, 0.1)\n    __check(\"range\", 0 <= p <= 1)\n    __check(\"calc\", abs(p - 0.09) < 1e-6) __check(\"hidden_callable\", callable(bayes_posterior)) __check(\"hidden_idempotent\", bayes_posterior() == bayes_posterior())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

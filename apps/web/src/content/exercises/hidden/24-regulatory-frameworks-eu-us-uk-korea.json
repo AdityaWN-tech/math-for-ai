@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-regulatory-frameworks-eu-us-uk-korea",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", risk_category(4,3)==12) __check(\"hidden_callable\", callable(risk_category)) __check(\"hidden_idempotent\", risk_category() == risk_category())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

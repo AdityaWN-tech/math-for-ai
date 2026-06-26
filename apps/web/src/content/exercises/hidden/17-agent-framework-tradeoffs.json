@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-agent-framework-tradeoffs",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", loop_steps_max(10)==10) __check(\"hidden_callable\", callable(loop_steps_max)) __check(\"hidden_idempotent\", loop_steps_max() == loop_steps_max())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

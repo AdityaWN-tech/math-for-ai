@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-actor-critic-a2c-a3c",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", advantage(10,7)==3) __check(\"hidden_callable\", callable(advantage)) __check(\"hidden_idempotent\", advantage() == advantage())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

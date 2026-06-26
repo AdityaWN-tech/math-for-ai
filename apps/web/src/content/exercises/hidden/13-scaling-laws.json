@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-scaling-laws",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", chinchilla_tokens(1_000_000)==20_000_000) __check(\"hidden_callable\", callable(chinchilla_tokens)) __check(\"hidden_idempotent\", chinchilla_tokens() == chinchilla_tokens())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

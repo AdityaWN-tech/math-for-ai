@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-production-rag-chatbot",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", rag_precision_at_k([1,1],2)==1.0) __check(\"hidden_callable\", callable(rag_precision_at_k)) __check(\"hidden_idempotent\", rag_precision_at_k() == rag_precision_at_k())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

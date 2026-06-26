@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-scalable-oversight-weak-to-strong",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", weak_strong_gap(0.6,0.9)>0) __check(\"hidden_callable\", callable(weak_strong_gap)) __check(\"hidden_idempotent\", weak_strong_gap() == weak_strong_gap())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

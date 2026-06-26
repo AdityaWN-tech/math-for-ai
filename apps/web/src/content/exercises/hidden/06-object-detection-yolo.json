@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-object-detection-yolo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", abs(iou_1d(0,10,5,15)-5/15)<1e-6) __check(\"hidden_callable\", callable(iou_1d)) __check(\"hidden_idempotent\", iou_1d() == iou_1d())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

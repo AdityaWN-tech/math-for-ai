@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-git-and-collaboration",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", parse_branch(\"refs/heads/main\")==\"main\") __check(\"hidden_callable\", callable(parse_branch)) __check(\"hidden_idempotent\", parse_branch() == parse_branch())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

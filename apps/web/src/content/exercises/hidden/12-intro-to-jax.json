@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-intro-to-jax",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = pure_update({\"w\":1.0},{\"w\":2.0}, 0.1)\n    __check(\"p\", abs(p[\"w\"]-0.8) < 1e-9) __check(\"hidden_callable\", callable(pure_update)) __check(\"hidden_idempotent\", pure_update() == pure_update())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

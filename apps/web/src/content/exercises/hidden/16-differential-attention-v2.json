@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-differential-attention-v2",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", diff_attn([1,0.5],[0.5,0.5])[0]==0.5) __check(\"hidden_no_none\", all(x is not None for x in diff_attn()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

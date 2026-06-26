@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-langgraph-state-machines",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", next_node(\"think\",{\"think\":\"act\"})==\"act\") __check(\"hidden_callable\", callable(next_node)) __check(\"hidden_idempotent\", next_node() == next_node())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

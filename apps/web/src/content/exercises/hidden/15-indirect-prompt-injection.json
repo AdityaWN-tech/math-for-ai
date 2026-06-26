@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-indirect-prompt-injection",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"u\", untrusted_source(\"evil.com\",[\"good.com\"])) __check(\"hidden_callable\", callable(untrusted_source)) __check(\"hidden_idempotent\", untrusted_source() == untrusted_source())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "26-failure-modes-agentic",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", loop_detect([\"a\",\"a\",\"a\"],2)) __check(\"hidden_bool\", isinstance(loop_detect(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-bias-representational-harm",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", stereotype_rate(2,10)==0.2) __check(\"hidden_callable\", callable(stereotype_rate)) __check(\"hidden_idempotent\", stereotype_rate() == stereotype_rate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

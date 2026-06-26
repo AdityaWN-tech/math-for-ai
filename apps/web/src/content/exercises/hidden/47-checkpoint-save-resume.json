@@ -1,0 +1,4 @@
+{
+  "lessonId": "47-checkpoint-save-resume",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", checkpoint_save_resume(7)==7) __check(\"hidden_callable\", callable(checkpoint_save_resume)) __check(\"hidden_idempotent\", checkpoint_save_resume() == checkpoint_save_resume())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

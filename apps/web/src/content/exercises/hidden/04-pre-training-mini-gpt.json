@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-pre-training-mini-gpt",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", params_estimate(2,512,2048)>0) __check(\"hidden_callable\", callable(params_estimate)) __check(\"hidden_idempotent\", params_estimate() == params_estimate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

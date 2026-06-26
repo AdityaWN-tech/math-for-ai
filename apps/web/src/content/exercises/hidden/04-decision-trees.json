@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-decision-trees",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"pure\", gini_impurity([10,0]) == 0)\n    __check(\"mixed\", abs(gini_impurity([5,5]) - 0.5) < 1e-9) __check(\"hidden_callable\", callable(gini_impurity)) __check(\"hidden_idempotent\", gini_impurity() == gini_impurity())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

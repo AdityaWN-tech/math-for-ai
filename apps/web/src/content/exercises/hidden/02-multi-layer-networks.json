@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-multi-layer-networks",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"r\", relu([-1,0,2]) == [0,0,2]) __check(\"hidden_no_none\", all(x is not None for x in relu()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-gpu-setup-and-cloud",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", vram_gb(7)==14) __check(\"hidden_callable\", callable(vram_gb)) __check(\"hidden_idempotent\", vram_gb() == vram_gb())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

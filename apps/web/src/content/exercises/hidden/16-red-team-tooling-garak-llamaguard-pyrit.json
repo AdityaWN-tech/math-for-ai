@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-red-team-tooling-garak-llamaguard-pyrit",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", probe_pass_rate(2,10)==0.8) __check(\"hidden_callable\", callable(probe_pass_rate)) __check(\"hidden_idempotent\", probe_pass_rate() == probe_pass_rate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

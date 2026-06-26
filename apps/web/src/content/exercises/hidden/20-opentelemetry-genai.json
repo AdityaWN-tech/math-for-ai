@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-opentelemetry-genai",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", genai_span(\"gpt\",50)[\"gen_ai.usage.total_tokens\"]==50) __check(\"hidden_callable\", callable(genai_span)) __check(\"hidden_idempotent\", genai_span() == genai_span())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

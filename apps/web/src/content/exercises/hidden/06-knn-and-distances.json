@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-knn-and-distances",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", majority_vote([1,1,0,1]) == 1) __check(\"hidden_callable\", callable(majority_vote)) __check(\"hidden_idempotent\", majority_vote() == majority_vote())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

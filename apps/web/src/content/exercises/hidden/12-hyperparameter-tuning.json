@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-hyperparameter-tuning",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"g\", grid_size([0.1,0.01],[16,32]) == 4) __check(\"hidden_callable\", callable(grid_size)) __check(\"hidden_idempotent\", grid_size() == grid_size())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

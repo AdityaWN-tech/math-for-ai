@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-optimization",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"step\", gradient_descent_step(5.0, 2.0, 0.1) == 4.8) __check(\"hidden_callable\", callable(gradient_descent_step)) __check(\"hidden_idempotent\", gradient_descent_step() == gradient_descent_step())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

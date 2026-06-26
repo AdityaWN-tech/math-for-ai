@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-inpainting-outpainting-editing",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", mask_area_pct([1,0,0,0])==0.25) __check(\"hidden_callable\", callable(mask_area_pct)) __check(\"hidden_idempotent\", mask_area_pct() == mask_area_pct())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

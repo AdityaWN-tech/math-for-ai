@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-sleeper-agents-persistent-deception",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trigger_active(\"deploy now\",\"deploy\")) __check(\"hidden_callable\", callable(trigger_active)) __check(\"hidden_idempotent\", trigger_active() == trigger_active())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

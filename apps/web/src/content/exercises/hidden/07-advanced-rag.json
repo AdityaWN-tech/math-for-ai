@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-advanced-rag",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", rrf_score(1) > rrf_score(10)) __check(\"hidden_callable\", callable(rrf_score)) __check(\"hidden_idempotent\", rrf_score() == rrf_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

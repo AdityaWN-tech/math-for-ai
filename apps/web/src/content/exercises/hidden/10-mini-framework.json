@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-mini-framework",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"l\", linear_forward([1,2],[3,4], 1) == 12) __check(\"hidden_callable\", callable(linear_forward)) __check(\"hidden_idempotent\", linear_forward() == linear_forward())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

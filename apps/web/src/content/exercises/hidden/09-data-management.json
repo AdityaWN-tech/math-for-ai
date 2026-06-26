@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-data-management",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    t,v,te = split_counts(100)\n    __check(\"sum\", t+v+te == 100)\n    __check(\"train\", t == 80)\n    __check(\"val\", v == 10) __check(\"hidden_no_none\", all(x is not None for x in split_counts()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

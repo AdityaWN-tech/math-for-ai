@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-linear-algebra-intuition",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\n\ntry:\n    __check(\"basic\", dot_product([1, 2], [3, 4]) == 11)\n    __check(\"perpendicular\", dot_product([1, 0], [0, 1]) == 0)\n    __check(\"negative\", dot_product([-1, 2], [2, -1]) == -4) __check(\"hidden_callable\", callable(dot_product)) __check(\"hidden_idempotent\", dot_product() == dot_product())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

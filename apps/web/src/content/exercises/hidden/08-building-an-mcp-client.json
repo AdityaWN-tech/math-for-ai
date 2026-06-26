@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-building-an-mcp-client",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", call_tool(\"search\",{})[\"name\"]==\"search\") __check(\"hidden_callable\", callable(call_tool)) __check(\"hidden_idempotent\", call_tool() == call_tool())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

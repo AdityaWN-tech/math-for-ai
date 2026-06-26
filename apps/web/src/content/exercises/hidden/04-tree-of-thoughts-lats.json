@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-tree-of-thoughts-lats",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", branch_count(2,3)==9) __check(\"hidden_callable\", callable(branch_count)) __check(\"hidden_idempotent\", branch_count() == branch_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

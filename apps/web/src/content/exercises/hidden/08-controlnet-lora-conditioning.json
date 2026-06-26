@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-controlnet-lora-conditioning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", lora_rank_params(100,4)==800) __check(\"hidden_callable\", callable(lora_rank_params)) __check(\"hidden_idempotent\", lora_rank_params() == lora_rank_params())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "24-plan-execute-control-flow",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", replan_on_fail(True)) __check(\"hidden_callable\", callable(replan_on_fail)) __check(\"hidden_idempotent\", replan_on_fail() == replan_on_fail())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

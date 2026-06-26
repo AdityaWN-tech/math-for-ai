@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-ppo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", clip_ratio(0.2)==(0.8,1.2)) __check(\"hidden_callable\", callable(clip_ratio)) __check(\"hidden_idempotent\", clip_ratio() == clip_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-cais-caisi-societal-risk",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", cais_caisi_societal_ri(7)==7) __check(\"hidden_callable\", callable(cais_caisi_societal_ri)) __check(\"hidden_idempotent\", cais_caisi_societal_ri() == cais_caisi_societal_ri())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

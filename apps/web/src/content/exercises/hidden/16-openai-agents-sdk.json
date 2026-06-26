@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-openai-agents-sdk",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", handoff_count([\"triage\"])==1) __check(\"hidden_callable\", callable(handoff_count)) __check(\"hidden_idempotent\", handoff_count() == handoff_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

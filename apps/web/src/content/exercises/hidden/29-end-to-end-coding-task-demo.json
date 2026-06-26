@@ -1,0 +1,4 @@
+{
+  "lessonId": "29-end-to-end-coding-task-demo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", e2e_success(True,True)) __check(\"hidden_callable\", callable(e2e_success)) __check(\"hidden_idempotent\", e2e_success() == e2e_success())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

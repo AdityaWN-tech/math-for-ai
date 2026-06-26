@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-conditional-gans-pix2pix",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", paired_loss(1.0,0.5)==0.5) __check(\"hidden_callable\", callable(paired_loss)) __check(\"hidden_idempotent\", paired_loss() == paired_loss())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

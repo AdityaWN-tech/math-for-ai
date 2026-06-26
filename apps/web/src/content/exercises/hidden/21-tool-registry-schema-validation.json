@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-tool-registry-schema-validation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", required_present({\"q\":\"x\"},[\"q\"])) __check(\"hidden_callable\", callable(required_present)) __check(\"hidden_idempotent\", required_present() == required_present())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

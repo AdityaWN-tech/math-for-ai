@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-regularization",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"l2\", l2_penalty([3,4], 0.5) == 12.5) __check(\"hidden_callable\", callable(l2_penalty)) __check(\"hidden_idempotent\", l2_penalty() == l2_penalty())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

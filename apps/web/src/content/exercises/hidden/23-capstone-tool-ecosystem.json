@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-capstone-tool-ecosystem",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", ecosystem_ready(True,True,True)) __check(\"hidden_callable\", callable(ecosystem_ready)) __check(\"hidden_idempotent\", ecosystem_ready() == ecosystem_ready())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

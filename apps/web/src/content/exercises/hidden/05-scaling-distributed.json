@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-scaling-distributed",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", ddp_world_size(8)==8) __check(\"hidden_callable\", callable(ddp_world_size)) __check(\"hidden_idempotent\", ddp_world_size() == ddp_world_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

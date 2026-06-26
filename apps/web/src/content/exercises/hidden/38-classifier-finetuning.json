@@ -1,0 +1,4 @@
+{
+  "lessonId": "38-classifier-finetuning",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", classifier_finetuning(7)==7) __check(\"hidden_callable\", callable(classifier_finetuning)) __check(\"hidden_idempotent\", classifier_finetuning() == classifier_finetuning())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

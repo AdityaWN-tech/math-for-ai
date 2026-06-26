@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-langgraph-stateful-graphs",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", next_state({\"a\":\"b\"},\"a\")==\"b\") __check(\"hidden_callable\", callable(next_state)) __check(\"hidden_idempotent\", next_state() == next_state())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

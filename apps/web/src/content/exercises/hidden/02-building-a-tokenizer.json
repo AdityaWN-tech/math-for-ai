@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-building-a-tokenizer",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", vocab_size(1000)==1256) __check(\"hidden_callable\", callable(vocab_size)) __check(\"hidden_idempotent\", vocab_size() == vocab_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-gpu-autoscaling-kubernetes",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", gpu_autoscaling_kubern(7)==7) __check(\"hidden_callable\", callable(gpu_autoscaling_kubern)) __check(\"hidden_idempotent\", gpu_autoscaling_kubern() == gpu_autoscaling_kubern())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

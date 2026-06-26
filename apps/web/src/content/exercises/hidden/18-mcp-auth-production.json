@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-mcp-auth-production",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", auth_header_present({\"Authorization\":\"bearer x\"})) __check(\"hidden_nonempty_str\", len(str(auth_header_present())) > 0)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-imbalanced-data",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    w = class_weight(100, 2, 10)\n    __check(\"w\", abs(w - 5.0) < 1e-9) __check(\"hidden_callable\", callable(class_weight)) __check(\"hidden_idempotent\", class_weight() == class_weight())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

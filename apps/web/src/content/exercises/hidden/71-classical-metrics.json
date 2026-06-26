@@ -1,0 +1,4 @@
+{
+  "lessonId": "71-classical-metrics",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", classical_metrics(7)==7) __check(\"hidden_callable\", callable(classical_metrics)) __check(\"hidden_idempotent\", classical_metrics() == classical_metrics())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

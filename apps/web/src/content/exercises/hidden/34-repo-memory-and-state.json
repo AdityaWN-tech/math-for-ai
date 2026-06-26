@@ -1,0 +1,4 @@
+{
+  "lessonId": "34-repo-memory-and-state",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", files_changed([\"a\"],[\"a\",\"b\"])==1) __check(\"hidden_callable\", callable(files_changed)) __check(\"hidden_idempotent\", files_changed() == files_changed())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-generative-agents-simulation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", generative_agents_simu(7)==7) __check(\"hidden_callable\", callable(generative_agents_simu)) __check(\"hidden_idempotent\", generative_agents_simu() == generative_agents_simu())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

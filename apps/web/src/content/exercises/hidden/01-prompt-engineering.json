@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-prompt-engineering",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"t\", estimate_tokens(\"abcd\") == 1)\n    __check(\"8\", estimate_tokens(\"a\"*32) == 8) __check(\"hidden_callable\", callable(estimate_tokens)) __check(\"hidden_idempotent\", estimate_tokens() == estimate_tokens())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

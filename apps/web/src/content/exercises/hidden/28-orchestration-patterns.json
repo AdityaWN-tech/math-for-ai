@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-orchestration-patterns",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", len(fan_out([\"a\",\"b\"],\"t\"))==2) __check(\"hidden_len_pos\", len(fan_out()) > 0) __check(\"hidden_no_none\", all(x is not None for x in fan_out()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-evaluation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"y\", exact_match(\"a\",\"a\"))\n __check(\"n\", not exact_match(\"a\",\"b\")) __check(\"hidden_bool\", isinstance(exact_match(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

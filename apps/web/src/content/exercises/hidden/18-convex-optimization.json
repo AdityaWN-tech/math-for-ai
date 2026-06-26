@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-convex-optimization",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"yes\", is_convex_coeff(1.0))\n    __check(\"no\", not is_convex_coeff(-1.0)) __check(\"hidden_bool\", isinstance(quadratic(), bool))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-parallel-swarm-networks",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", best_fitness([0.1,0.9,0.3])==0.9) __check(\"hidden_callable\", callable(best_fitness)) __check(\"hidden_idempotent\", best_fitness() == best_fitness())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

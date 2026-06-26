@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-vision-language-models",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", image_token_budget(576)==576) __check(\"hidden_callable\", callable(image_token_budget)) __check(\"hidden_idempotent\", image_token_budget() == image_token_budget())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

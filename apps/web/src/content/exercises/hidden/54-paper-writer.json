@@ -1,0 +1,4 @@
+{
+  "lessonId": "54-paper-writer",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", len(research_stages())==3) __check(\"hidden_len_pos\", len(research_stages()) > 0) __check(\"hidden_no_none\", all(x is not None for x in research_stages()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

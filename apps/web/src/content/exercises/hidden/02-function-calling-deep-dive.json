@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-function-calling-deep-dive",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"v\", validate_required({\"a\":1},[\"a\"])) __check(\"hidden_callable\", callable(validate_required)) __check(\"hidden_idempotent\", validate_required() == validate_required())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

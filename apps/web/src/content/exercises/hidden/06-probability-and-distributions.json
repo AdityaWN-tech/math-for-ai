@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-probability-and-distributions",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = softmax([1.0, 2.0, 3.0])\n    __check(\"sum\", abs(sum(p) - 1.0) < 1e-5)\n    __check(\"order\", p[2] > p[1] > p[0]) __check(\"hidden_no_none\", all(x is not None for x in softmax()))\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

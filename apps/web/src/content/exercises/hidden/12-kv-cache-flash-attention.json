@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-kv-cache-flash-attention",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"k\", kv_cache_size(1,10,4)==160) __check(\"hidden_callable\", callable(kv_cache_size)) __check(\"hidden_idempotent\", kv_cache_size() == kv_cache_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

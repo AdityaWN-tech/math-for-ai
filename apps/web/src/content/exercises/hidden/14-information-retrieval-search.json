@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-information-retrieval-search",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", bm25_tf(3)==3) __check(\"hidden_callable\", callable(bm25_tf)) __check(\"hidden_idempotent\", bm25_tf() == bm25_tf())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

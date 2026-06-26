@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-frontier-safety-frameworks-rsp-pf-fsf",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", capability_tier(0.5,[0.3,0.7])==1) __check(\"hidden_callable\", callable(capability_tier)) __check(\"hidden_idempotent\", capability_tier() == capability_tier())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

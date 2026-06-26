@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-chunking-strategies-rag",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", chunk_count(\"abcdef\",4)==2) __check(\"hidden_callable\", callable(chunk_count)) __check(\"hidden_idempotent\", chunk_count() == chunk_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

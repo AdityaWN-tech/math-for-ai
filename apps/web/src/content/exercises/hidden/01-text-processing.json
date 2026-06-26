@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-text-processing",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", tokenize_whitespace(\"a b  c\")==[\"a\",\"b\",\"c\"]) __check(\"hidden_no_none\", all(x is not None for x in tokenize_whitespace()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-speech-recognition-asr",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", wer_substitutions(\"a b\",\"a c\")==1) __check(\"hidden_callable\", callable(wer_substitutions)) __check(\"hidden_idempotent\", wer_substitutions() == wer_substitutions())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-jamba-hybrid-ssm-transformer",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", hybrid_ratio(2,2)==0.5) __check(\"hidden_callable\", callable(hybrid_ratio)) __check(\"hidden_idempotent\", hybrid_ratio() == hybrid_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

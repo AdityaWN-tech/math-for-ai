@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-the-tool-interface",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", tool_schema_name({\"name\":\"calc\"})==\"calc\") __check(\"hidden_callable\", callable(tool_schema_name)) __check(\"hidden_idempotent\", tool_schema_name() == tool_schema_name())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

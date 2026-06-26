@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-alphaevolve-evolutionary-coding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", fitness(0.9)==0.9) __check(\"hidden_callable\", callable(fitness)) __check(\"hidden_idempotent\", fitness() == fitness())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

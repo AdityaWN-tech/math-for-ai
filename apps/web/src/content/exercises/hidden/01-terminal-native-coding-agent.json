@@ -1,0 +1,4 @@
+{
+  "lessonId": "01-terminal-native-coding-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", run_tests_passed([True,True])) __check(\"hidden_callable\", callable(run_tests_passed)) __check(\"hidden_idempotent\", run_tests_passed() == run_tests_passed())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

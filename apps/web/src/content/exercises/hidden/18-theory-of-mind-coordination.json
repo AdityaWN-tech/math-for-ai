@@ -1,0 +1,4 @@
+{
+  "lessonId": "18-theory-of-mind-coordination",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", theory_of_mind_coordin(7)==7) __check(\"hidden_callable\", callable(theory_of_mind_coordin)) __check(\"hidden_idempotent\", theory_of_mind_coordin() == theory_of_mind_coordin())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

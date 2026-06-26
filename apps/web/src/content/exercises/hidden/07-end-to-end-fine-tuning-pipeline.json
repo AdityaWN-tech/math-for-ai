@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-end-to-end-fine-tuning-pipeline",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", trainable_tokens(100,30)==70) __check(\"hidden_callable\", callable(trainable_tokens)) __check(\"hidden_idempotent\", trainable_tokens() == trainable_tokens())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

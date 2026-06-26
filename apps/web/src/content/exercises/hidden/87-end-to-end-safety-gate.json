@@ -1,0 +1,4 @@
+{
+  "lessonId": "87-end-to-end-safety-gate",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", safety_pipeline_stages()==4) __check(\"hidden_callable\", callable(safety_pipeline_stages)) __check(\"hidden_idempotent\", safety_pipeline_stages() == safety_pipeline_stages())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

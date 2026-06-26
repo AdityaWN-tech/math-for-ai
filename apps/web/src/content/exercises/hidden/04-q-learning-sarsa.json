@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-q-learning-sarsa",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"q\", q_update(1.0,0.1,2.0)==1.2) __check(\"hidden_callable\", callable(q_update)) __check(\"hidden_idempotent\", q_update() == q_update())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

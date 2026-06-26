@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-multi-region-kv-locality",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", multi_region_kv_locali(7)==7) __check(\"hidden_callable\", callable(multi_region_kv_locali)) __check(\"hidden_idempotent\", multi_region_kv_locali() == multi_region_kv_locali())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

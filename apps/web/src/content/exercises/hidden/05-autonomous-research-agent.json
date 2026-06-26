@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-autonomous-research-agent",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", papers_found(3)) __check(\"hidden_callable\", callable(papers_found)) __check(\"hidden_idempotent\", papers_found() == papers_found())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

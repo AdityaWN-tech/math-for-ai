@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-negotiation-bargaining",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", negotiation_bargaining(7)==7) __check(\"hidden_callable\", callable(negotiation_bargaining)) __check(\"hidden_idempotent\", negotiation_bargaining() == negotiation_bargaining())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

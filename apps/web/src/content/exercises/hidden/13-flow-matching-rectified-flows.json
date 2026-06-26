@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-flow-matching-rectified-flows",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", flow_interpolate(0,1,0.5)==0.5) __check(\"hidden_callable\", callable(flow_interpolate)) __check(\"hidden_idempotent\", flow_interpolate() == flow_interpolate())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

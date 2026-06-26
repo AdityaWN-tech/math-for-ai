@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-quantization",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"q\", quantize_int8(0.5)==64) __check(\"hidden_callable\", callable(quantize_int8)) __check(\"hidden_idempotent\", quantize_int8() == quantize_int8())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

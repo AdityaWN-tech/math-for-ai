@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-music-generation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", midi_note_count([\"note\",\"rest\",\"note\"])==2) __check(\"hidden_callable\", callable(midi_note_count)) __check(\"hidden_idempotent\", midi_note_count() == midi_note_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

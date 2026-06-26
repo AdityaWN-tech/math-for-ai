@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-singular-value-decomposition",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"f\", abs(frobenius_norm([[3,0],[0,4]]) - 5.0) < 1e-9) __check(\"hidden_callable\", callable(frobenius_norm)) __check(\"hidden_idempotent\", frobenius_norm() == frobenius_norm())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

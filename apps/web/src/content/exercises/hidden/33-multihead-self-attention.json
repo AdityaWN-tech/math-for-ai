@@ -1,0 +1,4 @@
+{
+  "lessonId": "33-multihead-self-attention",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", head_dim(512,8)==64) __check(\"hidden_callable\", callable(head_dim)) __check(\"hidden_idempotent\", head_dim() == head_dim())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

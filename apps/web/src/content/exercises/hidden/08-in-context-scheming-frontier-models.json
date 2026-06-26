@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-in-context-scheming-frontier-models",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", hidden_goal_steps([\"conceal\",\"act\"])==1) __check(\"hidden_callable\", callable(hidden_goal_steps)) __check(\"hidden_idempotent\", hidden_goal_steps() == hidden_goal_steps())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

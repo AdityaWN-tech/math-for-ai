@@ -1,0 +1,4 @@
+{
+  "lessonId": "22-load-testing-llm-apis",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", load_testing_llm_apis(7)==7) __check(\"hidden_callable\", callable(load_testing_llm_apis)) __check(\"hidden_idempotent\", load_testing_llm_apis() == load_testing_llm_apis())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

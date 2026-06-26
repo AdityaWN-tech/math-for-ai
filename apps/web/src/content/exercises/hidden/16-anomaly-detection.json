@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-anomaly-detection",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"z\", z_score(110, 100, 5) == 2.0) __check(\"hidden_callable\", callable(z_score)) __check(\"hidden_idempotent\", z_score() == z_score())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-recursive-self-improvement",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", bounded_steps(100,10)==10) __check(\"hidden_callable\", callable(bounded_steps)) __check(\"hidden_idempotent\", bounded_steps() == bounded_steps())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-watermarking-synthid-stable-signature-c2pa",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", watermark_detected(0.95,0.9)) __check(\"hidden_callable\", callable(watermark_detected)) __check(\"hidden_idempotent\", watermark_detected() == watermark_detected())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

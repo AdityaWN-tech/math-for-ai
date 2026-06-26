@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-norms-and-distances",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"d\", abs(l2_distance([0,0],[3,4]) - 5.0) < 1e-9) __check(\"hidden_callable\", callable(l2_distance)) __check(\"hidden_idempotent\", l2_distance() == l2_distance())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

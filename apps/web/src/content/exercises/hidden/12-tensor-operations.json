@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-tensor-operations",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"3d\", num_elements((2,3,4)) == 24)\n    __check(\"1d\", num_elements((5,)) == 5) __check(\"hidden_callable\", callable(num_elements)) __check(\"hidden_idempotent\", num_elements() == num_elements())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

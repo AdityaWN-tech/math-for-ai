@@ -1,0 +1,4 @@
+{
+  "lessonId": "07-semantic-segmentation-unet",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", abs(dice_score(5,10,10)-0.666666)<1e-3) __check(\"hidden_callable\", callable(dice_score)) __check(\"hidden_idempotent\", dice_score() == dice_score())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

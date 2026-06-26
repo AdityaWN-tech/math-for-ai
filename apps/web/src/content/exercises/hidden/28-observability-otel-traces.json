@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-observability-otel-traces",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", span_count([1,2,3])==3) __check(\"hidden_callable\", callable(span_count)) __check(\"hidden_idempotent\", span_count() == span_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

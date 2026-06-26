@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-eagle3-speculative-decoding",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", eagle3_speculative_dec(7)==7) __check(\"hidden_callable\", callable(eagle3_speculative_dec)) __check(\"hidden_idempotent\", eagle3_speculative_dec() == eagle3_speculative_dec())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

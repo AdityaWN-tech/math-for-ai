@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-hierarchical-architecture",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", hierarchical_architect(7)==7) __check(\"hidden_callable\", callable(hierarchical_architect)) __check(\"hidden_idempotent\", hierarchical_architect() == hierarchical_architect())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

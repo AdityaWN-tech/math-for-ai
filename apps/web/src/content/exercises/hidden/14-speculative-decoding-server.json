@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-speculative-decoding-server",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", draft_tokens(4)==4) __check(\"hidden_callable\", callable(draft_tokens)) __check(\"hidden_idempotent\", draft_tokens() == draft_tokens())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

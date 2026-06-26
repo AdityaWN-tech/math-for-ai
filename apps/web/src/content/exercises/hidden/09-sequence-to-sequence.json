@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-sequence-to-sequence",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", teacher_forcing(True)) __check(\"hidden_bool\", isinstance(teacher_forcing(), bool))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

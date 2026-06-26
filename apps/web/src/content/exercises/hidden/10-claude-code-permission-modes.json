@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-claude-code-permission-modes",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", mode_allows(\"read-only\",\"read\")) __check(\"hidden_callable\", callable(mode_allows)) __check(\"hidden_idempotent\", mode_allows() == mode_allows())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

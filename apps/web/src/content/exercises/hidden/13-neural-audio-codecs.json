@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-neural-audio-codecs",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", compression_ratio(100,10)==10) __check(\"hidden_callable\", callable(compression_ratio)) __check(\"hidden_idempotent\", compression_ratio() == compression_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-claude-agent-sdk",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", tool_budget(20)==20) __check(\"hidden_callable\", callable(tool_budget)) __check(\"hidden_idempotent\", tool_budget() == tool_budget())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

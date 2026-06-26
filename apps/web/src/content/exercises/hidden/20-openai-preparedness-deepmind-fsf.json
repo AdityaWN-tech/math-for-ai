@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-openai-preparedness-deepmind-fsf",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", openai_preparedness_de(7)==7) __check(\"hidden_callable\", callable(openai_preparedness_de)) __check(\"hidden_idempotent\", openai_preparedness_de() == openai_preparedness_de())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

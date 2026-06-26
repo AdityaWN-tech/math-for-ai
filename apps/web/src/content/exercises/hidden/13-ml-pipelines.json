@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-ml-pipelines",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    r = run_pipeline([lambda x: x+1, lambda x: x*2], 3)\n    __check(\"p\", r == 8) __check(\"hidden_callable\", callable(run_pipeline)) __check(\"hidden_idempotent\", run_pipeline() == run_pipeline())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

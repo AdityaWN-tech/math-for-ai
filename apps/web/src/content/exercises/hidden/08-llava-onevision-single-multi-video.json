@@ -1,0 +1,4 @@
+{
+  "lessonId": "08-llava-onevision-single-multi-video",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"f\", frame_budget(1,10)==10) __check(\"hidden_callable\", callable(frame_budget)) __check(\"hidden_idempotent\", frame_budget() == frame_budget())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

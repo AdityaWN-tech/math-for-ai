@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-agent-harness-loop-contract",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", len(harness_steps())==3) __check(\"hidden_len_pos\", len(harness_steps()) > 0) __check(\"hidden_no_none\", all(x is not None for x in harness_steps()))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

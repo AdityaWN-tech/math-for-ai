@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-self-refine-and-critic",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", refine_rounds(3)==3) __check(\"hidden_callable\", callable(refine_rounds)) __check(\"hidden_idempotent\", refine_rounds() == refine_rounds())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

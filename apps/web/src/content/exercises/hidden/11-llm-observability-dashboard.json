@@ -1,0 +1,4 @@
+{
+  "lessonId": "11-llm-observability-dashboard",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", p99_latency([1,2,100])==100) __check(\"hidden_callable\", callable(p99_latency)) __check(\"hidden_idempotent\", p99_latency() == p99_latency())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

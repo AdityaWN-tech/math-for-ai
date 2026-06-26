@@ -1,0 +1,4 @@
+{
+  "lessonId": "30-dual-use-risk-cyber-bio-chem-nuclear",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", domain_risk(\"bio\")) __check(\"hidden_callable\", callable(domain_risk)) __check(\"hidden_idempotent\", domain_risk() == domain_risk())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

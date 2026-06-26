@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-3d-generation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", point_count(10)==1000) __check(\"hidden_callable\", callable(point_count)) __check(\"hidden_idempotent\", point_count() == point_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

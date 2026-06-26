@@ -1,0 +1,4 @@
+{
+  "lessonId": "28-long-context-evaluation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", needle_position(1000,0.5)==500) __check(\"hidden_callable\", callable(needle_position)) __check(\"hidden_idempotent\", needle_position() == needle_position())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

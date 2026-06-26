@@ -1,0 +1,4 @@
+{
+  "lessonId": "23-diffusion-transformers-rectified-flow",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", latent_dim(256,256)==(32,32)) __check(\"hidden_callable\", callable(latent_dim)) __check(\"hidden_idempotent\", latent_dim() == latent_dim())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

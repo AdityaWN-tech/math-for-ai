@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-bias-variance",
+  "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", mse([1,2],[1,2]) == 0) __check(\"hidden_callable\", callable(mse)) __check(\"hidden_idempotent\", mse() == mse())\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+}

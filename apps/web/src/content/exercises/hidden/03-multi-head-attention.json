@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-multi-head-attention",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"h\", num_heads(512,64)==8) __check(\"hidden_callable\", callable(num_heads)) __check(\"hidden_idempotent\", num_heads() == num_heads())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

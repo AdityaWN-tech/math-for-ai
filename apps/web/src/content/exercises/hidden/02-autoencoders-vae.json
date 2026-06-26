@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-autoencoders-vae",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"r\", reparameterize(1.0,0.5,2.0)==2.0) __check(\"hidden_callable\", callable(reparameterize)) __check(\"hidden_idempotent\", reparameterize() == reparameterize())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

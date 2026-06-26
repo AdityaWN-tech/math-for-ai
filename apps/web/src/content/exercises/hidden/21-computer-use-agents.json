@@ -1,0 +1,4 @@
+{
+  "lessonId": "21-computer-use-agents",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"a\", action_valid(\"click\")) __check(\"hidden_callable\", callable(action_valid)) __check(\"hidden_idempotent\", action_valid() == action_valid())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

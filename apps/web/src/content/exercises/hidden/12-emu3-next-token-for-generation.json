@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-emu3-next-token-for-generation",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"m\", modality_token_id(\"image\",50000)==50000) __check(\"hidden_callable\", callable(modality_token_id)) __check(\"hidden_idempotent\", modality_token_id() == modality_token_id())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

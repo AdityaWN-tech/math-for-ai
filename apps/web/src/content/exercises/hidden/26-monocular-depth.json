@@ -1,0 +1,4 @@
+{
+  "lessonId": "26-monocular-depth",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", depth_inverse(0.5)==2.0) __check(\"hidden_callable\", callable(depth_inverse)) __check(\"hidden_idempotent\", depth_inverse() == depth_inverse())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "25-entity-linking",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"k\", kb_id_format(\"Q42\")) __check(\"hidden_callable\", callable(kb_id_format)) __check(\"hidden_idempotent\", kb_id_format() == kb_id_format())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

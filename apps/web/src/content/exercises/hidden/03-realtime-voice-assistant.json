@@ -1,0 +1,4 @@
+{
+  "lessonId": "03-realtime-voice-assistant",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", e2e_budget_ms([100,200,150])==450) __check(\"hidden_callable\", callable(e2e_budget_ms)) __check(\"hidden_idempotent\", e2e_budget_ms() == e2e_budget_ms())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "05-dqn",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", replay_batch_size()==32) __check(\"hidden_callable\", callable(replay_batch_size)) __check(\"hidden_idempotent\", replay_batch_size() == replay_batch_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

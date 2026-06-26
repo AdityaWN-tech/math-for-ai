@@ -1,0 +1,4 @@
+{
+  "lessonId": "17-chatbots-rule-to-neural",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", intent_slot(\"book\",{})[\"intent\"]==\"book\") __check(\"hidden_callable\", callable(intent_slot)) __check(\"hidden_idempotent\", intent_slot() == intent_slot())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

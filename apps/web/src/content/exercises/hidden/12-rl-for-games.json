@@ -1,0 +1,4 @@
+{
+  "lessonId": "12-rl-for-games",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"e\", epsilon_greedy([0.1,0.9],0.1)>0) __check(\"hidden_callable\", callable(epsilon_greedy)) __check(\"hidden_idempotent\", epsilon_greedy() == epsilon_greedy())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

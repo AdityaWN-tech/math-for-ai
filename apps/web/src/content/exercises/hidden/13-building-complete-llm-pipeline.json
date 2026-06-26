@@ -1,0 +1,4 @@
+{
+  "lessonId": "13-building-complete-llm-pipeline",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", pipeline_stages([\"a\",\"b\",\"c\"])==3) __check(\"hidden_callable\", callable(pipeline_stages)) __check(\"hidden_idempotent\", pipeline_stages() == pipeline_stages())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

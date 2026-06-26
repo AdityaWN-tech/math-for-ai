@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-show-o-discrete-diffusion-unified",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", discrete_bins(1024)==1024) __check(\"hidden_callable\", callable(discrete_bins)) __check(\"hidden_idempotent\", discrete_bins() == discrete_bins())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

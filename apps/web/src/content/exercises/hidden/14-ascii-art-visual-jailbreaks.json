@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-ascii-art-visual-jailbreaks",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", non_ascii_ratio(\"café\")>0) __check(\"hidden_callable\", callable(non_ascii_ratio)) __check(\"hidden_idempotent\", non_ascii_ratio() == non_ascii_ratio())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

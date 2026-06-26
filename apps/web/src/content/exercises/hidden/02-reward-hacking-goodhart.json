@@ -1,0 +1,4 @@
+{
+  "lessonId": "02-reward-hacking-goodhart",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", proxy_gap(0.2,0.9)>0) __check(\"hidden_callable\", callable(proxy_gap)) __check(\"hidden_idempotent\", proxy_gap() == proxy_gap())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

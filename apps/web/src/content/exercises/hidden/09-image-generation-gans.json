@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-image-generation-gans",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"g\", generator_output_dim(64,128,784)==784) __check(\"hidden_callable\", callable(generator_output_dim)) __check(\"hidden_idempotent\", generator_output_dim() == generator_output_dim())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))\n"
+}

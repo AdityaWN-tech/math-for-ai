@@ -1,0 +1,4 @@
+{
+  "lessonId": "20-marl-maddpg-qmix-mappo",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"w\", world_size(8)==8) __check(\"hidden_callable\", callable(world_size)) __check(\"hidden_idempotent\", world_size() == world_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

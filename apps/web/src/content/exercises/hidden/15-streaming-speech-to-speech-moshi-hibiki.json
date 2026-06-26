@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-streaming-speech-to-speech-moshi-hibiki",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"l\", duplex_latency_ms(50,100,50)==200) __check(\"hidden_callable\", callable(duplex_latency_ms)) __check(\"hidden_idempotent\", duplex_latency_ms() == duplex_latency_ms())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

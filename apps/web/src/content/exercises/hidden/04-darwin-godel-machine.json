@@ -1,0 +1,4 @@
+{
+  "lessonId": "04-darwin-godel-machine",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"d\", improvement_delta(0.5,0.7)>0) __check(\"hidden_callable\", callable(improvement_delta)) __check(\"hidden_idempotent\", improvement_delta() == improvement_delta())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "16-mio-any-to-any-streaming",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", stream_modalities([\"a\",\"v\",\"t\"])==3) __check(\"hidden_callable\", callable(stream_modalities)) __check(\"hidden_idempotent\", stream_modalities() == stream_modalities())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

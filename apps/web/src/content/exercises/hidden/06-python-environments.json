@@ -1,0 +1,4 @@
+{
+  "lessonId": "06-python-environments",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"i\", env_isolated(\"/usr\", \"/proj/.venv\")) __check(\"hidden_callable\", callable(env_isolated)) __check(\"hidden_idempotent\", env_isolated() == env_isolated())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

@@ -1,0 +1,4 @@
+{
+  "lessonId": "09-mcp-transports",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", transport_ok(\"stdio\")) __check(\"hidden_callable\", callable(transport_ok)) __check(\"hidden_idempotent\", transport_ok() == transport_ok())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

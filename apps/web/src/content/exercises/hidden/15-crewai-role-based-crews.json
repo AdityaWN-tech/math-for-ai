@@ -1,0 +1,4 @@
+{
+  "lessonId": "15-crewai-role-based-crews",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"c\", crew_size([\"r\",\"w\"])==2) __check(\"hidden_callable\", callable(crew_size)) __check(\"hidden_idempotent\", crew_size() == crew_size())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

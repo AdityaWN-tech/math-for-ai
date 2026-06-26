@@ -1,0 +1,4 @@
+{
+  "lessonId": "10-skill-libraries-voyager",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", skill_count([\"move\",\"craft\"])==2) __check(\"hidden_callable\", callable(skill_count)) __check(\"hidden_idempotent\", skill_count() == skill_count())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

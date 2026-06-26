@@ -1,0 +1,4 @@
+{
+  "lessonId": "26-compliance-frameworks",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"core\", compliance_frameworks(7)==7) __check(\"hidden_callable\", callable(compliance_frameworks)) __check(\"hidden_idempotent\", compliance_frameworks() == compliance_frameworks())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}

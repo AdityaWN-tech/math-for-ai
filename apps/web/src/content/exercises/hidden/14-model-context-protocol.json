@@ -1,0 +1,4 @@
+{
+  "lessonId": "14-model-context-protocol",
+  "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"n\", mcp_tool_name({\"name\":\"search\"})==\"search\") __check(\"hidden_callable\", callable(mcp_tool_name)) __check(\"hidden_idempotent\", mcp_tool_name() == mcp_tool_name())\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+}
