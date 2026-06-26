@@ -1,0 +1,71 @@
+{
+  "id": "11-singular-value-decomposition",
+  "title": "Singular Value Decomposition",
+  "motto": "SVD is the Swiss Army knife of linear algebra. Every matrix has one. Every data scientist needs one.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 11
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "SVD is the Swiss Army knife of linear algebra. Every matrix has one. Every data scientist needs one."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have a 1000x2000 matrix. Maybe it is user-movie ratings. Maybe it is a document-term frequency table. Maybe it is the pixel values of an image. You need to compress it, denoise it, find hidden structure in it, or solve a least-squares system with it. Eigendecomposition only works on square matrices. Even then, it requires the matrix to have a full set of linearly independent eigenvectors.",
+        "SVD works on any matrix. Any shape. Any rank. No conditions. It decomposes the matrix into three factors that reveal the geometry of what the matrix does to space. It is the most general and most useful factorization in all of linear algebra."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "SVD factors any matrix into U Σ Vᵀ. Singular values rank components for PCA, compression, and recommender systems."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement svd",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "svd.py",
+        "starter": "def frobenius_norm(A):\n    \"\"\"Frobenius norm for matrix as list-of-lists.\"\"\"\n    # TODO: sqrt(sum of squares of all elements)\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"f\", abs(frobenius_norm([[3,0],[0,4]]) - 5.0) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Matrix norms",
+        "description": "You can compute Frobenius norm — used in SVD truncation and low-rank approximation."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

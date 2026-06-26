@@ -1,0 +1,71 @@
+{
+  "id": "10-mini-framework",
+  "title": "Mini Framework",
+  "motto": "You have built neurons, layers, networks, backprop, activations, loss functions, optimizers, regularization, initialization, and LR schedules. All as separate pieces. Now wire them together into a framework. Not PyTorch. Not TensorFlow. Yours.",
+  "phase": {
+    "id": 3,
+    "name": "Deep Learning Core",
+    "lessonNumber": 10
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "You have built neurons, layers, networks, backprop, activations, loss functions, optimizers, regularization, initialization, and LR schedules. All as separate pieces. Now wire them together into a framework. Not PyTorch. Not TensorFlow. Yours."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have ten lessons of building blocks scattered across separate files. A `Value` class here, a training loop there, weight initialization in another file, learning rate schedules in yet another. To train a network, you copy-paste from five different lessons and wire them together by hand.",
+        "That is what frameworks solve. PyTorch gives you `nn.Module`, `nn.Sequential`, `optim.Adam`, `DataLoader`, and a training loop pattern that ties them together. TensorFlow gives you `keras.Layer`, `keras.Sequential`, `keras.optimizers.Adam`. These are not magic. They are organizational patterns that make it possible to define, train, and evaluate networks without reinventing the plumbing every time."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Autograd tracks ops on a tape. Forward pass builds graph; backward propagates gradients."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement autograd",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "autograd.py",
+        "starter": "def linear_forward(x, w, b):\n    \"\"\"Scalar: x*w+b. Vectors: sum(x[i]*w[i])+b.\"\"\"\n    # TODO for lists\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"l\", linear_forward([1,2],[3,4], 1) == 12)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Linear forward",
+        "description": "You can run a linear layer forward — building block of your mini framework."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

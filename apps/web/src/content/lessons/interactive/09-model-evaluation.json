@@ -1,0 +1,71 @@
+{
+  "id": "09-model-evaluation",
+  "title": "Model Evaluation",
+  "motto": "A model is only as good as the way you measure it.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 9
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A model is only as good as the way you measure it."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You trained a model. It gets 95% accuracy on your data. Is it good?",
+        "Maybe. Maybe not. If 95% of your data belongs to one class, a model that always predicts that class gets 95% accuracy while being completely useless. If you evaluated on the same data you trained on, the 95% number is meaningless because the model just memorized the answers. If your dataset has a time component and you randomly shuffled before splitting, your model might be using future data to predict the past."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Accuracy = correct / total. For imbalanced data, also track precision, recall, and F1."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement metrics",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "metrics.py",
+        "starter": "def accuracy(y_true, y_pred):\n    \"\"\"Fraction of matching labels.\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"a\", accuracy([1,0,1],[1,1,1]) == 2/3)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Accuracy",
+        "description": "You can score classifiers — baseline metric before diving into F1."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

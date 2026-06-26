@@ -1,0 +1,71 @@
+{
+  "id": "06-optimizers",
+  "title": "Optimizers",
+  "motto": "Gradient descent tells you which direction to move. It says nothing about how far or how fast. SGD is a compass. Adam is GPS with traffic data.",
+  "phase": {
+    "id": 3,
+    "name": "Deep Learning Core",
+    "lessonNumber": 6
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Gradient descent tells you which direction to move. It says nothing about how far or how fast. SGD is a compass. Adam is GPS with traffic data."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You computed the gradients. You know that weight #4,721 should decrease by 0.003 to reduce the loss. But 0.003 in what units? Scaled by what? And should you move the same amount on step 1 as on step 1,000?",
+        "Vanilla gradient descent applies the same learning rate to every parameter on every step: w = w - lr * gradient. This creates three problems that make training neural networks painful in practice."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "SGD + momentum accumulates velocity. Adam adapts per-parameter learning rates — default for transformers."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement optim",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "optim.py",
+        "starter": "def sgd_momentum(v, grad, lr, beta=0.9):\n    \"\"\"Return updated velocity and param delta.\"\"\"\n    # TODO: v = beta*v + grad; return v, -lr*v\n    return v, 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    v, d = sgd_momentum(0.0, 1.0, 0.1, 0.0)\n    __check(\"d\", abs(d - (-0.1)) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "SGD step",
+        "description": "You can apply one SGD update — inner loop of every trainer."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

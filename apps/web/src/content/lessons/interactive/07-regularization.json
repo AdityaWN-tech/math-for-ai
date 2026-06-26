@@ -1,0 +1,71 @@
+{
+  "id": "07-regularization",
+  "title": "Regularization",
+  "motto": "Your model gets 99% on training data and 60% on test data. It memorized instead of learning. Regularization is the tax you impose on complexity to force generalization.",
+  "phase": {
+    "id": 3,
+    "name": "Deep Learning Core",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your model gets 99% on training data and 60% on test data. It memorized instead of learning. Regularization is the tax you impose on complexity to force generalization."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A neural network with enough parameters can memorize any dataset. This is not a hypothetical -- Zhang et al. (2017) proved it by training standard networks on ImageNet with random labels. The networks reached near-zero training loss on completely random label assignments. They memorized a million random input-output pairs with no pattern to learn. Training loss was perfect. Test accuracy was zero.",
+        "This is the overfitting problem, and it gets worse as models get larger. GPT-3 has 175 billion parameters. The training set has about 500 billion tokens. With that many parameters, the model has enough capacity to memorize significant chunks of the training data verbatim. Without regularization, it would just regurgitate training examples instead of learning generalizable patterns."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "L2 weight decay penalizes large weights. Dropout randomly zeros activations during training."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement reg",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "reg.py",
+        "starter": "def l2_penalty(weights, lam):\n    \"\"\"lambda * sum(w^2) for flat list of weights.\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"l2\", l2_penalty([3,4], 0.5) == 12.5)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "L2 penalty",
+        "description": "You can add weight decay to loss — fights overfitting."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

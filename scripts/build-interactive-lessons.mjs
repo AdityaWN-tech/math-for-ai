@@ -266,7 +266,505 @@ const SPECS = [
     },
     artifact: { name: "ReLU", description: "You can apply ReLU — the activation in most modern hidden layers." },
   },
-  // Phase 11 LLM Engineering entry
+  // Phase 1 remainder (11–22) — complete math foundations
+  {
+    id: "11-singular-value-decomposition",
+    phaseId: 1,
+    lessonNumber: 11,
+    title: "Singular Value Decomposition",
+    concept: "SVD factors any matrix into U Σ Vᵀ. Singular values rank components for PCA, compression, and recommender systems.",
+    build: {
+      filename: "svd.py",
+      starter: "def frobenius_norm(A):\n    \"\"\"Frobenius norm for matrix as list-of-lists.\"\"\"\n    # TODO: sqrt(sum of squares of all elements)\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("f", abs(frobenius_norm([[3,0],[0,4]]) - 5.0) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Matrix norms", description: "You can compute Frobenius norm — used in SVD truncation and low-rank approximation." },
+  },
+  {
+    id: "12-tensor-operations",
+    phaseId: 1,
+    lessonNumber: 12,
+    title: "Tensor Operations",
+    concept: "Tensors generalize matrices to N dimensions. PyTorch shapes like (batch, channels, height, width) are 4D tensors.",
+    build: {
+      filename: "tensor.py",
+      starter: "def num_elements(shape):\n    \"\"\"Product of dimensions, e.g. (2,3,4) -> 24.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("3d", num_elements((2,3,4)) == 24)\n    __check("1d", num_elements((5,)) == 5)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Tensor shape", description: "You can count elements from a shape tuple — first step in batching and memory estimates." },
+  },
+  {
+    id: "13-numerical-stability",
+    phaseId: 1,
+    lessonNumber: 13,
+    title: "Numerical Stability",
+    concept: "Subtract max before exp in softmax to avoid overflow. Stable numerics prevent NaNs in training.",
+    build: {
+      filename: "stable.py",
+      starter: "import math\n\ndef stable_softmax(logits):\n    \"\"\"Softmax with max-subtraction trick.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    p = stable_softmax([1000.0, 1001.0, 1002.0])\n    __check("sum", abs(sum(p)-1) < 1e-6)\n    __check("max", p[2] > p[1] > p[0])\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Stable softmax", description: "You can softmax large logits without overflow — production loss functions use this." },
+  },
+  {
+    id: "14-norms-and-distances",
+    phaseId: 1,
+    lessonNumber: 14,
+    title: "Norms & Distances",
+    concept: "L2 distance powers kNN and embeddings. L1 is robust to outliers. Cosine measures angle, not magnitude.",
+    build: {
+      filename: "norms.py",
+      starter: "def l2_distance(a, b):\n    \"\"\"Euclidean distance between equal-length vectors.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("d", abs(l2_distance([0,0],[3,4]) - 5.0) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "L2 distance", description: "You can measure vector distance — core to kNN, clustering, and embedding search." },
+  },
+  {
+    id: "15-statistics-for-ml",
+    phaseId: 1,
+    lessonNumber: 15,
+    title: "Statistics for ML",
+    concept: "Normalize features with mean and variance. Batch norm uses running statistics; z-scores stabilize training.",
+    build: {
+      filename: "stats.py",
+      starter: "def mean(xs):\n    \"\"\"Arithmetic mean of non-empty list.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("m", mean([2,4,6]) == 4.0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Mean", description: "You can compute feature means — required before standardization." },
+  },
+  {
+    id: "16-sampling-methods",
+    phaseId: 1,
+    lessonNumber: 16,
+    title: "Sampling Methods",
+    concept: "Mini-batches are random samples from the dataset. Shuffling each epoch prevents order bias.",
+    build: {
+      filename: "sample.py",
+      starter: "def batch_indices(n, batch_size, start=0):\n    \"\"\"Return index list [start, ..., start+batch_size-1] capped at n-1.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    b = batch_indices(10, 3, 0)\n    __check("len", len(b) == 3)\n    __check("idx", b == [0,1,2])\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Batch indexing", description: "You can slice batch indices — how DataLoader yields mini-batches." },
+  },
+  {
+    id: "17-linear-systems",
+    phaseId: 1,
+    lessonNumber: 17,
+    title: "Linear Systems",
+    concept: "Ax = b appears in least squares and Newton steps. Gaussian elimination solves small systems exactly.",
+    build: {
+      filename: "linsys.py",
+      starter: "def dot(a, b):\n    \"\"\"Dot product of equal-length vectors.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("d", dot([1,2],[3,4]) == 11)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Linear algebra glue", description: "Dot products tie vectors to matrix rows — building block for solving systems." },
+  },
+  {
+    id: "18-convex-optimization",
+    phaseId: 1,
+    lessonNumber: 18,
+    title: "Convex Optimization",
+    concept: "Convex functions have one global minimum. MSE is convex; neural nets are not — but convex subproblems appear everywhere.",
+    build: {
+      filename: "convex.py",
+      starter: "def quadratic(x, a, b, c):\n    \"\"\"Evaluate ax^2 + bx + c.\"\"\"\n    return a*x*x + b*x + c\n\ndef is_convex_coeff(a):\n    \"\"\"True if a>0 (convex quadratic).\"\"\"\n    # TODO\n    return False\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("yes", is_convex_coeff(1.0))\n    __check("no", not is_convex_coeff(-1.0))\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Convexity check", description: "You can spot convex quadratics — when gradient descent is guaranteed to find the minimum." },
+  },
+  {
+    id: "19-complex-numbers",
+    phaseId: 1,
+    lessonNumber: 19,
+    title: "Complex Numbers",
+    concept: "FFT and quantum ML use complex numbers. Euler's formula links rotation to e^(iθ).",
+    build: {
+      filename: "complex_nums.py",
+      starter: "def complex_mul(ar, ai, br, bi):\n    \"\"\"Return (real, imag) of (ar+ai*i)*(br+bi*i).\"\"\"\n    # TODO\n    return (0, 0)\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    r,i = complex_mul(1,1,1,-1)\n    __check("r", r == 2)\n    __check("i", i == 0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Complex multiply", description: "You can multiply complex numbers — prerequisite for Fourier and signal processing." },
+  },
+  {
+    id: "20-fourier-transform",
+    phaseId: 1,
+    lessonNumber: 20,
+    title: "Fourier Transform",
+    concept: "Signals decompose into frequencies. DFT finds how much of each frequency is present — used in audio and position encodings.",
+    build: {
+      filename: "fourier.py",
+      starter: "import math\n\ndef dft_real(signal, k):\n    \"\"\"Real part of k-th DFT coefficient for real signal.\"\"\"\n    # TODO: sum_n signal[n]*cos(2*pi*k*n/N)\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    s = [1.0, 0.0, -1.0, 0.0]\n    __check("finite", abs(dft_real(s, 1)) < 1e6)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "DFT coefficient", description: "You can extract one frequency component — intuition behind spectrograms and RoPE." },
+  },
+  {
+    id: "21-graph-theory",
+    phaseId: 1,
+    lessonNumber: 21,
+    title: "Graph Theory",
+    concept: "Graphs model molecules, social networks, and GNNs. Adjacency lists define who connects to whom.",
+    build: {
+      filename: "graph.py",
+      starter: "def has_edge(adj, u, v):\n    \"\"\"adj[u] is list of neighbors. Return True if edge u->v exists.\"\"\"\n    # TODO\n    return False\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    adj = {0:[1,2], 1:[0], 2:[]}\n    __check("y", has_edge(adj,0,1))\n    __check("n", not has_edge(adj,2,0))\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Adjacency lookup", description: "You can traverse graph edges — foundation for GNN message passing." },
+  },
+  {
+    id: "22-stochastic-processes",
+    phaseId: 1,
+    lessonNumber: 22,
+    title: "Stochastic Processes",
+    concept: "Markov chains: next state depends only on current. PageRank and RL policies are Markov processes.",
+    build: {
+      filename: "markov.py",
+      starter: "def markov_step(dist, P):\n    \"\"\"dist: state probs, P[i][j]=P(j|i). Return next distribution.\"\"\"\n    # TODO: new[j] = sum_i dist[i]*P[i][j]\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    P = [[0.9,0.1],[0.5,0.5]]\n    n = markov_step([1.0,0.0], P)\n    __check("sum", abs(sum(n)-1) < 1e-9)\n    __check("s0", abs(n[0]-0.9) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Markov step", description: "You can advance a probability distribution — core to RL and generative chains." },
+  },
+  // Phase 2 remainder (06–18)
+  {
+    id: "06-knn-and-distances",
+    phaseId: 2,
+    lessonNumber: 6,
+    title: "kNN & Distances",
+    concept: "kNN classifies by majority vote of nearest neighbors. No training — just store data and compare distances.",
+    build: {
+      filename: "knn.py",
+      starter: "def majority_vote(labels):\n    \"\"\"Return most common label in list.\"\"\"\n    # TODO\n    return None\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("m", majority_vote([1,1,0,1]) == 1)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Majority vote", description: "You can aggregate neighbor labels — the decision rule in kNN." },
+  },
+  {
+    id: "07-unsupervised-learning",
+    phaseId: 2,
+    lessonNumber: 7,
+    title: "Unsupervised Learning",
+    concept: "K-means clusters points by iterative assignment and centroid update. Unsupervised = no labels.",
+    build: {
+      filename: "kmeans.py",
+      starter: "def assign_cluster(x, centroids):\n    \"\"\"Return index of nearest centroid (L2).\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("c", assign_cluster([0,0], [[0,0],[10,10]]) == 0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Cluster assignment", description: "You can assign points to nearest centroid — one k-means iteration." },
+  },
+  {
+    id: "08-feature-engineering",
+    phaseId: 2,
+    lessonNumber: 8,
+    title: "Feature Engineering",
+    concept: "Scale features to zero mean, unit variance so gradient descent treats dimensions fairly.",
+    build: {
+      filename: "features.py",
+      starter: "def standardize(xs):\n    \"\"\"Return z-scored list. Use population std.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    z = standardize([1,2,3])\n    __check("mean", abs(sum(z)/3) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Standardization", description: "You can z-score features — standard preprocessing before ML." },
+  },
+  {
+    id: "09-model-evaluation",
+    phaseId: 2,
+    lessonNumber: 9,
+    title: "Model Evaluation",
+    concept: "Accuracy = correct / total. For imbalanced data, also track precision, recall, and F1.",
+    build: {
+      filename: "metrics.py",
+      starter: "def accuracy(y_true, y_pred):\n    \"\"\"Fraction of matching labels.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("a", accuracy([1,0,1],[1,1,1]) == 2/3)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Accuracy", description: "You can score classifiers — baseline metric before diving into F1." },
+  },
+  {
+    id: "10-bias-variance",
+    phaseId: 2,
+    lessonNumber: 10,
+    title: "Bias–Variance",
+    concept: "High bias = underfitting. High variance = overfitting. MSE decomposes into bias² + variance + noise.",
+    build: {
+      filename: "biasvar.py",
+      starter: "def mse(y_true, y_pred):\n    \"\"\"Mean squared error.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("m", mse([1,2],[1,2]) == 0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "MSE", description: "You can measure fit error — the quantity bias and variance trade off." },
+  },
+  {
+    id: "11-ensemble-methods",
+    phaseId: 2,
+    lessonNumber: 11,
+    title: "Ensemble Methods",
+    concept: "Bagging averages many models to reduce variance. Random forests are bagged decision trees.",
+    build: {
+      filename: "ensemble.py",
+      starter: "def average_predictions(preds):\n    \"\"\"Average list of scalar predictions.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("avg", average_predictions([1.0,3.0,5.0]) == 3.0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Model averaging", description: "You can bag predictions — core ensemble reduction of variance." },
+  },
+  {
+    id: "12-hyperparameter-tuning",
+    phaseId: 2,
+    lessonNumber: 12,
+    title: "Hyperparameter Tuning",
+    concept: "Grid search tries every combo of lr, batch size, etc. Random search often finds good configs faster.",
+    build: {
+      filename: "tuning.py",
+      starter: "def grid_size(lrs, batch_sizes):\n    \"\"\"Number of grid search combinations.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("g", grid_size([0.1,0.01],[16,32]) == 4)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Search space", description: "You can size a hyperparameter grid before burning GPU hours." },
+  },
+  {
+    id: "13-ml-pipelines",
+    phaseId: 2,
+    lessonNumber: 13,
+    title: "ML Pipelines",
+    concept: "Pipelines chain preprocess → train → evaluate. sklearn.Pipeline prevents train/test leakage.",
+    build: {
+      filename: "pipeline.py",
+      starter: "def run_pipeline(steps, data):\n    \"\"\"Apply list of callables in order: data = fn(data).\"\"\"\n    # TODO\n    return data\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    r = run_pipeline([lambda x: x+1, lambda x: x*2], 3)\n    __check("p", r == 8)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Pipeline compose", description: "You can chain transforms — how production ML pipelines avoid leakage." },
+  },
+  {
+    id: "14-naive-bayes",
+    phaseId: 2,
+    lessonNumber: 14,
+    title: "Naive Bayes",
+    concept: "Assume features are independent given class. Fast baseline for spam and text classification.",
+    build: {
+      filename: "nb.py",
+      starter: "def naive_score(log_priors, log_likelihoods):\n    \"\"\"Return class index with highest log prior + log likelihood sum.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("c", naive_score([-1,-2], [[0,0],[-5,-5]]) == 0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Naive Bayes decision", description: "You can pick class by log scores — spam filter logic in one function." },
+  },
+  {
+    id: "15-time-series",
+    phaseId: 2,
+    lessonNumber: 15,
+    title: "Time Series",
+    concept: "Sliding windows turn sequences into supervised samples. Forecast next step from past W values.",
+    build: {
+      filename: "timeseries.py",
+      starter: "def sliding_windows(series, window):\n    \"\"\"Return list of consecutive slices of length window.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    w = sliding_windows([1,2,3,4], 2)\n    __check("n", len(w) == 3)\n    __check("first", w[0] == [1,2])\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Windowing", description: "You can build sliding windows — how sequence models create training rows." },
+  },
+  {
+    id: "16-anomaly-detection",
+    phaseId: 2,
+    lessonNumber: 16,
+    title: "Anomaly Detection",
+    concept: "Z-score flags points far from the mean. Simple baseline before isolation forests and autoencoders.",
+    build: {
+      filename: "anomaly.py",
+      starter: "def z_score(x, mean, std):\n    \"\"\"Standard score (x-mean)/std.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("z", z_score(110, 100, 5) == 2.0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Z-score", description: "You can flag outliers statistically — monitoring and fraud detection starter." },
+  },
+  {
+    id: "17-imbalanced-data",
+    phaseId: 2,
+    lessonNumber: 17,
+    title: "Imbalanced Data",
+    concept: "Rare classes need oversampling or class weights. Accuracy lies when 99% of emails are not spam.",
+    build: {
+      filename: "imbalance.py",
+      starter: "def class_weight(total, n_classes, class_count):\n    \"\"\"Inverse frequency weight: total/(n_classes*count).\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    w = class_weight(100, 2, 10)\n    __check("w", abs(w - 5.0) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Class weights", description: "You can upweight rare classes — essential for fraud and medical ML." },
+  },
+  {
+    id: "18-feature-selection",
+    phaseId: 2,
+    lessonNumber: 18,
+    title: "Feature Selection",
+    concept: "Drop low-variance or redundant features. Fewer dimensions = faster training and less overfitting.",
+    build: {
+      filename: "select.py",
+      starter: "def variance(xs):\n    \"\"\"Population variance of list.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("v", variance([1,2,3]) == 2/3)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Variance filter", description: "You can score feature variance — simple filter before training." },
+  },
+  // Phase 3 remainder (03–13) — complete deep learning core
+  {
+    id: "03-backpropagation",
+    phaseId: 3,
+    lessonNumber: 3,
+    title: "Backpropagation",
+    concept: "Backprop applies chain rule from loss backward through layers. Each layer gets ∂L/∂weights to update.",
+    build: {
+      filename: "backprop.py",
+      starter: "def relu_derivative(x):\n    \"\"\"1 if x>0 else 0.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("p", relu_derivative(1.0) == 1)\n    __check("n", relu_derivative(-1.0) == 0)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "ReLU derivative", description: "You can differentiate ReLU — local gradient in backprop." },
+  },
+  {
+    id: "04-activation-functions",
+    phaseId: 3,
+    lessonNumber: 4,
+    title: "Activation Functions",
+    concept: "Sigmoid squashes to (0,1); tanh to (-1,1); GELU smooths ReLU. Choice affects gradients and speed.",
+    build: {
+      filename: "activations.py",
+      starter: "import math\n\ndef sigmoid(x):\n    # TODO\n    return 0.5\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("0", abs(sigmoid(0)-0.5) < 1e-6)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Sigmoid", description: "You can compute sigmoid — historical activation, still in gates and LSTMs." },
+  },
+  {
+    id: "05-loss-functions",
+    phaseId: 3,
+    lessonNumber: 5,
+    title: "Loss Functions",
+    concept: "Binary cross-entropy punishes confident wrong predictions. MSE for regression; CE for classification.",
+    build: {
+      filename: "loss.py",
+      starter: "import math\n\ndef bce(y, p, eps=1e-12):\n    \"\"\"Binary cross-entropy for y in {0,1}, p in (0,1).\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("p", bce(1, 0.9) < bce(1, 0.1))\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "BCE loss", description: "You can compute binary cross-entropy — standard classification loss." },
+  },
+  {
+    id: "06-optimizers",
+    phaseId: 3,
+    lessonNumber: 6,
+    title: "Optimizers",
+    concept: "SGD + momentum accumulates velocity. Adam adapts per-parameter learning rates — default for transformers.",
+    build: {
+      filename: "optim.py",
+      starter: "def sgd_momentum(v, grad, lr, beta=0.9):\n    \"\"\"Return updated velocity and param delta.\"\"\"\n    # TODO: v = beta*v + grad; return v, -lr*v\n    return v, 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    v, d = sgd_momentum(0.0, 1.0, 0.1, 0.0)\n    __check("d", abs(d - (-0.1)) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "SGD step", description: "You can apply one SGD update — inner loop of every trainer." },
+  },
+  {
+    id: "07-regularization",
+    phaseId: 3,
+    lessonNumber: 7,
+    title: "Regularization",
+    concept: "L2 weight decay penalizes large weights. Dropout randomly zeros activations during training.",
+    build: {
+      filename: "reg.py",
+      starter: "def l2_penalty(weights, lam):\n    \"\"\"lambda * sum(w^2) for flat list of weights.\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("l2", l2_penalty([3,4], 0.5) == 12.5)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "L2 penalty", description: "You can add weight decay to loss — fights overfitting." },
+  },
+  {
+    id: "08-weight-initialization",
+    phaseId: 3,
+    lessonNumber: 8,
+    title: "Weight Initialization",
+    concept: "Xavier/Glorot init scales variance by fan-in and fan-out. Bad init causes vanishing or exploding activations.",
+    build: {
+      filename: "init.py",
+      starter: "def xavier_std(fan_in, fan_out):\n    \"\"\"Xavier uniform std: sqrt(2/(fan_in+fan_out)).\"\"\"\n    # TODO\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    import math\n    __check("x", abs(xavier_std(512,512) - math.sqrt(2/1024)) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Xavier scale", description: "You can set init variance — why default Linear layers don't explode." },
+  },
+  {
+    id: "09-learning-rate-schedules",
+    phaseId: 3,
+    lessonNumber: 9,
+    title: "Learning Rate Schedules",
+    concept: "Warmup + cosine decay is standard for LLM training. LR controls step size through training.",
+    build: {
+      filename: "schedule.py",
+      starter: "import math\n\ndef cosine_lr(base, step, total_steps):\n    \"\"\"Cosine decay from base to 0.\"\"\"\n    # TODO: base * 0.5 * (1 + cos(pi * step / total_steps))\n    return base\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    import math\n    __check("end", abs(cosine_lr(1.0, 100, 100)) < 1e-6)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Cosine schedule", description: "You can decay learning rate — standard transformer training schedule." },
+  },
+  {
+    id: "10-mini-framework",
+    phaseId: 3,
+    lessonNumber: 10,
+    title: "Mini Framework",
+    concept: "Autograd tracks ops on a tape. Forward pass builds graph; backward propagates gradients.",
+    build: {
+      filename: "autograd.py",
+      starter: "def linear_forward(x, w, b):\n    \"\"\"Scalar: x*w+b. Vectors: sum(x[i]*w[i])+b.\"\"\"\n    # TODO for lists\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("l", linear_forward([1,2],[3,4], 1) == 12)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Linear forward", description: "You can run a linear layer forward — building block of your mini framework." },
+  },
+  {
+    id: "11-intro-to-pytorch",
+    phaseId: 3,
+    lessonNumber: 11,
+    title: "Intro to PyTorch",
+    concept: "Tensors are multi-dimensional arrays with GPU support. torch.nn.Module wraps parameters and forward().",
+    build: {
+      filename: "pytorch_shapes.py",
+      starter: "def numel(shape):\n    \"\"\"Number of elements from shape tuple.\"\"\"\n    # TODO\n    return 0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("n", numel((32,3,224,224)) == 32*3*224*224)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Tensor numel", description: "You can compute tensor size — memory planning for batches." },
+  },
+  {
+    id: "12-intro-to-jax",
+    phaseId: 3,
+    lessonNumber: 12,
+    title: "Intro to JAX",
+    concept: "JAX composes vmap, grad, and jit. Functional style — no in-place mutation — enables XLA fusion.",
+    build: {
+      filename: "jax_style.py",
+      starter: "def pure_update(params, grads, lr):\n    \"\"\"Return new params dict, don't mutate.\"\"\"\n    # TODO: {k: params[k]-lr*grads[k]}\n    return params\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    p = pure_update({"w":1.0},{"w":2.0}, 0.1)\n    __check("p", abs(p["w"]-0.8) < 1e-9)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Functional update", description: "You can update params immutably — JAX's functional core." },
+  },
+  {
+    id: "13-debugging-neural-networks",
+    phaseId: 3,
+    lessonNumber: 13,
+    title: "Debugging Neural Networks",
+    concept: "NaN loss = exploding grad or bad LR. Check for inf/nan in activations and gradients early.",
+    build: {
+      filename: "debug.py",
+      starter: "def has_nan(xs):\n    \"\"\"True if any element is NaN (use x!=x).\"\"\"\n    # TODO\n    return False\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("n", has_nan([1.0, float('nan')]))\n    __check("ok", not has_nan([1.0,2.0]))\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "NaN detector", description: "You can catch NaNs in tensors — first debug step when loss blows up." },
+  },
+  // Phase 4 Computer Vision entry
+  {
+    id: "01-image-fundamentals",
+    phaseId: 4,
+    lessonNumber: 1,
+    title: "Image Fundamentals",
+    concept: "Images are H×W×C tensors. RGB channels encode color; grayscale averages channels.",
+    build: {
+      filename: "image.py",
+      starter: "def rgb_to_gray(r, g, b):\n    \"\"\"ITU-R BT.601 luma approximation.\"\"\"\n    # TODO: 0.299*r + 0.587*g + 0.114*b\n    return 0.0\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("w", abs(rgb_to_gray(1,1,1)-1) < 1e-6)\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Grayscale", description: "You can convert RGB to luma — first step in CV pipelines." },
+  },
+  {
+    id: "02-convolutions-from-scratch",
+    phaseId: 4,
+    lessonNumber: 2,
+    title: "Convolutions from Scratch",
+    concept: "Convolution slides a kernel over the input, summing element-wise products. Translation equivariance is the CV superpower.",
+    build: {
+      filename: "conv.py",
+      starter: "def conv1d_valid(signal, kernel):\n    \"\"\"1D valid convolution, no padding.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("c", conv1d_valid([1,2,3,4],[1,0]) == [1,2,3])\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Conv1d", description: "You can convolve 1D signals — core operation behind CNNs." },
+  },
+  // Phase 11 LLM Engineering (extend)
   {
     id: "01-prompt-engineering",
     phaseId: 11,
@@ -280,6 +778,32 @@ const SPECS = [
     },
     artifact: { name: "Token budgeting", description: "You can estimate prompt size — first step in context engineering for LLM apps." },
   },
+  {
+    id: "02-few-shot-cot",
+    phaseId: 11,
+    lessonNumber: 2,
+    title: "Few-Shot & Chain-of-Thought",
+    concept: "Show examples in the prompt (few-shot). Ask the model to think step-by-step (CoT) before the final answer.",
+    build: {
+      filename: "cot.py",
+      starter: "def format_cot_prompt(question):\n    \"\"\"Append 'Let's think step by step.' to question.\"\"\"\n    # TODO\n    return question\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    p = format_cot_prompt("2+2?")\n    __check("cot", "step by step" in p.lower())\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "CoT prompt", description: "You can trigger chain-of-thought — improves reasoning on math and logic tasks." },
+  },
+  {
+    id: "03-structured-outputs",
+    phaseId: 11,
+    lessonNumber: 3,
+    title: "Structured Outputs",
+    concept: "JSON mode and tool schemas force parseable outputs. Agents need structured data, not prose.",
+    build: {
+      filename: "structured.py",
+      starter: "def extract_json_keys(obj):\n    \"\"\"Return sorted keys of dict.\"\"\"\n    # TODO\n    return []\n",
+      tests: `def __check(name, ok, msg=""):\n    __results.append({"name": name, "pass": bool(ok), "msg": msg})\ntry:\n    __check("k", extract_json_keys({"a":1,"b":2}) == ["a","b"])\nexcept Exception as e:\n    __check("runtime", False, str(e))\n`,
+    },
+    artifact: { name: "Schema keys", description: "You can validate JSON shape — prerequisite for tool calling and agents." },
+  },
 ];
 
 const PHASE_NAMES = {
@@ -287,8 +811,32 @@ const PHASE_NAMES = {
   1: "Math Foundations",
   2: "ML Fundamentals",
   3: "Deep Learning Core",
+  4: "Computer Vision",
   11: "LLM Engineering",
 };
+
+const CATALOG_PATH = path.join(ROOT, "apps/web/src/content/lessons/catalog.json");
+
+async function patchCatalogInteractive(manifest) {
+  try {
+    const raw = await fs.readFile(CATALOG_PATH, "utf8");
+    const catalog = JSON.parse(raw);
+    const interactiveIds = new Set(manifest.map((m) => m.id));
+    const titleById = Object.fromEntries(manifest.map((m) => [m.id, m.title]));
+    for (const lesson of catalog.lessons) {
+      lesson.interactive = interactiveIds.has(lesson.id);
+      if (lesson.interactive && titleById[lesson.id]) {
+        lesson.title = titleById[lesson.id];
+      }
+    }
+    catalog.interactiveCount = manifest.length;
+    catalog.lessonCount = catalog.lessons.length;
+    await fs.writeFile(CATALOG_PATH, JSON.stringify(catalog, null, 2));
+    console.log(`Patched catalog: ${catalog.interactiveCount} interactive`);
+  } catch (e) {
+    console.warn("Could not patch catalog.json:", e.message);
+  }
+}
 
 async function loadCompiled(id) {
   try {
@@ -431,6 +979,8 @@ async function main() {
   const entries = manifest.map((m, i) => `  "${m.id}": lesson_${i} as Lesson,`).join("\n");
   const registry = `/* AUTO-GENERATED by scripts/build-interactive-lessons.mjs — do not edit */\nimport type { Lesson } from "@/lib/lesson-types";\n${imports}\n\nexport const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {\n${entries}\n};\n`;
   await fs.writeFile(registryPath, registry);
+
+  await patchCatalogInteractive(manifest);
 
   console.log(`\nManifest: ${manifest.length} interactive lessons`);
 }

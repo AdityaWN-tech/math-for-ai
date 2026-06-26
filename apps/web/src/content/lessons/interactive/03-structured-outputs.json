@@ -1,0 +1,71 @@
+{
+  "id": "03-structured-outputs",
+  "title": "Structured Outputs",
+  "motto": "Your LLM returns a string. Your application needs JSON. That gap has crashed more production systems than any model hallucination. Structured output is the bridge between natural language and typed data. Get it right and your LLM becomes a reliable API. Get it wrong and you're parsing free-text with regex at 3am.",
+  "phase": {
+    "id": 11,
+    "name": "LLM Engineering",
+    "lessonNumber": 3
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your LLM returns a string. Your application needs JSON. That gap has crashed more production systems than any model hallucination. Structured output is the bridge between natural language and typed data. Get it right and your LLM becomes a reliable API. Get it wrong and you're parsing free-text with regex at 3am."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You ask an LLM: \"Extract the product name, price, and availability from this text.\" It responds:",
+        "That is a perfectly correct answer. It is also completely useless to your application. Your inventory system needs `{\"product\": \"Sony WH-1000XM5\", \"price\": 348.00, \"in_stock\": true}`. You need a JSON object with specific keys, specific types, and specific value constraints. You do not need a sentence."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "JSON mode and tool schemas force parseable outputs. Agents need structured data, not prose."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement structured",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "structured.py",
+        "starter": "def extract_json_keys(obj):\n    \"\"\"Return sorted keys of dict.\"\"\"\n    # TODO\n    return []\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"k\", extract_json_keys({\"a\":1,\"b\":2}) == [\"a\",\"b\"])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Schema keys",
+        "description": "You can validate JSON shape — prerequisite for tool calling and agents."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

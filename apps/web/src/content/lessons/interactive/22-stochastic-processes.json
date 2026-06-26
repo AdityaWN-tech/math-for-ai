@@ -1,0 +1,71 @@
+{
+  "id": "22-stochastic-processes",
+  "title": "Stochastic Processes",
+  "motto": "Randomness with structure. The math behind random walks, Markov chains, and diffusion models.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 22
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Randomness with structure. The math behind random walks, Markov chains, and diffusion models."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Many AI systems involve randomness that evolves over time. Not static randomness -- structured, sequential randomness where each step depends on what came before.",
+        "Language models generate tokens one at a time. Each token depends on the previous context. The model outputs a probability distribution, samples from it, and moves on. That is a stochastic process."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Markov chains: next state depends only on current. PageRank and RL policies are Markov processes."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement markov",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "markov.py",
+        "starter": "def markov_step(dist, P):\n    \"\"\"dist: state probs, P[i][j]=P(j|i). Return next distribution.\"\"\"\n    # TODO: new[j] = sum_i dist[i]*P[i][j]\n    return []\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    P = [[0.9,0.1],[0.5,0.5]]\n    n = markov_step([1.0,0.0], P)\n    __check(\"sum\", abs(sum(n)-1) < 1e-9)\n    __check(\"s0\", abs(n[0]-0.9) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Markov step",
+        "description": "You can advance a probability distribution — core to RL and generative chains."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

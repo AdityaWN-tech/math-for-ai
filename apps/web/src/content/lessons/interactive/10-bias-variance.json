@@ -1,0 +1,71 @@
+{
+  "id": "10-bias-variance",
+  "title": "Bias–Variance",
+  "motto": "Every model error comes from one of three sources: bias, variance, or noise. You can only control the first two.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 10
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Every model error comes from one of three sources: bias, variance, or noise. You can only control the first two."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You trained a model. It has some error on test data. Where does that error come from?",
+        "If your model is too simple (linear regression on a curved dataset), it will consistently miss the true pattern. That is bias. If your model is too complex (degree-20 polynomial on 15 data points), it will fit the training data perfectly but give wildly different predictions on new data. That is variance."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "High bias = underfitting. High variance = overfitting. MSE decomposes into bias² + variance + noise."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement biasvar",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "biasvar.py",
+        "starter": "def mse(y_true, y_pred):\n    \"\"\"Mean squared error.\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"m\", mse([1,2],[1,2]) == 0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "MSE",
+        "description": "You can measure fit error — the quantity bias and variance trade off."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

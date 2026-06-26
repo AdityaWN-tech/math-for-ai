@@ -1,0 +1,71 @@
+{
+  "id": "16-sampling-methods",
+  "title": "Sampling Methods",
+  "motto": "Sampling is how AI explores the space of possibilities.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 16
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Sampling is how AI explores the space of possibilities."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A language model finishes processing your prompt and produces a vector of 50,000 logits. One for every token in its vocabulary. Now it has to pick one. How?",
+        "If it always picks the highest-probability token, every response is identical. Deterministic. Boring. If it picks uniformly at random, the output is gibberish. The answer lives somewhere between these extremes, and that somewhere is controlled by sampling."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Mini-batches are random samples from the dataset. Shuffling each epoch prevents order bias."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement sample",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "sample.py",
+        "starter": "def batch_indices(n, batch_size, start=0):\n    \"\"\"Return index list [start, ..., start+batch_size-1] capped at n-1.\"\"\"\n    # TODO\n    return []\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    b = batch_indices(10, 3, 0)\n    __check(\"len\", len(b) == 3)\n    __check(\"idx\", b == [0,1,2])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Batch indexing",
+        "description": "You can slice batch indices — how DataLoader yields mini-batches."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

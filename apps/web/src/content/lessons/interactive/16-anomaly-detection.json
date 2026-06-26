@@ -1,0 +1,71 @@
+{
+  "id": "16-anomaly-detection",
+  "title": "Anomaly Detection",
+  "motto": "Normal is easy to define. Abnormal is whatever doesn't fit.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 16
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Normal is easy to define. Abnormal is whatever doesn't fit."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A credit card is used in New York at 2pm, then in Tokyo at 2:05pm. A factory sensor reads 150 degrees when the normal range is 80-120. A server sends 50,000 requests per second when the daily average is 200.",
+        "These are anomalies. Finding them matters. Fraud costs billions. Equipment failures cost downtime. Network intrusions cost data."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Z-score flags points far from the mean. Simple baseline before isolation forests and autoencoders."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement anomaly",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "anomaly.py",
+        "starter": "def z_score(x, mean, std):\n    \"\"\"Standard score (x-mean)/std.\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"z\", z_score(110, 100, 5) == 2.0)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Z-score",
+        "description": "You can flag outliers statistically — monitoring and fraud detection starter."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

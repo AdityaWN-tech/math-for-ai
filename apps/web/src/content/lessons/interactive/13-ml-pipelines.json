@@ -1,0 +1,71 @@
+{
+  "id": "13-ml-pipelines",
+  "title": "ML Pipelines",
+  "motto": "A model is not a product. A pipeline is. The pipeline is everything from raw data to deployed prediction, and every step must be reproducible.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 13
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A model is not a product. A pipeline is. The pipeline is everything from raw data to deployed prediction, and every step must be reproducible."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have a notebook that loads data, fills missing values with the median, scales features, trains a model, and prints accuracy. It works. You ship it.",
+        "A month later, someone retrains the model and gets different results. The median was computed on the full dataset including test data (data leakage). The scaling parameters were not saved, so inference uses different statistics. The feature engineering code was copy-pasted between training and serving, and the copies diverged. A categorical column gained a new value in production that the encoder has never seen."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Pipelines chain preprocess → train → evaluate. sklearn.Pipeline prevents train/test leakage."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement pipeline",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "pipeline.py",
+        "starter": "def run_pipeline(steps, data):\n    \"\"\"Apply list of callables in order: data = fn(data).\"\"\"\n    # TODO\n    return data\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    r = run_pipeline([lambda x: x+1, lambda x: x*2], 3)\n    __check(\"p\", r == 8)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Pipeline compose",
+        "description": "You can chain transforms — how production ML pipelines avoid leakage."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

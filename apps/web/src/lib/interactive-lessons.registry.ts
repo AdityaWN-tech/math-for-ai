@@ -22,14 +22,54 @@ import lesson_18 from "@/content/lessons/interactive/07-bayes-theorem.json";
 import lesson_19 from "@/content/lessons/interactive/08-optimization.json";
 import lesson_20 from "@/content/lessons/interactive/09-information-theory.json";
 import lesson_21 from "@/content/lessons/interactive/10-dimensionality-reduction.json";
-import lesson_22 from "@/content/lessons/interactive/01-what-is-machine-learning.json";
-import lesson_23 from "@/content/lessons/interactive/02-linear-regression.json";
-import lesson_24 from "@/content/lessons/interactive/03-logistic-regression.json";
-import lesson_25 from "@/content/lessons/interactive/04-decision-trees.json";
-import lesson_26 from "@/content/lessons/interactive/05-support-vector-machines.json";
-import lesson_27 from "@/content/lessons/interactive/01-the-perceptron.json";
-import lesson_28 from "@/content/lessons/interactive/02-multi-layer-networks.json";
-import lesson_29 from "@/content/lessons/interactive/01-prompt-engineering.json";
+import lesson_22 from "@/content/lessons/interactive/11-singular-value-decomposition.json";
+import lesson_23 from "@/content/lessons/interactive/12-tensor-operations.json";
+import lesson_24 from "@/content/lessons/interactive/13-numerical-stability.json";
+import lesson_25 from "@/content/lessons/interactive/14-norms-and-distances.json";
+import lesson_26 from "@/content/lessons/interactive/15-statistics-for-ml.json";
+import lesson_27 from "@/content/lessons/interactive/16-sampling-methods.json";
+import lesson_28 from "@/content/lessons/interactive/17-linear-systems.json";
+import lesson_29 from "@/content/lessons/interactive/18-convex-optimization.json";
+import lesson_30 from "@/content/lessons/interactive/19-complex-numbers.json";
+import lesson_31 from "@/content/lessons/interactive/20-fourier-transform.json";
+import lesson_32 from "@/content/lessons/interactive/21-graph-theory.json";
+import lesson_33 from "@/content/lessons/interactive/22-stochastic-processes.json";
+import lesson_34 from "@/content/lessons/interactive/01-what-is-machine-learning.json";
+import lesson_35 from "@/content/lessons/interactive/02-linear-regression.json";
+import lesson_36 from "@/content/lessons/interactive/03-logistic-regression.json";
+import lesson_37 from "@/content/lessons/interactive/04-decision-trees.json";
+import lesson_38 from "@/content/lessons/interactive/05-support-vector-machines.json";
+import lesson_39 from "@/content/lessons/interactive/06-knn-and-distances.json";
+import lesson_40 from "@/content/lessons/interactive/07-unsupervised-learning.json";
+import lesson_41 from "@/content/lessons/interactive/08-feature-engineering.json";
+import lesson_42 from "@/content/lessons/interactive/09-model-evaluation.json";
+import lesson_43 from "@/content/lessons/interactive/10-bias-variance.json";
+import lesson_44 from "@/content/lessons/interactive/11-ensemble-methods.json";
+import lesson_45 from "@/content/lessons/interactive/12-hyperparameter-tuning.json";
+import lesson_46 from "@/content/lessons/interactive/13-ml-pipelines.json";
+import lesson_47 from "@/content/lessons/interactive/14-naive-bayes.json";
+import lesson_48 from "@/content/lessons/interactive/15-time-series.json";
+import lesson_49 from "@/content/lessons/interactive/16-anomaly-detection.json";
+import lesson_50 from "@/content/lessons/interactive/17-imbalanced-data.json";
+import lesson_51 from "@/content/lessons/interactive/18-feature-selection.json";
+import lesson_52 from "@/content/lessons/interactive/01-the-perceptron.json";
+import lesson_53 from "@/content/lessons/interactive/02-multi-layer-networks.json";
+import lesson_54 from "@/content/lessons/interactive/03-backpropagation.json";
+import lesson_55 from "@/content/lessons/interactive/04-activation-functions.json";
+import lesson_56 from "@/content/lessons/interactive/05-loss-functions.json";
+import lesson_57 from "@/content/lessons/interactive/06-optimizers.json";
+import lesson_58 from "@/content/lessons/interactive/07-regularization.json";
+import lesson_59 from "@/content/lessons/interactive/08-weight-initialization.json";
+import lesson_60 from "@/content/lessons/interactive/09-learning-rate-schedules.json";
+import lesson_61 from "@/content/lessons/interactive/10-mini-framework.json";
+import lesson_62 from "@/content/lessons/interactive/11-intro-to-pytorch.json";
+import lesson_63 from "@/content/lessons/interactive/12-intro-to-jax.json";
+import lesson_64 from "@/content/lessons/interactive/13-debugging-neural-networks.json";
+import lesson_65 from "@/content/lessons/interactive/01-image-fundamentals.json";
+import lesson_66 from "@/content/lessons/interactive/02-convolutions-from-scratch.json";
+import lesson_67 from "@/content/lessons/interactive/01-prompt-engineering.json";
+import lesson_68 from "@/content/lessons/interactive/02-few-shot-cot.json";
+import lesson_69 from "@/content/lessons/interactive/03-structured-outputs.json";
 
 export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "01-dev-environment": lesson_0 as Lesson,
@@ -54,12 +94,52 @@ export const INTERACTIVE_LESSONS_REGISTRY: Record<string, Lesson> = {
   "08-optimization": lesson_19 as Lesson,
   "09-information-theory": lesson_20 as Lesson,
   "10-dimensionality-reduction": lesson_21 as Lesson,
-  "01-what-is-machine-learning": lesson_22 as Lesson,
-  "02-linear-regression": lesson_23 as Lesson,
-  "03-logistic-regression": lesson_24 as Lesson,
-  "04-decision-trees": lesson_25 as Lesson,
-  "05-support-vector-machines": lesson_26 as Lesson,
-  "01-the-perceptron": lesson_27 as Lesson,
-  "02-multi-layer-networks": lesson_28 as Lesson,
-  "01-prompt-engineering": lesson_29 as Lesson,
+  "11-singular-value-decomposition": lesson_22 as Lesson,
+  "12-tensor-operations": lesson_23 as Lesson,
+  "13-numerical-stability": lesson_24 as Lesson,
+  "14-norms-and-distances": lesson_25 as Lesson,
+  "15-statistics-for-ml": lesson_26 as Lesson,
+  "16-sampling-methods": lesson_27 as Lesson,
+  "17-linear-systems": lesson_28 as Lesson,
+  "18-convex-optimization": lesson_29 as Lesson,
+  "19-complex-numbers": lesson_30 as Lesson,
+  "20-fourier-transform": lesson_31 as Lesson,
+  "21-graph-theory": lesson_32 as Lesson,
+  "22-stochastic-processes": lesson_33 as Lesson,
+  "01-what-is-machine-learning": lesson_34 as Lesson,
+  "02-linear-regression": lesson_35 as Lesson,
+  "03-logistic-regression": lesson_36 as Lesson,
+  "04-decision-trees": lesson_37 as Lesson,
+  "05-support-vector-machines": lesson_38 as Lesson,
+  "06-knn-and-distances": lesson_39 as Lesson,
+  "07-unsupervised-learning": lesson_40 as Lesson,
+  "08-feature-engineering": lesson_41 as Lesson,
+  "09-model-evaluation": lesson_42 as Lesson,
+  "10-bias-variance": lesson_43 as Lesson,
+  "11-ensemble-methods": lesson_44 as Lesson,
+  "12-hyperparameter-tuning": lesson_45 as Lesson,
+  "13-ml-pipelines": lesson_46 as Lesson,
+  "14-naive-bayes": lesson_47 as Lesson,
+  "15-time-series": lesson_48 as Lesson,
+  "16-anomaly-detection": lesson_49 as Lesson,
+  "17-imbalanced-data": lesson_50 as Lesson,
+  "18-feature-selection": lesson_51 as Lesson,
+  "01-the-perceptron": lesson_52 as Lesson,
+  "02-multi-layer-networks": lesson_53 as Lesson,
+  "03-backpropagation": lesson_54 as Lesson,
+  "04-activation-functions": lesson_55 as Lesson,
+  "05-loss-functions": lesson_56 as Lesson,
+  "06-optimizers": lesson_57 as Lesson,
+  "07-regularization": lesson_58 as Lesson,
+  "08-weight-initialization": lesson_59 as Lesson,
+  "09-learning-rate-schedules": lesson_60 as Lesson,
+  "10-mini-framework": lesson_61 as Lesson,
+  "11-intro-to-pytorch": lesson_62 as Lesson,
+  "12-intro-to-jax": lesson_63 as Lesson,
+  "13-debugging-neural-networks": lesson_64 as Lesson,
+  "01-image-fundamentals": lesson_65 as Lesson,
+  "02-convolutions-from-scratch": lesson_66 as Lesson,
+  "01-prompt-engineering": lesson_67 as Lesson,
+  "02-few-shot-cot": lesson_68 as Lesson,
+  "03-structured-outputs": lesson_69 as Lesson,
 };

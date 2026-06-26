@@ -1,0 +1,71 @@
+{
+  "id": "15-time-series",
+  "title": "Time Series",
+  "motto": "Past performance does predict future results -- if you check for stationarity first.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 15
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Past performance does predict future results -- if you check for stationarity first."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have data ordered by time. Daily sales, hourly temperature, per-minute CPU usage, weekly stock prices. You want to predict the next value, the next week, the next quarter.",
+        "You reach for your standard ML toolkit: random train/test split, cross-validation, feature matrix in, prediction out. Every step is wrong."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Sliding windows turn sequences into supervised samples. Forecast next step from past W values."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement timeseries",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "timeseries.py",
+        "starter": "def sliding_windows(series, window):\n    \"\"\"Return list of consecutive slices of length window.\"\"\"\n    # TODO\n    return []\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    w = sliding_windows([1,2,3,4], 2)\n    __check(\"n\", len(w) == 3)\n    __check(\"first\", w[0] == [1,2])\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Windowing",
+        "description": "You can build sliding windows — how sequence models create training rows."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

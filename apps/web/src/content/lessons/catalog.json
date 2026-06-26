@@ -23,7 +23,7 @@
     19
   ],
   "lessonCount": 502,
-  "interactiveCount": 30,
+  "interactiveCount": 70,
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -229,7 +229,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-singular-value-decomposition"
     },
     {
@@ -238,7 +238,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-tensor-operations"
     },
     {
@@ -247,25 +247,25 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-numerical-stability"
     },
     {
       "id": "14-norms-and-distances",
-      "title": "Norms And Distances",
+      "title": "Norms & Distances",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-norms-and-distances"
     },
     {
       "id": "15-statistics-for-ml",
-      "title": "Statistics For Ml",
+      "title": "Statistics for ML",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-statistics-for-ml"
     },
     {
@@ -274,7 +274,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-sampling-methods"
     },
     {
@@ -283,7 +283,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-linear-systems"
     },
     {
@@ -292,7 +292,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-convex-optimization"
     },
     {
@@ -301,7 +301,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 19,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/19-complex-numbers"
     },
     {
@@ -310,7 +310,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 20,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/20-fourier-transform"
     },
     {
@@ -319,7 +319,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 21,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/21-graph-theory"
     },
     {
@@ -328,7 +328,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 22,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/22-stochastic-processes"
     },
     {
@@ -378,11 +378,11 @@
     },
     {
       "id": "06-knn-and-distances",
-      "title": "Knn And Distances",
+      "title": "kNN & Distances",
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-knn-and-distances"
     },
     {
@@ -391,7 +391,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-unsupervised-learning"
     },
     {
@@ -400,7 +400,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-feature-engineering"
     },
     {
@@ -409,16 +409,16 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-model-evaluation"
     },
     {
       "id": "10-bias-variance",
-      "title": "Bias Variance",
+      "title": "Bias–Variance",
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-bias-variance"
     },
     {
@@ -427,7 +427,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-ensemble-methods"
     },
     {
@@ -436,16 +436,16 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-hyperparameter-tuning"
     },
     {
       "id": "13-ml-pipelines",
-      "title": "Ml Pipelines",
+      "title": "ML Pipelines",
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-ml-pipelines"
     },
     {
@@ -454,7 +454,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 14,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/14-naive-bayes"
     },
     {
@@ -463,7 +463,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 15,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/15-time-series"
     },
     {
@@ -472,7 +472,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 16,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/16-anomaly-detection"
     },
     {
@@ -481,7 +481,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 17,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/17-imbalanced-data"
     },
     {
@@ -490,7 +490,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 18,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/18-feature-selection"
     },
     {
@@ -517,7 +517,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-backpropagation"
     },
     {
@@ -526,7 +526,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-activation-functions"
     },
     {
@@ -535,7 +535,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-loss-functions"
     },
     {
@@ -544,7 +544,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-optimizers"
     },
     {
@@ -553,7 +553,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-regularization"
     },
     {
@@ -562,7 +562,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-weight-initialization"
     },
     {
@@ -571,7 +571,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-learning-rate-schedules"
     },
     {
@@ -580,25 +580,25 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-mini-framework"
     },
     {
       "id": "11-intro-to-pytorch",
-      "title": "Intro To Pytorch",
+      "title": "Intro to PyTorch",
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-intro-to-pytorch"
     },
     {
       "id": "12-intro-to-jax",
-      "title": "Intro To Jax",
+      "title": "Intro to JAX",
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-intro-to-jax"
     },
     {
@@ -607,7 +607,7 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 13,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/13-debugging-neural-networks"
     },
     {
@@ -616,16 +616,16 @@
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-image-fundamentals"
     },
     {
       "id": "02-convolutions-from-scratch",
-      "title": "Convolutions From Scratch",
+      "title": "Convolutions from Scratch",
       "phaseId": 4,
       "phaseName": "Computer Vision",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-convolutions-from-scratch"
     },
     {
@@ -1881,11 +1881,11 @@
     },
     {
       "id": "02-few-shot-cot",
-      "title": "Few Shot Cot",
+      "title": "Few-Shot & Chain-of-Thought",
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-few-shot-cot"
     },
     {
@@ -1894,7 +1894,7 @@
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-structured-outputs"
     },
     {
