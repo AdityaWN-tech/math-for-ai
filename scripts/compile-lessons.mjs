@@ -12,25 +12,26 @@ const ROOT = path.join(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "apps/web/src/content/lessons/compiled");
 const CATALOG_PATH = path.join(ROOT, "apps/web/src/content/lessons/catalog.json");
 
+const MANIFEST_PATH = path.join(ROOT, "apps/web/src/content/lessons/interactive-manifest.json");
+
 const REPO = "rohitg00/ai-engineering-from-scratch";
 const BRANCH = "main";
 const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 
-/** Hand-authored interactive lessons (apps/web/src/content/lessons/*.json) */
-const INTERACTIVE_LESSONS_META = [
-  { id: "01-dev-environment", title: "Dev Environment", phaseId: 0, lessonNumber: 1 },
-  { id: "02-git-and-collaboration", title: "Git & Collaboration", phaseId: 0, lessonNumber: 2 },
-  { id: "03-gpu-setup-and-cloud", title: "GPU Setup & Cloud", phaseId: 0, lessonNumber: 3 },
-  { id: "04-apis-and-keys", title: "APIs & Keys", phaseId: 0, lessonNumber: 4 },
-  { id: "05-jupyter-notebooks", title: "Jupyter Notebooks", phaseId: 0, lessonNumber: 5 },
-  { id: "06-python-environments", title: "Python Environments", phaseId: 0, lessonNumber: 6 },
-  { id: "07-docker-for-ai", title: "Docker for AI", phaseId: 0, lessonNumber: 7 },
-  { id: "01-linear-algebra-intuition", title: "Linear Algebra Intuition", phaseId: 1, lessonNumber: 1 },
-  { id: "02-vectors-matrices-operations", title: "Vectors, Matrices & Operations", phaseId: 1, lessonNumber: 2 },
-  { id: "03-matrix-transformations", title: "Matrix Transformations", phaseId: 1, lessonNumber: 3 },
-];
+/** Loaded from interactive-manifest.json (see build-interactive-lessons.mjs) */
+let INTERACTIVE_LESSONS_META = [];
+let INTERACTIVE_IDS = new Set();
 
-const INTERACTIVE_IDS = new Set(INTERACTIVE_LESSONS_META.map((l) => l.id));
+async function loadInteractiveManifest() {
+  try {
+    const raw = await fs.readFile(MANIFEST_PATH, "utf8");
+    const data = JSON.parse(raw);
+    INTERACTIVE_LESSONS_META = data.lessons ?? [];
+    INTERACTIVE_IDS = new Set(INTERACTIVE_LESSONS_META.map((l) => l.id));
+  } catch {
+    console.warn("No interactive-manifest.json — run node scripts/build-interactive-lessons.mjs first");
+  }
+}
 
 const PHASE_META = {
   0: { dir: "00-setup-and-tooling", name: "Setup & Tooling" },
@@ -215,6 +216,7 @@ async function compilePhase(phaseNum) {
 }
 
 async function main() {
+  await loadInteractiveManifest();
   const entries = [];
 
   for (const phaseNum of PHASES_TO_COMPILE) {
@@ -226,10 +228,10 @@ async function main() {
     id: l.id,
     title: l.title,
     phaseId: l.phaseId,
-    phaseName: PHASE_META[l.phaseId].name,
+    phaseName: l.phaseName ?? PHASE_META[l.phaseId]?.name ?? `Phase ${l.phaseId}`,
     lessonNumber: l.lessonNumber,
     interactive: true,
-    path: `/demo/${l.id}`,
+    path: l.path ?? `/demo/${l.id}`,
   }));
 
   const byId = new Map();

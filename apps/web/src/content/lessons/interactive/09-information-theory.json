@@ -1,0 +1,71 @@
+{
+  "id": "09-information-theory",
+  "title": "Information Theory",
+  "motto": "Information theory measures surprise. Loss functions are built on it.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 9
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Information theory measures surprise. Loss functions are built on it."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You call `CrossEntropyLoss()` in every classification model you train. You see \"perplexity\" in every language model paper. You read about KL divergence in VAEs, distillation, and RLHF. These are not disconnected concepts. They are all the same idea wearing different hats.",
+        "Information theory gives you the language to reason about uncertainty, compression, and prediction. Claude Shannon invented it in 1948 to solve communication problems. Turns out, training a neural network is a communication problem: the model is trying to transmit the correct label through a noisy channel of learned weights."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Cross-entropy H(p,q) = -Σ p log q. Language models minimize cross-entropy between predicted and true token distributions."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement entropy",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "entropy.py",
+        "starter": "import math\n\ndef cross_entropy(p, q):\n    \"\"\"Cross-entropy for discrete distributions p (true), q (pred).\"\"\"\n    # TODO: assume same length, sum -p_i log q_i\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    ce = cross_entropy([1.0, 0.0], [0.9, 0.1])\n    __check(\"pos\", ce > 0)\n    __check(\"match\", abs(cross_entropy([0.5,0.5],[0.5,0.5]) - math.log(2)) < 1e-5)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Cross-entropy",
+        "description": "You can compute CE — the loss behind classification and LLM training."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

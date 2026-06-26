@@ -1,0 +1,71 @@
+{
+  "id": "01-what-is-machine-learning",
+  "title": "What is Machine Learning",
+  "motto": "Machine learning is teaching computers to find patterns in data instead of writing rules by hand.",
+  "phase": {
+    "id": 2,
+    "name": "ML Fundamentals",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Machine learning is teaching computers to find patterns in data instead of writing rules by hand."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You want to build a spam filter. The traditional approach: sit down and write hundreds of rules. \"If the email contains 'FREE MONEY', mark it spam. If it has more than 3 exclamation marks, mark it spam.\" You spend weeks writing rules. Then spammers change their wording. Your rules break. You write more rules. The cycle never ends.",
+        "Machine learning flips this. Instead of writing rules, you give the computer thousands of labeled emails (\"spam\" or \"not spam\") and let it figure out the rules on its own. The computer finds patterns you never would have thought of. When spammers change tactics, you retrain on new data instead of rewriting code."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Supervised learning: learn f(x)→y from labeled examples. Split data before you touch the model."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement ml_basics",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "ml_basics.py",
+        "starter": "def train_test_split(n, train_ratio=0.8):\n    \"\"\"Return (train_size, test_size) ints summing to n.\"\"\"\n    # TODO\n    return (0, 0)\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    tr, te = train_test_split(100)\n    __check(\"sum\", tr+te == 100)\n    __check(\"ratio\", tr == 80)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "ML framing",
+        "description": "You can split datasets and explain learning-from-data vs hand-written rules."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

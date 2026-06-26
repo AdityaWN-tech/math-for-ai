@@ -1,0 +1,71 @@
+{
+  "id": "11-linux-for-ai",
+  "title": "Linux for AI",
+  "motto": "Most AI runs on Linux. You need to know enough to not be stuck.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 11
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Most AI runs on Linux. You need to know enough to not be stuck."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You develop on macOS or Windows. But the moment you SSH into a cloud GPU box, rent a Lambda instance, or spin up an EC2 machine, you land in Ubuntu. The terminal is your only interface. There is no Finder, no Explorer, no GUI. If you can't navigate the file system, install packages, and manage processes from the command line, you're stuck paying for idle GPU hours while googling \"how to unzip a file in Linux.\"",
+        "This is a survival guide. It covers exactly what you need to operate on a remote Linux machine for AI work. Nothing more."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Cloud GPUs and Docker containers run Linux. Know paths, permissions, and process lists before you SSH into a training box."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement paths",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "paths.py",
+        "starter": "def basename(path):\n    \"\"\"Return final path segment (like os.path.basename).\"\"\"\n    # TODO\n    return \"\"\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"file\", basename(\"/data/models/ckpt.pt\") == \"ckpt.pt\")\n    __check(\"root\", basename(\"/\") == \"\")\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Path literacy",
+        "description": "You can navigate POSIX paths on remote Linux hosts where most training runs."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T06:57:07.825Z",
+  "generatedAt": "2026-06-26T07:10:54.316Z",
   "phases": [
     0,
     1,
@@ -23,7 +23,7 @@
     19
   ],
   "lessonCount": 502,
-  "interactiveCount": 10,
+  "interactiveCount": 30,
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -94,7 +94,7 @@
       "phaseId": 0,
       "phaseName": "Setup & Tooling",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-editor-setup"
     },
     {
@@ -103,34 +103,34 @@
       "phaseId": 0,
       "phaseName": "Setup & Tooling",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-data-management"
     },
     {
       "id": "10-terminal-and-shell",
-      "title": "Terminal And Shell",
+      "title": "Terminal & Shell",
       "phaseId": 0,
       "phaseName": "Setup & Tooling",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-terminal-and-shell"
     },
     {
       "id": "11-linux-for-ai",
-      "title": "Linux For Ai",
+      "title": "Linux for AI",
       "phaseId": 0,
       "phaseName": "Setup & Tooling",
       "lessonNumber": 11,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/11-linux-for-ai"
     },
     {
       "id": "12-debugging-and-profiling",
-      "title": "Debugging And Profiling",
+      "title": "Debugging & Profiling",
       "phaseId": 0,
       "phaseName": "Setup & Tooling",
       "lessonNumber": 12,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/12-debugging-and-profiling"
     },
     {
@@ -162,38 +162,38 @@
     },
     {
       "id": "04-calculus-for-ml",
-      "title": "Calculus For Ml",
+      "title": "Calculus for ML",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-calculus-for-ml"
     },
     {
       "id": "05-chain-rule-and-autodiff",
-      "title": "Chain Rule And Autodiff",
+      "title": "Chain Rule & Autodiff",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-chain-rule-and-autodiff"
     },
     {
       "id": "06-probability-and-distributions",
-      "title": "Probability And Distributions",
+      "title": "Probability & Distributions",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 6,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/06-probability-and-distributions"
     },
     {
       "id": "07-bayes-theorem",
-      "title": "Bayes Theorem",
+      "title": "Bayes' Theorem",
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 7,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/07-bayes-theorem"
     },
     {
@@ -202,7 +202,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 8,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/08-optimization"
     },
     {
@@ -211,7 +211,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 9,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/09-information-theory"
     },
     {
@@ -220,7 +220,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 10,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/10-dimensionality-reduction"
     },
     {
@@ -333,11 +333,11 @@
     },
     {
       "id": "01-what-is-machine-learning",
-      "title": "What Is Machine Learning",
+      "title": "What is Machine Learning",
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-what-is-machine-learning"
     },
     {
@@ -346,7 +346,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-linear-regression"
     },
     {
@@ -355,7 +355,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-logistic-regression"
     },
     {
@@ -364,7 +364,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 4,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/04-decision-trees"
     },
     {
@@ -373,7 +373,7 @@
       "phaseId": 2,
       "phaseName": "ML Fundamentals",
       "lessonNumber": 5,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/05-support-vector-machines"
     },
     {
@@ -499,16 +499,16 @@
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-the-perceptron"
     },
     {
       "id": "02-multi-layer-networks",
-      "title": "Multi Layer Networks",
+      "title": "Multi-Layer Networks",
       "phaseId": 3,
       "phaseName": "Deep Learning Core",
       "lessonNumber": 2,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/02-multi-layer-networks"
     },
     {
@@ -1876,7 +1876,7 @@
       "phaseId": 11,
       "phaseName": "LLM Engineering",
       "lessonNumber": 1,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/01-prompt-engineering"
     },
     {

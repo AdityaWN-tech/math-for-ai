@@ -35,7 +35,7 @@ Without `DATABASE_URL`, waitlist falls back to local file (not suitable for serv
 
 ```bash
 npm run infra:up          # Postgres on localhost:5433
-cd apps/web && npm run dev
+cd apps/web && npm run dev # App on http://localhost:7777
 ```
 
 Copy `apps/web/.env.example` → `apps/web/.env.local`:

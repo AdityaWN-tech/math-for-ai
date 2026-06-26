@@ -11,26 +11,29 @@ Curriculum spine: [ai-engineering-from-scratch](https://github.com/rohitg00/ai-e
 git clone git@github.com:t4tarzan/math-for-ai.git
 ```
 
-**Phase 0–19 roadmap live** — 502-lesson catalog, 10 interactive lessons (Phase 0 chain + math slice).
+**Phase 0–19 roadmap** — 502-lesson catalog, **30 interactive** lessons (setup → math → ML → DL → LLM eng).
 
 ```bash
-# Terminal 1 — app
+# Terminal 1 — app (http://localhost:7777)
 cd apps/web && npm install && npm run dev
 
 # Terminal 2 — Postgres (slice v2 deploy)
 cd ../.. && npm run infra:up   # requires Docker
 
-# Recompile full curriculum from upstream (all 20 phases)
+# Recompile curriculum + refresh interactive manifest
 npm run compile:lessons
+
+# Add interactive lessons: edit scripts/build-interactive-lessons.mjs, then:
+node scripts/build-interactive-lessons.mjs
 ```
 
 | URL | What |
 |-----|------|
-| http://localhost:3000 | Landing |
-| http://localhost:3000/lessons | Full roadmap — Phases 0–19 (502 lessons) |
-| http://localhost:3000/demo/01-dev-environment | **Start here** — Phase 0 setup |
-| http://localhost:3000/demo/07-docker-for-ai | Deploy Postgres |
-| http://localhost:3000/demo/01-linear-algebra-intuition | Phase 1 math + Pyodide |
+| http://localhost:7777 | Landing |
+| http://localhost:7777/lessons | Full roadmap — Phases 0–19 (502 lessons) |
+| http://localhost:7777/demo/01-dev-environment | **Start here** — Phase 0 setup |
+| http://localhost:7777/demo/07-docker-for-ai | Deploy Postgres |
+| http://localhost:7777/demo/01-linear-algebra-intuition | Phase 1 math + Pyodide |
 
 ## Docs
 

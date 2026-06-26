@@ -1,0 +1,71 @@
+{
+  "id": "10-dimensionality-reduction",
+  "title": "Dimensionality Reduction",
+  "motto": "High-dimensional data has structure. You find it by looking from the right angle.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 10
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "High-dimensional data has structure. You find it by looking from the right angle."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have a dataset with 784 features per sample. Maybe it is pixel values of handwritten digits. Maybe it is gene expression levels. Maybe it is user behavior signals. You cannot visualize 784 dimensions. You cannot plot them. You cannot even think about them.",
+        "But most of those 784 features are redundant. The actual information lives on a much smaller surface. A handwritten \"7\" does not need 784 independent numbers to describe it. It needs a few: the angle of the stroke, the length of the crossbar, how much it leans. The rest is noise."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "PCA finds directions of maximum variance. Project high-dimensional embeddings down for visualization and denoising."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement pca",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "pca.py",
+        "starter": "def center_columns(X):\n    \"\"\"X is list of rows. Return rows with each column mean subtracted.\"\"\"\n    # TODO\n    return X\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    X = [[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]]\n    C = center_columns(X)\n    col0 = sum(r[0] for r in C)/3\n    __check(\"c0\", abs(col0) < 1e-9)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Centering step",
+        "description": "You can center data — the required first step before PCA or covariance."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

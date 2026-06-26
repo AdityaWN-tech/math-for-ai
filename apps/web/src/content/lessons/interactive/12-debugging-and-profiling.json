@@ -1,0 +1,71 @@
+{
+  "id": "12-debugging-and-profiling",
+  "title": "Debugging & Profiling",
+  "motto": "The worst AI bugs don't crash. They train silently on garbage and report a beautiful loss curve.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 12
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The worst AI bugs don't crash. They train silently on garbage and report a beautiful loss curve."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "AI code fails differently than regular code. A web app crashes with a stack trace. A misconfigured training loop runs for 8 hours, burns $200 in GPU time, and produces a model that predicts the mean of every input. The code never errored. The bug was a tensor on the wrong device, a forgotten `.detach()`, or labels leaking into features.",
+        "You need debugging tools that catch these silent failures before they waste your time and compute."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "When loss NaNs or GPU sits idle, you profile. Estimate memory from parameter count before you launch a 70B run."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement profile",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "profile.py",
+        "starter": "def memory_gb(num_params, bytes_per_param=2):\n    \"\"\"Estimate GB for num_params at given bytes/param (fp16=2).\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    __check(\"7b\", abs(memory_gb(7_000_000_000) - 14.0) < 0.1)\n    __check(\"fp32\", abs(memory_gb(1_000_000_000, 4) - 4.0) < 0.1)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "VRAM estimator",
+        "description": "You can ballpark GPU memory from parameter count — avoids OOM surprises."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

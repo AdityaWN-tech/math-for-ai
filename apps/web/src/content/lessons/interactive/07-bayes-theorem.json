@@ -1,0 +1,71 @@
+{
+  "id": "07-bayes-theorem",
+  "title": "Bayes' Theorem",
+  "motto": "Probability is about what you expect. Bayes' theorem is about what you learn.",
+  "phase": {
+    "id": 1,
+    "name": "Math Foundations",
+    "lessonNumber": 7
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Probability is about what you expect. Bayes' theorem is about what you learn."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A medical test is 99% accurate. You test positive. What are the chances you actually have the disease?",
+        "Most people say 99%. The real answer depends on how rare the disease is. If 1 in 10,000 people have it, a positive result only gives you about a 1% chance of being sick. The other 99% of positive results are false alarms from healthy people."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Posterior ∝ likelihood × prior. Bayesian updating is how spam filters and medical tests reason under uncertainty."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement bayes",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "bayes.py",
+        "starter": "def bayes_posterior(prior, likelihood, evidence):\n    \"\"\"P(H|D) = P(D|H)*P(H)/P(D). All scalars in [0,1].\"\"\"\n    # TODO\n    return 0.0\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    p = bayes_posterior(0.01, 0.9, 0.1)\n    __check(\"range\", 0 <= p <= 1)\n    __check(\"calc\", abs(p - 0.09) < 1e-6)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Bayesian update",
+        "description": "You can compute posteriors — foundation for Naive Bayes and probabilistic ML."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "09-data-management",
+  "title": "Data Management",
+  "motto": "Data is the fuel. How you manage it determines how fast you go.",
+  "phase": {
+    "id": 0,
+    "name": "Setup & Tooling",
+    "lessonNumber": 9
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Data is the fuel. How you manage it determines how fast you go."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Every AI project starts with data. You need to find datasets, download them, convert between formats, split them for training and evaluation, and version them so experiments are reproducible. Doing this manually every time is slow and error-prone. You need a repeatable workflow."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "AI projects drown in datasets, checkpoints, and logs. Version data like code: splits, hashes, and clear train/val/test boundaries before training."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement data_splits",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "data_splits.py",
+        "starter": "def split_counts(n, train=0.8, val=0.1):\n    \"\"\"Return (train_n, val_n, test_n) ints summing to n.\"\"\"\n    # TODO\n    return (0, 0, 0)\n",
+        "tests": "def __check(name, ok, msg=\"\"):\n    __results.append({\"name\": name, \"pass\": bool(ok), \"msg\": msg})\ntry:\n    t,v,te = split_counts(100)\n    __check(\"sum\", t+v+te == 100)\n    __check(\"train\", t == 80)\n    __check(\"val\", v == 10)\nexcept Exception as e:\n    __check(\"runtime\", False, str(e))\n"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Split discipline",
+        "description": "You can size train/val/test splits and avoid leakage before any model lesson."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

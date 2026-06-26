@@ -1,0 +1,275 @@
+{
+  "generatedAt": "2026-06-26T07:06:19.530Z",
+  "lessons": [
+    {
+      "id": "01-dev-environment",
+      "title": "Dev Environment",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-dev-environment"
+    },
+    {
+      "id": "02-git-and-collaboration",
+      "title": "Git & Collaboration",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-git-and-collaboration"
+    },
+    {
+      "id": "03-gpu-setup-and-cloud",
+      "title": "GPU Setup & Cloud",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-gpu-setup-and-cloud"
+    },
+    {
+      "id": "04-apis-and-keys",
+      "title": "APIs & Keys",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-apis-and-keys"
+    },
+    {
+      "id": "05-jupyter-notebooks",
+      "title": "Jupyter Notebooks",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-jupyter-notebooks"
+    },
+    {
+      "id": "06-python-environments",
+      "title": "Python Environments",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-python-environments"
+    },
+    {
+      "id": "07-docker-for-ai",
+      "title": "Docker for AI",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-docker-for-ai"
+    },
+    {
+      "id": "08-editor-setup",
+      "title": "Editor Setup",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-editor-setup"
+    },
+    {
+      "id": "09-data-management",
+      "title": "Data Management",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 9,
+      "interactive": true,
+      "path": "/demo/09-data-management"
+    },
+    {
+      "id": "10-terminal-and-shell",
+      "title": "Terminal & Shell",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 10,
+      "interactive": true,
+      "path": "/demo/10-terminal-and-shell"
+    },
+    {
+      "id": "11-linux-for-ai",
+      "title": "Linux for AI",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 11,
+      "interactive": true,
+      "path": "/demo/11-linux-for-ai"
+    },
+    {
+      "id": "12-debugging-and-profiling",
+      "title": "Debugging & Profiling",
+      "phaseId": 0,
+      "phaseName": "Setup & Tooling",
+      "lessonNumber": 12,
+      "interactive": true,
+      "path": "/demo/12-debugging-and-profiling"
+    },
+    {
+      "id": "01-linear-algebra-intuition",
+      "title": "Linear Algebra Intuition",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-linear-algebra-intuition"
+    },
+    {
+      "id": "02-vectors-matrices-operations",
+      "title": "Vectors, Matrices & Operations",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-vectors-matrices-operations"
+    },
+    {
+      "id": "03-matrix-transformations",
+      "title": "Matrix Transformations",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-matrix-transformations"
+    },
+    {
+      "id": "04-calculus-for-ml",
+      "title": "Calculus for ML",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-calculus-for-ml"
+    },
+    {
+      "id": "05-chain-rule-and-autodiff",
+      "title": "Chain Rule & Autodiff",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-chain-rule-and-autodiff"
+    },
+    {
+      "id": "06-probability-and-distributions",
+      "title": "Probability & Distributions",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-probability-and-distributions"
+    },
+    {
+      "id": "07-bayes-theorem",
+      "title": "Bayes' Theorem",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-bayes-theorem"
+    },
+    {
+      "id": "08-optimization",
+      "title": "Optimization",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-optimization"
+    },
+    {
+      "id": "09-information-theory",
+      "title": "Information Theory",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 9,
+      "interactive": true,
+      "path": "/demo/09-information-theory"
+    },
+    {
+      "id": "10-dimensionality-reduction",
+      "title": "Dimensionality Reduction",
+      "phaseId": 1,
+      "phaseName": "Math Foundations",
+      "lessonNumber": 10,
+      "interactive": true,
+      "path": "/demo/10-dimensionality-reduction"
+    },
+    {
+      "id": "01-what-is-machine-learning",
+      "title": "What is Machine Learning",
+      "phaseId": 2,
+      "phaseName": "ML Fundamentals",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-what-is-machine-learning"
+    },
+    {
+      "id": "02-linear-regression",
+      "title": "Linear Regression",
+      "phaseId": 2,
+      "phaseName": "ML Fundamentals",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-linear-regression"
+    },
+    {
+      "id": "03-logistic-regression",
+      "title": "Logistic Regression",
+      "phaseId": 2,
+      "phaseName": "ML Fundamentals",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-logistic-regression"
+    },
+    {
+      "id": "04-decision-trees",
+      "title": "Decision Trees",
+      "phaseId": 2,
+      "phaseName": "ML Fundamentals",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-decision-trees"
+    },
+    {
+      "id": "05-support-vector-machines",
+      "title": "Support Vector Machines",
+      "phaseId": 2,
+      "phaseName": "ML Fundamentals",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-support-vector-machines"
+    },
+    {
+      "id": "01-the-perceptron",
+      "title": "The Perceptron",
+      "phaseId": 3,
+      "phaseName": "Deep Learning Core",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-the-perceptron"
+    },
+    {
+      "id": "02-multi-layer-networks",
+      "title": "Multi-Layer Networks",
+      "phaseId": 3,
+      "phaseName": "Deep Learning Core",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-multi-layer-networks"
+    },
+    {
+      "id": "01-prompt-engineering",
+      "title": "Prompt Engineering",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-prompt-engineering"
+    }
+  ]
+}
