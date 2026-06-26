@@ -1,0 +1,71 @@
+{
+  "id": "03-data-pipelines",
+  "title": "Data Pipelines",
+  "motto": "The model is a mirror. It reflects whatever data you feed it. Feed it garbage, it reflects garbage with perfect fluency.",
+  "phase": {
+    "id": 10,
+    "name": "LLMs from Scratch",
+    "lessonNumber": 3
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "The model is a mirror. It reflects whatever data you feed it. Feed it garbage, it reflects garbage with perfect fluency."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You have a tokenizer. Now you need data.",
+        "Not a dataset. Not a CSV file. Terabytes of text -- cleaned, deduplicated, filtered for quality, tokenized into fixed-length sequences, and served in randomized batches fast enough that your 8-GPU cluster never waits for the next batch."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Shuffle, pack, mask for pretraining. Web-scale dedup."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement data",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "data.py",
+        "starter": "def shard_count(tokens, shard_size):\n    return (tokens+shard_size-1)//shard_size\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"s\", shard_count(1000,300)==4)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Data shards",
+        "description": "Training shard count."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

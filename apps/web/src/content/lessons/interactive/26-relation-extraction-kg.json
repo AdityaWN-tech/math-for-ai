@@ -1,0 +1,71 @@
+{
+  "id": "26-relation-extraction-kg",
+  "title": "Relation Extraction",
+  "motto": "NER found the entities. Entity linking anchored them. Relation extraction finds the edges between them. A knowledge graph is the sum of nodes, edges, and their provenance.",
+  "phase": {
+    "id": 5,
+    "name": "NLP Foundations to Advanced",
+    "lessonNumber": 26
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "NER found the entities. Entity linking anchored them. Relation extraction finds the edges between them. A knowledge graph is the sum of nodes, edges, and their provenance."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "An analyst reads: \"Tim Cook became CEO of Apple in 2011.\" Four facts:",
+        "- `(Tim Cook, role, CEO)`\n- `(Tim Cook, employer, Apple)`\n- `(Tim Cook, start_date, 2011)`\n- `(Apple, type, Organization)`"
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Triples (subject, relation, object) build knowledge graphs."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement re",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "re.py",
+        "starter": "def triple(subject,predicate,obj):\n    return (subject,predicate,obj)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", triple(\"A\",\"knows\",\"B\")[1]==\"knows\")\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "KG triple",
+        "description": "Structured knowledge representation."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

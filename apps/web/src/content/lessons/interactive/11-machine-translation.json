@@ -1,0 +1,71 @@
+{
+  "id": "11-machine-translation",
+  "title": "Machine Translation",
+  "motto": "Translation is the task that paid for NLP research for thirty years and keeps paying now.",
+  "phase": {
+    "id": 5,
+    "name": "NLP Foundations to Advanced",
+    "lessonNumber": 11
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Translation is the task that paid for NLP research for thirty years and keeps paying now."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A model reads a sentence in one language and produces a sentence in another. Length varies. Word order varies. Some source words map to multiple target words and vice versa. Idioms refuse one-to-one mapping. \"I miss you\" in French is \"tu me manques\" — literally \"you are lacking to me.\" No word-level alignment survives that.",
+        "Machine translation is the task that forced NLP to invent encoder-decoders, attention, transformers, and eventually the whole LLM paradigm. Every step forward arrived because translation quality was measurable and the gap between human and machine was stubborn."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Seq2seq with attention revolutionized MT. Now transformers dominate."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement mt",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "mt.py",
+        "starter": "def bleu_ngram_match(ref,hyp,n=1):\n    return int(ref[:n]==hyp[:n])\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"b\", bleu_ngram_match(\"abc\",\"abc\")==1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "N-gram match",
+        "description": "Simplest BLEU building block."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

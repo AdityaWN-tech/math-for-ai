@@ -1,0 +1,71 @@
+{
+  "id": "12-voice-assistant-pipeline",
+  "title": "Voice Assistant Pipeline",
+  "motto": "Everything from lessons 01-11, stitched together. Build a voice assistant that listens, reasons, and talks back. In 2026 that is a solved engineering problem, not a research problem — but the integration details decide whether it ships.",
+  "phase": {
+    "id": 6,
+    "name": "Speech & Audio",
+    "lessonNumber": 12
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Everything from lessons 01-11, stitched together. Build a voice assistant that listens, reasons, and talks back. In 2026 that is a solved engineering problem, not a research problem — but the integration details decide whether it ships."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Build an end-to-end assistant:",
+        "1. Captures mic input (16 kHz mono).\n2. Detects start/end of user speech.\n3. Transcribes streaming.\n4. Passes transcript to an LLM that can call tools (timer, weather, calendar).\n5. Streams LLM text to a TTS.\n6. Plays audio back to the user.\n7. Stops if the user interrupts mid-response."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "VAD → ASR → LLM → TTS loop for conversational AI."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement voice",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "voice.py",
+        "starter": "def pipeline_latency(asr,llm,tts):\n    return asr+llm+tts\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", pipeline_latency(100,500,200)==800)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "E2E latency",
+        "description": "Voice agent latency budget."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 import BATCH2 from "./interactive-specs-batch2.mjs";
+import BATCH3 from "./interactive-specs-batch3.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -814,9 +815,19 @@ const PHASE_NAMES = {
   3: "Deep Learning Core",
   4: "Computer Vision",
   5: "NLP Foundations to Advanced",
+  6: "Speech & Audio",
   7: "Transformers Deep Dive",
   8: "Generative AI",
+  9: "Reinforcement Learning",
+  10: "LLMs from Scratch",
   11: "LLM Engineering",
+  12: "Multimodal AI",
+  13: "Tools & Protocols",
+  14: "Agent Engineering",
+  15: "Autonomous Systems",
+  16: "Multi-Agent Systems",
+  17: "AI Infrastructure",
+  18: "AI Safety & Ethics",
   19: "Capstone Projects",
 };
 
@@ -932,7 +943,7 @@ async function main() {
   await fs.mkdir(OUT, { recursive: true });
   const manifest = [];
 
-  for (const spec of [...SPECS, ...BATCH2]) {
+  for (const spec of [...SPECS, ...BATCH2, ...BATCH3]) {
     const compiled = await loadCompiled(spec.id);
     const lesson = buildLesson(spec, compiled);
     const outPath = path.join(OUT, `${spec.id}.json`);

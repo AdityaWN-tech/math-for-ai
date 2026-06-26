@@ -1,0 +1,71 @@
+{
+  "id": "03-audio-classification",
+  "title": "Audio Classification",
+  "motto": "Everything from \"dog barking vs siren\" to \"which language is this\" is audio classification. The features are mels. The architecture moves each decade. The evaluation stays AUC, F1, and per-class recall.",
+  "phase": {
+    "id": 6,
+    "name": "Speech & Audio",
+    "lessonNumber": 3
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Everything from \"dog barking vs siren\" to \"which language is this\" is audio classification. The features are mels. The architecture moves each decade. The evaluation stays AUC, F1, and per-class recall."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "You get a 10-second clip. You want to know: \"what is it?\" Urban sound (siren, drill, dog), speech command (yes/no/stop), language ID (en/es/ar), speaker emotion (angry/neutral), or environmental sound (indoor/outdoor, babble). All of these are *audio classification*, and in 2026 the baseline architecture is mature: log-mel → CNN or Transformer → softmax.",
+        "The core difficulty is not the network. It is data. Audio datasets have brutal class imbalance, strong domain shift (clean vs noisy), and label noise (who decided \"urban babble\" vs \"restaurant noise\"?). The 80% of the problem is curation, augmentation, and evaluation, not swapping CNN for Transformer."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "ESC-50, AudioSet — classify environmental sounds."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement aclass",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "aclass.py",
+        "starter": "def top_label(probs):\n    return probs.index(max(probs))\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", top_label([0.1,0.8])==1)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Audio class",
+        "description": "Argmax over class probabilities."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

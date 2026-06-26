@@ -1,0 +1,71 @@
+{
+  "id": "20-structured-outputs-constrained-decoding",
+  "title": "Constrained Decoding",
+  "motto": "Ask an LLM for JSON. Get JSON most of the time. In production, \"most\" is the problem. Constrained decoding turns \"most\" into \"always\" by editing the logits before sampling.",
+  "phase": {
+    "id": 5,
+    "name": "NLP Foundations to Advanced",
+    "lessonNumber": 20
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Ask an LLM for JSON. Get JSON most of the time. In production, \"most\" is the problem. Constrained decoding turns \"most\" into \"always\" by editing the logits before sampling."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "A classifier prompts an LLM: \"Return one of {positive, negative, neutral}.\" The model returns \"The sentiment is positive — this review is overwhelmingly favorable because the customer explicitly states that they ...\". Your parser crashes. Your classifier's F1 is 0.0.",
+        "Free-form generation is not a contract. It is a suggestion. A production system needs a contract."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Force JSON/grammar valid tokens during generation."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement decode",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "decode.py",
+        "starter": "def is_json_start(ch):\n    return ch==\"{\"\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"j\", is_json_start(\"{\"))\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "JSON start",
+        "description": "Detect structured output begin."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

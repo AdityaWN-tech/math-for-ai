@@ -1,0 +1,71 @@
+{
+  "id": "01-tokenizers",
+  "title": "Tokenizers",
+  "motto": "Your LLM does not read English. It reads integers. The tokenizer decides whether those integers carry meaning or waste it.",
+  "phase": {
+    "id": 10,
+    "name": "LLMs from Scratch",
+    "lessonNumber": 1
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "Your LLM does not read English. It reads integers. The tokenizer decides whether those integers carry meaning or waste it."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Your LLM does not read English. It does not read any language. It reads numbers.",
+        "The gap between \"Hello, world!\" and [15496, 11, 995, 0] is the tokenizer. Every word, every space, every punctuation mark must be converted into an integer before a model can process it. This conversion is not neutral. It bakes assumptions into the model that cannot be undone later."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "BPE/WordPiece split text into subword IDs for the model."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement tok",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "tok.py",
+        "starter": "def char_to_ids(text,vocab):\n    return [vocab.index(c) for c in text if c in vocab]\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"t\", char_to_ids(\"ab\",list(\"abc\"))==[0,1])\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Char tokenize",
+        "description": "Map chars to token IDs."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}

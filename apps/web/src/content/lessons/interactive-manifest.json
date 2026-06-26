@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T07:23:16.145Z",
+  "generatedAt": "2026-06-26T07:30:19.073Z",
   "lessons": [
     {
       "id": "01-dev-environment",
@@ -695,6 +695,150 @@
       "path": "/demo/12-video-understanding"
     },
     {
+      "id": "13-3d-vision-nerf",
+      "title": "3D Vision & NeRF",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 13,
+      "interactive": true,
+      "path": "/demo/13-3d-vision-nerf"
+    },
+    {
+      "id": "14-vision-transformers",
+      "title": "Vision Transformers",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 14,
+      "interactive": true,
+      "path": "/demo/14-vision-transformers"
+    },
+    {
+      "id": "15-real-time-edge",
+      "title": "Real-Time Edge CV",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 15,
+      "interactive": true,
+      "path": "/demo/15-real-time-edge"
+    },
+    {
+      "id": "16-vision-pipeline-capstone",
+      "title": "Vision Pipeline Capstone",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 16,
+      "interactive": true,
+      "path": "/demo/16-vision-pipeline-capstone"
+    },
+    {
+      "id": "17-self-supervised-vision",
+      "title": "Self-Supervised Vision",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 17,
+      "interactive": true,
+      "path": "/demo/17-self-supervised-vision"
+    },
+    {
+      "id": "18-open-vocab-clip",
+      "title": "Open-Vocab CLIP",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 18,
+      "interactive": true,
+      "path": "/demo/18-open-vocab-clip"
+    },
+    {
+      "id": "19-ocr-document-understanding",
+      "title": "OCR & Documents",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 19,
+      "interactive": true,
+      "path": "/demo/19-ocr-document-understanding"
+    },
+    {
+      "id": "20-image-retrieval-metric",
+      "title": "Image Retrieval",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 20,
+      "interactive": true,
+      "path": "/demo/20-image-retrieval-metric"
+    },
+    {
+      "id": "21-keypoint-pose",
+      "title": "Keypoint & Pose",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 21,
+      "interactive": true,
+      "path": "/demo/21-keypoint-pose"
+    },
+    {
+      "id": "22-3d-gaussian-splatting",
+      "title": "3D Gaussian Splatting",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 22,
+      "interactive": true,
+      "path": "/demo/22-3d-gaussian-splatting"
+    },
+    {
+      "id": "23-diffusion-transformers-rectified-flow",
+      "title": "DiT & Rectified Flow",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 23,
+      "interactive": true,
+      "path": "/demo/23-diffusion-transformers-rectified-flow"
+    },
+    {
+      "id": "24-sam3-open-vocab-segmentation",
+      "title": "SAM & Open-Vocab Seg",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 24,
+      "interactive": true,
+      "path": "/demo/24-sam3-open-vocab-segmentation"
+    },
+    {
+      "id": "25-vision-language-models",
+      "title": "Vision-Language Models",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 25,
+      "interactive": true,
+      "path": "/demo/25-vision-language-models"
+    },
+    {
+      "id": "26-monocular-depth",
+      "title": "Monocular Depth",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 26,
+      "interactive": true,
+      "path": "/demo/26-monocular-depth"
+    },
+    {
+      "id": "27-multi-object-tracking",
+      "title": "Multi-Object Tracking",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 27,
+      "interactive": true,
+      "path": "/demo/27-multi-object-tracking"
+    },
+    {
+      "id": "28-world-models-video-diffusion",
+      "title": "World Models & Video",
+      "phaseId": 4,
+      "phaseName": "Computer Vision",
+      "lessonNumber": 28,
+      "interactive": true,
+      "path": "/demo/28-world-models-video-diffusion"
+    },
+    {
       "id": "01-text-processing",
       "title": "Text Processing",
       "phaseId": 5,
@@ -783,6 +927,285 @@
       "lessonNumber": 10,
       "interactive": true,
       "path": "/demo/10-attention-mechanism"
+    },
+    {
+      "id": "11-machine-translation",
+      "title": "Machine Translation",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 11,
+      "interactive": true,
+      "path": "/demo/11-machine-translation"
+    },
+    {
+      "id": "12-text-summarization",
+      "title": "Summarization",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 12,
+      "interactive": true,
+      "path": "/demo/12-text-summarization"
+    },
+    {
+      "id": "13-question-answering",
+      "title": "Question Answering",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 13,
+      "interactive": true,
+      "path": "/demo/13-question-answering"
+    },
+    {
+      "id": "14-information-retrieval-search",
+      "title": "Information Retrieval",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 14,
+      "interactive": true,
+      "path": "/demo/14-information-retrieval-search"
+    },
+    {
+      "id": "15-topic-modeling",
+      "title": "Topic Modeling",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 15,
+      "interactive": true,
+      "path": "/demo/15-topic-modeling"
+    },
+    {
+      "id": "16-text-generation-pre-transformer",
+      "title": "Pre-Transformer Generation",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 16,
+      "interactive": true,
+      "path": "/demo/16-text-generation-pre-transformer"
+    },
+    {
+      "id": "17-chatbots-rule-to-neural",
+      "title": "Chatbots",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 17,
+      "interactive": true,
+      "path": "/demo/17-chatbots-rule-to-neural"
+    },
+    {
+      "id": "18-multilingual-nlp",
+      "title": "Multilingual NLP",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 18,
+      "interactive": true,
+      "path": "/demo/18-multilingual-nlp"
+    },
+    {
+      "id": "19-subword-tokenization",
+      "title": "Subword Tokenization",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 19,
+      "interactive": true,
+      "path": "/demo/19-subword-tokenization"
+    },
+    {
+      "id": "20-structured-outputs-constrained-decoding",
+      "title": "Constrained Decoding",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 20,
+      "interactive": true,
+      "path": "/demo/20-structured-outputs-constrained-decoding"
+    },
+    {
+      "id": "21-nli-textual-entailment",
+      "title": "Natural Language Inference",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 21,
+      "interactive": true,
+      "path": "/demo/21-nli-textual-entailment"
+    },
+    {
+      "id": "22-embedding-models-deep-dive",
+      "title": "Embedding Models",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 22,
+      "interactive": true,
+      "path": "/demo/22-embedding-models-deep-dive"
+    },
+    {
+      "id": "23-chunking-strategies-rag",
+      "title": "Chunking for RAG",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 23,
+      "interactive": true,
+      "path": "/demo/23-chunking-strategies-rag"
+    },
+    {
+      "id": "24-coreference-resolution",
+      "title": "Coreference",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 24,
+      "interactive": true,
+      "path": "/demo/24-coreference-resolution"
+    },
+    {
+      "id": "25-entity-linking",
+      "title": "Entity Linking",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 25,
+      "interactive": true,
+      "path": "/demo/25-entity-linking"
+    },
+    {
+      "id": "26-relation-extraction-kg",
+      "title": "Relation Extraction",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 26,
+      "interactive": true,
+      "path": "/demo/26-relation-extraction-kg"
+    },
+    {
+      "id": "27-llm-evaluation-frameworks",
+      "title": "LLM Eval Frameworks",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 27,
+      "interactive": true,
+      "path": "/demo/27-llm-evaluation-frameworks"
+    },
+    {
+      "id": "28-long-context-evaluation",
+      "title": "Long Context Eval",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 28,
+      "interactive": true,
+      "path": "/demo/28-long-context-evaluation"
+    },
+    {
+      "id": "29-dialogue-state-tracking",
+      "title": "Dialogue State Tracking",
+      "phaseId": 5,
+      "phaseName": "NLP Foundations to Advanced",
+      "lessonNumber": 29,
+      "interactive": true,
+      "path": "/demo/29-dialogue-state-tracking"
+    },
+    {
+      "id": "01-audio-fundamentals",
+      "title": "Audio Fundamentals",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-audio-fundamentals"
+    },
+    {
+      "id": "02-spectrograms-mel-features",
+      "title": "Spectrograms & Mel",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-spectrograms-mel-features"
+    },
+    {
+      "id": "03-audio-classification",
+      "title": "Audio Classification",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-audio-classification"
+    },
+    {
+      "id": "04-speech-recognition-asr",
+      "title": "Speech Recognition",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-speech-recognition-asr"
+    },
+    {
+      "id": "05-whisper-architecture-finetuning",
+      "title": "Whisper Fine-Tuning",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-whisper-architecture-finetuning"
+    },
+    {
+      "id": "06-speaker-recognition-verification",
+      "title": "Speaker Verification",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-speaker-recognition-verification"
+    },
+    {
+      "id": "07-text-to-speech",
+      "title": "Text-to-Speech",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-text-to-speech"
+    },
+    {
+      "id": "08-voice-cloning-conversion",
+      "title": "Voice Cloning",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-voice-cloning-conversion"
+    },
+    {
+      "id": "09-music-generation",
+      "title": "Music Generation",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 9,
+      "interactive": true,
+      "path": "/demo/09-music-generation"
+    },
+    {
+      "id": "10-audio-language-models",
+      "title": "Audio LMs",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 10,
+      "interactive": true,
+      "path": "/demo/10-audio-language-models"
+    },
+    {
+      "id": "11-real-time-audio-processing",
+      "title": "Real-Time Audio",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 11,
+      "interactive": true,
+      "path": "/demo/11-real-time-audio-processing"
+    },
+    {
+      "id": "12-voice-assistant-pipeline",
+      "title": "Voice Assistant Pipeline",
+      "phaseId": 6,
+      "phaseName": "Speech & Audio",
+      "lessonNumber": 12,
+      "interactive": true,
+      "path": "/demo/12-voice-assistant-pipeline"
     },
     {
       "id": "01-why-transformers",
@@ -875,6 +1298,60 @@
       "path": "/demo/10-audio-transformers-whisper"
     },
     {
+      "id": "11-mixture-of-experts",
+      "title": "Mixture of Experts",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 11,
+      "interactive": true,
+      "path": "/demo/11-mixture-of-experts"
+    },
+    {
+      "id": "12-kv-cache-flash-attention",
+      "title": "KV Cache & FlashAttention",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 12,
+      "interactive": true,
+      "path": "/demo/12-kv-cache-flash-attention"
+    },
+    {
+      "id": "13-scaling-laws",
+      "title": "Scaling Laws",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 13,
+      "interactive": true,
+      "path": "/demo/13-scaling-laws"
+    },
+    {
+      "id": "14-build-a-transformer-capstone",
+      "title": "Build a Transformer",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 14,
+      "interactive": true,
+      "path": "/demo/14-build-a-transformer-capstone"
+    },
+    {
+      "id": "15-attention-variants",
+      "title": "Attention Variants",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 15,
+      "interactive": true,
+      "path": "/demo/15-attention-variants"
+    },
+    {
+      "id": "16-speculative-decoding",
+      "title": "Speculative Decoding",
+      "phaseId": 7,
+      "phaseName": "Transformers Deep Dive",
+      "lessonNumber": 16,
+      "interactive": true,
+      "path": "/demo/16-speculative-decoding"
+    },
+    {
       "id": "01-generative-models-taxonomy-history",
       "title": "Generative Models Taxonomy",
       "phaseId": 8,
@@ -900,6 +1377,195 @@
       "lessonNumber": 3,
       "interactive": true,
       "path": "/demo/03-gans-generator-discriminator"
+    },
+    {
+      "id": "04-conditional-gans-pix2pix",
+      "title": "Conditional GANs",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-conditional-gans-pix2pix"
+    },
+    {
+      "id": "05-stylegan",
+      "title": "StyleGAN",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-stylegan"
+    },
+    {
+      "id": "06-diffusion-ddpm-from-scratch",
+      "title": "DDPM from Scratch",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-diffusion-ddpm-from-scratch"
+    },
+    {
+      "id": "07-latent-diffusion-stable-diffusion",
+      "title": "Latent Diffusion",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-latent-diffusion-stable-diffusion"
+    },
+    {
+      "id": "08-controlnet-lora-conditioning",
+      "title": "ControlNet & LoRA",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-controlnet-lora-conditioning"
+    },
+    {
+      "id": "09-inpainting-outpainting-editing",
+      "title": "Inpainting",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 9,
+      "interactive": true,
+      "path": "/demo/09-inpainting-outpainting-editing"
+    },
+    {
+      "id": "10-video-generation",
+      "title": "Video Generation",
+      "phaseId": 8,
+      "phaseName": "Generative AI",
+      "lessonNumber": 10,
+      "interactive": true,
+      "path": "/demo/10-video-generation"
+    },
+    {
+      "id": "01-mdps-states-actions-rewards",
+      "title": "MDPs",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-mdps-states-actions-rewards"
+    },
+    {
+      "id": "02-dynamic-programming",
+      "title": "Dynamic Programming",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-dynamic-programming"
+    },
+    {
+      "id": "03-monte-carlo-methods",
+      "title": "Monte Carlo",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-monte-carlo-methods"
+    },
+    {
+      "id": "04-q-learning-sarsa",
+      "title": "Q-Learning & SARSA",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-q-learning-sarsa"
+    },
+    {
+      "id": "05-dqn",
+      "title": "DQN",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-dqn"
+    },
+    {
+      "id": "06-policy-gradients-reinforce",
+      "title": "REINFORCE",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-policy-gradients-reinforce"
+    },
+    {
+      "id": "07-actor-critic-a2c-a3c",
+      "title": "Actor-Critic",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 7,
+      "interactive": true,
+      "path": "/demo/07-actor-critic-a2c-a3c"
+    },
+    {
+      "id": "08-ppo",
+      "title": "PPO",
+      "phaseId": 9,
+      "phaseName": "Reinforcement Learning",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-ppo"
+    },
+    {
+      "id": "01-tokenizers",
+      "title": "Tokenizers",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-tokenizers"
+    },
+    {
+      "id": "02-building-a-tokenizer",
+      "title": "Build a Tokenizer",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-building-a-tokenizer"
+    },
+    {
+      "id": "03-data-pipelines",
+      "title": "Data Pipelines",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-data-pipelines"
+    },
+    {
+      "id": "04-pre-training-mini-gpt",
+      "title": "Pre-Train Mini-GPT",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-pre-training-mini-gpt"
+    },
+    {
+      "id": "05-scaling-distributed",
+      "title": "Distributed Training",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-scaling-distributed"
+    },
+    {
+      "id": "06-instruction-tuning-sft",
+      "title": "Instruction Tuning",
+      "phaseId": 10,
+      "phaseName": "LLMs from Scratch",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-instruction-tuning-sft"
     },
     {
       "id": "01-prompt-engineering",
@@ -992,6 +1658,267 @@
       "path": "/demo/10-evaluation"
     },
     {
+      "id": "11-caching-cost",
+      "title": "Caching & Cost",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 11,
+      "interactive": true,
+      "path": "/demo/11-caching-cost"
+    },
+    {
+      "id": "12-guardrails",
+      "title": "Guardrails",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 12,
+      "interactive": true,
+      "path": "/demo/12-guardrails"
+    },
+    {
+      "id": "13-production-app",
+      "title": "Production LLM App",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 13,
+      "interactive": true,
+      "path": "/demo/13-production-app"
+    },
+    {
+      "id": "14-model-context-protocol",
+      "title": "Model Context Protocol",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 14,
+      "interactive": true,
+      "path": "/demo/14-model-context-protocol"
+    },
+    {
+      "id": "15-prompt-caching",
+      "title": "Prompt Caching",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 15,
+      "interactive": true,
+      "path": "/demo/15-prompt-caching"
+    },
+    {
+      "id": "16-langgraph-state-machines",
+      "title": "LangGraph",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 16,
+      "interactive": true,
+      "path": "/demo/16-langgraph-state-machines"
+    },
+    {
+      "id": "17-agent-framework-tradeoffs",
+      "title": "Agent Frameworks",
+      "phaseId": 11,
+      "phaseName": "LLM Engineering",
+      "lessonNumber": 17,
+      "interactive": true,
+      "path": "/demo/17-agent-framework-tradeoffs"
+    },
+    {
+      "id": "01-vision-transformer-patch-tokens",
+      "title": "ViT Patch Tokens",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-vision-transformer-patch-tokens"
+    },
+    {
+      "id": "02-clip-contrastive-pretraining",
+      "title": "CLIP",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-clip-contrastive-pretraining"
+    },
+    {
+      "id": "03-blip2-qformer-bridge",
+      "title": "BLIP-2 Q-Former",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-blip2-qformer-bridge"
+    },
+    {
+      "id": "04-flamingo-gated-cross-attention",
+      "title": "Flamingo",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-flamingo-gated-cross-attention"
+    },
+    {
+      "id": "05-llava-visual-instruction-tuning",
+      "title": "LLaVA",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-llava-visual-instruction-tuning"
+    },
+    {
+      "id": "06-any-resolution-patch-n-pack",
+      "title": "Any-Resolution ViT",
+      "phaseId": 12,
+      "phaseName": "Multimodal AI",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-any-resolution-patch-n-pack"
+    },
+    {
+      "id": "01-the-tool-interface",
+      "title": "The Tool Interface",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-the-tool-interface"
+    },
+    {
+      "id": "02-function-calling-deep-dive",
+      "title": "Function Calling",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-function-calling-deep-dive"
+    },
+    {
+      "id": "03-parallel-and-streaming-tool-calls",
+      "title": "Parallel Tool Calls",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-parallel-and-streaming-tool-calls"
+    },
+    {
+      "id": "04-structured-output",
+      "title": "Structured Output",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-structured-output"
+    },
+    {
+      "id": "05-tool-schema-design",
+      "title": "Tool Schema Design",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-tool-schema-design"
+    },
+    {
+      "id": "06-mcp-fundamentals",
+      "title": "MCP Fundamentals",
+      "phaseId": 13,
+      "phaseName": "Tools & Protocols",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-mcp-fundamentals"
+    },
+    {
+      "id": "01-the-agent-loop",
+      "title": "The Agent Loop",
+      "phaseId": 14,
+      "phaseName": "Agent Engineering",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-the-agent-loop"
+    },
+    {
+      "id": "02-rewoo-plan-and-execute",
+      "title": "ReWOO Plan & Execute",
+      "phaseId": 14,
+      "phaseName": "Agent Engineering",
+      "lessonNumber": 2,
+      "interactive": true,
+      "path": "/demo/02-rewoo-plan-and-execute"
+    },
+    {
+      "id": "03-reflexion-verbal-rl",
+      "title": "Reflexion",
+      "phaseId": 14,
+      "phaseName": "Agent Engineering",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-reflexion-verbal-rl"
+    },
+    {
+      "id": "04-tree-of-thoughts-lats",
+      "title": "Tree of Thoughts & LATS",
+      "phaseId": 14,
+      "phaseName": "Agent Engineering",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-tree-of-thoughts-lats"
+    },
+    {
+      "id": "05-self-refine-and-critic",
+      "title": "Self-Refine & Critic",
+      "phaseId": 14,
+      "phaseName": "Agent Engineering",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-self-refine-and-critic"
+    },
+    {
+      "id": "01-long-horizon-agents",
+      "title": "Long-Horizon Agents",
+      "phaseId": 15,
+      "phaseName": "Autonomous Systems",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-long-horizon-agents"
+    },
+    {
+      "id": "01-why-multi-agent",
+      "title": "Why Multi-Agent",
+      "phaseId": 16,
+      "phaseName": "Multi-Agent Systems",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-why-multi-agent"
+    },
+    {
+      "id": "01-managed-llm-platforms",
+      "title": "Managed LLM Platforms",
+      "phaseId": 17,
+      "phaseName": "AI Infrastructure",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-managed-llm-platforms"
+    },
+    {
+      "id": "01-instruction-following-alignment-signal",
+      "title": "Instruction Following",
+      "phaseId": 18,
+      "phaseName": "AI Safety & Ethics",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-instruction-following-alignment-signal"
+    },
+    {
+      "id": "01-terminal-native-coding-agent",
+      "title": "Terminal Coding Agent",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 1,
+      "interactive": true,
+      "path": "/demo/01-terminal-native-coding-agent"
+    },
+    {
       "id": "02-rag-over-codebase",
       "title": "RAG over Codebase",
       "phaseId": 19,
@@ -999,6 +1926,51 @@
       "lessonNumber": 2,
       "interactive": true,
       "path": "/demo/02-rag-over-codebase"
+    },
+    {
+      "id": "03-realtime-voice-assistant",
+      "title": "Realtime Voice Assistant",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 3,
+      "interactive": true,
+      "path": "/demo/03-realtime-voice-assistant"
+    },
+    {
+      "id": "04-multimodal-document-qa",
+      "title": "Multimodal Document QA",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 4,
+      "interactive": true,
+      "path": "/demo/04-multimodal-document-qa"
+    },
+    {
+      "id": "05-autonomous-research-agent",
+      "title": "Research Agent",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 5,
+      "interactive": true,
+      "path": "/demo/05-autonomous-research-agent"
+    },
+    {
+      "id": "06-devops-troubleshooting-agent",
+      "title": "DevOps Agent",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 6,
+      "interactive": true,
+      "path": "/demo/06-devops-troubleshooting-agent"
+    },
+    {
+      "id": "08-production-rag-chatbot",
+      "title": "Production RAG Chatbot",
+      "phaseId": 19,
+      "phaseName": "Capstone Projects",
+      "lessonNumber": 8,
+      "interactive": true,
+      "path": "/demo/08-production-rag-chatbot"
     }
   ]
 }

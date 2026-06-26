@@ -1,0 +1,71 @@
+{
+  "id": "05-tool-schema-design",
+  "title": "Tool Schema Design",
+  "motto": "A correct tool fails silently when the model cannot tell when to use it. Naming, descriptions, and parameter shapes drive 10 to 20 percentage-point swings in tool-selection accuracy on benchmarks like StableToolBench and MCPToolBench++. This lesson names the design rules that separate a tool a model picks reliably from a tool a model mis-fires.",
+  "phase": {
+    "id": 13,
+    "name": "Tools & Protocols",
+    "lessonNumber": 5
+  },
+  "steps": [
+    {
+      "id": "motto",
+      "beat": "MOTTO",
+      "type": "motto",
+      "gate": "continue",
+      "title": "Core idea",
+      "body": "A correct tool fails silently when the model cannot tell when to use it. Naming, descriptions, and parameter shapes drive 10 to 20 percentage-point swings in tool-selection accuracy on benchmarks like StableToolBench and MCPToolBench++. This lesson names the design rules that separate a tool a model picks reliably from a tool a model mis-fires."
+    },
+    {
+      "id": "problem",
+      "beat": "PROBLEM",
+      "type": "problem",
+      "gate": "continue",
+      "title": "Why this matters",
+      "cards": [
+        "Imagine an agent with 30 tools. Every user query triggers tool selection: the model reads every description and picks one. Two shapes of failure show up.",
+        "**Wrong tool picked.** The model chooses `search_contacts` when it should have chosen `get_customer_details`. Cause: both descriptions say \"look up people\". The model has no way to disambiguate."
+      ]
+    },
+    {
+      "id": "concept",
+      "beat": "CONCEPT",
+      "type": "concept",
+      "gate": "continue",
+      "title": "The concept",
+      "body": "Clear descriptions + typed params = reliable tool use."
+    },
+    {
+      "id": "build",
+      "beat": "BUILD IT",
+      "type": "build",
+      "gate": "tests",
+      "title": "Implement schema",
+      "body": "Write the function from scratch in the workspace. Run when ready — all tests must pass.",
+      "code": {
+        "language": "python",
+        "filename": "schema.py",
+        "starter": "def param_count(props):\n    return len(props)\n",
+        "tests": "def __check(n,ok,m=\"\"):\n __results.append({\"name\":n,\"pass\":bool(ok),\"msg\":m})\ntry:\n __check(\"p\", param_count({\"a\":1,\"b\":2})==2)\nexcept Exception as e:\n __check(\"runtime\",False,str(e))"
+      }
+    },
+    {
+      "id": "ship",
+      "beat": "SHIP IT",
+      "type": "ship",
+      "gate": "continue",
+      "title": "Artifact unlocked",
+      "artifact": {
+        "name": "Param count",
+        "description": "Tool arity from schema."
+      }
+    },
+    {
+      "id": "complete",
+      "beat": "COMPLETE",
+      "type": "complete",
+      "gate": "continue",
+      "title": "Lesson complete"
+    }
+  ]
+}
