@@ -18,7 +18,7 @@ export interface LessonStep {
   title: string;
   body?: string;
   cards?: string[];
-  figure?: "vector-projection" | "matrix-multiply";
+  figure?: "vector-projection" | "matrix-multiply" | "matrix-transform";
   artifact?: {
     name: string;
     description: string;

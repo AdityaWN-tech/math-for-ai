@@ -19,6 +19,7 @@ const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 const INTERACTIVE_IDS = new Set([
   "01-linear-algebra-intuition",
   "02-vectors-matrices-operations",
+  "03-matrix-transformations",
   "07-docker-for-ai",
 ]);
 
@@ -141,6 +142,7 @@ async function compilePhase(phaseNum) {
       const titles = {
         "01-linear-algebra-intuition": "Linear Algebra Intuition",
         "02-vectors-matrices-operations": "Vectors, Matrices & Operations",
+        "03-matrix-transformations": "Matrix Transformations",
         "07-docker-for-ai": "Docker for AI",
       };
       catalogEntries.push({
@@ -215,6 +217,15 @@ async function main() {
       lessonNumber: 2,
       interactive: true,
       path: "/demo/02-vectors-matrices-operations",
+    },
+    {
+      id: "03-matrix-transformations",
+      title: "Matrix Transformations",
+      phaseId: 1,
+      phaseName: "Math Foundations",
+      lessonNumber: 3,
+      interactive: true,
+      path: "/demo/03-matrix-transformations",
     },
     {
       id: "07-docker-for-ai",

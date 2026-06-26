@@ -6,13 +6,14 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, Loader2, Play, Rocket, Sparkles } from "lucide-react";
 import { VectorProjectionFigure } from "@/components/figure/VectorProjectionFigure";
 import { MatrixMultiplyFigure } from "@/components/figure/MatrixMultiplyFigure";
+import { MatrixTransformFigure } from "@/components/figure/MatrixTransformFigure";
 import { DeployPanel } from "@/components/shell/DeployPanel";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 import type { Lesson, LessonStep } from "@/lib/lesson-types";
 import { nextInteractiveLessonId } from "@/lib/lessons";
-import { markLessonComplete, markStep } from "@/lib/progress";
+import { getResumeStepIndex, markLessonComplete, markStep } from "@/lib/progress";
 import { runPythonWithTests, type RunResult } from "@/lib/pyodide-runner";
 
 const CodeEditor = dynamic(() => import("@/components/shell/CodeEditor"), {
@@ -42,12 +43,12 @@ export function LearningShell({ lesson }: LearningShellProps) {
   const hasBuild = lesson.steps.some((s) => s.type === "build");
 
   useEffect(() => {
-    setStepIndex(0);
     setFigureReady(false);
     setDeployReady(false);
     setRunResult(null);
     const buildStep = lesson.steps.find((s) => s.type === "build");
     setCode(buildStep?.code?.starter ?? "");
+    setStepIndex(getResumeStepIndex(lesson.id, lesson.steps));
   }, [lesson.id, lesson.steps]);
 
   useEffect(() => {
@@ -221,6 +222,12 @@ export function LearningShell({ lesson }: LearningShellProps) {
           {figureId === "matrix-multiply" && (
             <div className="flex-1 p-4">
               <MatrixMultiplyFigure onInteract={() => setFigureReady(true)} />
+            </div>
+          )}
+
+          {figureId === "matrix-transform" && (
+            <div className="flex-1 p-4">
+              <MatrixTransformFigure onInteract={() => setFigureReady(true)} />
             </div>
           )}
 

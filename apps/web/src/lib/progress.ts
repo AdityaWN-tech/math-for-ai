@@ -62,6 +62,14 @@ export function isLessonComplete(lessonId: string): boolean {
   return Boolean(readProgress().lessons[lessonId]?.completedAt);
 }
 
+export function getResumeStepIndex(lessonId: string, steps: { id: string }[]): number {
+  if (isLessonComplete(lessonId)) return 0;
+  const lastStepId = readProgress().lessons[lessonId]?.lastStepId;
+  if (!lastStepId) return 0;
+  const idx = steps.findIndex((s) => s.id === lastStepId);
+  return idx >= 0 ? idx : 0;
+}
+
 export function getCompletedCount(): number {
   return Object.values(readProgress().lessons).filter((l) => l.completedAt).length;
 }

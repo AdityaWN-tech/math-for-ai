@@ -1,11 +1,13 @@
 import type { Lesson } from "@/lib/lesson-types";
 import lesson01 from "@/content/lessons/01-linear-algebra-intuition.json";
 import lesson02 from "@/content/lessons/02-vectors-matrices-operations.json";
+import lesson03 from "@/content/lessons/03-matrix-transformations.json";
 import lesson07 from "@/content/lessons/07-docker-for-ai.json";
 
 export const INTERACTIVE_LESSONS: Record<string, Lesson> = {
   "01-linear-algebra-intuition": lesson01 as Lesson,
   "02-vectors-matrices-operations": lesson02 as Lesson,
+  "03-matrix-transformations": lesson03 as Lesson,
   "07-docker-for-ai": lesson07 as Lesson,
 };
 
@@ -14,6 +16,7 @@ export const DEFAULT_LESSON_ID = "01-linear-algebra-intuition";
 export const INTERACTIVE_LESSON_ORDER = [
   "01-linear-algebra-intuition",
   "02-vectors-matrices-operations",
+  "03-matrix-transformations",
   "07-docker-for-ai",
 ] as const;
 

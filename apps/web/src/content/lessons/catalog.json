@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T06:45:09.190Z",
+  "generatedAt": "2026-06-26T06:47:13.682Z",
   "phases": [
     0,
     1
@@ -137,7 +137,7 @@
       "phaseId": 1,
       "phaseName": "Math Foundations",
       "lessonNumber": 3,
-      "interactive": false,
+      "interactive": true,
       "path": "/demo/03-matrix-transformations"
     },
     {
