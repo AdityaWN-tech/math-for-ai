@@ -31,6 +31,8 @@ node scripts/build-interactive-lessons.mjs
 |-----|------|
 | http://localhost:7777 | Landing |
 | http://localhost:7777/lessons | Full roadmap — Phases 0–19 (502 lessons) |
+| http://localhost:7777/arcade | **Math Arcade** — 6 games (3 in 3D), medals, daily challenge, Apply-It Python missions |
+| http://localhost:7777/arcade/trophies | Trophy room — medal cabinet, badges, rank path |
 | http://localhost:7777/demo/01-dev-environment | **Start here** — Phase 0 setup |
 | http://localhost:7777/demo/07-docker-for-ai | Deploy Postgres |
 | http://localhost:7777/demo/01-linear-algebra-intuition | Phase 1 math + Pyodide |

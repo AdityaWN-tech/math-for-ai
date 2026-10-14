@@ -63,3 +63,52 @@ body {
     --shadow-hard: 3px 3px 0 #e8e6dc;
   }
 }
+
+/* Arcade: game-feel colours shared by 2D and 3D scenes */
+:root {
+  --arcade-a: #3553ff;
+  --arcade-b: #e4572e;
+  --arcade-hit: #1a7f4b;
+  --arcade-gold: #f5c542;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --arcade-a: #6b8eff;
+    --arcade-b: #ff7a50;
+    --arcade-hit: #3ddc84;
+  }
+}
+
+@keyframes m4ai-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0.2; }
+}
+
+@keyframes m4ai-pop-in {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes m4ai-medal-drop {
+  0% { transform: translateY(-40px) rotate(-25deg) scale(0.5); opacity: 0; }
+  55% { transform: translateY(6px) rotate(8deg) scale(1.1); opacity: 1; }
+  100% { transform: translateY(0) rotate(0) scale(1); }
+}
+
+@keyframes m4ai-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.m4ai-confetti { animation: m4ai-fall linear forwards; }
+.m4ai-pop { animation: m4ai-pop-in 0.45s cubic-bezier(.2,.9,.3,1.2) both; }
+.m4ai-medal-drop { animation: m4ai-medal-drop 0.7s cubic-bezier(.2,.9,.3,1.2) both; }
+.m4ai-shake { animation: m4ai-shake 0.25s ease-in-out 2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m4ai-confetti, .m4ai-pop, .m4ai-medal-drop, .m4ai-shake { animation: none; }
+  .m4ai-confetti { display: none; }
+}

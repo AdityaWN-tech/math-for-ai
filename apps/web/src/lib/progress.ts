@@ -1,12 +1,14 @@
 import {
   computeLessonXp,
   evaluateBadges,
-  todayKey,
+  LEVEL_UP_EVENT,
+  levelFromXp,
+  type LevelUpDetail,
   updateStreak,
   XP_PHASE_BONUS,
 } from "@/lib/gamification";
 
-const STORAGE_KEY = "m4ai:progress:v2";
+export const STORAGE_KEY = "m4ai:progress:v2";
 const LEGACY_KEY = "m4ai:progress:v1";
 
 export interface LessonProgress {
@@ -20,6 +22,16 @@ export interface LessonProgress {
   xpEarned: number;
 }
 
+export type MedalTier = "bronze" | "silver" | "gold";
+
+export interface ArcadeRecord {
+  bestScore: number;
+  medal: MedalTier | null;
+  plays: number;
+  lastPlayedAt: number;
+  applied?: boolean;
+}
+
 export interface ProgressState {
   lessons: Record<string, LessonProgress>;
   xp: number;
@@ -27,6 +39,7 @@ export interface ProgressState {
   lastActiveDate: string | null;
   badges: string[];
   questsCompleted?: string[];
+  arcade?: Record<string, ArcadeRecord>;
   updatedAt: number;
 }
 
@@ -80,6 +93,7 @@ export function readProgress(): ProgressState {
           ...parsed,
           badges: parsed.badges ?? [],
           questsCompleted: parsed.questsCompleted ?? [],
+          arcade: parsed.arcade ?? {},
           streakDays: parsed.streakDays ?? 0,
         };
       }
@@ -96,15 +110,30 @@ export function readProgress(): ProgressState {
   }
 }
 
+function storedXp(): number {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? ((JSON.parse(raw) as ProgressState).xp ?? 0) : 0;
+  } catch {
+    return 0;
+  }
+}
+
 export function writeProgress(state: ProgressState, opts?: { skipSync?: boolean }) {
   if (typeof window === "undefined") return;
   state.updatedAt = Date.now();
   try {
+    const before = levelFromXp(storedXp()).level;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     if (!opts?.skipSync) {
       import("@/lib/progress-sync").then((m) => m.scheduleProgressSync());
     }
     window.dispatchEvent(new Event("m4ai:progress"));
+    const after = levelFromXp(state.xp);
+    if (!opts?.skipSync && after.level > before) {
+      const detail: LevelUpDetail = { level: after.level, title: after.title };
+      window.dispatchEvent(new CustomEvent(LEVEL_UP_EVENT, { detail }));
+    }
   } catch {
     /* quota */
   }
@@ -246,8 +275,25 @@ export function mergeRemoteProgress(remote: ProgressState) {
     badges: [...new Set([...(local.badges ?? []), ...(remote.badges ?? [])])],
     questsCompleted: [...new Set([...(local.questsCompleted ?? []), ...(remote.questsCompleted ?? [])])],
     lessons: { ...local.lessons },
+    arcade: { ...(local.arcade ?? {}) },
     updatedAt: Math.max(local.updatedAt, remote.updatedAt ?? 0),
   };
+
+  const medalRank = (m: MedalTier | null | undefined) => (m ? ["bronze", "silver", "gold"].indexOf(m) : -1);
+  for (const [id, remoteRec] of Object.entries(remote.arcade ?? {})) {
+    const localRec = merged.arcade![id];
+    if (!localRec) {
+      merged.arcade![id] = remoteRec;
+      continue;
+    }
+    merged.arcade![id] = {
+      bestScore: Math.max(localRec.bestScore, remoteRec.bestScore ?? 0),
+      medal: medalRank(remoteRec.medal) > medalRank(localRec.medal) ? remoteRec.medal : localRec.medal,
+      plays: Math.max(localRec.plays, remoteRec.plays ?? 0),
+      lastPlayedAt: Math.max(localRec.lastPlayedAt, remoteRec.lastPlayedAt ?? 0),
+      applied: Boolean(localRec.applied || remoteRec.applied),
+    };
+  }
 
   for (const [id, remoteLesson] of Object.entries(remote.lessons ?? {})) {
     const localLesson = local.lessons[id] ?? emptyLesson();

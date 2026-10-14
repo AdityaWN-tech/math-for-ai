@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { notifyProgress, ProgressHUD } from "@/components/gamification/ProgressHUD";
+import { GAMES } from "@/lib/arcade/catalog";
 import { DeployPanel } from "@/components/shell/DeployPanel";
 import { LocalWorkspace } from "@/components/shell/LocalWorkspace";
 import { Button } from "@/components/ui/button";
@@ -209,6 +210,7 @@ export function LearningShell({ lesson }: LearningShellProps) {
   const FigureComponent = figureId ? getFigureComponent(figureId) : null;
   const hints = buildStep?.exercise?.hints ?? [];
   const nextLessonId = nextInteractiveLessonId(lesson.id);
+  const arcadeGame = lesson.phase.id === 1 ? GAMES.find((g) => g.lessonId === lesson.id) : undefined;
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg)] text-[var(--ink)]">
@@ -237,6 +239,15 @@ export function LearningShell({ lesson }: LearningShellProps) {
             ))}
           </div>
           <div className="flex items-center gap-3">
+            {arcadeGame && (
+              <Link
+                href={`/arcade/${arcadeGame.id}`}
+                className="hidden rounded-sm border border-[var(--blueprint)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[var(--blueprint)] hover:bg-[var(--blueprint-tint)] md:inline"
+                title={arcadeGame.tagline}
+              >
+                🕹 Play {arcadeGame.title}
+              </Link>
+            )}
             <ProgressHUD />
             <span className="hidden font-mono text-xs text-[var(--ink-mute)] sm:block">
               {stepIndex + 1}/{total}

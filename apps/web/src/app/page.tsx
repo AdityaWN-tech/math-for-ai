@@ -8,9 +8,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)]">
       <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
         <p className="font-display text-2xl text-[var(--blueprint)]">Math for AI</p>
-        <Link href="/demo">
-          <Button size="sm">Try demo</Button>
-        </Link>
+        <div className="flex gap-2">
+          <Link href="/arcade">
+            <Button size="sm" variant="secondary">Math Arcade</Button>
+          </Link>
+          <Link href="/demo">
+            <Button size="sm">Try demo</Button>
+          </Link>
+        </div>
       </header>
 
       <main className="mx-auto max-w-5xl px-6 pb-20">
@@ -32,8 +37,11 @@ export default function HomePage() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
+            <Link href="/arcade">
+              <Button variant="secondary">Play the Math Arcade</Button>
+            </Link>
             <Link href="/lessons">
-              <Button variant="secondary">Browse catalog</Button>
+              <Button variant="ghost">Browse catalog</Button>
             </Link>
           </div>
         </section>

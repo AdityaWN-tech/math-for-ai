@@ -26,9 +26,14 @@ export default function LessonsPage() {
         <Link href="/" className="font-display text-2xl text-[var(--blueprint)]">
           Math for AI
         </Link>
-        <Link href={`/demo/${DEFAULT_LESSON_ID}`}>
-          <Button size="sm">Start Phase 0</Button>
-        </Link>
+        <div className="flex gap-2">
+          <Link href="/arcade">
+            <Button size="sm" variant="secondary">Math Arcade</Button>
+          </Link>
+          <Link href={`/demo/${DEFAULT_LESSON_ID}`}>
+            <Button size="sm">Start Phase 0</Button>
+          </Link>
+        </div>
       </header>
 
       <main className="mx-auto max-w-4xl px-6 pb-16">

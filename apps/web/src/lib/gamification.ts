@@ -21,7 +21,21 @@ export const BADGES: BadgeDef[] = [
   { id: "ten-lessons", name: "Double Digits", description: "Complete 10 lessons", emoji: "🔟" },
   { id: "fifty-lessons", name: "Half Century", description: "Complete 50 lessons", emoji: "🏅" },
   { id: "first-try", name: "Clean Run", description: "Pass a lesson on the first attempt", emoji: "✨" },
+  { id: "first-medal", name: "Podium", description: "Win your first Arcade medal", emoji: "🥉" },
+  { id: "gold-3", name: "Golden Touch", description: "Win 3 gold medals in the Arcade", emoji: "🥇" },
+  { id: "arcade-all", name: "Arcade Explorer", description: "Play every Arcade game", emoji: "🕹" },
+  { id: "applied-1", name: "Theory → Practice", description: "Finish your first Apply It mission", emoji: "🧪" },
+  { id: "applied-all", name: "Applied Mathematician", description: "Finish every Apply It mission", emoji: "🏗" },
+  { id: "daily-1", name: "Daily Driver", description: "Win a medal in the Daily Challenge", emoji: "📅" },
 ];
+
+/** Fired on window when a write pushes the player to a new level. */
+export const LEVEL_UP_EVENT = "m4ai:levelup";
+
+export interface LevelUpDetail {
+  level: number;
+  title: string;
+}
 
 export interface LevelInfo {
   level: number;
@@ -31,7 +45,7 @@ export interface LevelInfo {
   progress: number;
 }
 
-const LEVEL_TITLES = [
+export const LEVEL_TITLES = [
   "Curious",
   "Apprentice",
   "Builder",
@@ -49,7 +63,7 @@ export function xpForLevel(level: number): number {
 export function levelFromXp(xp: number): LevelInfo {
   let level = 1;
   while (xp >= xpForLevel(level + 1) && level < 50) level += 1;
-  const currentFloor = xpForLevel(level);
+  const currentFloor = level === 1 ? 0 : xpForLevel(level);
   const nextLevelXp = xpForLevel(level + 1);
   const span = Math.max(1, nextLevelXp - currentFloor);
   const progress = Math.min(1, (xp - currentFloor) / span);
